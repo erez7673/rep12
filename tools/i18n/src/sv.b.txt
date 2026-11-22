@@ -1,0 +1,610 @@
+611	Börja med raka armar ovanför huvudet.
+612	Dra nedåt och för armbågarna mot höfterna.
+613	Gå tillbaka långsamt till raka armar.
+614	Ställ in sätet så att handtagen är i brösthöjd.
+615	Lätt böjda armbågar som du håller fast.
+616	För ihop armarna framför bröstet och kläm.
+617	Öppna långsamt tills du känner en stretch.
+618	Ställ in så att handtagen är i axelhöjd.
+619	Armarna nästan raka framför dig.
+620	För armarna bakåt och utåt tills de är i linje med kroppen.
+621	Gå tillbaka långsamt.
+622	Ställ in så att vridpunkten är i linje med axlarna.
+623	Börja med armarna längs sidorna.
+624	Lyft armarna ut åt sidorna upp till axelhöjd.
+625	Sänk långsamt.
+626	Stå eller sitt rak och håll i handtagen.
+627	Lyft axlarna rakt upp mot öronen.
+628	Håll 1 s i toppen.
+629	Ställ in så att armbågarna är i linje med maskinens vridpunkt.
+630	Överarmarna på dynan, handflatorna uppåt.
+631	Curla handtagen upp mot axlarna.
+632	Sänk långsamt till nästan raka armar.
+633	Överarmarna på dynan.
+634	Sträck armarna helt och spänn tricepsen.
+635	Ställ in sätet eller ryggstödet så att knäna är cirka 90° i början.
+636	Fötterna axelbrett, ryggen platt mot dynan.
+637	Tryck med hela foten tills benen är nästan raka.
+638	Sänk långsamt – låt inte ländryggen lyfta från dynan.
+639	Placera knäna i linje med vridpunkten.
+640	Dynan precis ovanför anklarna.
+641	Sträck benen och spänn.
+642	Dynan precis ovanför hälarna.
+643	Böj hälarna bakåt så långt det går.
+644	Ställ dig så att dynan eller vikten är i höfthöjd.
+645	Rak rygg, lätt böjda knän.
+646	Fäll framåt i höften tills du känner baksidan av låren stretchas.
+647	Spänn sätet för att komma upp igen.
+648	Övre ryggen mot dynan, dyna eller bälte över höfterna.
+649	Fötterna i golvet, knäna cirka 90° i toppen.
+650	Tryck upp höften och spänn sätet.
+651	Placera dynan bakom hälen eller knät.
+652	Håll i handtagen och håll överkroppen still.
+653	Tryck benet bakåt och spänn sätet.
+654	Gå tillbaka långsamt. Byt ben.
+655	Sitt med dynorna på utsidan av knäna.
+656	Sitt rak.
+657	Tryck isär knäna.
+658	Sitt med dynorna på insidan av knäna.
+659	Kläm ihop benen.
+660	Trampdynorna på kanten av plattan.
+661	Raka ben (stående) eller dyna på låren (sittande).
+662	Res dig så högt du kan på tå.
+663	Sänk långsamt till full stretch.
+664	Ställ in sätet och håll i handtagen.
+665	Andas ut och rulla framåt med rundad rygg.
+666	Spänn magen i 1 s.
+667	Sitt eller stå rak, höften riktad framåt.
+668	Vrid överkroppen åt ena sidan mot motståndet.
+669	Gå långsamt tillbaka till mitten.
+670	Gör alla repetitioner och byt sedan sida.
+671	Gå in i position med spänd bål.
+672	Håll still mot motståndet.
+673	Andas jämnt.
+674	Släpp långsamt.
+675	Börja på en lätt nivå i 2 minuter.
+676	Öka till en ganska hård ansträngning.
+677	Håll jämn rytm och bra hållning.
+678	Avsluta med 2 lätta minuter.
+679	Hantlar (ställ)
+680	Olympisk skivstång + viktskivor
+681	EZ-stång / fasta skivstänger
+682	Kettlebells
+683	Plan bänk
+684	Justerbar bänk
+685	Powerrack / knäböjsställning
+686	Smithmaskin
+687	Scottbänk
+688	Lutande bänk / situpbänk
+689	Kabeltorn (justerbar trissa)
+690	Kabelkors / dubbel trissa
+691	Latsdrag
+692	Sittande kabelrodd (låg trissa)
+693	Bröstpressmaskin
+694	Axelpressmaskin
+695	Pec deck / omvänd flyes
+696	Sittande roddmaskin (med bröststöd)
+697	Bensträck
+698	Bencurl (sittande eller liggande)
+699	Höftabduktion (utsida lår)
+700	Höftadduktion (insida lår)
+701	Tricepsmaskin
+702	Bålrotation (sittande vridning)
+703	Magmaskin
+704	Sittande vadpress
+705	Bröstpress med viktskivor
+706	Lutande press med viktskivor
+707	Rodd med viktskivor
+708	Benpress
+709	Hackknäböj
+710	Hip thrust-maskin
+711	Chinsstång
+712	Assisterad chins-/dipsmaskin
+713	Knälyftsstation (captain's chair)
+714	45° ryggresningsbänk
+715	TRX-band
+716	Löpband
+717	Crosstrainers
+718	Trappmaskin
+719	Motionscykel (liggande)
+720	Motionscykel (upprätt)
+721	Roddmaskin
+722	Bänkpress med skivstång
+723	Ligg på bänken med ögonen under stången, fötterna platt i golvet.
+724	Grepp lite bredare än axlarna, kläm ihop skulderbladen.
+725	Lyft av stången och sänk den till mitten av bröstet med armbågarna cirka 45° från kroppen.
+726	Tryck upp tills armarna är raka. Använd en spottare eller säkerhetsstöd vid tunga vikter.
+727	Håll rumpan på bänken och handlederna ovanför armbågarna.
+728	Bänkpress i smithmaskin
+729	Ställ en plan bänk under smithstången så att stången är ovanför nedre delen av bröstet.
+730	Grepp lite bredare än axlarna, vrid stången för att haka loss den.
+731	Sänk långsamt till bröstet, armbågarna cirka 45° från kroppen.
+732	Tryck upp till raka armar; vrid tillbaka stången på krokarna när du är klar.
+733	Ställ säkerhetsstoppen precis ovanför brösthöjd.
+734	Bänkpress med hantlar
+735	Sitt med hantlarna på låren, luta dig bakåt och för upp dem i brösthöjd.
+736	Handflatorna framåt (eller lite inåt), skulderbladen bakåt.
+737	Tryck upp tills hantlarna nästan möts ovanför bröstet.
+738	Sänk långsamt tills du känner en stretch i bröstet.
+739	Hantlar är snällare mot axlarna än en skivstång.
+740	Lutande hantelpress
+741	Ställ bänken på 30°. Luta dig bakåt med hantlarna i axelhöjd.
+742	Tryck uppåt och lite inåt över övre delen av bröstet.
+743	Sänk kontrollerat tills armbågarna är strax under bänkens nivå.
+744	Håll skulderbladen ihopklämda hela tiden.
+745	Tränar övre delen av bröstet.
+746	Lutande press i smithmaskin
+747	Ställ en justerbar bänk på 30° under smithstången.
+748	Stången ska komma ner till övre delen av bröstet.
+749	Haka loss och sänk långsamt till övre delen av bröstet.
+750	Tryck upp till raka armar och haka sedan fast igen.
+751	Bröstpress i maskin
+752	Ställ in sätet så att handtagen är i höjd med mitten av bröstet.
+753	Sitt med ryggen platt mot dynan och fötterna i golvet.
+754	Tryck handtagen framåt tills armarna är nästan raka.
+755	Gå tillbaka långsamt tills du känner en stretch i bröstet.
+756	En bra och säker första press för nybörjare.
+757	Bröstpress med viktskivor
+758	Lägg på lika många skivor på båda sidor. Ställ in sätet så att handtagen är vid mitten av bröstet.
+759	Luta dig bakåt, ta tag i handtagen, skulderbladen bakåt.
+760	Tryck framåt tills armarna är nästan raka.
+761	Sänk långsamt. Varje arm rör sig för sig – håll dem jämna.
+762	Vikten som visas är alla pålagda skivor tillsammans.
+763	Lutande press med viktskivor
+764	Lägg på lika många skivor. Ställ in sätet så att handtagen börjar i höjd med övre bröstet.
+765	Luta dig bakåt med bröstet upp och skulderbladen ihop.
+766	Tryck uppåt och framåt tills armarna är nästan raka.
+767	Sänk långsamt till en behaglig stretch.
+768	Armhävning
+769	Händerna lite bredare än axlarna, kroppen i en rak linje.
+770	Sänk bröstet till strax ovanför golvet, armbågarna cirka 45°.
+771	För tungt? Ha händerna på en bänk eller gör dem på knä.
+772	Flyes i pec deck
+773	Ställ in sätet så att handtagen är i brösthöjd. Ställ maskinens armar i främre läget.
+774	Sitt med ryggen mot dynan och ta tag i handtagen med lätt böjda armbågar.
+775	För ihop handtagen framför bröstet.
+776	Öppna långsamt tills du känner en stretch, utan att gå förbi axlarna.
+777	Kabelflyes
+778	Ställ båda trissorna i axelhöjd med enhandsgrepp.
+779	Ta ett steg fram i gångställning och luta dig lätt framåt.
+780	För ihop handtagen framför bröstet med lätt böjda armbågar.
+781	Gå tillbaka långsamt och kontrollerat.
+782	Vikten gäller per sida.
+783	Kabelflyes nedifrån och upp (övre bröst)
+784	Ställ båda trissorna i lägsta läget.
+785	Stå i mitten, ta ett steg fram, armarna nere och lite bakåt.
+786	För handtagen uppåt och ihop till höjd med övre bröstet.
+787	Kabelflyes uppifrån och ner
+788	Ställ båda trissorna högst upp.
+789	Ta ett steg fram med lätt framåtlutning, armarna brett ut.
+790	Dra handtagen nedåt och ihop framför höfterna.
+791	Hantelflyes
+792	Ligg på en bänk, hantlarna ovanför bröstet, handflatorna mot varandra.
+793	Öppna armarna brett med mjukt böjda armbågar.
+794	Stanna när du känner en stretch (armbågarna ungefär i bänkens höjd).
+795	Kläm ihop hantlarna igen.
+796	Lutande hantelflyes
+797	Ställ bänken på 30°.
+798	Hantlarna ovanför övre bröstet, handflatorna mot varandra.
+799	Öppna brett med mjuka armbågar tills du känner en stretch.
+800	För ihop dem igen ovanför bröstet.
+801	Sittande axelpress med hantlar
+802	Ställ bänken upprätt (80–90°). Hantlarna i axelhöjd, handflatorna framåt.
+803	Spänn bålen och håll ryggen mot dynan.
+804	Tryck upp tills armarna är raka ovanför huvudet.
+805	Sänk till öronhöjd.
+806	Axelpress i maskin
+807	Ställ in sätet så att handtagen börjar i axelhöjd.
+808	Sitt med ryggen mot dynan och ta tag i handtagen.
+809	Sänk långsamt till startläget.
+810	Sittande axelpress i smithmaskin
+811	Ställ en upprätt bänk under smithstången så att stången går precis framför ansiktet.
+812	Grepp lite bredare än axlarna.
+813	Haka loss och sänk till hakhöjd.
+814	Tryck upp till raka armar.
+815	Stående militärpress med skivstång
+816	Ställ stången i ställningen i nyckelbenshöjd. Grepp strax utanför axlarna.
+817	Lyft av, spänn bålen och kläm ihop sätet.
+818	Tryck stången rakt upp och flytta huvudet lite bakåt så att den kommer förbi.
+819	Sträck ut helt ovanför huvudet och sänk sedan till nyckelbenen.
+820	Arnoldpress
+821	Sitt rak, hantlarna framför axlarna, handflatorna mot dig.
+822	Vrid handflatorna framåt när du trycker upp.
+823	Avsluta med raka armar ovanför huvudet.
+824	Vrid tillbaka när du sänker.
+825	Sidolyft med hantlar
+826	Stå rak, hantlarna längs sidorna, lätt böjda armbågar.
+827	Lyft armarna ut åt sidorna tills de når axelhöjd.
+828	Led med armbågarna; lillfingrarna lite uppåt.
+829	Sänk långsamt – utan att gunga.
+830	Sidolyft i kabel
+831	Ställ en trissa i lägsta läget med ett enhandsgrepp.
+832	Stå med sidan mot maskinen och håll handtaget med den bortre handen, över kroppen.
+833	Lyft armen ut åt sidan till axelhöjd.
+834	Sänk långsamt. Gör alla repetitioner och byt sedan sida.
+835	Omvänd pec deck
+836	Ställ maskinens armar i bakre läget. Sitt med ansiktet mot dynan.
+837	Ta tag i handtagen i axelhöjd med nästan raka armar.
+838	Face pull i kabel
+839	Ställ trissan i huvudhöjd med rephandtaget.
+840	Ta tag i båda repändarna med handflatorna inåt och ta ett steg bakåt.
+841	Dra repet mot ansiktet och dra isär ändarna bredvid öronen.
+842	Kläm ihop skulderbladen och gå sedan långsamt tillbaka.
+843	Utmärkt för hållningen och axlarnas hälsa.
+844	Framåtböjda omvända flyes med hantlar
+845	Fäll framåt i höften med rak rygg, hantlarna hänger under bröstet.
+846	Lyft armarna ut åt sidorna med mjuka armbågar.
+847	Spänn övre ryggen i toppen.
+848	Latsdrag med brett grepp
+849	Ställ in lårdynan så att benen sitter fast.
+850	Greppa stången bredare än axlarna och sätt dig med raka armar.
+851	Dra stången till övre bröstet och led med armbågarna.
+852	Låt den gå upp långsamt tills armarna är raka.
+853	Bröstet upp; luta dig inte för långt bakåt.
+854	Latsdrag med smalt grepp (V-grepp)
+855	Fäst ett V-grepp. Lås benen under dynan.
+856	Grepp med handflatorna mot varandra, raka armar.
+857	Dra handtaget till övre bröstet med armbågarna nära kroppen.
+858	Assisterad chins
+859	Välj assistansvikt – MER vikt = LÄTTARE.
+860	Greppa stången med handflatorna mot dig, axelbrett.
+861	Ställ dig på knä (eller stå) på dynan och häng med raka armar.
+862	Dra upp tills hakan är över stången och sänk långsamt.
+863	Gör framsteg genom att minska assistansen.
+864	Pull-up
+865	Häng i stången med händerna lite bredare än axlarna, handflatorna bort från dig.
+866	Dra bröstet mot stången och för armbågarna nedåt.
+867	Få upp hakan över stången.
+868	Sänk kontrollerat till raka armar.
+869	Raka armar-nedtryck i kabel
+870	Ställ en trissa högt med rak stång eller rep.
+871	Ta ett steg bakåt, fäll lätt framåt, raka armar framför dig i huvudhöjd.
+872	För stången ner till låren med raka armar.
+873	Sittande kabelrodd
+874	Sitt med fötterna på plattan, lätt böjda knän, och ta tag i V-greppet.
+875	Sitt rak med raka armar.
+876	Dra handtaget mot magen och kläm ihop skulderbladen.
+877	Gå tillbaka långsamt utan att runda ryggen.
+878	Sittande korsad kabelrodd
+879	Sitt framför de låga trissorna och håll enhandsgreppen korsade (höger handtag i vänster hand).
+880	Ro båda handtagen bakåt mot sidorna.
+881	Roddmaskin med bröststöd
+882	Ställ in sätet så att handtagen är i brösthöjd och bröstet vilar mot dynan.
+883	Greppa handtagen med raka armar.
+884	Dra bakåt och kläm ihop skulderbladen.
+885	Sittande enarmsrodd i maskin
+886	Lägg på viktskivor. Ställ in sätet så att bröstet ligger mot dynan och du når handtagen.
+887	Greppa ett eller båda handtagen med raka armar.
+888	Dra armbågen (eller armbågarna) bakåt förbi kroppen.
+889	Gå tillbaka långsamt. Kör du en arm i taget, gör alla repetitioner och byt sedan.
+890	Enarms hantelrodd
+891	Sätt ena knät och handen på en plan bänk, rak rygg.
+892	Håll en hantel i andra handen med rak arm.
+893	Dra hanteln mot höften med armbågen nära kroppen.
+894	Hantelrodd med bröststöd
+895	Ställ bänken på 30–45° och lägg dig på mage på den.
+896	Låt hantlarna hänga rakt ner.
+897	Ro upp båda och kläm ihop skulderbladen.
+898	Skonsam mot ländryggen.
+899	Framåtböjd skivstångsrodd
+900	Håll stången med överhandsgrepp och fäll i höften tills överkroppen är cirka 45°.
+901	Rak rygg och mjuka knän.
+902	Dra stången mot nedre revbenen.
+903	Sänk till raka armar.
+904	TRX-rodd
+905	Håll TRX-handtagen, gå fram med fötterna och luta dig bakåt med raka armar.
+906	Håll kroppen i en rak linje.
+907	Dra upp bröstet till handtagen.
+908	Sänk långsamt. Flytta fötterna längre fram för att göra det tyngre.
+909	Axelryckningar med hantlar
+910	Stå rak med hantlarna längs sidorna.
+911	Håll en sekund i toppen.
+912	Sänk långsamt. Rulla inte axlarna.
+913	Axelryckningar i smithmaskin
+914	Ställ smithstången i höjd med mitten av låren.
+915	Grepp axelbrett, stå rak med raka armar.
+916	Lyft axlarna rakt upp.
+917	Bicepscurl med hantlar
+918	Stå rak, hantlarna längs sidorna, handflatorna framåt.
+919	Håll armbågarna mot sidorna.
+920	Curla vikterna upp till axelhöjd.
+921	Sänk långsamt till raka armar.
+922	Hammarcurl
+923	Håll hantlarna längs sidorna med handflatorna mot varandra.
+924	Håll armbågarna still.
+925	Curla upp med tummarna uppåt.
+926	EZ-stångscurl
+927	Håll EZ-stången i de vinklade greppen, handflatorna uppåt.
+928	Armbågarna längs sidorna.
+929	Curla stången upp mot bröstet.
+930	Sänk långsamt utan att gunga.
+931	Scottcurl
+932	Ställ in sätet så att armhålorna ligger vid dynans överkant.
+933	Håll en EZ-stång (eller hantel) med armarna på dynan.
+934	Curla upp tills underarmarna är lodräta.
+935	Sänk långsamt och stanna strax innan armbågarna låses.
+936	Kabelcurl
+937	Ställ trissan längst ner med rak stång eller rep.
+938	Stå med ansiktet mot maskinen, armbågarna längs sidorna.
+939	Curla handtaget mot bröstet.
+940	Lutande hantelcurl
+941	Ställ bänken på 45–60° och luta dig bakåt med armarna hängande rakt ner.
+942	Handflatorna framåt.
+943	Curla upp båda hantlarna utan att röra överarmarna.
+944	Sänk ända ner långsamt.
+945	Triceps pushdown med rep
+946	Ställ trissan högt med rephandtaget.
+947	Armbågarna mot sidorna, underarmarna uppe.
+948	Tryck ner repet och dra isär ändarna längst ner.
+949	Gå långsamt tillbaka till 90°.
+950	Triceps pushdown med rak stång
+951	Ställ trissan högt med rak eller vinklad stång.
+952	Överhandsgrepp, armbågarna tätt intill sidorna.
+953	Tryck stången nedåt tills armarna är raka.
+954	Tricepssträck över huvudet i kabel
+955	Ställ trissan lågt med ett rep. Vänd ryggen mot maskinen, repet bakom huvudet.
+956	Ta ett steg fram i gångställning, armbågarna pekar framåt.
+957	Sträck armarna ovanför huvudet.
+958	Böj armbågarna långsamt bakåt.
+959	Sittande tricepssträck med hantel
+960	Sitt rak och håll en hantel med båda händerna ovanför huvudet.
+961	Armbågarna pekar uppåt och hålls nära varandra.
+962	Sänk hanteln bakom huvudet.
+963	Sträck upp armarna igen.
+964	Skull crusher med EZ-stång
+965	Ligg på en bänk och håll en EZ-stång ovanför bröstet.
+966	Håll överarmarna still och böj armbågarna så att stången sänks mot pannan.
+967	Stanna precis ovanför huvudet.
+968	Sträck armarna igen.
+969	Smal bänkpress i smithmaskin
+970	Ligg under smithstången med axelbrett grepp.
+971	Haka loss och sänk till nedre bröstet med armbågarna nära kroppen.
+972	Haka fast stången när du är klar.
+973	Assisterade dips
+974	Greppa dipshandtagen och ställ dig på knä på dynan med raka armar.
+975	Sänk tills överarmarna är ungefär parallella med golvet.
+976	Tricepssträck i maskin
+977	Ställ in sätet så att armbågarna är i linje med maskinens vridpunkt.
+978	Lägg överarmarna på dynan och ta tag i handtagen.
+979	Tryck nedåt/framåt tills armarna är raka.
+980	Bänkdips
+981	Sitt på kanten av en bänk med händerna bredvid höfterna.
+982	Skjut rumpan av bänken, benen böjda.
+983	Böj armbågarna och sänk kroppen cirka 10–15 cm.
+984	Tryck tillbaka upp.
+985	Benpress
+986	Sitt med ryggen platt mot dynan och fötterna axelbrett mitt på plattan.
+987	Lossa säkerhetshandtagen.
+988	Sänk tills knäna är cirka 90°, med ländryggen mot dynan.
+989	Tryck tillbaka utan att låsa knäna.
+990	Fötterna högre = mer säte, lägre = mer framsida lår.
+991	Knäböj med skivstång
+992	Ställ stången i ställningen i axelhöjd och säkerhetsstöden strax under knäböjsdjupet.
+993	Stången på övre ryggen, fötterna axelbrett, tårna lite utåt.
+994	Spänn bålen, sätt dig bakåt och nedåt tills låren är minst parallella.
+995	Tryck upp genom hela foten.
+996	Knäböj i smithmaskin
+997	Stången på övre ryggen, fötterna lite framför stången.
+998	Haka loss stången.
+999	Gå ner tills låren är ungefär parallella.
+1000	Tryck upp igen och haka sedan fast.
+1001	Gobletknäböj
+1002	Håll en hantel lodrätt mot bröstet.
+1003	Fötterna axelbrett, tårna lite utåt.
+1004	Gå ner mellan knäna med bröstet upp.
+1005	Res dig upp igen.
+1006	Sumoknäböj med hantel
+1007	Bred ställning, tårna utåt, håll en hantel mellan benen.
+1008	Håll bröstet uppe.
+1009	Gå ner och tryck knäna utåt över tårna.
+1010	Spänn sätet för att resa dig.
+1011	Hackknäböjmaskin
+1012	Ställ dig på plattan med ryggen och axlarna mot dynorna.
+1013	Fötterna axelbrett. Lossa säkerhetshandtagen.
+1014	Sänk tills knäna är 90° eller lite djupare.
+1015	Rumänsk marklyft med skivstång
+1016	Håll stången vid låren, fötterna höftbrett, mjuka knän.
+1017	Skjut höften bakåt och låt stången glida längs benen.
+1018	Håll ryggen rak; stanna när du känner en tydlig stretch i baksida lår.
+1019	Driv höften framåt för att resa dig.
+1020	Rumänsk marklyft med hantlar
+1021	Håll hantlarna framför låren, mjuka knän.
+1022	Skjut höften bakåt med hantlarna nära benen.
+1023	Gå ner tills baksida lår stretchas, rak rygg.
+1024	Rumänsk marklyft i smithmaskin
+1025	Ställ smithstången vid mitten av låren och stå nära, fötterna höftbrett.
+1026	Haka loss och skjut höften bakåt, rak rygg.
+1027	Sänk tills baksida lår stretchas.
+1028	Driv höften framåt för att resa dig.
+1029	Marklyft
+1030	Stången över mitten av foten, fötterna höftbrett. Grepp strax utanför knäna.
+1031	Smalbenen mot stången, bröstet upp, rak rygg, spänn hårt.
+1032	Tryck bort golvet och res dig rak.
+1033	Sänk genom att skjuta höften bakåt.
+1034	Ryggresning 45°
+1035	Ställ dynan strax under höftbenen och hälarna under fotdynan.
+1036	Korsa armarna över bröstet.
+1037	Sänk överkroppen genom att böja i höften.
+1038	Spänn sätet för att komma upp till en rak linje.
+1039	Pull-through i kabel
+1040	Ställ en låg trissa med rep. Vänd ryggen mot maskinen, repet mellan benen.
+1041	Gå två steg framåt med brett isär fötterna.
+1042	Fäll i höften och låt repet gå bakåt mellan benen.
+1043	Spänn sätet för att stå rak.
+1044	Gående utfall med hantlar
+1045	Håll hantlarna längs sidorna.
+1046	Ta ett långt steg fram och sänk bakre knät mot golvet.
+1047	Tryck ifrån med främre hälen och gå in i nästa utfall.
+1048	Repetitionerna räknas per ben.
+1049	Bakåtutfall med hantlar
+1050	Stå rak med hantlarna.
+1051	Ta ett steg bakåt med ena foten och sänk bakre knät.
+1052	Tryck ifrån med främre hälen för att komma tillbaka.
+1053	Växla ben; repetitionerna räknas per ben.
+1054	Snällare mot knäna än utfall framåt.
+1055	Bulgarisk split squat
+1056	Stå framför en bänk och lägg bakre fotens ovansida på den.
+1057	Sänk rakt ner tills främre låret är ungefär parallellt.
+1058	Tryck upp genom främre hälen. Gör alla repetitioner och byt sedan.
+1059	Step-up med hantlar
+1060	Stå framför en plan bänk med hantlar.
+1061	Sätt hela ena foten på bänken.
+1062	Tryck genom den hälen för att kliva upp på bänken.
+1063	Kliv ner långsamt. Gör alla repetitioner och byt sedan.
+1064	Split squat i smithmaskin
+1065	Stången på övre ryggen, ena foten fram och andra bak i en lång ställning.
+1066	Sänk bakre knät mot golvet.
+1067	Tryck upp genom främre foten. Gör alla repetitioner och byt sedan.
+1068	Bensträck
+1069	Ställ in ryggstödet så att knäna är i linje med maskinens vridpunkt.
+1070	Ställ smalbensdynan precis ovanför anklarna.
+1071	Sträck benen helt och spänn framsida lår.
+1072	Bencurlmaskin
+1073	Ställ in så att knäna är i linje med vridpunkten; lås lårdynan.
+1074	Bendynan ligger precis ovanför hälarna.
+1075	Böj hälarna bakåt/nedåt så långt du kan.
+1076	Hip thrust med skivstång
+1077	Sitt på golvet med övre ryggen mot en bänk och stången över höften (använd en dyna).
+1078	Fötterna i golvet höftbrett, knäna böjda.
+1079	Driv upp höften tills kroppen är rak från axlarna till knäna.
+1080	Spänn sätet i toppen och sänk långsamt.
+1081	Hip thrust i smithmaskin
+1082	Ställ en bänk på tvären vid smithmaskinen. Övre ryggen på bänken, stången över höften (med dyna).
+1083	Fötterna i golvet, knäna böjda.
+1084	Haka loss och tryck upp höften till en rak linje.
+1085	Spänn och sänk sedan långsamt.
+1086	Hip thrust-maskin
+1087	Sitt med övre ryggen mot dynan och bältet eller dynan över höften.
+1088	Fötterna platt på plattan.
+1089	Tryck upp höften tills du är rak.
+1090	Spänn sätet och sänk långsamt.
+1091	Glute bridge
+1092	Ligg på rygg med böjda knän och fötterna nära rumpan.
+1093	Tryck genom hälarna och lyft höften.
+1094	Spänn sätet i toppen i 2 sekunder.
+1095	Abduktionsmaskin
+1096	Sitt med dynorna på utsidan av knäna.
+1097	Sitt rak och håll i handtagen.
+1098	Tryck knäna utåt så långt du kan.
+1099	Luta dig lite framåt för att träffa övre sätet mer.
+1100	Adduktionsmaskin
+1101	Sitt med dynorna på insidan av knäna och benen isär.
+1102	Öppna långsamt.
+1103	Kabelkickback för sätet
+1104	Fäst en fotledsrem på en låg trissa och sätt den runt ena fotleden.
+1105	Stå med ansiktet mot maskinen, håll i den för stöd och luta dig lätt framåt.
+1106	Sparka benet rakt bakåt och spänn sätet.
+1107	Gå tillbaka långsamt. Gör alla repetitioner och byt sedan.
+1108	Tåhävningar i smithmaskin
+1109	Stången på övre ryggen, trampdynorna på en viktskiva eller ett steg.
+1110	Res dig så högt du kan på tå.
+1111	Sänk hälarna under steget för att stretcha.
+1112	Tåhävningar i benpress
+1113	Sitt i benpressen och sätt trampdynorna på plattans nederkant.
+1114	Nästan raka ben. Håll säkerhetshandtagen låsta om möjligt.
+1115	Tryck plattan med tårna.
+1116	Låt hälarna komma tillbaka för att stretcha.
+1117	Enbens tåhävningar med hantel
+1118	Stå på en fot på ett steg eller en viktskiva med en hantel på samma sida.
+1119	Håll i något med andra handen för balansen.
+1120	Res dig på tå.
+1121	Sänk hälen långsamt. Gör alla repetitioner och byt sedan.
+1122	Sittande vadmaskin
+1123	Sitt med dynan på nedre delen av låren och trampdynorna på plattan.
+1124	Lossa säkerhetsspaken.
+1125	Lyft hälarna så högt det går.
+1126	Planka
+1127	Underarmarna i golvet, armbågarna under axlarna.
+1128	Kroppen i en rak linje från huvud till hälar.
+1129	Spänn sätet och magen.
+1130	Håll i den tid som visas – andas normalt.
+1131	Sidoplanka
+1132	Ligg på sidan med armbågen under axeln.
+1133	Lyft höften så att kroppen blir rak.
+1134	Håll i den tid som visas.
+1135	Byt sida (tiden gäller per sida).
+1136	Knälyft med armstöd
+1137	Ställ dig i knälyftsstationen med underarmarna på dynorna och ryggen mot ryggstödet.
+1138	Låt benen hänga raka.
+1139	Lyft knäna mot bröstet och rulla upp bäckenet.
+1140	Hängande benlyft
+1141	Häng i en chinsstång.
+1142	Håll benen raka (eller böjda för att göra det lättare).
+1143	Lyft benen till höfthöjd eller högre.
+1144	Knästående kabelcrunch
+1145	Ställ en hög trissa med rep. Ställ dig på knä mot den, repet bredvid huvudet.
+1146	Håll höften still.
+1147	Crunsha nedåt och för armbågarna mot knäna.
+1148	Vedhuggare i kabel
+1149	Ställ en trissa högt. Stå med sidan mot maskinen och håll handtaget med båda händerna.
+1150	Dra diagonalt nedåt över kroppen mot motsatt höft.
+1151	Vrid överkroppen och vrid på bakre foten.
+1152	Gå tillbaka långsamt. Gör alla repetitioner och byt sedan sida.
+1153	Vedhuggare med hantel
+1154	Håll en hantel med båda händerna ovanför ena axeln.
+1155	Hugg den diagonalt ner mot motsatt höft och vrid överkroppen.
+1156	Böj knäna lätt längst ner.
+1157	Tillbaka till start. Gör alla repetitioner och byt sedan.
+1158	Pallof press
+1159	Ställ en trissa i brösthöjd. Stå med sidan mot maskinen och håll handtaget vid bröstet.
+1160	Gå ut tills kabeln är spänd.
+1161	Tryck handtaget rakt fram och stå emot draget.
+1162	För tillbaka det till bröstet. Gör alla repetitioner och byt sedan.
+1163	Dead bug
+1164	Ligg på rygg, armarna upp, knäna böjda 90° över höften.
+1165	Pressa ländryggen mot golvet.
+1166	Sträck långsamt ut ena armen ovanför huvudet och motsatt ben.
+1167	Gå tillbaka och byt sida.
+1168	Situps på lutande bänk
+1169	Sitt på den lutande bänken och haka fast fötterna under fotrullarna.
+1170	Luta dig bakåt tills ryggen ligger mot dynan, händerna korsade över bröstet.
+1171	Andas ut och rulla upp hela vägen tills överkroppen är upprätt.
+1172	Sänk långsamt, en kota i taget, utan att falla bakåt.
+1173	För tungt? Sänk lutningen eller sträck armarna framåt. Tyngre: händerna vid öronen eller en viktskiva på bröstet.
+1174	Magmaskin
+1175	Ställ in sätet, håll i handtagen eller lägg armarna på dynorna.
+1176	Rulla överkroppen framåt och nedåt.
+1177	Spänn magen.
+1178	Bålrotationsmaskin
+1179	Sitt med ansiktet mot handtagen och ställ startvinkeln åt ena sidan.
+1180	Spänn benen mot dynorna och håll i handtagen.
+1181	Vrid överkroppen långsamt åt andra sidan.
+1182	Rör dig långsamt och håll rörelseomfånget bekvämt för ryggen.
+1183	Farmer's walk
+1184	Plocka upp tunga hantlar, en i varje hand.
+1185	Stå rak med axlarna bakåt.
+1186	Gå med korta, stadiga steg i den tid som visas.
+1187	Ställ ner vikterna försiktigt.
+1188	Intervaller på löpband
+1189	2 min lätt gång eller jogg som uppvärmning.
+1190	Upprepa sedan: 1 min snabbt (hård ansträngning) + 1 min lätt gång.
+1191	Avsluta med 2 min lätt gång.
+1192	Använd sidoräckena för att kliva av säkert när du stannar.
+1193	Uppförsgång på löpband
+1194	Ställ lutningen på 8–12 % och farten på 4.5–5.5 km/h.
+1195	Gå utan att hålla i räckena.
+1196	Sikta på en ansträngning där du kan prata, men det är jobbigt.
+1197	Sänk lutningen den sista minuten.
+1198	Skonsamt för lederna och bra för fettförbränning.
+1199	Crosstrainer
+1200	Kliv på och ta tag i de rörliga handtagen.
+1201	Börja med lätt motstånd i 2 minuter.
+1202	Öka motståndet till en jämn, ganska hård ansträngning.
+1203	Tryck och dra med armarna också.
+1204	Trappmaskin
+1205	Kliv på och börja i långsam fart.
+1206	Stå rak; håll lätt i räckena bara för balansen.
+1207	Kliv med hela foten på varje steg.
+1208	Öka farten gradvis.
+1209	Liggande motionscykel
+1210	Ställ in sätet så att knät är lätt böjt i nedersta läget.
+1211	Börja lätt i 2 minuter.
+1212	Sedan 30 s hårt / 60 s lätt, eller ett jämnt måttligt tempo.
+1213	Varva ner lätt de sista 2 minuterna.
+1214	Snällast mot knäna.
+1215	Upprätt motionscykel
+1216	Roddmaskin
+1217	Spänn fast fötterna och ta tag i handtaget.
+1218	Tryck först med benen, luta dig sedan bakåt och dra sist med armarna.
+1219	Gå tillbaka i omvänd ordning: armar, kropp, ben.
+1220	Håll en jämn rytm.

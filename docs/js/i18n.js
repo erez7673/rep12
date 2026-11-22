@@ -11,7 +11,7 @@ export const LANGS = {
 };
 const RTL = ['ar', 'he'];
 // Languages whose translation is finished; only these can be picked.
-export const READY = ['en', 'es', 'pt', 'de', 'it', 'fi'];
+export const READY = ['en', 'es', 'pt', 'de', 'it', 'fi', 'sv'];
 export const langChoices = () => Object.fromEntries(Object.entries(LANGS).filter(([k]) => READY.includes(k)));
 
 let byEn = null; // Map: English text → translation

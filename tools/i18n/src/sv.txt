@@ -1,0 +1,611 @@
+1	Animation: {name}
+2	Fortsätt
+3	Inga data än.
+4	lb
+5	kg
+6	Börja lätt: gör ett testset med 10 lätta repetitioner för att lära dig rörelsen och justera sedan vikten.
+7	Träningsdag {x}
+8	Träning
+9	{n} dagar i veckan
+10	{list} och {last}
+11	Deloadvecka – lättare, återhämta dig
+12	Fas 3 · Tyngre, färre repetitioner
+13	Fas 2 · Mer volym
+14	Fas 1 · Lär dig och bygg grunden
+15	Eget program · samma set och repetitioner varje vecka
+16	Startuppskattning – tryck på seten för att ändra.
+17	Mindre assistans – du klarade alla repetitioner förra gången!
+18	+{w} – du klarade alla repetitioner förra gången!
+19	Deloadvecka – lättare med flit.
+20	Ändrat av dig
+21	Synkroniseringen misslyckades
+22	Stäng guiden
+23	{a} av {b}
+24	Rygg
+25	Hoppa till {section}
+26	Klar
+27	Nästa
+28	Byt till ljust läge
+29	Byt till mörkt läge
+30	{n} s
+31	{n} min
+32	{n} reps
+33	Ingen utrustning
+34	eller
+35	Inga övningar matchar.
+36	Övningar
+37	Sök övningar
+38	Alla
+39	Bara det som finns på mitt gym
+40	Övningen hittades inte.
+41	finns inte i din gymutrustning
+42	Lägg till i passet
+43	Din maskin:
+44	Markerad som riskabel för: {parts}. Kör lätt eller byt övning.
+45	Så gör du
+46	Steg i text
+47	På assisterade maskiner hjälper vikten dig – mer vikt = lättare. Appen sänker den när du blir starkare.
+48	Vikten gäller per hantel.
+49	Din historik
+50	Favorit
+51	Jag gillar den
+52	Undviks
+53	Undvik den
+54	Gillade och undvikna övningar används nästa gång du gör om ditt program.
+55	som avslutande kondition för:
+56	läggs till varje vecka för:
+57	har {n} – tryck för att lägga till eller byta
+58	Finns redan
+59	Använd som min uppvärmning
+60	Alla träningsdagar
+61	Avbryt
+62	Avslutande kondition för {day}
+63	Lägg till eller byt
+64	{day} har {n} övningar.
+65	Lägg till {name}
+66	{day} får {n} övningar
+67	, och du kan ha upp till {n} på varje träningsdag
+68	{n} övningar är max per dag.
+69	Eller byt mot
+70	Tillagd i {day} ({a} av {b})
+71	Tillagd i {day} ({n} övningar)
+72	{name} finns nu i {day}
+73	Vald som din uppvärmning
+74	Gymutrustning
+75	{a}/{b} påslagna
+76	Lägg till en maskin med foto
+77	Stäng av allt som ditt gym inte har. Programmet använder bara det som är påslaget.
+78	Mina maskiner
+79	Ändrat utrustningen?
+80	Gör om ditt program så att det bara använder det som är påslaget.
+81	Gör om mitt program
+82	Stäng
+83	Göra om programmet med nuvarande utrustning? Din historik sparas, men programmet börjar om från vecka 1.
+84	Programmet är omgjort
+85	Byt namn
+86	Markera som tillgänglig
+87	Markera som inte tillgänglig
+88	Ta bort maskin
+89	Maskinens namn
+90	Ta bort maskinen och dess foto? Egna övningar som skapats för den tas också bort.
+91	Ta ett foto av maskinen
+92	Det sparas med maskinen så att du känner igen den senare.
+93	Tryck för att ta ett foto
+94	Namn (om du vet det)
+95	t.ex. sittande rodd
+96	Märke
+97	valfritt
+98	Modell (på typskylten)
+99	Identifiera med AI
+100	Hur är kroppen placerad?
+101	Vad håller du i eller trycker mot?
+102	Vilken rörelse gör du?
+103	Testa maskinen utan vikt om du är osäker.
+104	Var känner du det?
+105	(valfritt, välj så många du vill)
+106	Visa träffar
+107	Är det någon av dessa?
+108	Ja, det är den
+109	Ingen liknande övning i biblioteket.
+110	Ingen av dessa?
+111	Skapa en egen övning utifrån dina svar – appen skriver korta instruktioner för den här typen av rörelse.
+112	Skapa egen övning
+113	Vad är det här för maskin?
+114	Min maskin
+115	Välj en rörelse
+116	Det gick inte att läsa fotot
+117	Frågar AI…
+118	AI är inte konfigurerad
+119	AI-fel: {msg}
+120	Maskinen sparad
+121	Välj en rörelse först
+122	Maskin: {kind}
+123	Egen
+124	Egen övning skapad
+125	Längd
+126	Längd (cm)
+127	Namn
+128	Ditt namn
+129	Kön
+130	Kvinna
+131	Man
+132	Ålder
+133	Vikt ({u})
+134	Erfarenhet
+135	Huvudmål
+136	Träningsdagar per vecka
+137	Övningar per träningsdag
+138	(4 set var, plus uppvärmning och nedvarvning)
+139	Muskelgrupper per träningsdag
+140	(lämna en dag tom så väljer appen)
+141	Passets längd
+142	Uppvärmning
+143	Ingen
+144	Lägg till avslutande kondition (löpband, crosstrainer, trappmaskin, cykel)
+145	Skador eller begränsningar
+146	(övningar som belastar dessa undviks)
+147	Extra fokus
+148	(lägger till övningar för dessa)
+149	Färg
+150	Skapa mitt program
+151	Skapa mitt eget program
+152	Spara utan att ändra programmet
+153	Spara och gör om programmet
+154	Den här appen ger allmänna träningsråd, inte medicinska råd. Om du har en skada eller ett hälsoproblem, eller inte har tränat på länge, rådgör först med läkare eller fysioterapeut. Avbryt övningar som gör ont.
+155	Redigera profil
+156	Välkommen
+157	Ny profil
+158	Nu skapar vi ditt personliga program. Efteråt kan du lägga till fler profiler, till exempel för din partner.
+159	Språk och enheter
+160	Övningar per dag, muskelgrupper, passets längd, uppvärmning, kondition, skador och extra fokus finns under Profil → Skapa ditt eget program.
+161	Skapa ditt eget program
+162	Välj hur var och en av dina {n} träningsdagar ser ut. Ändra antalet dagar under Redigera profil.
+163	Ett eget program behåller samma set och repetitioner alla 12 veckor. Ett program från Redigera profil blir tuffare i steg.
+164	Programmet är klart, {name}!
+165	Att göra om programmet startar om från vecka 1 (historiken sparas). Fortsätta?
+166	Sparat
+167	Profil
+168	Inställningar
+169	{n} år
+170	{d} dagar × {m} min
+171	Färdiga program (nybörjare, 50+)
+172	Byt profil
+173	1 profil
+174	{n} profiler
+175	Lägg till en profil
+176	Gymutrustning
+177	Gå appguiden
+178	Ta bort profilen för {name}
+179	aldrig
+180	Språk
+181	Enheter
+182	Metriskt (kg, cm)
+183	USA (lb, ft)
+184	Dina data är desamma; bara hur vikter och längder visas ändras.
+185	Utseende
+186	Auto
+187	Ljust
+188	Mörkt
+189	Auto följer telefonens inställning.
+190	Träning
+191	Pip när vilan är slut
+192	Testa pipet
+193	Skärmen är tänd under passet så att timern kan pipa. Höj volymen och stäng av ljudlöst läge.
+194	Synka med Google Sheets
+195	Säkerhetskopierar alla profiler och gymutrustningen till ditt eget Google-kalkylark och håller dina telefoner synkade. Instruktionerna finns i README.
+196	URL till Apps Script-webbappen
+197	Hemlig nyckel (samma som i skriptet)
+198	er gemensamma hemlighet
+199	Spara
+200	Synka nu
+201	Senaste synk: {when}
+202	Experimentellt: AI-igenkänning av maskiner (kräver en Claude API-nyckel i skriptet)
+203	Säkerhetskopia
+204	Exportera fil
+205	Importera fil
+206	Om appen
+207	Dina data stannar på den här telefonen. Inget skickas någonstans om du inte konfigurerar synk med Google Sheets, och då bara till ditt eget kalkylark.
+208	Synkar…
+209	Offline eller inte konfigurerad
+210	Synkat · {a} uppdaterade, {b} skickade
+211	Synkningen misslyckades: {msg}
+212	Inte en säkerhetskopia från den här appen
+213	Ersätta all data på den här telefonen med säkerhetskopian?
+214	Säkerhetskopian återställd
+215	Importen misslyckades: {msg}
+216	Ta bort profilen för {name} och all historik från den här telefonen? Det går inte att ångra.
+217	Framsteg
+218	Pass
+219	Senaste 30 dagarna
+220	{u} lyfta
+221	Pass per vecka
+222	Styrka
+223	Uppskattat 1RM från ditt bästa set (Epleys formel).
+224	Bästa repetitioner per pass.
+225	Logga ett pass för att se din styrkeutveckling.
+226	Kroppsvikt
+227	Dagens vikt ({u})
+228	Lägg till
+229	Historik
+230	{n} övningar
+231	Inga pass än.
+232	Ange en vikt i {u}
+233	Vikten sparad
+234	Assist {u}
+235	Hej {name}
+236	Du har inget program än.
+237	Eller välj ett färdigt program
+238	Vecka {w}
+239	Viss utrustning är avstängd – tryck för att byta
+240	av {n}
+241	{a}/{b} klara
+242	tillbaka till aktuell vecka
+243	Klart av programmet
+244	Loggade pass
+245	Per pass
+246	Programmet är klart!
+247	uppvärmning
+248	avslutande kondition
+249	{w} veckor · {d} dagar i veckan · pass på {m} min
+250	Varje dag:
+251	{n} övningar, plus uppvärmning{walk} och nedvarvning. Tryck på en dag för att byta, lägga till eller ta bort övningar och ändra set, repetitioner och vikt.
+252	, en kort promenad
+253	{n} × 4 set, plus {extras} och nedvarvning. Öppna en dag för att välja dess muskelgrupper eller ändra uppvärmningen.
+254	1 övning
+255	Eget program:
+256	samma set och repetitioner varje vecka. Skapa ett program via Redigera profil om du vill att appen ska göra det tuffare i steg.
+257	Vecka 1–4
+258	lär dig rörelserna, hitta dina arbetsvikter.
+259	Vecka 5–8
+260	fler repetitioner per set.
+261	Vecka 9–11
+262	tyngre med färre repetitioner.
+263	fortsätt öka repetitioner och vikt.
+264	Vecka 12
+265	deload – lättare så att kroppen återhämtar sig.
+266	Appen höjer vikten automatiskt när du når toppen av repetitionsintervallet i alla set. Tryck på en dags set för att ändra repetitioner eller vikt.
+267	Färdiga program
+268	Programinställningar
+269	Fasta helkroppsprogram för kvinnor som börjar runt 50+. De följer forskningen om styrketräning i den åldern: hela kroppen, maskiner först, 4–6 övningar per dag, 2–3 set med 10–15 repetitioner, lätt start. Du kan ändå byta, lägga till eller ta bort övningar och ändra set, repetitioner och vikt varje dag.
+270	Aktuellt
+271	Starta om det här programmet
+272	Använd det här programmet
+273	Ett nytt program börjar på vecka 1 (din historik sparas). Fortsätta?
+274	Vem tränar?
+275	Aktiv
+276	Ändra ordning
+277	för alla veckor
+278	Flytta upp
+279	Flytta ner
+280	Tillbaka till appens ordning (stora muskler först)
+281	Klar
+282	Hittades inte
+283	Redigera repetitioner och vikt
+284	Redigera
+285	Utrustningen är markerad som inte tillgänglig – byt övning
+286	Flytta upp eller ner
+287	Alternativ
+288	Vila: {n} s
+289	Välj muskelgrupper
+290	Muskelgrupper
+291	Passets längd
+292	Kalorier (ca)
+293	Klar {date} – visa logg
+294	Ändra uppvärmning
+295	Ändra
+296	Sedan en snabb rörlighetsrutin
+297	{n} rörelser
+298	Lägg till uppvärmning
+299	Övningslista
+300	Avslutande kondition
+301	Ändra avslutande kondition
+302	Lägg till avslutande kondition
+303	Stretch för nedvarvning
+304	Starta (ersätter pågående pass)
+305	Gör det igen
+306	Starta
+307	Vecka {w} · mål {a}–{b} {u}. Ändrar du ett set ändras även seten efter.
+308	s
+309	reps
+310	Set
+311	Sek
+312	Reps
+313	kroppsvikt
+314	Tillbaka till appens förslag
+315	{day}: muskelgrupper
+316	Välj en eller flera. Appen väljer {n} övning(ar) för dem (antalet ställer du in under Profil → Skapa ditt eget program) utifrån utrustningen på ditt gym. Du kan fortfarande byta eller ta bort enskilda övningar efteråt.
+317	Välj övningar för dessa grupper
+318	Låt appen välja grupperna
+319	Minuter
+320	En minut mindre
+321	En minut mer
+322	Används på alla dina träningsdagar. Tryck på Starta under passet så piper appen när tiden är slut.
+323	Maskin
+324	Vald
+325	Inga konditionsmaskiner är påslagna i gymutrustningen.
+326	Används på {day} varje vecka. Sätt minuterna till 0 för att ta bort den.
+327	Snabb rörlighetsrutin
+328	Gör dessa direkt efter uppvärmningsmaskinen.
+329	Nya övningar valda för alla veckor
+330	Ett pass pågår redan. Kasta det och starta det här?
+331	Byt mot en annan övning för {area}
+332	Inga alternativ med din nuvarande utrustning.
+333	Ta bort från den här dagen
+334	Övningen bytt för alla veckor
+335	Inget pass pågår.
+336	Till mitt program
+337	UPPVÄRMNING
+338	Telefonen piper när tiden är slut.
+339	Avsluta uppvärmningen nu
+340	VILA · nästa: {name} · set {a}/{b}
+341	−15 s
+342	+15 s
+343	Hoppa över vilan
+344	Alla set klara
+345	Avsluta med kondition och nedvarvning, tryck sedan på Klar.
+346	Avsluta med nedvarvning, tryck sedan på Klar.
+347	Avsluta passet
+348	Pausa
+349	Logga set
+350	Set {a} av {b}
+351	hålltid
+352	settid
+353	PAUSAD
+354	Vila: {n}
+355	Logg
+356	Logga set {n}
+357	Lägg till set
+358	klar
+359	Stoppa
+360	Igen
+361	Sedan: snabb rörlighet
+362	Avslutning
+363	Nedvarvning
+364	stretch
+365	Timer
+366	Kasta passet
+367	Alla set loggade!
+368	Vila −15 s
+369	nu {n} s
+370	Vila +15 s
+371	Ta bort sista setet
+372	Hoppa över övningen i dag
+373	Ljud
+374	På
+375	Av
+376	Testa pip
+377	Inga set loggade. Kasta det här passet?
+378	{n} set inte loggade. Avsluta ändå?
+379	Kasta passet? Loggade set försvinner.
+380	Tid
+381	Set
+382	{n} kcal
+383	uppskattat
+384	Nya personbästan
+385	Ta bort loggen
+386	Ta bort loggen för det här passet? Det går inte att ångra.
+387	Räknar uppåt. Bra för plankor, håll eller för att ta tid på vilan.
+388	Fortsätt
+389	Nollställ
+390	Inställd på {time}.
+391	Tiden är ute!
+392	Nedräkning
+393	Tidtagarur
+394	Snabbval
+395	Timern fortsätter när du byter flik eller låser telefonen. Under ett pass går vilotimern för sig själv.
+396	Välkommen till Rep12 👋
+397	Den här korta guiden visar appen. Tryck på Nästa för att gå vidare, Hoppa till för att gå till nästa del eller X för att stänga. Du kan starta guiden igen när som helst från fliken Profil.
+398	Fliken Profil
+399	Vi börjar här, med dina uppgifter. Appens inställningar kommer direkt efter.
+400	Din profil
+401	Ditt namn, ålder, längd, vikt, erfarenhet, mål och hur många dagar i veckan du tränar. Ditt program och dina startvikter bygger på detta.
+402	Ändra dina personuppgifter, ditt mål eller dina träningsdagar per vecka. Välj ”Spara och gör om programmet” för att få ett nytt program som passar.
+403	Välj hur många övningar varje dag har, vilka muskelgrupper varje dag tränar, hur långt ett pass är, uppvärmningen, avslutande kondition, skador att skydda och extra fokus. Ett eget program behåller samma set och repetitioner alla 12 veckor.
+404	Enkla helkroppsprogram för nybörjare och personer över 50. Välj ett i stället för ett eget program om du vill.
+405	Fler än en person
+406	Lägg till en profil för någon annan som tränar med den här telefonen och byt profil här. Varje person får sitt eget program och sin egen historik.
+407	Berätta för appen vilken utrustning ditt gym har, så använder programmet bara det som finns. Mer om detta under fliken Gym.
+408	Gå guiden igen
+409	Starta guiden härifrån igen när du behöver en repetition.
+410	Kugghjulet öppnar appens inställningar: språk, enheter, ljust eller mörkt, vilopipet, synk och säkerhetskopia.
+411	Välj appens språk. Appen startar om på det nya språket; dina data är desamma.
+412	Metriskt visar kilo och centimeter. USA visar pund och fot. Bytet ändrar bara hur vikter och längder visas.
+413	Ljust eller mörkt
+414	Välj ett ljust eller mörkt utseende. Auto följer telefonens inställning.
+415	Vilopip
+416	Appen piper när vilan är slut. Använd ”Testa pipet” för att kontrollera volymen. Stäng av ljudlöst läge när du tränar.
+417	Synka med Google Sheets (valfritt)
+418	Säkerhetskopierar dina data till ditt eget Google-kalkylark och håller flera telefoner i takt. Stegen finns i appens README. Du kan hoppa över detta.
+419	Spara all din data i en fil eller återställ från en fil, till exempel när du byter telefon.
+420	Hur dina data hålls privata, och en påminnelse om att appen ger allmänna råd, inte medicinska råd.
+421	Mitt program
+422	Fliken Mitt program
+423	Ditt 12-veckorsprogram. Här startar du varje pass.
+424	Dina 12 veckor
+425	Varje stapel är en vecka och fylls i när du gör veckans pass. Tryck på en vecka för att titta på den. Ett program som appen skapar blir tuffare i steg, och vecka 12 är en lättare återhämtningsvecka. Ett program från ”Skapa ditt eget program” behåller samma set och repetitioner varje vecka.
+426	Om ditt program
+427	Tryck på programmets namn för att se hur det fungerar eller byta till ett färdigt program.
+428	Träningsdagar
+429	Ett kort per träningsdag. ”Nästa” markerar den du ska göra nu, och klara dagar får en bock. Tryck på en dag för att öppna den.
+430	Träningsdag
+431	En träningsdag
+432	Här ser du hela passet och kan justera det innan du startar. Ändringarna gäller den här dagen varje vecka.
+433	Musklerna som dagen tränar. Tryck för att välja andra grupper, så väljer appen passande övningar.
+434	Några minuter på en konditionsmaskin och sedan en kort rörlighetsrutin. Tryck på Ändra för att välja maskin och minuter.
+435	Set, repetitioner och vikt
+436	Varje bricka är ett set. Tryck på Redigera för att ändra repetitioner eller vikt innan du börjar. De första vikterna är uppskattningar, så justera dem första veckan.
+437	Flytta en övning upp eller ner i passet.
+438	Byt eller ta bort
+439	Se hur övningen görs, byt den mot en annan för samma muskler eller ta bort den från den här dagen.
+440	Valfri kondition i slutet av passet. Tryck för att välja maskin och minuter, eller ta bort den.
+441	Starta passet
+442	Tryck på ✓ efter varje set under passet. Vilotimern startar av sig själv och piper när det är dags för nästa set. Skärmen är tänd, och vikterna ökar när du blir starkare.
+443	Fliken Övningar
+444	Alla övningar i appen, med instruktionsvideor.
+445	Sök och filtrera
+446	Sök på namn eller tryck på en muskel för att bara se dess övningar. ”Bara det som finns på mitt gym” döljer övningar för utrustning du inte har.
+447	En övning
+448	Tryck på en övning för att öppna den. Under ”Så gör du” finns en kort video (för de flesta) och steg-för-steg-instruktioner.
+449	Lägg in övningen på en av dina träningsdagar, som extra övning eller i stället för en annan.
+450	Gilla eller undvik
+451	Markera övningar du gillar eller vill undvika. Appen tar hänsyn till det nästa gång den skapar ditt program.
+452	Gym
+453	Fliken Gym
+454	Ditt gyms utrustning.
+455	Stäng av allt som ditt gym inte har. Tryck på en bild för att se den större.
+456	Gör om ditt program
+457	När du har ändrat utrustningen, gör om programmet så att det bara använder det som är påslaget.
+458	Känner du inte igen en maskin?
+459	Ta ett foto, svara på några frågor om hur den rör sig, så berättar appen vilka övningar du kan göra i den.
+460	Fliken Timer
+461	En nedräkning och ett tidtagarur för sådant som inte finns i programmet, som en planka eller en stretch.
+462	Nedräkning och tidtagarur
+463	Växla mellan dem högst upp. Nedräkningen piper när tiden är slut.
+464	Fliken Framsteg
+465	Diagram över dina pass per vecka, din styrka och din kroppsvikt. De fylls i när du loggar pass.
+466	Nu är du redo!
+467	Öppna din nästa träningsdag i Mitt program och tryck på Starta. Lycka till med träningen!
+468	Tryck framåt
+469	Tillbaka långsamt
+470	Tryck bort plattan
+471	Böj knäna långsamt
+472	Dra stången mot bröstet
+473	Låt den gå upp långsamt
+474	Bröst
+475	Axlar
+476	Bakre axlar
+477	Kappmuskler
+478	Biceps
+479	Triceps
+480	Underarmar
+481	Framsida lår
+482	Baksida lår
+483	Säte
+484	Insida lår
+485	Vader
+486	Bål
+487	Kondition
+488	Axel
+489	Armbåge
+490	Handled
+491	Nacke
+492	Ländrygg
+493	Höft
+494	Knä
+495	Fotled
+496	Trycka bort från bröstet
+497	Trycka upp över huvudet
+498	Trycka upp kroppen / trycka nedåt (dips)
+499	Dra mot kroppen (rodd)
+500	Dra ner uppifrån / dra upp mig själv
+501	Föra ihop armarna framför mig
+502	Öppna armarna utåt / bakåt
+503	Lyfta armarna ut åt sidorna
+504	Lyfta axlarna
+505	Böja armbågarna (curl)
+506	Sträcka armbågarna
+507	Trycka med benen (knäböj / press)
+508	Sträcka knäna (sparka uppåt)
+509	Böja knäna (dra hälarna bakåt)
+510	Fälla framåt i höften och resa mig
+511	Trycka upp höften
+512	Sparka benet bakåt
+513	Trycka isär benen
+514	Klämma ihop benen
+515	Resa mig på tå
+516	Crunch / lyfta knäna
+517	Vrida överkroppen
+518	Hålla still (antirörelse)
+519	Gå / springa / trampa / klättra
+520	Bröstpress
+521	Axelpress
+522	Rodd
+523	Latsdrag
+524	Bröstflyes
+525	Sidoaxlar
+526	Knäböj / benpress
+527	Höftfällning
+528	Ett ben
+529	Nybörjare
+530	Medel
+531	Avancerad
+532	Sittande
+533	Liggande (på rygg eller mage)
+534	Lutad bakåt på en lutande bänk
+535	Stående
+536	Knästående
+537	Hängande / stödd på armarna
+538	Handtag
+539	En rak eller böjd stång
+540	En kabel med handtag eller rep
+541	Dynor mot armarna
+542	Dynor mot benen
+543	En fotplatta
+544	Fria vikter
+545	Remmar
+546	Inget – bara min kropp
+547	Framsidan av armarna
+548	Baksidan av armarna
+549	Framsidan av låren
+550	Baksidan av låren
+551	Säte / rumpa
+552	Mage / bål
+553	Bänkar och ställningar
+554	Kabelmaskiner
+555	Viktmagasinsmaskiner
+556	Maskiner med viktskivor
+557	Kroppsviktsstationer
+558	Bygga muskler
+559	Gå ner i fett / tona
+560	Allmän kondition
+561	Ben
+562	Armar
+563	Bål / mage
+564	Mjuk start · 2 dagar i veckan
+565	2 dagar i veckan
+566	Det mjukaste sättet att börja: två helkroppsdagar med en eller två vilodagar emellan. Gå upp till 3 dagar när det känns lätt.
+567	Helkropp för nybörjare · 3 dagar i veckan
+568	3 dagar i veckan
+569	Tre helkroppsdagar (till exempel mån, ons, fre). Varje muskelgrupp tränas två gånger eller mer i veckan.
+570	Kort helkropp · 3 dagar i veckan
+571	3 korta dagar i veckan
+572	Tre helkroppsdagar med bara 4 övningar var – ben, en press, ett drag och höft eller bål – så ett pass tar cirka 35–40 minuter med uppvärmning och nedvarvning.
+573	2 set × 12–15 repetitioner, lätta vikter. Lär dig rörelserna.
+574	3 set × 10–12 repetitioner. Lite mer vikt när alla repetitioner känns bra.
+575	3 set × 8–10 repetitioner, tyngre. Behåll kontrollen.
+576	2 set × 10–12 repetitioner, lättare. Återhämta dig.
+577	Lätt kondition (cykel, crosstrainer eller löpband)
+578	Armcirklar framåt och bakåt
+579	Knäböj utan vikt
+580	Höftcirklar / bensving
+581	Isärdrag med band eller lätt kabel / face pulls
+582	Lätt uppvärmningsset av första övningen
+583	Bröststretch i dörröppningen
+584	Barnets position / latsstretch
+585	Axelstretch med armen över kroppen (varje sida)
+586	Tricepsstretch över huvudet (varje sida)
+587	Bicepsstretch mot väggen
+588	Stående lårstretch (varje sida)
+589	Sittande stretch för baksida lår
+590	Sätesstretch i fyrposition (varje sida)
+591	Vadstretch mot väggen (varje sida)
+592	Kobrastretch
+593	Långsam djupandning, liggande
+594	Ställ in sätet så att handtagen är i höjd med mitten av bröstet.
+595	Sitt med ryggen platt mot dynan och skulderbladen bakåt.
+596	Tryck framåt tills armarna är nästan raka – lås inte armbågarna.
+597	Gå tillbaka långsamt (2–3 s) tills du känner en stretch i bröstet.
+598	Ställ in sätet så att handtagen börjar i axelhöjd.
+599	Ryggen platt mot dynan, bålen spänd.
+600	Tryck uppåt tills armarna är nästan raka.
+601	Sänk långsamt tillbaka till axelhöjd.
+602	Välj en vikt som låter dig göra repetitionerna med bra teknik (på assisterade maskiner är mer vikt = lättare).
+603	Börja med raka armar och axlarna nere, bort från öronen.
+604	Sänk genom att böja armbågarna till cirka 90°.
+605	Tryck tillbaka upp till raka armar.
+606	Ställ in sätet eller bröstdynan så att du når handtagen med raka armar.
+607	Sitt rak med bröstet upp.
+608	Dra handtagen mot kroppen och kläm ihop skulderbladen.
+609	Gå tillbaka långsamt tills armarna är raka.
+610	Ställ in sätet eller knädynan så att du sitter fast.
+1221	Föregående

@@ -5,6 +5,7 @@ import { state, save, profile } from './store.js';
 import { currentWeek } from './planner.js';
 import { icon, esc, closeSheet, register } from './ui.js';
 import { t } from './i18n.js';
+import { coachAvailable, coachCardShown } from './coach.js';
 
 // Routes that depend on the plan: this week's first workout day and its first exercise.
 const dayRoute = () => { const p = profile(); return p?.plan ? `#/day/${currentWeek(p.plan)}/0` : '#/plan'; };
@@ -21,10 +22,11 @@ const STEPS = [
   { sec: 'Profile', route: '#/profile', sel: 'a.eqrow[href="#/onboard/edit"]', title: 'Edit profile', text: 'Change your personal details, goal or training days per week. Choose "Save & rebuild plan" to get a new plan that fits.' },
   { sec: 'Profile', route: '#/profile', sel: 'a.eqrow[href="#/custom"]', title: 'Build your custom plan', text: 'Choose how many exercises each workout day has, which muscle areas each day trains, how long a session is, the warm-up, a cardio finisher, any injuries to protect, and extra focus areas. A custom plan keeps the same sets and reps all 12 weeks.' },
   { sec: 'Profile', route: '#/profile', sel: '[data-act="tpl-open"]', title: 'App-built plans', text: 'Plans with a set weekly layout: full-body plans for 2 or 3 days a week, the AB Plan and Upper / Lower for 4 days a week, and a Seated plan with no standing or floor work. Pick one instead of a custom plan if you prefer.' },
+  { sec: 'Profile', route: '#/profile', sel: '.coach-row', when: () => coachAvailable(), title: 'Your coach', text: 'Pick Mia or Lucas, or no coach. Your coach cheers you on with short tips and messages. Change how often they speak, or turn them off, any time.' },
   { sec: 'Profile', route: '#/profile', sel: '[data-act="switch-profile"]', title: 'More than one person', text: 'Add a profile for someone else who trains on this phone, and switch between profiles here. Each person gets their own plan and history.' },
   { sec: 'Profile', route: '#/profile', sel: 'a.eqrow[href="#/gym"]', title: 'Gym setup', text: 'Tell the app which equipment your gym has, so your plan only uses what\'s there. More about this in the Gym tab.' },
   { sec: 'Profile', route: '#/profile', sel: '[data-act="tour-start"]', title: 'Take the tour again', text: 'Start this tour again from here whenever you need a refresher.' },
-  { sec: 'Profile', route: '#/profile', sel: '.a11y-btn', title: 'Accessibility', text: 'The person icon opens the accessibility options: bigger text, high contrast, bigger buttons, and spoken cues during workouts. The app also works with VoiceOver and TalkBack.' },
+  { sec: 'Profile', route: '#/profile', sel: '.a11y-btn', title: 'Accessibility', text: 'The person icon opens the accessibility options: bigger text, high contrast, bigger buttons, less motion, and spoken cues during workouts. The app also works with VoiceOver and TalkBack.' },
   { sec: 'Profile', route: '#/profile', sel: '.gear', title: 'Settings', text: 'The gear opens the app\'s settings: language, units, light or dark, the rest timer beep, sync and backup.' },
 
   // ── Settings ──
@@ -41,6 +43,7 @@ const STEPS = [
   { sec: 'My Plan', route: '#/plan', sel: '#nav a[href="#/plan"]', fixed: true, title: 'The My Plan tab', text: 'Your 12-week plan. This is where you start every workout.' },
   { sec: 'My Plan', route: '#/plan', sel: '.weekbar', title: 'Your 12 weeks', text: 'Each bar is a week and fills up as you finish its workouts. Tap a week to look at it. A plan the app builds for you gets harder in steps, and week 12 is an easier recovery week. A plan from "Build your custom plan" keeps the same sets and reps every week.' },
   { sec: 'My Plan', route: '#/plan', sel: '[data-act="plan-info"]', title: 'About your plan', text: 'Tap the plan\'s name to see how it works, or to switch to an app-built plan.' },
+  { sec: 'My Plan', route: '#/plan', sel: '.coachcard', when: () => coachCardShown(), title: 'Tip of the day', text: 'Your coach shares a tip here every day. Tap it to change the coach or how often they speak.' },
   { sec: 'My Plan', route: '#/plan', sel: '.days', title: 'Workout days', text: 'One card per workout day. "Next" marks the one to do now, and finished days get a tick. Tap a day to open it.' },
 
   // ── Workout day ──
@@ -76,6 +79,7 @@ const STEPS = [
 ];
 
 const SECTIONS = [...new Set(STEPS.map(s => s.sec))];
+let LIST = STEPS; // the steps of this run: steps that depend on a feature (the coach) are left out when it is not there
 let at = -1; // current step, -1 = no tour
 let root = null;
 
@@ -84,6 +88,7 @@ export const tourOpen = () => at >= 0;
 export function startTour(from = 0) {
   closeSheet();
   state.settings.tourDone = true; save();
+  LIST = STEPS.filter(s => !s.when || s.when());
   at = from;
   if (!root) {
     root = document.createElement('div');
@@ -103,7 +108,7 @@ function endTour() {
 }
 
 function show() {
-  const st = STEPS[at];
+  const st = LIST[at];
   const route = typeof st.route === 'function' ? st.route() : st.route;
   if (location.hash !== route) { location.hash = route; setTimeout(place, 120); }
   else place();
@@ -112,7 +117,7 @@ function show() {
 // Highlights the step's part of the screen and puts the card where it doesn't cover it.
 function place() {
   if (at < 0 || !root) return;
-  const st = STEPS[at];
+  const st = LIST[at];
   let el = st.sel ? document.querySelector(st.sel) : null;
   if (el && !el.getClientRects().length) el = null;
   const vh = window.innerHeight;
@@ -122,9 +127,9 @@ function place() {
   }
   const r = el?.getBoundingClientRect();
   const secIdx = SECTIONS.indexOf(st.sec);
-  const inSec = STEPS.filter(s => s.sec === st.sec);
+  const inSec = LIST.filter(s => s.sec === st.sec);
   const nextSec = SECTIONS[secIdx + 1];
-  const last = at === STEPS.length - 1;
+  const last = at === LIST.length - 1;
   const cardTop = r && (r.top + r.bottom) / 2 > vh * 0.5;
   root.innerHTML = `
     ${r ? spot(r, vh) : '<div class="tour-dim"></div>'}
@@ -158,10 +163,10 @@ function spot(r, vh) {
 register({
   'tour-start': () => startTour(),
   'tour-close': () => endTour(),
-  'tour-next': () => { if (at >= STEPS.length - 1) endTour(); else { at++; show(); } },
+  'tour-next': () => { if (at >= LIST.length - 1) endTour(); else { at++; show(); } },
   'tour-back': () => { if (at > 0) { at--; show(); } },
   'tour-skip': () => {
-    const next = STEPS.findIndex((s, k) => k > at && s.sec !== STEPS[at].sec);
+    const next = LIST.findIndex((s, k) => k > at && s.sec !== LIST[at].sec);
     if (next < 0) endTour(); else { at = next; show(); }
   },
 });

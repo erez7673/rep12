@@ -114,6 +114,14 @@ Deploy = commit and push to `main`; GitHub Pages is live about 30 s later. On ph
 - Bump `CACHE` when the set of files changes.
 - Anything under `/media/` bypasses the service worker: iPhone Safari loads video with range requests, which the cache can't answer. Clips and their posters are therefore not available offline (beyond the browser's own HTTP cache).
 
+**AI personal coaches (`coach.js`, built but hidden).** Mia and Lucas; plan in the git-ignored `AI personal trainers/` folder (`COACH-USAGE-PLAN.md`), status in `HANDOVER.md`. Coaches use original faces only: never a real person's or actor's face as a reference.
+- **Hidden until the pictures exist:** `READY = false` in `coach.js` hides every coach element (and the coach tour steps). For testing set `state.settings.coachPreview = true`. When `docs/media/coach/` has `<coach>-idle.jpg` and the clips, set `READY = true`.
+- **No AI at run time:** words are fixed, translated texts (`t()`), picked by simple rules: a tip of the day (rotating, plus a tip for the plan's phase on app-built plans), the exercise's own tip on the rest card and exercise page, a line for the day's focus. Most texts are shared and neutral; only a few signature lines (`SIG`) differ per coach, so keep new coach texts shared where possible.
+- **Settings (per phone, not synced):** `coach` (`mia`, `lucas`, `none`), `coachStyle` (`full`, `key` = only start and finish), `coachAsked`. Off by default; chosen on the "Meet your coach" card after the first profile (the tour starts after it), or from Profile → Coach / Settings. Existing users see a one-time card on My Plan.
+- **Where it shows:** My Plan tip card, day preview line, "Let's go!" overlay at workout start (never takes taps), rest card tip, summary note, exercise page tip. The avatar falls back to the coach's initial when the picture is missing; clips are skipped with Reduce motion.
+- **Disclosure:** the coach sheet says the coaches are AI-generated characters and the tips are general guidance, not medical advice.
+- Add a tour step for anything new (steps with `when:` are skipped when the coach is hidden).
+
 ## Conventions
 
 - **UI text:** written in English through `t()` (see Language and units), plain wording aimed at non-technical users; weights and heights always through the unit helpers. The app is public: no gym names, no machine-brand names, nothing that assumes a couple or "both phones".

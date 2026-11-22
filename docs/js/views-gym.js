@@ -9,6 +9,7 @@ import { EQUIP_PIC } from './pictures.js';
 import { hasAnim, animHTML, startAnims } from './anim.js';
 import { generatePlan, dayFocus, sessionBudget, warmPref, dayCap, sortDay, raiseDayCap, MAX_EX_PER_DAY, dayName } from './planner.js';
 import { t, toW, wUnit, unitText, listJoin } from './i18n.js';
+import { coachTipCard } from './coach.js';
 import { rerender } from './app.js';
 import { scheduleSync } from './sync.js';
 
@@ -88,7 +89,7 @@ export function exerciseView(id) {
       ${hasAnim(ex.id) ? `${animHTML(ex, p.stats.sex)}
         <details class="card moves-card"><summary><b>${t('Written steps')}</b></summary>${steps}</details>`
       : steps}
-      ${ex.tip ? `<div class="card tip">💡 ${esc(exText(ex.tip))}</div>` : ''}
+      ${ex.tip ? (coachTipCard(exText(ex.tip)) || `<div class="card tip">💡 ${esc(exText(ex.tip))}</div>`) : ''}
       ${ex.assist ? `<div class="card tip">${t('On assisted machines the weight helps you – more weight = easier. The app lowers it as you get stronger.')}</div>` : ''}
       ${ex.perHand ? `<p class="muted">${t('Weight shown is per dumbbell.')}</p>` : ''}
       <h3>${t('Your history')}</h3>

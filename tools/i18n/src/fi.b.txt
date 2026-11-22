@@ -661,3 +661,47 @@
 1272	Aika loppui.
 1273	Henkilökuvake avaa saavutettavuusvalinnat: isompi teksti, suuri kontrasti, isommat painikkeet ja puhutut ohjeet treenin aikana. Sovellus toimii myös VoiceOverin ja TalkBackin kanssa.
 1274	Saavutettavuusvalinnat löytyvät myös täältä.
+1275	Lämmin ja innostava
+1276	Rauhallinen ja tasainen
+1277	Hei, olen Mia! Kannustan sinua.
+1278	Mennään!
+1279	Mahtavaa työtä tänään!
+1280	Olen Lucas. Treenaamme tasaisesti, yksi sarja kerrallaan.
+1281	Aika treenata.
+1282	Hyvin taisteltu. Vahva kuin pitkälaiva.
+1283	Lämmittele ensin: muutama kevyt sarja ennen työpainoa suojaa niveliäsi.
+1284	Hidas ja hallittu voittaa raskaan ja huolimattoman. Laske paino kahdessa sekunnissa.
+1285	Hengitä ulos, kun työnnät, ja sisään, kun lasket.
+1286	Juo vähän vettä sarjojen välillä.
+1287	Lihakset kasvavat unen aikana. Tavoittele seitsemää tuntia tai enemmän.
+1288	Lisää painoa vasta, kun jokainen toisto jokaisessa sarjassa tuntui hyvältä.
+1289	Jäikö päivä väliin? Tee vain seuraava treeni. Yksi väliin jäänyt päivä ei muuta mitään.
+1290	Pidä selkä suorana ja vatsa kireänä jokaisessa liikkeessä.
+1291	Lepää sarjojen välillä 60–90 sekuntia, jotta jaksat seuraavan sarjan hyvin.
+1292	Kirjaa jokainen sarja. Ylös kirjatun voit voittaa ensi viikolla.
+1293	Lyhyt kävely treenin jälkeen auttaa palautumaan.
+1294	Kipu ei ole sama asia kuin ponnistus. Jos jokin sattuu, lopeta tai vaihda liike.
+1295	Viikot 1–4: opettele liikkeet ja löydä työpainosi. Älä vielä tavoittele raskasta.
+1296	Viikot 5–8: muutama toisto lisää sarjaa kohden. Lisää painoa vasta, kun jokainen toisto tuntuu hyvältä.
+1297	Viikot 9–11: raskaampia painoja ja vähemmän toistoja. Pysy hallinnassa.
+1298	Viikko 12 on tarkoituksella kevyempi. Palaudu ja aloita seuraava ohjelma.
+1299	Tapaa valmentajasi
+1300	Valitse valmentaja kannustamaan sinua tai ohita tämä.
+1301	Tänään: {focus}. Lämmittele ensin ja ota rauhallisesti.
+1302	Vinkki: {name}
+1303	Valmentaja
+1304	Ei valmentajaa
+1305	Valmentajat ovat tekoälyllä tehtyjä hahmoja. Heidän vinkkinsä tulevat sovelluksesta, eivät ihmiseltä, ja ovat yleisiä ohjeita, eivät lääketieteellistä neuvontaa.
+1306	Valitse valmentaja kannustamaan sinua tai ohita tämä. Voit vaihtaa milloin tahansa kohdassa Profiili → Valmentaja.
+1307	Valmentajasi
+1308	Kuinka usein
+1309	Vinkit ja viestit
+1310	Vain alku ja loppu
+1311	Vähennä liikettä
+1313	Valitse Mia tai Lucas, tai ei kumpaakaan. Valmentajasi kannustaa lyhyillä vinkeillä ja viesteillä. Muuta, kuinka usein hän puhuu, tai kytke hänet pois milloin tahansa.
+1314	Henkilökuvake avaa saavutettavuusvalinnat: isompi teksti, suuri kontrasti, isommat painikkeet, vähemmän liikettä ja puhutut ohjeet treenin aikana. Sovellus toimii myös VoiceOverin ja TalkBackin kanssa.
+1315	Valmentajasi jakaa tässä vinkin joka päivä. Napauta sitä vaihtaaksesi valmentajaa tai sitä, kuinka usein hän puhuu.
+1316	Liikeklipit ja valmentaja pysyvät paikallaan, kunnes toistat ne, ja liukumiset ja häivytykset loppuvat. Myös puhelimesi oma asetus huomioidaan.
+1312	Liikeklipit ja valmentaja pysyvät paikallaan, kunnes toistat ne, ja liukumiset ja häivytykset loppuvat. Myös puhelimesi oma asetus huomioidaan.
+1317	Päivän vinkki
+1318	Liikeklipit pysyvät paikallaan, kunnes toistat ne, ja liukumiset ja häivytykset loppuvat. Myös puhelimesi oma asetus huomioidaan.

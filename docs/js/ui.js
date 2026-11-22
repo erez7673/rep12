@@ -102,14 +102,19 @@ export function applyTheme() {
   document.querySelectorAll('input[name="theme"]').forEach(r => { r.checked = r.value === th; });
 }
 // Accessibility settings (per phone): text size, high contrast, bigger buttons. CSS reads them from <html>.
+const reduceMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
+// Less motion: the setting in Accessibility, or the phone's own "reduce motion".
+export const motionReduced = () => !!state.settings.reduceMotion || reduceMQ.matches;
 export function applyA11y() {
   const st = state.settings, d = document.documentElement.dataset;
+  if (motionReduced()) d.motion = 'reduce'; else delete d.motion;
   if (st.textSize && st.textSize !== 'normal') d.text = st.textSize; else delete d.text;
   if (st.contrast) d.contrast = 'high'; else delete d.contrast;
   if (st.bigButtons) d.big = '1'; else delete d.big;
 }
 export function setTheme(th) { state.settings.theme = th; save(); applyTheme(); }
 darkMQ.addEventListener?.('change', applyTheme);
+reduceMQ.addEventListener?.('change', () => applyA11y());
 
 export const themeButton = () => `<button class="iconbtn" data-act="toggle-theme" aria-label="${isDark() ? t('Switch to light mode') : t('Switch to dark mode')}">${isDark() ? SUN : MOON}</button>`;
 register({ 'toggle-theme': () => setTheme(isDark() ? 'light' : 'dark') });

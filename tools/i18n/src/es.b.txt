@@ -662,3 +662,47 @@
 1272	Se acabó el tiempo.
 1273	El icono de la persona abre las opciones de accesibilidad: texto más grande, alto contraste, botones más grandes y avisos hablados durante el entrenamiento. La app también funciona con VoiceOver y TalkBack.
 1274	Las opciones de accesibilidad también están aquí.
+1275	Cercana y animada
+1276	Tranquilo y constante
+1277	¡Hola, soy Mia! Te animaré.
+1278	¡Vamos!
+1279	¡Qué gran trabajo hoy!
+1280	Soy Lucas. Entrenamos con constancia, serie a serie.
+1281	Hora de entrenar.
+1282	Bien peleado. Fuerte como un drakkar.
+1283	Calienta primero: unas series suaves antes del peso de trabajo protegen tus articulaciones.
+1284	Lento y controlado vale más que pesado y descuidado. Baja el peso en dos segundos.
+1285	Suelta el aire al empujar y toma aire al bajar.
+1286	Bebe un poco de agua entre series.
+1287	El músculo crece mientras duermes. Intenta dormir siete horas o más.
+1288	Sube el peso solo cuando cada repetición de cada serie salió bien.
+1289	¿Te saltaste un día? Haz el siguiente entrenamiento. Un día perdido no cambia nada.
+1290	Mantén la espalda recta y el abdomen firme en cada ejercicio.
+1291	Descansa de 60 a 90 segundos entre series para rendir bien en la siguiente.
+1292	Registra cada serie. Lo que anotas es lo que puedes superar la próxima semana.
+1293	Un paseo corto después de entrenar ayuda a recuperarte.
+1294	Dolor no es lo mismo que esfuerzo. Si algo duele, para o cambia el ejercicio.
+1295	Semanas 1–4: aprende los movimientos y encuentra tus pesos de trabajo. Aún no busques peso alto.
+1296	Semanas 5–8: unas repeticiones más por serie. Sube el peso solo cuando cada repetición sale bien.
+1297	Semanas 9–11: pesos más altos y menos repeticiones. Mantén el control.
+1298	La semana 12 es más ligera a propósito. Recupérate y empieza el siguiente plan.
+1299	Conoce a tu entrenador
+1300	Elige un entrenador que te anime, o salta este paso.
+1301	Hoy: {focus}. Calienta primero y tómate tu tiempo.
+1302	Consejo de {name}
+1303	Entrenador
+1304	Sin entrenador
+1305	Los entrenadores son personajes creados con IA. Sus consejos vienen de la app, no de una persona, y son orientación general, no consejo médico.
+1306	Elige un entrenador que te anime, o salta este paso. Puedes cambiarlo cuando quieras en Perfil → Entrenador.
+1307	Tu entrenador
+1308	Con qué frecuencia
+1309	Consejos y mensajes
+1310	Solo el inicio y el final
+1311	Reducir movimiento
+1313	Elige a Mia o a Lucas, o ninguno. Tu entrenador te anima con consejos y mensajes breves. Cambia la frecuencia con que habla, o desactívalo, cuando quieras.
+1314	El icono de la persona abre las opciones de accesibilidad: texto más grande, alto contraste, botones más grandes, menos movimiento y avisos hablados durante el entrenamiento. La app también funciona con VoiceOver y TalkBack.
+1315	Tu entrenador comparte aquí un consejo cada día. Tócalo para cambiar de entrenador o la frecuencia con que habla.
+1316	Los clips de ejercicios y el entrenador se quedan quietos hasta que los reproduzcas, y se detienen los deslizamientos y desvanecimientos. También se respeta el ajuste de tu teléfono.
+1312	Los clips de ejercicios y el entrenador se quedan quietos hasta que los reproduzcas, y se detienen los deslizamientos y desvanecimientos. También se respeta el ajuste de tu teléfono.
+1317	Consejo del día
+1318	Los clips de ejercicios se quedan quietos hasta que los reproduzcas, y se detienen los deslizamientos y desvanecimientos. También se respeta el ajuste de tu teléfono.

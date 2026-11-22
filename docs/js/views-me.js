@@ -2,6 +2,7 @@
 import { state, profile, profileList, createProfile, touchProfile, save, replaceState, exById, today } from './store.js';
 import { esc, icon, register, toast, fmtDate, sheet, closeSheet, setTheme, applyA11y } from './ui.js';
 import { say, canSpeak } from './speak.js';
+import { coachAvailable, coachProfileRow, coachSettingsBlock, openMeet } from './coach.js';
 import { GOALS, LEVELS, FOCUS, generatePlan, AREAS, areasFor, dayName, exPerDay, setDayAreas, fitDay, MAX_DAYS, MAX_EX_PER_DAY } from './planner.js';
 import { startTour } from './tour.js';
 import { INJURIES } from './exercises.js';
@@ -129,7 +130,11 @@ register({
     toast(t('Plan ready, {name}!', { name: p.name }));
     location.hash = '#/plan';
     // A new user gets the app tour once, right after making their first profile.
-    if (first && !state.settings.tourDone) setTimeout(() => startTour(), 600);
+    if (first && !state.settings.tourDone) {
+      // The coach card comes first (when the coaches are available); the tour starts once it is answered.
+      if (coachAvailable() && !state.settings.coachAsked) setTimeout(() => openMeet(() => startTour()), 500);
+      else setTimeout(() => startTour(), 600);
+    }
   },
   'save-profile': (el) => {
     const d = readForm(); if (!d) return;
@@ -162,6 +167,7 @@ export function profileView() {
         <a class="eqrow" href="#/onboard/edit"><span>${t('Edit profile')}</span>${icon.chev}</a>
         <a class="eqrow" href="#/custom"><span>${t('Build your custom plan')}</span>${icon.chev}</a>
         <button class="eqrow" data-act="tpl-open"><span>${t('App-built plans')}</span>${icon.chev}</button>
+        ${coachProfileRow()}
         <button class="eqrow" data-act="switch-profile"><span>${t('Switch profile')}</span><span class="muted">${n === 1 ? t('1 profile') : t('{n} profiles', { n })} ${icon.chev}</span></button>
         <a class="eqrow" href="#/onboard"><span>${t('Add a profile')}</span>${icon.plus}</a>
         <a class="eqrow" href="#/gym"><span>${t('Gym setup')}</span>${icon.chev}</a>
@@ -187,6 +193,7 @@ export function accessView() {
       <div class="card list a11y-card">
         ${sw('contrast', t('High contrast'), t('Darker text, stronger lines and colours that stand out more.'))}
         ${sw('bigButtons', t('Bigger buttons'), t('Larger buttons and more space between them, so they are easier to tap.'))}
+        ${sw('reduceMotion', t('Reduce motion'), t('Exercise clips stay still until you play them, and sliding and fading stop. Your phone\'s own setting is followed too.'))}
       </div>
 
       <h3>${t('Spoken workout cues')}</h3>
@@ -224,6 +231,8 @@ export function settingsView() {
 
       <h3>${t('Accessibility')}</h3>
       <div class="card list"><a class="eqrow a11y-row" href="#/access"><span>${icon.access} ${t('Text size, contrast, bigger buttons, spoken cues')}</span>${icon.chev}</a></div>
+
+      ${coachSettingsBlock()}
 
       <h3>${t('Workout')}</h3>
       <div class="card list beep-card">

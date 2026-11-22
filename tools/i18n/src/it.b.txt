@@ -661,3 +661,47 @@
 1272	Tempo scaduto.
 1273	L'icona della persona apre le opzioni di accessibilità: testo più grande, contrasto elevato, pulsanti più grandi e avvisi vocali durante l'allenamento. L'app funziona anche con VoiceOver e TalkBack.
 1274	Le opzioni di accessibilità sono anche qui.
+1275	Calorosa e motivante
+1276	Calmo e costante
+1277	Ciao, sono Mia! Farò il tifo per te.
+1278	Andiamo!
+1279	Ottimo lavoro oggi!
+1280	Sono Lucas. Ci alleniamo con costanza, una serie alla volta.
+1281	È ora di allenarsi.
+1282	Ben combattuto. Forte come un drakkar.
+1283	Riscaldati prima: qualche serie leggera prima del carico di lavoro protegge le articolazioni.
+1284	Lento e controllato batte pesante e sporco. Abbassa il peso in due secondi.
+1285	Espira quando spingi, inspira quando scendi.
+1286	Bevi un po' d'acqua tra le serie.
+1287	I muscoli crescono mentre dormi. Punta a sette ore o più.
+1288	Aumenta il peso solo quando ogni ripetizione di ogni serie è andata bene.
+1289	Hai saltato un giorno? Fai semplicemente il prossimo allenamento. Un giorno perso non cambia nulla.
+1290	Tieni la schiena dritta e l'addome contratto in ogni esercizio.
+1291	Recupera da 60 a 90 secondi tra le serie per rendere bene nella successiva.
+1292	Registra ogni serie. Quello che scrivi è ciò che puoi battere la prossima settimana.
+1293	Una breve camminata dopo l'allenamento aiuta il recupero.
+1294	Dolore non è sforzo. Se qualcosa fa male, fermati o cambia esercizio.
+1295	Settimane 1–4: impara i movimenti e trova i tuoi carichi di lavoro. Non inseguire ancora i pesi alti.
+1296	Settimane 5–8: qualche ripetizione in più per serie. Aumenta il peso solo quando ogni ripetizione va bene.
+1297	Settimane 9–11: pesi più alti e meno ripetizioni. Mantieni il controllo.
+1298	La settimana 12 è più leggera di proposito. Recupera, poi inizia il prossimo piano.
+1299	Conosci il tuo coach
+1300	Scegli un coach che faccia il tifo per te, oppure salta.
+1301	Oggi: {focus}. Riscaldati prima e non avere fretta.
+1302	Consiglio di {name}
+1303	Coach
+1304	Nessun coach
+1305	I coach sono personaggi generati con l'IA. I consigli arrivano dall'app, non da una persona, e sono indicazioni generali, non consulenza medica.
+1306	Scegli un coach che faccia il tifo per te, oppure salta. Puoi cambiare in qualsiasi momento in Profilo → Coach.
+1307	Il tuo coach
+1308	Quanto spesso
+1309	Consigli e messaggi
+1310	Solo inizio e fine
+1311	Riduci il movimento
+1313	Scegli Mia o Lucas, oppure nessuno. Il tuo coach ti incoraggia con brevi consigli e messaggi. Cambia quanto spesso parla, o spegnilo, quando vuoi.
+1314	L'icona della persona apre le opzioni di accessibilità: testo più grande, contrasto elevato, pulsanti più grandi, meno movimento e avvisi vocali durante l'allenamento. L'app funziona anche con VoiceOver e TalkBack.
+1315	Il tuo coach condivide qui un consiglio ogni giorno. Toccalo per cambiare coach o quanto spesso parla.
+1316	Le clip degli esercizi e il coach restano fermi finché non le avvii, e scorrimenti e dissolvenze si fermano. Viene seguita anche l'impostazione del telefono.
+1312	Le clip degli esercizi e il coach restano fermi finché non le avvii, e scorrimenti e dissolvenze si fermano. Viene seguita anche l'impostazione del telefono.
+1317	Consiglio del giorno
+1318	Le clip degli esercizi restano ferme finché non le avvii, e scorrimenti e dissolvenze si fermano. Viene seguita anche l'impostazione del telefono.

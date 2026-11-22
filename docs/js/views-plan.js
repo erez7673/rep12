@@ -5,6 +5,7 @@ import { currentWeek, planProgress, dayFocus, planPhase, isCustom, buildSession,
 import { MUSCLES } from './exercises.js';
 import * as W from './workout.js';
 import { say, setCue } from './speak.js';
+import { coachPlanCard, coachDayLine, coachRest, coachFinish, coachStart, coachSpeakFinish } from './coach.js';
 import { t, wUnit, fromW, toW, locale, listJoin } from './i18n.js';
 import { rerender } from './app.js';
 import { scheduleSync } from './sync.js';
@@ -61,6 +62,7 @@ export function planView() {
       </header>
       <div class="weekbar">${segs}</div>
       <p class="phase">${esc(planPhase(plan, w).name)} · ${t('{a}/{b} done', { a: doneThisWeek, b: plan.days.length })}${w !== cw ? ` · <button class="linklike" data-act="pick-week" data-w="${cw}">${t('back to current week')}</button>` : ''}</p>
+      ${coachPlanCard(p)}
       <div class="days">${cards}</div>
       <div class="statrow">
         <div class="stat"><b>${pct}%</b><small>${t('Plan complete')}</small></div>
@@ -180,6 +182,7 @@ export function dayView(w, d) {
         <div class="stat">${icon.fire}<b>${estimateCalories(p.stats, mins)}</b><small>${t('Calories (est.)')}</small></div>
       </div>
       <p class="phase">${t('Week {w}', { w })} · ${esc(planPhase(plan, w).name)}</p>
+      ${coachDayLine(day)}
       ${rec ? `<a class="card donecard" href="#/summary/${rec.id}">${icon.check} ${t('Done on {date} – view log', { date: fmtDate(rec.date) })}</a>` : ''}
       <h3>${t('Warm-up')}</h3>
       ${preview.warm ? `<div class="exrow"><a href="#/ex/${encodeURIComponent(preview.warm.exId)}" aria-label="${esc(t('How to do it') + ': ' + (exById(preview.warm.exId)?.name || ''))}">${thumb(exById(preview.warm.exId))}</a>
@@ -342,6 +345,7 @@ register({
     const s = buildSession(p, +el.dataset.w, +el.dataset.d);
     W.start(s);
     location.hash = '#/session';
+    coachStart();
   },
   'ex-menu': (el) => {
     const d = +el.dataset.d, i = +el.dataset.i;
@@ -442,7 +446,7 @@ export function sessionView() {
         <button class="pillbtn" data-act="rest-add" data-v="-15">${t('−15 s')}</button>
         <button class="pillbtn" data-act="rest-add" data-v="15">${t('+15 s')}</button>
         <button class="pillbtn light" data-act="rest-skip">${t('Skip rest')}</button>
-      </div></div>`;
+      </div>${coachRest(s.items[s.cur.i])}</div>`;
   } else if (allDone || s.phase === 'ready') {
     head = `<div class="hd"><div class="bigline">${t('All sets done')} 🎉</div><p>${s.cardio && !s.cardio.done ? t('Finish with cardio and the cooldown, then tap Finish.') : t('Finish with the cooldown, then tap Finish.')}</p>
       <div class="hd-btns"><button class="pillbtn light" data-act="finish">${t('Finish workout')}</button></div></div>`;
@@ -614,6 +618,7 @@ register({
     if (left && !confirm(t('{n} set(s) not logged. Finish anyway?', { n: left }))) return;
     closeSheet();
     const rec = W.finish();
+    coachSpeakFinish();
     openItem = null;
     scheduleSync(500);
     location.hash = `#/summary/${rec.id}`;
@@ -645,6 +650,7 @@ export function summaryView(id) {
   const title = rec.dayIdx != null ? dayName(rec.dayIdx) : t(rec.title);
   return {
     html: `<header class="bar"><button class="iconbtn" data-act="go" data-href="#/plan" aria-label="${t('Back')}">${icon.back}</button><h2>${esc(title)}</h2><span></span></header>
+      ${coachFinish()}
       <p class="lead">${fmtDate(rec.date)}${rec.week ? ` · ${t('Week {w}', { w: rec.week })}` : ''}</p>
       <div class="statrow">
         <div class="stat"><b>${t('{n} min', { n: mins })}</b><small>${t('Duration')}</small></div>

@@ -59,7 +59,19 @@ These changes don't affect the clips. If a future change adds a JS or CSS file, 
   - bigger buttons;
   - spoken workout cues (set logged, 10 seconds of rest left, rest over with the next set, timers done) in the app's language.
 - **Screen readers (VoiceOver, TalkBack):** every button and input has a spoken name, icons are hidden from readers, sheets act as dialogs, the active tab is announced, and keyboard focus is visible.
-- **Not done (the user didn't pick these):** reduce motion, seated / wheelchair-only plans.
+- **Seated plan: done** (`ac2b94b`, live and confirmed working by the user): an app-built plan with no standing or floor work.
+- **Not done (the user didn't pick it):** reduce motion.
+
+## AI personal coaches (first version built behind a switch, 2026-11-22)
+
+- Two coaches: **Mia** (female; her face was made by the user, `AI personal trainers/Screenshot 2026-11-22 180242.png`) and **Lucas** (male, Viking look, **original invented face**). The actor screenshot in that folder must not be used as a reference: it is a real, identifiable person.
+- **Decisions (user, 2026-11-22: "use your recommendations"):** coach off unless chosen at onboarding; one neutral voice with a few signature lines per coach; Reduce motion added to the Accessibility screen; build the first version first.
+- **Built (hidden, `READY = false` in `docs/js/coach.js`):** picker and "Meet your coach" card, avatar, tip of the day, day-preview line, start overlay, rest-card tip, summary note, exercise-page tip, Coach row in Profile and Settings, tour steps, 41 translated texts, and **Reduce motion** (live now: Accessibility screen; exercise clips don't autoplay, sliding/fading stops; also follows the phone's setting). Details in CLAUDE.md.
+- **To switch it on:** put the approved pictures and clips in `docs/media/coach/` (`mia-idle.jpg`, `mia-letsgo.mp4`, `lucas-idle.jpg`, `lucas-letsgo.mp4`; 480×480, `idle` = round-crop of the master still), then set `READY = true`. `breathe`, `thumbsup`, `highfive` and `cheer` clips are not used by the code yet (phase 2: week/phase/milestone moments, welcome back, weight-up, Progress line).
+- Plan and placement: `AI personal trainers/COACH-USAGE-PLAN.md` (detailed; the older `COACH-PLAN.md` is the first draft). Silent 4 s clips (idle, wave, letsgo, breathe, thumbsup, cheer, highfive), 480×480 like the exercise clips, plus a translated speech bubble; always optional.
+- First-picture prompts: `AI personal trainers/FLOW-PROMPTS.md` (master still, avatar close-up, three-quarter view per coach). Save approved pictures as `mia-master.png` etc. in that folder.
+- **Tool not decided.** Flow on Google AI Pro: 1,000 credits/month + 50/day; a clip costs about 10 (Lite) / 20 (Fast) / 100 (Quality), so one coach (~21 generations) ≈ 210 Lite or 420 Fast credits. Pro clips get a visible Veo watermark (removed only for Ultra in Flow); SynthID is always there. **Commercial use of Flow output is not confirmed**: Google's preview-product terms forbid commercial use of preview output, and Flow/Veo may count as preview. Until that is settled, make test images in Flow and the final published clips in Higgsfield.
+- The user wants to see a Flow clip with the watermark before deciding (one Lite clip ≈ 10 credits).
 
 ## Still to do next month (9 exercises, cardio excluded)
 

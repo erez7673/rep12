@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="css/app.css">
   <script>
     // Apply the saved light/dark and accessibility choices before the page paints (avoids a flash).
-    try { var s = JSON.parse(localStorage.getItem('fressi.v1') || '{}').settings || {}, d = document.documentElement.dataset; if (s.theme === 'light' || s.theme === 'dark') d.theme = s.theme; if (s.textSize && s.textSize !== 'normal') d.text = s.textSize; if (s.contrast) d.contrast = 'high'; if (s.bigButtons) d.big = '1'; } catch (e) {}
+    try { var s = JSON.parse(localStorage.getItem('fressi.v1') || '{}').settings || {}, d = document.documentElement.dataset; if (s.theme === 'light' || s.theme === 'dark') d.theme = s.theme; if (s.textSize && s.textSize !== 'normal') d.text = s.textSize; if (s.contrast) d.contrast = 'high'; if (s.bigButtons) d.big = '1'; if (s.reduceMotion) d.motion = 'reduce'; } catch (e) {}
   </script>
 </head>
 <body>

@@ -6,7 +6,7 @@
 // and the end of the effort (p = 1). Elbows and knees are worked out from that (two-joint inverse kinematics),
 // so the hands stay on the handles and the feet on the platform while the equipment moves.
 import { MUSCLES } from './exercises.js';
-import { esc } from './ui.js';
+import { esc, motionReduced } from './ui.js';
 import { t } from './i18n.js';
 
 // Body sizes in drawing units (the picture is 260 × 220, floor at y = 205).
@@ -223,7 +223,7 @@ export function animHTML(ex, sex) {
   if (VIDEOS.has(ex.id)) {
     const f = `media/anim/${ex.id}-${sex === 'male' ? 'm' : 'f'}`;
     return `<figure class="anim vid">
-      <video src="${f}.mp4" poster="${f}.jpg" autoplay muted loop playsinline preload="auto" aria-label="${esc(t('{name} animation', { name: ex.name }))}"></video>
+      <video src="${f}.mp4" poster="${f}.jpg" ${motionReduced() ? 'controls preload="metadata"' : 'autoplay loop preload="auto"'} muted playsinline aria-label="${esc(t('{name} animation', { name: ex.name }))}"></video>
       <figcaption><span class="legend">${leg('pri', [ex.m])}${leg('sec', ex.s || [])}</span></figcaption>
     </figure>`;
   }
@@ -237,7 +237,7 @@ export function animHTML(ex, sex) {
 // Runs every animation on the page; each one stops by itself when its element is removed.
 export function startAnims(exById) {
   for (const el of document.querySelectorAll('[data-anim]')) {
-    if (el.dataset.running) continue;
+    if (el.dataset.running || motionReduced()) continue; // reduced motion: the first frame stays
     el.dataset.running = '1';
     const id = el.dataset.anim, ex = exById(id), svg = el.querySelector('svg'), word = el.querySelector('[data-anim-word]');
     let lastWord = 0;

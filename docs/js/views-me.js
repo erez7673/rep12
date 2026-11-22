@@ -2,6 +2,7 @@
 import { state, profile, profileList, createProfile, touchProfile, save, replaceState, exById, today } from './store.js';
 import { esc, icon, register, toast, fmtDate, fmtKg, sheet, closeSheet, setTheme } from './ui.js';
 import { GOALS, LEVELS, FOCUS, generatePlan, AREAS, areasFor, dayName, exPerDay, setDayAreas, fitDay, MAX_DAYS, MAX_EX_PER_DAY } from './planner.js';
+import { startTour } from './tour.js';
 import { INJURIES, MUSCLES } from './exercises.js';
 import { lineChart, barChart } from './charts.js';
 import { syncNow, syncEnabled, scheduleSync } from './sync.js';
@@ -102,11 +103,14 @@ register({
   'create-profile': () => {
     const d = readForm(); if (!d) return;
     d.stats.likes = []; d.stats.dislikes = [];
+    const first = !profileList().length;
     const p = createProfile(d);
     p.plan = generatePlan(p);
     touchProfile(p); scheduleSync(1000);
     toast(`Plan ready, ${p.name}!`);
     location.hash = '#/plan';
+    // A new user gets the app tour once, right after making their first profile.
+    if (first && !state.settings.tourDone) setTimeout(() => startTour(), 600);
   },
   'save-profile': (el) => {
     const d = readForm(); if (!d) return;
@@ -141,6 +145,7 @@ export function profileView() {
         <button class="eqrow" data-act="switch-profile"><span>Switch profile</span><span class="muted">${profileList().length} profiles ${icon.chev}</span></button>
         <a class="eqrow" href="#/onboard"><span>Add a profile</span>${icon.plus}</a>
         <a class="eqrow" href="#/gym"><span>Gym setup</span>${icon.chev}</a>
+        <button class="eqrow" data-act="tour-start"><span>Take the app tour</span>${icon.chev}</button>
       </div>
 
       <h3>Appearance</h3>

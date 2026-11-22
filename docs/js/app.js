@@ -8,6 +8,7 @@ import { planView, dayView, sessionView, summaryView } from './views-plan.js';
 import { libraryView, exerciseView, gymView, identifyView } from './views-gym.js';
 import { onboardView, customPlanView, profileView, progressView } from './views-me.js';
 import { timerView, timerTick } from './views-timer.js';
+import './tour.js';
 
 const ROUTES = [
   [/^#?\/?$/, () => planView()],

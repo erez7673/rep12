@@ -117,7 +117,7 @@ function place() {
   const last = at === STEPS.length - 1;
   const cardTop = r && (r.top + r.bottom) / 2 > vh * 0.5;
   root.innerHTML = `
-    ${r ? `<div class="tour-spot" style="top:${r.top - 6}px;left:${r.left - 6}px;width:${r.width + 12}px;height:${r.height + 12}px"></div>` : '<div class="tour-dim"></div>'}
+    ${r ? spot(r, vh) : '<div class="tour-dim"></div>'}
     <div class="tour-card ${cardTop ? 'at-top' : ''}">
       <button class="tour-x" data-act="tour-close" aria-label="Close the tour">${icon.x}</button>
       <small class="tour-sec">${esc(st.sec)} · ${inSec.indexOf(st) + 1} of ${inSec.length}</small>
@@ -129,6 +129,13 @@ function place() {
         <button class="tour-btn primary" data-act="tour-next">${last ? 'Finish' : 'Next'}</button>
       </div>
     </div>`;
+}
+
+// The highlight: the part's box plus a small margin, kept inside the screen (the bottom tabs touch its edge).
+function spot(r, vh) {
+  const top = Math.max(2, r.top - 6), bottom = Math.min(vh - 2, r.bottom + 6);
+  const left = Math.max(2, r.left - 6), right = Math.min(window.innerWidth - 2, r.right + 6);
+  return `<div class="tour-spot" style="top:${top}px;left:${left}px;width:${right - left}px;height:${bottom - top}px"></div>`;
 }
 
 register({

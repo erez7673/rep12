@@ -1,0 +1,610 @@
+611	Parti con le braccia tese sopra la testa.
+612	Tira giù portando i gomiti verso i fianchi.
+613	Torna piano fino a distendere le braccia.
+614	Regola il sedile in modo che le maniglie siano all'altezza del petto.
+615	Gomiti leggermente piegati e fermi.
+616	Unisci le braccia davanti al petto e stringi.
+617	Apri piano finché senti allungare.
+618	Regola in modo che le maniglie siano all'altezza delle spalle.
+619	Braccia quasi tese davanti a te.
+620	Porta le braccia indietro e in fuori fino ad allinearle al corpo.
+621	Torna piano.
+622	Regola in modo che il perno sia allineato alle spalle.
+623	Parti con le braccia lungo i fianchi.
+624	Solleva le braccia lateralmente fino all'altezza delle spalle.
+625	Scendi piano.
+626	In piedi o seduto dritto, tieni le maniglie.
+627	Solleva le spalle dritte verso le orecchie.
+628	Tieni 1 s in alto.
+629	Regola in modo che i gomiti siano allineati al perno della macchina.
+630	Braccia sull'imbottitura, palmi in su.
+631	Porta le maniglie verso le spalle.
+632	Scendi piano fino a braccia quasi tese.
+633	Braccia sull'imbottitura.
+634	Distendi del tutto le braccia e contrai i tricipiti.
+635	Regola sedile o schienale in modo che le ginocchia siano a circa 90° all'inizio.
+636	Piedi alla larghezza delle spalle, schiena aderente allo schienale.
+637	Spingi con tutto il piede finché le gambe sono quasi tese.
+638	Scendi piano, senza staccare la zona lombare dallo schienale.
+639	Allinea le ginocchia al perno.
+640	Imbottitura appena sopra le caviglie.
+641	Distendi le gambe e contrai.
+642	Imbottitura appena sopra i talloni.
+643	Porta i talloni indietro il più possibile.
+644	Posizionati in modo che l'imbottitura o il peso sia all'altezza delle anche.
+645	Schiena dritta, ginocchia leggermente piegate.
+646	Piegati in avanti dalle anche finché senti allungare i femorali.
+647	Contrai i glutei per risalire.
+648	Parte alta della schiena sull'appoggio, imbottitura o cintura sulle anche.
+649	Piedi a terra, ginocchia a circa 90° in alto.
+650	Spingi su le anche e contrai i glutei.
+651	Metti l'imbottitura dietro il tallone o il ginocchio.
+652	Tieni le maniglie e il busto fermo.
+653	Spingi la gamba indietro e contrai il gluteo.
+654	Torna piano. Cambia gamba.
+655	Siediti con le imbottiture all'esterno delle ginocchia.
+656	Siediti dritto.
+657	Allarga le ginocchia spingendo.
+658	Siediti con le imbottiture all'interno delle ginocchia.
+659	Stringi le gambe insieme.
+660	Avampiedi sul bordo della pedana.
+661	Gambe tese (in piedi) o imbottitura sulle cosce (seduto).
+662	Sali sulle punte più in alto che puoi.
+663	Scendi piano fino all'allungamento completo.
+664	Regola il sedile e tieni le maniglie.
+665	Espira e arrotolati in avanti, curvando la schiena.
+666	Contrai gli addominali per 1 s.
+667	Seduto o in piedi dritto, anche rivolte in avanti.
+668	Ruota il busto da un lato contro la resistenza.
+669	Torna piano al centro.
+670	Fai tutte le ripetizioni, poi cambia lato.
+671	Mettiti in posizione con il core contratto.
+672	Resta fermo contro la resistenza.
+673	Respira in modo regolare.
+674	Rilascia piano.
+675	Inizia a un livello facile per 2 minuti.
+676	Aumenta a uno sforzo moderatamente intenso.
+677	Mantieni un ritmo costante e una buona postura.
+678	Chiudi con 2 minuti facili.
+679	Manubri (rastrelliera)
+680	Bilanciere olimpico + dischi
+681	Bilanciere EZ / bilancieri fissi
+682	Kettlebell
+683	Panca piana
+684	Panca regolabile
+685	Power rack / rack per squat
+686	Multipower (Smith machine)
+687	Panca Scott
+688	Panca declinata / per addominali
+689	Colonna a cavi (carrucola regolabile)
+690	Croce ai cavi / doppia carrucola
+691	Lat machine
+692	Pulley basso
+693	Macchina chest press
+694	Macchina shoulder press
+695	Pectoral machine / croci inverse
+696	Rematore seduto alla macchina (con appoggio al petto)
+697	Leg extension
+698	Leg curl (seduto o sdraiato)
+699	Abductor (esterno coscia)
+700	Adductor (interno coscia)
+701	Macchina per tricipiti
+702	Torsione del busto (rotazione da seduto)
+703	Macchina per addominali
+704	Calf da seduto
+705	Chest press a dischi
+706	Distensioni inclinate a dischi
+707	Rematore a dischi
+708	Pressa per gambe
+709	Hack squat
+710	Macchina per hip thrust
+711	Sbarra per trazioni
+712	Macchina assistita per trazioni / dip
+713	Stazione per sollevamento ginocchia (sedia del capitano)
+714	Panca per iperestensioni a 45°
+715	Cinghie da sospensione TRX
+716	Tapis roulant
+717	Ellittiche
+718	Stepper
+719	Cyclette (reclinata)
+720	Cyclette (verticale)
+721	Vogatore
+722	Panca piana con bilanciere
+723	Sdraiati sulla panca con gli occhi sotto la barra, piedi a terra.
+724	Presa poco più larga delle spalle, stringi le scapole.
+725	Stacca la barra e scendi a metà petto con i gomiti a circa 45° dal corpo.
+726	Spingi fino a distendere le braccia. Con carichi alti usa un assistente o le sicure.
+727	Tieni i glutei sulla panca e i polsi sopra i gomiti.
+728	Panca piana al multipower
+729	Metti una panca piana sotto il bilanciere del multipower, con la barra sopra la parte bassa del petto.
+730	Presa poco più larga delle spalle, ruota la barra per sganciarla.
+731	Scendi piano al petto, gomiti a circa 45° dal corpo.
+732	Spingi fino a distendere le braccia; alla fine ruota la barra per riagganciarla.
+733	Imposta le sicure appena sopra l'altezza del petto.
+734	Panca piana con manubri
+735	Siediti con i manubri sulle cosce, poi sdraiati e portali all'altezza del petto.
+736	Palmi in avanti (o un po' verso l'interno), scapole indietro.
+737	Spingi in alto finché i manubri quasi si toccano sopra il petto.
+738	Scendi piano finché senti allungare il petto.
+739	I manubri sono più gentili con le spalle del bilanciere.
+740	Panca inclinata con manubri
+741	Imposta la panca a 30°. Appoggiati indietro con i manubri all'altezza delle spalle.
+742	Spingi in alto e un po' verso l'interno sopra la parte alta del petto.
+743	Scendi controllando finché i gomiti sono appena sotto la linea della panca.
+744	Tieni le scapole strette per tutto il tempo.
+745	Lavora la parte alta del petto.
+746	Panca inclinata al multipower
+747	Metti una panca regolabile a 30° sotto il bilanciere del multipower.
+748	La barra deve scendere sulla parte alta del petto.
+749	Sgancia e scendi piano sulla parte alta del petto.
+750	Spingi fino a distendere le braccia, poi riaggancia.
+751	Chest press alla macchina
+752	Regola il sedile in modo che le maniglie siano a metà petto.
+753	Siediti con la schiena aderente allo schienale e i piedi a terra.
+754	Spingi le maniglie in avanti finché le braccia sono quasi tese.
+755	Torna piano finché senti allungare il petto.
+756	Un'ottima prima spinta, sicura per i principianti.
+757	Chest press a dischi
+758	Carica gli stessi dischi su entrambi i lati. Regola il sedile con le maniglie a metà petto.
+759	Appoggiati indietro, afferra le maniglie, scapole indietro.
+760	Spingi in avanti finché le braccia sono quasi tese.
+761	Scendi piano. Ogni braccio si muove da solo: tienili pari.
+762	Il peso indicato è il totale dei dischi caricati.
+763	Distensioni inclinate a dischi
+764	Carica gli stessi dischi. Regola il sedile in modo che le maniglie partano all'altezza della parte alta del petto.
+765	Appoggiati indietro con il petto in fuori e le scapole strette.
+766	Spingi in alto e in avanti finché le braccia sono quasi tese.
+767	Scendi piano fino a un allungamento comodo.
+768	Piegamenti sulle braccia
+769	Mani poco più larghe delle spalle, corpo in linea retta.
+770	Scendi con il petto fin quasi a terra, gomiti a circa 45°.
+771	Troppo difficile? Appoggia le mani su una panca o falli sulle ginocchia.
+772	Croci alla pectoral machine
+773	Regola il sedile in modo che le maniglie siano all'altezza del petto. Porta i bracci della macchina in posizione anteriore.
+774	Siediti con la schiena sull'imbottitura, afferra le maniglie con i gomiti leggermente piegati.
+775	Unisci le maniglie davanti al petto.
+776	Apri piano finché senti allungare, senza andare oltre le spalle.
+777	Croci ai cavi
+778	Imposta entrambe le carrucole all'altezza delle spalle con maniglie singole.
+779	Fai un passo avanti a gambe sfalsate, leggermente inclinato in avanti.
+780	Con i gomiti un po' piegati, unisci le maniglie davanti al petto.
+781	Torna piano e con controllo.
+782	Il peso indicato è per lato.
+783	Croci ai cavi dal basso verso l'alto (petto alto)
+784	Imposta entrambe le carrucole nella posizione più bassa.
+785	Mettiti al centro, fai un passo avanti, braccia in basso e un po' indietro.
+786	Porta le maniglie in alto e insieme fino all'altezza del petto alto.
+787	Croci ai cavi dall'alto verso il basso
+788	Imposta entrambe le carrucole in alto.
+789	Fai un passo avanti inclinandoti un po', braccia ben aperte.
+790	Tira le maniglie in basso e uniscile davanti alle anche.
+791	Croci con manubri
+792	Sdraiati su una panca, manubri sopra il petto, palmi rivolti l'uno verso l'altro.
+793	Con i gomiti leggermente piegati, apri bene le braccia.
+794	Fermati quando senti allungare (gomiti più o meno all'altezza della panca).
+795	Riporta i manubri insieme stringendo.
+796	Croci su panca inclinata con manubri
+797	Imposta la panca a 30°.
+798	Manubri sopra la parte alta del petto, palmi rivolti l'uno verso l'altro.
+799	Apri bene con i gomiti morbidi finché senti allungare.
+800	Riportali insieme sopra il petto.
+801	Lento avanti seduto con manubri
+802	Imposta la panca quasi verticale (80–90°). Manubri all'altezza delle spalle, palmi in avanti.
+803	Contrai il core e tieni la schiena sullo schienale.
+804	Spingi in alto finché le braccia sono tese sopra la testa.
+805	Scendi all'altezza delle orecchie.
+806	Shoulder press alla macchina
+807	Regola il sedile in modo che le maniglie partano all'altezza delle spalle.
+808	Siediti con la schiena sull'imbottitura e afferra le maniglie.
+809	Scendi piano fino alla partenza.
+810	Lento avanti seduto al multipower
+811	Metti una panca verticale sotto il bilanciere del multipower in modo che la barra passi appena davanti al viso.
+812	Presa poco più larga delle spalle.
+813	Sgancia e scendi all'altezza del mento.
+814	Spingi fino a distendere le braccia.
+815	Lento avanti in piedi con bilanciere
+816	Metti la barra nel rack all'altezza delle clavicole. Presa appena fuori dalle spalle.
+817	Stacca la barra, contrai il core e stringi i glutei.
+818	Spingi la barra dritta in alto, spostando un po' indietro la testa per farla passare.
+819	Distendi del tutto in alto, poi scendi alle clavicole.
+820	Arnold press
+821	Siediti dritto, manubri davanti alle spalle, palmi verso di te.
+822	Mentre spingi in alto, ruota i palmi in avanti.
+823	Finisci con le braccia tese sopra la testa.
+824	Inverti la rotazione mentre scendi.
+825	Alzate laterali con manubri
+826	In piedi dritto, manubri lungo i fianchi, gomiti leggermente piegati.
+827	Solleva le braccia lateralmente fino all'altezza delle spalle.
+828	Guida con i gomiti; mignoli un po' in su.
+829	Scendi piano, senza slanci.
+830	Alzate laterali al cavo
+831	Imposta una carrucola nella posizione più bassa con una maniglia singola.
+832	Mettiti di lato e tieni la maniglia con la mano lontana, davanti al corpo.
+833	Solleva il braccio lateralmente fino all'altezza della spalla.
+834	Scendi piano. Fai tutte le ripetizioni, poi cambia lato.
+835	Croci inverse alla macchina
+836	Porta i bracci della macchina in posizione posteriore. Siediti rivolto verso l'imbottitura.
+837	Afferra le maniglie all'altezza delle spalle con le braccia quasi tese.
+838	Face pull al cavo
+839	Imposta la carrucola all'altezza della testa con la corda.
+840	Afferra entrambe le estremità della corda, palmi verso l'interno, e fai un passo indietro.
+841	Tira la corda verso il viso, separando le estremità ai lati delle orecchie.
+842	Stringi le scapole, poi torna piano.
+843	Ottimo per la postura e la salute delle spalle.
+844	Alzate posteriori a busto flesso con manubri
+845	Piegati in avanti dalle anche, schiena dritta, manubri sotto il petto.
+846	Con i gomiti morbidi, solleva le braccia lateralmente.
+847	In alto contrai la parte alta della schiena.
+848	Lat machine presa larga
+849	Regola l'imbottitura delle cosce in modo che le gambe siano bloccate.
+850	Afferra la barra più larga delle spalle e siediti con le braccia tese.
+851	Tira la barra alla parte alta del petto, guidando con i gomiti.
+852	Lasciala risalire piano fino a distendere le braccia.
+853	Petto in fuori; non inclinarti troppo indietro.
+854	Lat machine presa stretta (triangolo)
+855	Aggancia il triangolo. Blocca le gambe sotto l'imbottitura.
+856	Presa con i palmi rivolti l'uno verso l'altro, braccia tese.
+857	Tira la maniglia alla parte alta del petto, gomiti vicini al corpo.
+858	Trazioni assistite presa supina
+859	Scegli il peso di assistenza – PIÙ peso = PIÙ facile.
+860	Afferra la sbarra con i palmi verso di te, alla larghezza delle spalle.
+861	Inginocchiati (o mettiti in piedi) sull'appoggio e resta appeso a braccia tese.
+862	Sali finché il mento supera la sbarra, poi scendi piano.
+863	Progredisci riducendo l'assistenza.
+864	Trazioni alla sbarra
+865	Appenditi alla sbarra, mani poco più larghe delle spalle, palmi in avanti.
+866	Porta il petto verso la sbarra, spingendo i gomiti in basso.
+867	Porta il mento sopra la sbarra.
+868	Scendi con controllo fino a braccia tese.
+869	Pulldown al cavo a braccia tese
+870	Imposta una carrucola alta con barra dritta o corda.
+871	Fai un passo indietro, inclinati un po', braccia tese davanti all'altezza della testa.
+872	Tenendo le braccia tese, porta la barra fino alle cosce.
+873	Pulley basso seduto
+874	Siediti con i piedi sulla pedana, ginocchia un po' piegate, afferra il triangolo.
+875	Siediti dritto con le braccia tese.
+876	Tira la maniglia verso la pancia stringendo le scapole.
+877	Torna piano senza curvare la schiena.
+878	Rematore incrociato seduto ai cavi
+879	Siediti davanti alle carrucole basse con le maniglie singole incrociate (maniglia destra nella mano sinistra).
+880	Tira entrambe le maniglie indietro verso i fianchi.
+881	Rematore alla macchina con appoggio al petto
+882	Regola il sedile in modo che le maniglie siano all'altezza del petto e il petto appoggiato.
+883	Afferra le maniglie a braccia tese.
+884	Tira indietro stringendo le scapole.
+885	Rematore seduto a un braccio alla macchina
+886	Carica i dischi. Regola il sedile con il petto sull'appoggio e le maniglie a portata.
+887	Afferra una o entrambe le maniglie a braccia tese.
+888	Porta il gomito (o i gomiti) indietro oltre il corpo.
+889	Torna piano. Se lavori un braccio alla volta, fai tutte le ripetizioni e poi cambia.
+890	Rematore a un braccio con manubrio
+891	Appoggia un ginocchio e una mano su una panca piana, schiena dritta.
+892	Tieni un manubrio nell'altra mano, braccio teso.
+893	Tira il manubrio verso l'anca, gomito vicino al corpo.
+894	Rematore con manubri su panca inclinata
+895	Imposta la panca a 30–45° e sdraiati a pancia in giù.
+896	Lascia pendere i manubri dritti verso il basso.
+897	Tirali su entrambi stringendo le scapole.
+898	Leggero sulla zona lombare.
+899	Rematore con bilanciere a busto flesso
+900	Tieni la barra con presa prona e piegati dalle anche finché il busto è a circa 45°.
+901	Schiena dritta e ginocchia morbide.
+902	Tira la barra verso le costole basse.
+903	Scendi fino a braccia tese.
+904	Rematore al TRX
+905	Tieni le maniglie del TRX, porta i piedi in avanti e inclinati indietro a braccia tese.
+906	Tieni il corpo in linea retta.
+907	Tira il petto verso le maniglie.
+908	Scendi piano. Porta i piedi più avanti per renderlo più difficile.
+909	Scrollate con manubri
+910	In piedi dritto, manubri lungo i fianchi.
+911	Tieni un secondo in alto.
+912	Scendi piano. Non ruotare le spalle.
+913	Scrollate al multipower
+914	Imposta il bilanciere del multipower a metà coscia.
+915	Presa alla larghezza delle spalle, in piedi dritto, braccia tese.
+916	Solleva le spalle dritte verso l'alto.
+917	Curl con manubri
+918	In piedi dritto, manubri lungo i fianchi, palmi in avanti.
+919	Gomiti fermi ai fianchi.
+920	Porta i pesi fino all'altezza delle spalle.
+921	Scendi piano fino a braccia tese.
+922	Curl a martello
+923	Tieni i manubri lungo i fianchi con i palmi rivolti l'uno verso l'altro.
+924	Gomiti fermi.
+925	Sali tenendo i pollici in alto.
+926	Curl con bilanciere EZ
+927	Tieni il bilanciere EZ sulle prese inclinate, palmi in su.
+928	Gomiti ai fianchi.
+929	Porta la barra fino al petto.
+930	Scendi piano senza slanci.
+931	Curl alla panca Scott
+932	Regola il sedile in modo che le ascelle siano sul bordo dell'imbottitura.
+933	Tieni un bilanciere EZ (o un manubrio) con le braccia sull'imbottitura.
+934	Sali finché gli avambracci sono verticali.
+935	Scendi piano, fermandoti poco prima di bloccare i gomiti.
+936	Curl al cavo
+937	Imposta la carrucola in basso con barra dritta o corda.
+938	Mettiti di fronte alla macchina, gomiti ai fianchi.
+939	Porta la maniglia al petto.
+940	Curl su panca inclinata con manubri
+941	Imposta la panca a 45–60° e appoggiati con le braccia che pendono dritte.
+942	Palmi in avanti.
+943	Porta su entrambi i manubri senza muovere la parte alta delle braccia.
+944	Scendi piano fino in fondo.
+945	Pushdown con corda al cavo
+946	Imposta la carrucola in alto con la corda.
+947	Gomiti fermi ai fianchi, avambracci in alto.
+948	Spingi la corda in basso e separa le estremità in fondo.
+949	Torna piano fino a 90°.
+950	Pushdown con barra dritta
+951	Imposta la carrucola in alto con una barra dritta o angolata.
+952	Presa prona, gomiti stretti ai fianchi.
+953	Spingi la barra in basso fino a distendere le braccia.
+954	Estensioni dei tricipiti sopra la testa al cavo
+955	Imposta la carrucola in basso con una corda. Dai le spalle alla macchina, corda dietro la testa.
+956	Fai un passo avanti a gambe sfalsate, gomiti puntati in avanti.
+957	Distendi le braccia sopra la testa.
+958	Piega piano i gomiti all'indietro.
+959	Estensioni sopra la testa da seduto con manubrio
+960	Siediti dritto, tieni un manubrio con entrambe le mani sopra la testa.
+961	Gomiti verso l'alto e vicini.
+962	Abbassa il manubrio dietro la testa.
+963	Distendi di nuovo le braccia.
+964	French press con bilanciere EZ
+965	Sdraiati su una panca tenendo un bilanciere EZ sopra il petto.
+966	Tieni ferma la parte alta delle braccia e piega i gomiti portando la barra verso la fronte.
+967	Fermati appena sopra la testa.
+968	Distendi di nuovo le braccia.
+969	Panca presa stretta al multipower
+970	Sdraiati sotto il bilanciere del multipower, presa alla larghezza delle spalle.
+971	Sgancia e scendi alla parte bassa del petto, gomiti vicini al corpo.
+972	Riaggancia alla fine.
+973	Dip assistiti
+974	Afferra le maniglie per i dip e inginocchiati sull'appoggio a braccia tese.
+975	Scendi finché la parte alta delle braccia è circa parallela al pavimento.
+976	Estensioni dei tricipiti alla macchina
+977	Regola il sedile in modo che i gomiti siano allineati al perno della macchina.
+978	Appoggia la parte alta delle braccia sull'imbottitura, afferra le maniglie.
+979	Spingi in basso o in avanti fino a distendere le braccia.
+980	Dip sulla panca
+981	Siediti sul bordo di una panca, mani accanto ai fianchi.
+982	Fai scivolare i glutei fuori dalla panca, gambe piegate.
+983	Piega i gomiti per abbassare il corpo di circa 10–15 cm.
+984	Spingi di nuovo su.
+985	Leg press
+986	Siediti con la schiena aderente allo schienale, piedi alla larghezza delle spalle al centro della pedana.
+987	Sblocca le maniglie di sicurezza.
+988	Scendi finché le ginocchia sono a circa 90°, tenendo la zona lombare sullo schienale.
+989	Spingi di nuovo senza bloccare le ginocchia.
+990	Piedi più in alto = più glutei, più in basso = più quadricipiti.
+991	Squat con bilanciere
+992	Metti la barra nel rack all'altezza delle spalle e le sicure appena sotto la profondità dello squat.
+993	Barra sulla parte alta della schiena, piedi alla larghezza delle spalle, punte un po' in fuori.
+994	Contrai il core, siediti indietro e in basso finché le cosce sono almeno parallele.
+995	Risali spingendo con tutto il piede.
+996	Squat al multipower
+997	Barra sulla parte alta della schiena, piedi un po' davanti alla barra.
+998	Sgancia la barra.
+999	Scendi finché le cosce sono circa parallele.
+1000	Risali, poi riaggancia.
+1001	Goblet squat
+1002	Tieni un manubrio in verticale contro il petto.
+1003	Piedi alla larghezza delle spalle, punte un po' in fuori.
+1004	Scendi tra le ginocchia, petto in fuori.
+1005	Torna in piedi.
+1006	Squat sumo con manubrio
+1007	Gambe larghe, punte in fuori, tieni un manubrio tra le gambe.
+1008	Tieni il petto in fuori.
+1009	Scendi spingendo le ginocchia in fuori sopra le punte.
+1010	Contrai i glutei per risalire.
+1011	Hack squat alla macchina
+1012	Sali sulla pedana con schiena e spalle contro le imbottiture.
+1013	Piedi alla larghezza delle spalle. Sblocca le maniglie di sicurezza.
+1014	Scendi finché le ginocchia sono a 90° o un po' più giù.
+1015	Stacco rumeno con bilanciere
+1016	Tieni la barra all'altezza delle cosce, piedi alla larghezza delle anche, ginocchia morbide.
+1017	Spingi le anche indietro facendo scivolare la barra lungo le gambe.
+1018	Schiena dritta; fermati quando senti un buon allungamento dei femorali.
+1019	Spingi le anche in avanti per risalire.
+1020	Stacco rumeno con manubri
+1021	Tieni i manubri davanti alle cosce, ginocchia morbide.
+1022	Spingi le anche indietro, manubri vicini alle gambe.
+1023	Scendi finché senti allungare i femorali, schiena dritta.
+1024	Stacco rumeno al multipower
+1025	Imposta il bilanciere del multipower a metà coscia, mettiti vicino con i piedi alla larghezza delle anche.
+1026	Sgancia e spingi le anche indietro, schiena dritta.
+1027	Scendi finché senti allungare i femorali.
+1028	Spingi le anche in avanti per risalire.
+1029	Stacco da terra
+1030	Barra sopra il centro del piede, piedi alla larghezza delle anche. Presa appena fuori dalle ginocchia.
+1031	Tibie contro la barra, petto in fuori, schiena dritta, contrai forte il core.
+1032	Spingi via il pavimento e alzati dritto.
+1033	Scendi portando le anche indietro.
+1034	Iperestensioni a 45°
+1035	Imposta l'imbottitura appena sotto le ossa del bacino, talloni sotto il rullo.
+1036	Incrocia le braccia sul petto.
+1037	Abbassa il busto piegandoti dalle anche.
+1038	Contrai i glutei per tornare in linea retta.
+1039	Pull-through al cavo
+1040	Imposta una carrucola bassa con la corda. Dai le spalle alla macchina, corda tra le gambe.
+1041	Fai due passi avanti, piedi larghi.
+1042	Piegati dalle anche lasciando andare la corda indietro tra le gambe.
+1043	Contrai i glutei per alzarti dritto.
+1044	Affondi camminati con manubri
+1045	Tieni i manubri lungo i fianchi.
+1046	Fai un passo lungo in avanti e abbassa il ginocchio dietro verso il pavimento.
+1047	Spingi con il tallone davanti e passa all'affondo successivo.
+1048	Le ripetizioni si contano per gamba.
+1049	Affondi indietro con manubri
+1050	In piedi dritto con i manubri.
+1051	Porta un piede indietro e abbassa il ginocchio dietro.
+1052	Spingi con il tallone davanti per tornare.
+1053	Alterna le gambe; le ripetizioni si contano per gamba.
+1054	Più gentile con le ginocchia degli affondi in avanti.
+1055	Squat bulgaro
+1056	Mettiti davanti a una panca e appoggiaci il collo del piede dietro.
+1057	Scendi dritto finché la coscia davanti è circa parallela.
+1058	Risali spingendo con il tallone davanti. Fai tutte le ripetizioni, poi cambia.
+1059	Step-up con manubri
+1060	Mettiti di fronte a una panca piana con i manubri.
+1061	Appoggia un piede intero sulla panca.
+1062	Spingi con quel tallone per salire sulla panca.
+1063	Scendi piano. Fai tutte le ripetizioni, poi cambia.
+1064	Split squat al multipower
+1065	Barra sulla parte alta della schiena, un piede avanti e uno indietro a passo lungo.
+1066	Abbassa il ginocchio dietro verso il pavimento.
+1067	Risali spingendo con il piede davanti. Fai tutte le ripetizioni, poi cambia.
+1068	Leg extension
+1069	Regola lo schienale in modo che le ginocchia siano allineate al perno della macchina.
+1070	Metti l'imbottitura delle tibie appena sopra le caviglie.
+1071	Distendi del tutto le gambe e contrai i quadricipiti.
+1072	Leg curl alla macchina
+1073	Regola in modo che le ginocchia siano allineate al perno; blocca l'imbottitura delle cosce.
+1074	L'imbottitura per le gambe sta appena sopra i talloni.
+1075	Porta i talloni indietro/in basso il più possibile.
+1076	Hip thrust con bilanciere
+1077	Siediti a terra con la parte alta della schiena contro una panca, barra sulle anche (usa un'imbottitura).
+1078	Piedi a terra alla larghezza delle anche, ginocchia piegate.
+1079	Spingi su le anche finché il corpo è dritto dalle spalle alle ginocchia.
+1080	Contrai i glutei in alto, scendi piano.
+1081	Hip thrust al multipower
+1082	Metti una panca di traverso vicino al multipower. Parte alta della schiena sulla panca, barra sulle anche (con imbottitura).
+1083	Piedi a terra, ginocchia piegate.
+1084	Sgancia e spingi su le anche fino a una linea retta.
+1085	Contrai, poi scendi piano.
+1086	Macchina per hip thrust
+1087	Siediti con la parte alta della schiena sull'imbottitura e la cintura o imbottitura sulle anche.
+1088	Piedi a terra sulla pedana.
+1089	Spingi su le anche fino a essere dritto.
+1090	Contrai i glutei, scendi piano.
+1091	Ponte per i glutei
+1092	Sdraiati sulla schiena, ginocchia piegate, piedi a terra vicino ai glutei.
+1093	Spingi con i talloni per sollevare le anche.
+1094	Contrai i glutei in alto per 2 secondi.
+1095	Abductor machine
+1096	Siediti con le imbottiture all'esterno delle ginocchia.
+1097	Siediti dritto, tieni le maniglie.
+1098	Spingi le ginocchia in fuori il più possibile.
+1099	Inclinati un po' in avanti per lavorare di più la parte alta dei glutei.
+1100	Adductor machine
+1101	Siediti con le imbottiture all'interno delle ginocchia, gambe aperte.
+1102	Apri piano.
+1103	Slanci dei glutei al cavo
+1104	Aggancia una cavigliera a una carrucola bassa e mettila su una caviglia.
+1105	Mettiti di fronte alla macchina, tieniti per l'equilibrio, leggermente inclinato in avanti.
+1106	Calcia la gamba dritta indietro, contraendo il gluteo.
+1107	Torna piano. Fai tutte le ripetizioni, poi cambia.
+1108	Calf in piedi al multipower
+1109	Barra sulla parte alta della schiena, avampiedi su un disco o un gradino.
+1110	Sali sulle punte più in alto che puoi.
+1111	Abbassa i talloni sotto il gradino per allungare.
+1112	Calf alla leg press
+1113	Siediti alla leg press e appoggia gli avampiedi sul bordo inferiore della pedana.
+1114	Gambe quasi tese. Se possibile tieni bloccate le sicure.
+1115	Spingi la pedana con le punte dei piedi.
+1116	Lascia tornare i talloni per allungare.
+1117	Calf a una gamba con manubrio
+1118	Stai su un piede su un gradino o un disco, con un manubrio dallo stesso lato.
+1119	Tieniti a qualcosa con l'altra mano per l'equilibrio.
+1120	Sali sulle punte.
+1121	Abbassa piano il tallone. Fai tutte le ripetizioni, poi cambia.
+1122	Calf machine da seduto
+1123	Siediti con l'imbottitura sulla parte bassa delle cosce, avampiedi sulla pedana.
+1124	Sblocca la leva di sicurezza.
+1125	Solleva i talloni il più possibile.
+1126	Plank
+1127	Avambracci a terra, gomiti sotto le spalle.
+1128	Corpo in linea retta dalla testa ai talloni.
+1129	Contrai glutei e addome.
+1130	Tieni per il tempo indicato – respira normalmente.
+1131	Plank laterale
+1132	Sdraiati sul fianco, gomito sotto la spalla.
+1133	Solleva le anche finché il corpo è dritto.
+1134	Tieni per il tempo indicato.
+1135	Cambia lato (il tempo è per lato).
+1136	Sollevamento ginocchia con appoggio sulle braccia
+1137	Mettiti nella stazione per il sollevamento ginocchia, avambracci sulle imbottiture, schiena contro lo schienale.
+1138	Lascia pendere le gambe dritte.
+1139	Porta le ginocchia verso il petto, arrotolando il bacino in alto.
+1140	Sollevamento gambe alla sbarra
+1141	Appenditi a una sbarra per trazioni.
+1142	Gambe tese (o piegate per renderlo più facile).
+1143	Solleva le gambe fino all'altezza delle anche o più su.
+1144	Crunch al cavo in ginocchio
+1145	Imposta una carrucola alta con la corda. Inginocchiati di fronte, corda ai lati della testa.
+1146	Tieni le anche ferme.
+1147	Arrotolati verso il basso portando i gomiti verso le ginocchia.
+1148	Taglialegna al cavo
+1149	Imposta una carrucola alta. Mettiti di lato e tieni la maniglia con entrambe le mani.
+1150	Tira in diagonale verso il basso attraverso il corpo fino all'anca opposta.
+1151	Ruota il busto e fai perno sul piede dietro.
+1152	Torna piano. Fai tutte le ripetizioni, poi cambia lato.
+1153	Taglialegna con manubrio
+1154	Tieni un manubrio con entrambe le mani sopra una spalla.
+1155	Portalo in diagonale verso il basso fino all'anca opposta, ruotando il busto.
+1156	Piega un po' le ginocchia in basso.
+1157	Torna all'inizio. Fai tutte le ripetizioni, poi cambia.
+1158	Pallof press
+1159	Imposta una carrucola all'altezza del petto. Mettiti di lato e tieni la maniglia al petto.
+1160	Allontanati finché il cavo è teso.
+1161	Spingi la maniglia dritta davanti a te, resistendo alla trazione.
+1162	Riportala al petto. Fai tutte le ripetizioni, poi cambia.
+1163	Dead bug
+1164	Sdraiati sulla schiena, braccia in alto, ginocchia piegate a 90° sopra le anche.
+1165	Premi la zona lombare contro il pavimento.
+1166	Distendi piano un braccio sopra la testa e la gamba opposta.
+1167	Torna e cambia lato.
+1168	Sit-up su panca declinata
+1169	Siediti sulla panca declinata e aggancia i piedi sotto i rulli.
+1170	Sdraiati indietro finché la schiena è sull'imbottitura, mani incrociate sul petto.
+1171	Espira e sali del tutto finché il busto è eretto.
+1172	Scendi piano, una vertebra alla volta, senza lasciarti cadere.
+1173	Troppo difficile? Riduci l'inclinazione o allunga le braccia in avanti. Più difficile: mani vicino alle orecchie o un disco sul petto.
+1174	Macchina per addominali
+1175	Regola il sedile, tieni le maniglie o appoggia le braccia sulle imbottiture.
+1176	Arrotola il busto in avanti e in basso.
+1177	Contrai gli addominali.
+1178	Macchina per la torsione del busto
+1179	Siediti di fronte alle maniglie e imposta l'angolo di partenza da un lato.
+1180	Blocca le gambe contro le imbottiture e tieni le maniglie.
+1181	Ruota piano la parte alta del corpo verso l'altro lato.
+1182	Muoviti piano e tieni un'ampiezza comoda per la schiena.
+1183	Farmer's walk
+1184	Prendi manubri pesanti, uno per mano.
+1185	In piedi dritto, spalle indietro.
+1186	Cammina a passi corti e regolari per il tempo indicato.
+1187	Appoggia i pesi a terra con attenzione.
+1188	Intervalli sul tapis roulant
+1189	2 min di camminata o corsa leggera per scaldarti.
+1190	Poi ripeti: 1 min veloce (sforzo intenso) + 1 min di camminata leggera.
+1191	Chiudi con 2 min di camminata leggera.
+1192	Usa i corrimano laterali per scendere in sicurezza quando ti fermi.
+1193	Camminata in pendenza sul tapis roulant
+1194	Imposta la pendenza all'8–12% e la velocità a 4.5–5.5 km/h.
+1195	Cammina senza tenerti ai corrimano.
+1196	Punta a uno sforzo in cui riesci a parlare, ma con fatica.
+1197	Riduci la pendenza nell'ultimo minuto.
+1198	A basso impatto e ottima per perdere grasso.
+1199	Ellittica
+1200	Sali e afferra le maniglie mobili.
+1201	Inizia con una resistenza leggera per 2 minuti.
+1202	Aumenta la resistenza a uno sforzo costante e moderatamente intenso.
+1203	Spingi e tira anche con le braccia.
+1204	Stepper
+1205	Sali e inizia a velocità lenta.
+1206	Stai dritto; tieni i corrimano leggermente solo per l'equilibrio.
+1207	Appoggia tutto il piede su ogni gradino.
+1208	Aumenta la velocità gradualmente.
+1209	Cyclette reclinata
+1210	Regola il sedile in modo che il ginocchio sia leggermente piegato in basso.
+1211	Inizia piano per 2 minuti.
+1212	Poi 30 s intensi / 60 s leggeri, oppure un ritmo moderato costante.
+1213	Defatica leggero negli ultimi 2 minuti.
+1214	La più gentile con le ginocchia.
+1215	Cyclette verticale
+1216	Vogatore
+1217	Fissa i piedi con le cinghie e afferra la maniglia.
+1218	Spingi prima con le gambe, poi inclinati indietro, poi tira con le braccia.
+1219	Torna al contrario: braccia, busto, gambe.
+1220	Mantieni un ritmo costante.

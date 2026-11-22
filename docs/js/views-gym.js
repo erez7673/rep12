@@ -8,7 +8,7 @@ import { lineChart } from './charts.js';
 import { EQUIP_PIC } from './pictures.js';
 import { hasAnim, animHTML, startAnims } from './anim.js';
 import { generatePlan, dayFocus, sessionBudget, warmPref, dayCap, sortDay, raiseDayCap, MAX_EX_PER_DAY, dayName } from './planner.js';
-import { t, toW, wUnit, unitText } from './i18n.js';
+import { t, toW, wUnit, unitText, listJoin } from './i18n.js';
 import { rerender } from './app.js';
 import { scheduleSync } from './sync.js';
 
@@ -34,7 +34,7 @@ function libraryList() {
     .sort((a, b) => (filter.m && a.m !== b.m ? (a.m === filter.m ? -1 : 1) : 0) || a.name.localeCompare(b.name));
   if (!list.length) return `<p class="muted center">${t('No exercises match.')}</p>`;
   return list.map(e => `<a class="exrow" href="#/ex/${encodeURIComponent(e.id)}">${thumb(e, photoFor(e.id))}
-    <div class="exbody"><b class="exname">${esc(e.name)}</b><small>${esc(MUSCLES[e.m])}${e.s.length ? ' · ' + e.s.map(x => MUSCLES[x]).join(', ') : ''}</small></div>
+    <div class="exbody"><b class="exname">${esc(e.name)}</b><small>${esc(MUSCLES[e.m])}${e.s.length ? ' · ' + listJoin(e.s.map(x => MUSCLES[x])) : ''}</small></div>
     ${icon.chev}</a>`).join('');
 }
 
@@ -82,8 +82,8 @@ export function exerciseView(id) {
       </div>
       <p class="muted">${icon.gym} ${esc(eqText(ex.eq))}${isAvailable(ex) ? '' : ` · <b class="warn">${t('not in your gym setup')}</b>`}</p>
       ${p.plan ? `<button class="btn primary" data-act="add-to-day" data-id="${ex.id}">${icon.plus} ${t('Add to workout')}</button>` : ''}
-      ${machines.length ? `<p class="muted">${t('Your machine:')} ${machines.map(m => esc([m.name, m.brand, m.model].filter(Boolean).join(' · '))).join(', ')}</p>` : ''}
-      ${avoid.length ? `<div class="card warncard">⚠️ ${t('Marked as risky for your {parts} – go light or swap it.', { parts: esc(avoid.join(', ')) })}</div>` : ''}
+      ${machines.length ? `<p class="muted">${t('Your machine:')} ${listJoin(machines.map(m => esc([m.name, m.brand, m.model].filter(Boolean).join(' · '))))}</p>` : ''}
+      ${avoid.length ? `<div class="card warncard">⚠️ ${t('Marked as risky for your {parts} – go light or swap it.', { parts: esc(listJoin(avoid)) })}</div>` : ''}
       <h3>${t('How to do it')}</h3>
       ${hasAnim(ex.id) ? `${animHTML(ex, p.stats.sex)}
         <details class="card moves-card"><summary><b>${t('Written steps')}</b></summary>${steps}</details>`

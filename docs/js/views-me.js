@@ -160,7 +160,7 @@ export function profileView() {
       <div class="card list">
         <a class="eqrow" href="#/onboard/edit"><span>${t('Edit profile')}</span>${icon.chev}</a>
         <a class="eqrow" href="#/custom"><span>${t('Build your custom plan')}</span>${icon.chev}</a>
-        <button class="eqrow" data-act="tpl-open"><span>${t('Ready-made plans (beginner, 50+)')}</span>${icon.chev}</button>
+        <button class="eqrow" data-act="tpl-open"><span>${t('App-built plans')}</span>${icon.chev}</button>
         <button class="eqrow" data-act="switch-profile"><span>${t('Switch profile')}</span><span class="muted">${n === 1 ? t('1 profile') : t('{n} profiles', { n })} ${icon.chev}</span></button>
         <a class="eqrow" href="#/onboard"><span>${t('Add a profile')}</span>${icon.plus}</a>
         <a class="eqrow" href="#/gym"><span>${t('Gym setup')}</span>${icon.chev}</a>

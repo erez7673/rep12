@@ -1,19 +1,18 @@
 // Builds a multi-week plan from a profile, and works out each session's sets, reps and weights.
 import { MUSCLES, WARMUP, COOLDOWN } from './exercises.js';
 import { allExercises, isAvailable, exById, lastLogFor, uid } from './store.js';
-import { t, wStep, fmtW } from './i18n.js';
+import { t, wStep, fmtW, listJoin } from './i18n.js';
 
 export const PLAN_WEEKS = 12;
 export const EX_PER_DAY = 4;   // default exercises per workout day (not counting warm-up and cardio finisher)
 export const MAX_EX_PER_DAY = 8;
 export const exPerDay = (st) => Math.max(1, Math.min(MAX_EX_PER_DAY, st?.exPerDay || EX_PER_DAY)); // the profile's choice, 1–8
-// Exercises per day for this profile's plan: ready-made plans have their own number (see TEMPLATES).
-// Exercises per workout day. A ready-made plan uses its own number, raised when the user adds extra exercises (plan.cap).
+// Exercises per workout day. An app-built plan (TEMPLATES) uses its own number, raised when the user adds extra exercises (plan.cap).
 export const dayCap = (p) => {
   const tpl = TEMPLATES[p.plan?.template];
   return tpl ? Math.min(MAX_EX_PER_DAY, Math.max(tpl.perDay, p.plan.cap || 0)) : exPerDay(p.stats);
 };
-// Raises the number of exercises per day to n (max MAX_EX_PER_DAY), for a ready-made or a custom plan.
+// Raises the number of exercises per day to n (max MAX_EX_PER_DAY), for an app-built or a custom plan.
 export function raiseDayCap(p, n) {
   n = Math.min(MAX_EX_PER_DAY, n);
   if (n <= dayCap(p)) return;
@@ -80,10 +79,11 @@ export const GOALS = {
   general: { name: 'General fitness', compound: { sets: 3, reps: [8, 12], rest: 75 }, iso: { sets: 2, reps: [10, 15], rest: 60 }, cardio: 10, factor: 0.9 },
 };
 
-// ── Ready-made plans ──
-// Fixed full-body plans for women starting out around 50+: machines first, 6 exercises a day,
-// 2–3 sets of 10–15 reps, light start and slow progression. Each slot lists exercises in order of
-// preference; the first one that is on in Gym Setup (and safe for the profile's injuries) is used.
+// ── App-built plans (TEMPLATES) ──
+// Full-body plans: machines first, 4–6 exercises a day, 2–3 sets of 10–15 reps (TPL_RX), light start
+// and slow progression. Each slot lists exercises in order of preference; the first one that is on in
+// Gym Setup (and safe for the profile's injuries) is used.
+// Split plans (AB, Upper / Lower) instead give each day muscle areas (areas) and follow the profile's goal (goalRx).
 const TPL_DAYS = {
   fullA: [['leg-press', 'goblet-squat', 'smith-squat'], ['machine-chest-press', 'plate-chest-press', 'db-bench', 'pushup'],
     ['machine-row', 'seated-cable-row', 'plate-row', 'db-row'], ['glute-bridge', 'hip-thrust-machine'], ['db-lateral', 'cable-lateral'], ['plank', 'dead-bug']],
@@ -100,16 +100,26 @@ const TPL_DAYS = {
     ['seated-cable-row', 'machine-row', 'db-row'], ['back-ext', 'db-rdl', 'glute-bridge']],
 };
 
+const AB_A = ['chest', 'biceps', 'back'], AB_B = ['shoulders', 'triceps', 'legs'];
+const UP_AREAS = ['chest', 'back', 'shoulders', 'biceps', 'triceps'], LOW_AREAS = ['legs', 'glutes', 'calves', 'core'];
 export const TEMPLATES = {
   starter: { name: 'Gentle start · 2 days a week', short: '2 days a week', days: ['fullA', 'fullB'], perDay: 6,
     blurb: 'The softest way in: two full-body days with a rest day or two between. Move up to 3 days when it feels easy.' },
-  steady: { name: 'Beginner full body · 3 days a week', short: '3 days a week', days: ['fullA', 'fullB', 'fullC'], perDay: 6,
+  steady: { name: 'Full body · 3 days a week', short: '3 days a week', days: ['fullA', 'fullB', 'fullC'], perDay: 6,
     blurb: 'Three full-body days (for example Mon, Wed, Fri). Every muscle group is trained twice or more a week.' },
   short: { name: 'Short full body · 3 days a week', short: '3 short days a week', days: ['shortA', 'shortB', 'shortC'], perDay: 4,
     blurb: 'Three full-body days with only 4 exercises each – legs, a push, a pull and hips or core – so a session takes about 35–40 minutes with warm-up and cooldown.' },
+  ab: { name: 'AB Plan · 4 days a week', short: '4 days a week', days: ['abA', 'abB', 'abA', 'abB'], perDay: 6, goalRx: true,
+    areas: [AB_A, AB_B, AB_A, AB_B],
+    blurb: 'Two workouts in turn, three muscle areas each: A is chest, biceps and back, B is shoulders, triceps and legs. Every area is trained twice a week. Sets and reps follow your goal.' },
+  upperlower: { name: 'Upper / Lower · 4 days a week', short: '4 days a week', days: ['upper', 'lower', 'upper', 'lower'], perDay: 6, goalRx: true,
+    areas: [UP_AREAS, LOW_AREAS, UP_AREAS, LOW_AREAS],
+    blurb: 'Upper body and lower body days in turn: chest, back, shoulders and arms, then legs, glutes, calves and core. Every area is trained twice a week. Sets and reps follow your goal.' },
 };
+// The app-built plan that uses the gentle sets and reps of TPL_RX (null for split plans, which follow the goal).
+export const tplRx = (plan) => (plan?.template && TEMPLATES[plan.template] && !TEMPLATES[plan.template].goalRx) ? plan.template : null;
 
-// Sets, reps and rest per phase of a ready-made plan (bodyweight holds: seconds instead of reps).
+// Sets, reps and rest per phase of a full-body app-built plan (bodyweight holds: seconds instead of reps).
 const TPL_RX = {
   base: { sets: 2, reps: [12, 15], rest: 60, hold: [20, 30] },
   build: { sets: 3, reps: [10, 12], rest: 60, hold: [25, 40] },
@@ -117,7 +127,7 @@ const TPL_RX = {
   deload: { sets: 2, reps: [10, 12], rest: 60, hold: [20, 30] },
 };
 
-// A short human summary of a ready-made plan's phases, for the info sheets.
+// A short human summary of a full-body app-built plan's phases, for the info sheets.
 export const TPL_PHASES = [
   ['Weeks 1–4', '2 sets × 12–15 reps, light weights. Learn the movements.'],
   ['Weeks 5–8', '3 sets × 10–12 reps. A bit more weight when all reps feel good.'],
@@ -125,7 +135,12 @@ export const TPL_PHASES = [
   ['Week 12', '2 sets × 10–12 reps, lighter. Recover.'],
 ];
 
-export const templateExNames = (key, di) => TPL_DAYS[TEMPLATES[key].days[di]].map(alts => exById(alts[0])?.name).filter(Boolean);
+export const templateExNames = (key, di) => (TPL_DAYS[TEMPLATES[key].days[di]] || []).map(alts => exById(alts[0])?.name).filter(Boolean);
+// What a day of an app-built plan trains, for the plan list: its muscle areas, or its main exercises.
+export const templateDayText = (key, di) => {
+  const a = TEMPLATES[key].areas?.[di];
+  return listJoin(a ? a.map(k => AREAS[k]?.name).filter(Boolean) : templateExNames(key, di));
+};
 
 function resolveSlot(st, ids, taken) {
   const inj = st.injuries || [], no = st.dislikes || [];
@@ -141,8 +156,9 @@ export function generateTemplatePlan(p, key) {
   const tpl = TEMPLATES[key], st = p.stats;
   const used = new Map();
   const days = tpl.days.map((dk, di) => {
-    // Muscle areas the user picked for this day in the profile replace the ready-made exercises.
-    const muscles = areasFor(p, di);
+    // Muscle areas the user picked for this day in the profile replace the plan's own exercises or areas.
+    const own = (st.dayAreas?.[di] || []).filter(k => AREAS[k]);
+    const muscles = own.length ? own : [...(tpl.areas?.[di] || [])];
     let items = [];
     if (muscles.length) items = itemsForAreas(st, muscles, rng(p.id + muscles.join() + di), used, [], tpl.perDay);
     else for (const alts of TPL_DAYS[dk]) {
@@ -158,9 +174,16 @@ export function generateTemplatePlan(p, key) {
     sortDay(day);
     return day;
   });
+  // Split plans use the goal's sets and rests: shorten the rests (down to 45 s) if the longest day doesn't fit the session length.
+  let restScale = 1;
+  if (tpl.goalRx) {
+    const budget = sessionBudget(st);
+    const daySec = (sc) => Math.max(...days.map(d => d.items.reduce((a, it) => a + exerciseSeconds(prescribe(st, exById(it.exId), 1, sc)), 0)));
+    while (restScale > 0.3 && daySec(restScale) > budget.lift + 120) restScale = +(restScale - 0.05).toFixed(2);
+  }
   return {
     id: uid('plan'), version: (p.plan?.version || 0) + 1, createdAt: Date.now(), fmt: PLAN_FMT,
-    name: tpl.name, weeks: PLAN_WEEKS, goal: 'general', days, done: {}, restScale: 1, edits: {}, template: key,
+    name: tpl.name, weeks: PLAN_WEEKS, goal: tpl.goalRx ? st.goal : 'general', days, done: {}, restScale, edits: {}, template: key,
   };
 }
 
@@ -426,7 +449,7 @@ export function dayFocus(day) {
   }
   if (day.cardio) names.push(MUSCLES.cardio);
   if (names.length <= 1) return names.join('');
-  return t('{list} & {last}', { list: names.slice(0, -1).join(', '), last: names[names.length - 1] });
+  return t('{list} & {last}', { list: listJoin(names.slice(0, -1)), last: names[names.length - 1] });
 }
 
 // Phase of the 12-week program.
@@ -438,7 +461,7 @@ export function phaseOf(week) {
 }
 
 // A plan saved from "Build your custom plan" keeps the same sets and reps all 12 weeks (no phases, no deload).
-// Plans the app builds (new profile, Edit profile → rebuild, ready-made) step up through the phases.
+// Plans the app builds (new profile, Edit profile → rebuild, app-built plans) step up through the phases.
 export const isCustom = (plan) => !!plan?.custom && !plan?.template;
 export function planPhase(plan, week) {
   return isCustom(plan) ? { key: 'base', name: t('Custom plan · same sets and reps every week') } : phaseOf(week);
@@ -489,7 +512,7 @@ export function suggest(p, ex, rx, week) {
   if (!last && p.startKg?.[ex.id] != null) {
     kg = p.startKg[ex.id]; // weight the user set in a day preview before ever logging this exercise
   } else if (!last) {
-    kg = estimateWeight(p.plan?.template ? { ...p.stats, level: 'beginner', goal: 'general' } : p.stats, ex);
+    kg = estimateWeight(tplRx(p.plan) ? { ...p.stats, level: 'beginner', goal: 'general' } : p.stats, ex);
     estimated = !!ex.load;
     if (estimated) note = t('Starting estimate – tap the sets to change it.');
   } else {
@@ -523,7 +546,7 @@ export function buildSession(p, week, dayIdx) {
   const items = day.items.map(it => {
     const ex = exById(it.exId);
     if (!ex) return null;
-    const rx = prescribe(st, ex, week, p.plan.restScale || 1, p.plan.template, isCustom(p.plan));
+    const rx = prescribe(st, ex, week, p.plan.restScale || 1, tplRx(p.plan), isCustom(p.plan));
     const sg = suggest(p, ex, rx, week);
     const edit = p.plan.edits?.[editKey(week, dayIdx, ex.id)];
     const sets = Array.from({ length: rx.sets }, (_, k) => {

@@ -40,7 +40,7 @@ These changes don't affect the clips. If a future change adds a JS or CSS file, 
 - **Added for the public:** a health disclaimer (welcome screen and Profile → About) and a privacy note (Profile → About). The README is rewritten for public users.
 - **New equipment and exercise:** `decline-bench` (Decline / sit-up bench, under Benches & racks, off by default, no picture yet) and `decline-situp` (Decline Sit-Up, core, avoided for lower back and neck injuries). It needs a clip and a picture.
 - **Day view:** each exercise has a move button (↕) that opens a "Change the order" sheet (Move up / Move down, "Back to the app's order"). A reordered day has `day.manual = true`, which `sortDay` respects.
-- **Add to workout on a full day** offers Add or Swap. Adding raises the exercises-per-day setting (`raiseDayCap`: `p.stats.exPerDay`, or `plan.cap` for ready-made plans), max 8.
+- **Add to workout on a full day** offers Add or Swap. Adding raises the exercises-per-day setting (`raiseDayCap`: `p.stats.exPerDay`, or `plan.cap` for app-built plans), max 8.
 
 ## Languages, units and Settings (2026-11-22, pushed)
 

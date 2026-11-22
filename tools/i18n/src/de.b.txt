@@ -608,3 +608,14 @@
 1218	Zuerst mit den Beinen drücken, dann zurücklehnen, dann mit den Armen ziehen.
 1219	In umgekehrter Reihenfolge zurück: Arme, Oberkörper, Beine.
 1220	Gleichmäßigen Rhythmus halten.
+1222	Pläne von der App
+1223	Oder wähle einen Plan von der App
+1224	Pläne mit festem Wochenaufbau, gefüllt mit Übungen, die zu deinen Geräten passen. Die Ganzkörperpläne starten leicht, mit 2–3 Sätzen à 10–15 Wiederholungen. Der AB-Plan und Oberkörper / Unterkörper richten sich nach deinem Ziel. Du kannst trotzdem an jedem Tag Übungen tauschen, hinzufügen oder entfernen und Sätze, Wiederholungen und Gewicht ändern.
+1225	Pläne mit festem Wochenaufbau: Ganzkörperpläne für 2 oder 3 Tage pro Woche, dazu der AB-Plan und Oberkörper / Unterkörper für 4 Tage pro Woche. Wähle einen statt eines eigenen Plans, wenn dir das lieber ist.
+1226	Tippe auf den Namen des Plans, um zu sehen, wie er funktioniert, oder um zu einem Plan von der App zu wechseln.
+1227	Ganzkörper · 3 Tage pro Woche
+1228	AB-Plan · 4 Tage pro Woche
+1229	4 Tage pro Woche
+1230	Zwei Trainings im Wechsel, mit je drei Muskelbereichen: A ist Brust, Bizeps und Rücken, B ist Schultern, Trizeps und Beine. Jeder Bereich wird zweimal pro Woche trainiert. Sätze und Wiederholungen richten sich nach deinem Ziel.
+1231	Oberkörper / Unterkörper · 4 Tage pro Woche
+1232	Oberkörper- und Unterkörpertage im Wechsel: Brust, Rücken, Schultern und Arme, dann Beine, Po, Waden und Rumpf. Jeder Bereich wird zweimal pro Woche trainiert. Sätze und Wiederholungen richten sich nach deinem Ziel.

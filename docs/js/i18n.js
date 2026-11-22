@@ -49,6 +49,9 @@ export function t(s, vars) {
   return out;
 }
 
+// Joins a list with the language's own separator (Chinese 、, Arabic ،).
+export const listJoin = (arr) => arr.join({ zh: '、', ar: '، ' }[lang()] ?? ', ');
+
 // Locale for dates and numbers.
 export const locale = () => lang() === 'en' ? (isUS() ? 'en-US' : 'en-GB') : lang();
 

@@ -1,10 +1,10 @@
 // My Plan, day preview, active workout and summary screens.
 import { state, profile, exById, photoFor, isAvailable, touchProfile, save, lastLogFor } from './store.js';
 import { esc, icon, thumb, register, sheet, closeSheet, toast, fmtClock, fmtKg, fmtDate, fmtDur, setLabel, themeButton } from './ui.js';
-import { currentWeek, planProgress, dayFocus, planPhase, isCustom, buildSession, estimateMinutes, estimateCalories, swapOptions, generatePlan, sortDay, itemArea, editKey, AREAS, setDayAreas, exPerDay, dayCap, warmOptions, warmPref, sessionBudget, TEMPLATES, TPL_PHASES, generateTemplatePlan, templateExNames, dayName, planTitle } from './planner.js';
+import { currentWeek, planProgress, dayFocus, planPhase, isCustom, buildSession, estimateMinutes, estimateCalories, swapOptions, generatePlan, sortDay, itemArea, editKey, AREAS, setDayAreas, exPerDay, dayCap, warmOptions, warmPref, sessionBudget, TEMPLATES, TPL_PHASES, generateTemplatePlan, templateDayText, tplRx, dayName, planTitle } from './planner.js';
 import { MUSCLES } from './exercises.js';
 import * as W from './workout.js';
-import { t, wUnit, fromW, toW, locale } from './i18n.js';
+import { t, wUnit, fromW, toW, locale, listJoin } from './i18n.js';
 import { rerender } from './app.js';
 import { scheduleSync } from './sync.js';
 
@@ -25,7 +25,7 @@ export function planView() {
   if (!p.plan) {
     return { html: `<header class="top"><h1>${t('Hi {name}', { name: esc(p.name) })}</h1>${avatar(p)}</header>
       <div class="card center"><p>${t('You don\'t have a plan yet.')}</p><button class="btn primary" data-act="make-plan">${t('Build my plan')}</button>
-      <button class="btn" data-act="tpl-open">${t('Or choose a ready-made plan')}</button></div>` };
+      <button class="btn" data-act="tpl-open">${t('Or choose an app-built plan')}</button></div>` };
   }
   const plan = p.plan;
   const cw = currentWeek(plan);
@@ -74,11 +74,11 @@ register({
   'make-plan': () => { const p = profile(); p.plan = generatePlan(p); touchProfile(p); scheduleSync(); rerender(); toast(t('Plan ready!')); },
   'plan-info': () => {
     const p = profile(); const plan = p.plan;
-    const n = exPerDay(p.stats);
-    const extras = [t('warm-up'), ...(p.stats.cardio ? [t('cardio finisher')] : [])].join(', ');
+    const n = dayCap(p);
+    const extras = listJoin([t('warm-up'), ...(p.stats.cardio ? [t('cardio finisher')] : [])]);
     sheet(`<h2>${esc(planTitle(plan))}</h2>
       <p class="muted">${t('{w} weeks · {d} days per week · {m} min sessions', { w: plan.weeks, d: plan.days.length, m: p.stats.minutes })}</p>
-      ${plan.template ? `<ul class="plain"><li><b>${t('Every day:')}</b> ${t('{n} exercises, plus warm-up{walk} and cooldown. Tap any day to swap, add or remove exercises and to change sets, reps and weight.', { n: dayCap(p), walk: plan.days[0]?.cardio ? t(', a short walk') : '' })}</li>
+      ${tplRx(plan) ? `<ul class="plain"><li><b>${t('Every day:')}</b> ${t('{n} exercises, plus warm-up{walk} and cooldown. Tap any day to swap, add or remove exercises and to change sets, reps and weight.', { n: dayCap(p), walk: plan.days[0]?.cardio ? t(', a short walk') : '' })}</li>
         ${TPL_PHASES.map(([a, b]) => `<li><b>${esc(a)}:</b> ${esc(b)}</li>`).join('')}</ul>`
       : `<ul class="plain">
         <li><b>${t('Every day:')}</b> ${t('{n} × 4 sets, plus {extras} and cooldown. Open a day to choose its muscle areas or change the warm-up.', { n: n === 1 ? t('1 exercise') : t('{n} exercises', { n }), extras })}</li>
@@ -89,23 +89,25 @@ register({
         <li><b>${t('Week 12')}:</b> ${t('deload – lighter so your body recovers.')}</li>`}
       </ul>`}
       <p class="muted">${t('The app raises the weight automatically when you hit the top of the rep range on every set. Tap the sets on a day to change reps or weight.')}</p>
-      <button class="btn" data-act="tpl-open">${t('Ready-made plans')}</button>
+      <button class="btn" data-act="tpl-open">${t('App-built plans')}</button>
       <button class="btn" data-act="go" data-href="#/profile">${t('Plan settings')}</button>`);
   },
   'tpl-open': () => {
     const cur = profile().plan?.template;
-    sheet(`<h2>${t('Ready-made plans')}</h2>
-      <p class="muted small">${t('Fixed full-body plans for women starting out around 50+. They follow research on strength training for this age: whole body, machines first, 4–6 exercises a day, 2–3 sets of 10–15 reps, light start. You can still swap, add or remove exercises and change sets, reps and weight on every day.')}</p>
+    sheet(`${closeX()}<h2>${t('App-built plans')}</h2>
+      <p class="muted small">${t('Plans with a set weekly layout, filled with exercises that fit your equipment. The full-body plans start light, with 2–3 sets of 10–15 reps. The AB and Upper / Lower plans follow your goal. You can still swap, add or remove exercises and change sets, reps and weight on every day.')}</p>
       ${Object.entries(TEMPLATES).map(([k, tp]) => `<div class="card">
         <b>${esc(tp.name)}</b>${cur === k ? ` <span class="pill">${t('Current')}</span>` : ''}
         <p class="muted small">${esc(tp.blurb)}</p>
-        <ul class="plain">${tp.days.map((_, di) => `<li><b>${esc(dayName(di))}:</b> ${esc(templateExNames(k, di).join(', '))}</li>`).join('')}</ul>
+        <ul class="plain">${tp.days.map((_, di) => `<li><b>${esc(dayName(di))}:</b> ${esc(templateDayText(k, di))}</li>`).join('')}</ul>
         <button class="btn primary" data-act="tpl-use" data-k="${k}">${cur === k ? t('Restart this plan') : t('Use this plan')}</button></div>`).join('')}
       <button class="btn ghost" data-act="sheet-close">${t('Cancel')}</button>`);
   },
   'tpl-use': (el) => {
     const p = profile();
     if (p.plan && Object.keys(p.plan.done).length && !confirm(t('A new plan restarts at week 1 (your history is kept). Continue?'))) return;
+    // A split plan brings its own muscle areas per day, so the areas picked for the old plan are cleared.
+    if (TEMPLATES[el.dataset.k]?.areas) delete p.stats.dayAreas;
     p.plan = generateTemplatePlan(p, el.dataset.k);
     viewWeek = null;
     touchProfile(p); scheduleSync(); closeSheet(); location.hash = '#/plan'; rerender(); toast(t('Plan ready!'));

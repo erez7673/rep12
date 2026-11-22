@@ -609,3 +609,14 @@
 1219	Vuelve al revés: brazos, tronco, piernas.
 1220	Mantén un ritmo constante.
 1221	Anterior
+1222	Planes creados por la app
+1223	O elige un plan creado por la app
+1224	Planes con una estructura semanal fija, con ejercicios que encajan con tu equipo. Los planes de cuerpo completo empiezan suave, con 2–3 series de 10–15 repeticiones. El Plan AB y Superior / Inferior siguen tu objetivo. Puedes seguir cambiando, añadiendo o quitando ejercicios y ajustar series, repeticiones y peso cada día.
+1225	Planes con una estructura semanal fija: planes de cuerpo completo para 2 o 3 días por semana, y el Plan AB y Superior / Inferior para 4 días por semana. Elige uno en lugar de un plan personalizado si lo prefieres.
+1226	Toca el nombre del plan para ver cómo funciona o para cambiar a un plan creado por la app.
+1227	Cuerpo completo · 3 días por semana
+1228	Plan AB · 4 días por semana
+1229	4 días por semana
+1230	Dos entrenamientos que se alternan, con tres zonas musculares cada uno: A es pecho, bíceps y espalda; B es hombros, tríceps y piernas. Cada zona se entrena dos veces por semana. Las series y repeticiones siguen tu objetivo.
+1231	Superior / Inferior · 4 días por semana
+1232	Días de tren superior e inferior que se alternan: pecho, espalda, hombros y brazos; luego piernas, glúteos, gemelos y core. Cada zona se entrena dos veces por semana. Las series y repeticiones siguen tu objetivo.

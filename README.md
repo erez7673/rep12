@@ -6,7 +6,7 @@ A free workout app (installable web app) for Android and iPhone: personal 12-wee
 
 > Rep12 gives general fitness guidance, not medical advice. If you have an injury or a health condition, check with a doctor or physiotherapist before you start.
 
-- Ready-made beginner plans for women 50+ (2 or 3 full-body days with 6 exercises, or 3 short days with 4; 2–3 sets of 10–15 reps), fully editable per day
+- App-built plans: 2 or 3 full-body days (2–3 sets of 10–15 reps), the AB Plan (4 days: chest, biceps and back / shoulders, triceps and legs) and Upper / Lower (4 days), fully editable per day
 - 12-week plans built from your stats, goal, schedule, injuries and focus areas: 4 exercises × 4 sets per day, plus warm-up, optional cardio finisher and cooldown
 - Tap the sets on a day to change reps or kg before you start
 - Pick the muscle areas of each workout day (e.g. Workout Day A: chest + biceps) and the app chooses the exercises

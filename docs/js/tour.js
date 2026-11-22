@@ -20,7 +20,7 @@ const STEPS = [
   { sec: 'Profile', route: '#/profile', sel: '.card.me', title: 'Your profile', text: 'Your name, age, height, weight, experience, goal, and how many days a week you train. Your plan and starting weights are based on these.' },
   { sec: 'Profile', route: '#/profile', sel: 'a.eqrow[href="#/onboard/edit"]', title: 'Edit profile', text: 'Change your personal details, goal or training days per week. Choose "Save & rebuild plan" to get a new plan that fits.' },
   { sec: 'Profile', route: '#/profile', sel: 'a.eqrow[href="#/custom"]', title: 'Build your custom plan', text: 'Choose how many exercises each workout day has, which muscle areas each day trains, how long a session is, the warm-up, a cardio finisher, any injuries to protect, and extra focus areas. A custom plan keeps the same sets and reps all 12 weeks.' },
-  { sec: 'Profile', route: '#/profile', sel: '[data-act="tpl-open"]', title: 'Ready-made plans', text: 'Simple full-body plans for beginners and people over 50. Pick one instead of a custom plan if you prefer.' },
+  { sec: 'Profile', route: '#/profile', sel: '[data-act="tpl-open"]', title: 'App-built plans', text: 'Plans with a set weekly layout: full-body plans for 2 or 3 days a week, the AB Plan and Upper / Lower for 4 days a week. Pick one instead of a custom plan if you prefer.' },
   { sec: 'Profile', route: '#/profile', sel: '[data-act="switch-profile"]', title: 'More than one person', text: 'Add a profile for someone else who trains on this phone, and switch between profiles here. Each person gets their own plan and history.' },
   { sec: 'Profile', route: '#/profile', sel: 'a.eqrow[href="#/gym"]', title: 'Gym setup', text: 'Tell the app which equipment your gym has, so your plan only uses what\'s there. More about this in the Gym tab.' },
   { sec: 'Profile', route: '#/profile', sel: '[data-act="tour-start"]', title: 'Take the tour again', text: 'Start this tour again from here whenever you need a refresher.' },
@@ -38,7 +38,7 @@ const STEPS = [
   // ── My Plan ──
   { sec: 'My Plan', route: '#/plan', sel: '#nav a[href="#/plan"]', fixed: true, title: 'The My Plan tab', text: 'Your 12-week plan. This is where you start every workout.' },
   { sec: 'My Plan', route: '#/plan', sel: '.weekbar', title: 'Your 12 weeks', text: 'Each bar is a week and fills up as you finish its workouts. Tap a week to look at it. A plan the app builds for you gets harder in steps, and week 12 is an easier recovery week. A plan from "Build your custom plan" keeps the same sets and reps every week.' },
-  { sec: 'My Plan', route: '#/plan', sel: '[data-act="plan-info"]', title: 'About your plan', text: 'Tap the plan\'s name to see how it works, or to switch to a ready-made plan.' },
+  { sec: 'My Plan', route: '#/plan', sel: '[data-act="plan-info"]', title: 'About your plan', text: 'Tap the plan\'s name to see how it works, or to switch to an app-built plan.' },
   { sec: 'My Plan', route: '#/plan', sel: '.days', title: 'Workout days', text: 'One card per workout day. "Next" marks the one to do now, and finished days get a tick. Tap a day to open it.' },
 
   // ── Workout day ──

@@ -1,0 +1,611 @@
+611	Empieza con los brazos estirados por encima de la cabeza.
+612	Tira hacia abajo llevando los codos hacia las caderas.
+613	Vuelve despacio hasta estirar los brazos.
+614	Ajusta el asiento para que las asas queden a la altura del pecho.
+615	Codos ligeramente doblados y fijos.
+616	Junta los brazos delante del pecho y aprieta.
+617	Abre despacio hasta notar estiramiento.
+618	Ajusta para que las asas queden a la altura de los hombros.
+619	Brazos casi rectos delante de ti.
+620	Lleva los brazos hacia atrás y hacia fuera hasta quedar en línea con el cuerpo.
+621	Vuelve despacio.
+622	Ajusta para que el eje quede alineado con tus hombros.
+623	Empieza con los brazos a los lados.
+624	Levanta los brazos hacia los lados hasta la altura de los hombros.
+625	Baja despacio.
+626	De pie o sentado erguido, sujetando las asas.
+627	Sube los hombros en línea recta hacia las orejas.
+628	Mantén 1 s arriba.
+629	Ajusta para que los codos queden alineados con el eje de la máquina.
+630	Brazos sobre el apoyo, palmas hacia arriba.
+631	Sube las asas hacia los hombros.
+632	Baja despacio hasta tener los brazos casi rectos.
+633	Brazos sobre el apoyo.
+634	Estira del todo los brazos y aprieta los tríceps.
+635	Ajusta el asiento o respaldo para que las rodillas estén a unos 90° al empezar.
+636	Pies a la anchura de los hombros, espalda pegada al respaldo.
+637	Empuja con todo el pie hasta que las piernas estén casi rectas.
+638	Baja despacio, sin que la zona lumbar se despegue del respaldo.
+639	Alinea las rodillas con el eje.
+640	Apoyo justo por encima de los tobillos.
+641	Estira las piernas y aprieta.
+642	Apoyo justo por encima de los talones.
+643	Lleva los talones hacia atrás todo lo que puedas.
+644	Colócate de modo que el apoyo o el peso quede a la altura de la cadera.
+645	Espalda recta, rodillas ligeramente dobladas.
+646	Inclínate desde la cadera hasta notar estiramiento en los isquiotibiales.
+647	Aprieta los glúteos para volver a subir.
+648	Parte alta de la espalda en el apoyo, almohadilla o cinturón sobre la cadera.
+649	Pies apoyados, rodillas a unos 90° arriba.
+650	Sube la cadera y aprieta los glúteos.
+651	Coloca el apoyo detrás del talón o de la rodilla.
+652	Sujeta las asas y mantén el tronco quieto.
+653	Lleva la pierna hacia atrás y aprieta el glúteo.
+654	Vuelve despacio. Cambia de pierna.
+655	Siéntate con los apoyos por fuera de las rodillas.
+656	Siéntate erguido.
+657	Separa las rodillas empujando.
+658	Siéntate con los apoyos por dentro de las rodillas.
+659	Junta las piernas apretando.
+660	Parte delantera de los pies en el borde de la plataforma.
+661	Piernas rectas (de pie) o apoyo sobre los muslos (sentado).
+662	Sube de puntillas todo lo que puedas.
+663	Baja despacio hasta estirar del todo.
+664	Ajusta el asiento y sujeta las asas.
+665	Suelta el aire y encógete hacia delante, curvando la espalda.
+666	Aprieta el abdomen 1 s.
+667	Sentado o de pie, erguido, con la cadera mirando al frente.
+668	Gira el tronco hacia un lado contra la resistencia.
+669	Vuelve despacio al centro.
+670	Haz todas las repeticiones y luego cambia de lado.
+671	Colócate en posición con el abdomen firme.
+672	Mantente quieto contra la resistencia.
+673	Respira de forma constante.
+674	Suelta despacio.
+675	Empieza a un nivel suave durante 2 minutos.
+676	Sube a un esfuerzo moderadamente intenso.
+677	Mantén un ritmo constante y buena postura.
+678	Termina con 2 minutos suaves.
+679	Mancuernas (soporte)
+680	Barra olímpica + discos
+681	Barra Z / barras fijas
+682	Kettlebells
+683	Banco plano
+684	Banco regulable
+685	Jaula de potencia / rack de sentadillas
+686	Máquina Smith
+687	Banco Scott
+688	Banco declinado / de abdominales
+689	Polea simple (regulable)
+690	Cruce de poleas / polea doble
+691	Jalón al pecho
+692	Remo en polea baja sentado
+693	Máquina de press de pecho
+694	Máquina de press de hombros
+695	Contractor de pecho / deltoides posterior
+696	Máquina de remo sentado (con apoyo de pecho)
+697	Extensión de piernas
+698	Curl femoral (sentado o tumbado)
+699	Abducción de cadera (exterior del muslo)
+700	Aducción de cadera (interior del muslo)
+701	Máquina de extensión de tríceps
+702	Torsión de tronco (giro sentado)
+703	Máquina de abdominales
+704	Elevación de gemelos sentado
+705	Press de pecho de discos
+706	Press inclinado de discos
+707	Remo de discos
+708	Prensa de piernas
+709	Sentadilla hack
+710	Máquina de hip thrust
+711	Barra de dominadas
+712	Máquina asistida de dominadas / fondos
+713	Estación de elevación de rodillas (silla romana)
+714	Banco de extensiones lumbares a 45°
+715	Correas de suspensión TRX
+716	Cintas de correr
+717	Elípticas
+718	Escaladora
+719	Bici estática (reclinada)
+720	Bici estática (vertical)
+721	Máquina de remo
+722	Press de banca con barra
+723	Túmbate en el banco con los ojos bajo la barra y los pies en el suelo.
+724	Agarre algo más ancho que los hombros, junta las escápulas.
+725	Saca la barra y bájala a la mitad del pecho con los codos a unos 45° del cuerpo.
+726	Empuja hasta estirar los brazos. Usa un ayudante o los topes de seguridad con mucho peso.
+727	Mantén los glúteos en el banco y las muñecas encima de los codos.
+728	Press de banca en Smith
+729	Pon un banco plano bajo la barra Smith para que quede sobre la parte baja del pecho.
+730	Agarre algo más ancho que los hombros; gira la barra para soltarla.
+731	Baja despacio hasta el pecho, codos a unos 45° del cuerpo.
+732	Empuja hasta estirar los brazos; al final gira la barra para engancharla.
+733	Pon los topes de seguridad justo por encima del pecho.
+734	Press de banca con mancuernas
+735	Siéntate con las mancuernas sobre los muslos, túmbate y llévalas a la altura del pecho.
+736	Palmas hacia delante (o un poco hacia dentro), escápulas hacia atrás.
+737	Empuja hasta que las mancuernas casi se toquen sobre el pecho.
+738	Baja despacio hasta notar estiramiento en el pecho.
+739	Las mancuernas cuidan más los hombros que la barra.
+740	Press inclinado con mancuernas
+741	Pon el banco a 30°. Recuéstate con las mancuernas a la altura de los hombros.
+742	Empuja hacia arriba y un poco hacia dentro sobre la parte alta del pecho.
+743	Baja con control hasta que los codos queden un poco por debajo del banco.
+744	Mantén las escápulas juntas todo el tiempo.
+745	Trabaja la parte alta del pecho.
+746	Press inclinado en Smith
+747	Pon un banco regulable a 30° bajo la barra Smith.
+748	La barra debe bajar a la parte alta del pecho.
+749	Suelta la barra y bájala despacio a la parte alta del pecho.
+750	Empuja hasta estirar los brazos y vuelve a engancharla.
+751	Press de pecho en máquina
+752	Ajusta el asiento para que las asas queden a mitad del pecho.
+753	Siéntate con la espalda pegada al respaldo y los pies en el suelo.
+754	Empuja las asas hacia delante hasta que los brazos estén casi rectos.
+755	Vuelve despacio hasta notar estiramiento en el pecho.
+756	Un primer press seguro y estupendo para principiantes.
+757	Press de pecho de discos
+758	Carga los mismos discos en ambos lados. Ajusta el asiento para que las asas queden a mitad del pecho.
+759	Recuéstate, coge las asas, escápulas atrás.
+760	Empuja hacia delante hasta que los brazos estén casi rectos.
+761	Baja despacio. Cada brazo se mueve por separado: mantenlos iguales.
+762	El peso indicado es el total de discos cargados.
+763	Press inclinado de discos
+764	Carga los mismos discos. Ajusta el asiento para que las asas empiecen a la altura de la parte alta del pecho.
+765	Recuéstate con el pecho arriba y las escápulas juntas.
+766	Empuja hacia arriba y hacia delante hasta que los brazos estén casi rectos.
+767	Baja despacio hasta un estiramiento cómodo.
+768	Flexión
+769	Manos algo más anchas que los hombros, cuerpo en línea recta.
+770	Baja el pecho hasta casi tocar el suelo, codos a unos 45°.
+771	¿Demasiado difícil? Apoya las manos en un banco o hazlas de rodillas.
+772	Aperturas en contractor
+773	Ajusta el asiento para que las asas queden a la altura del pecho. Pon los brazos de la máquina en posición delantera.
+774	Siéntate con la espalda en el respaldo y coge las asas con los codos un poco doblados.
+775	Junta las asas delante del pecho.
+776	Abre despacio hasta notar estiramiento, sin pasar de los hombros.
+777	Aperturas en cruce de poleas
+778	Pon ambas poleas a la altura de los hombros con asas simples.
+779	Da un paso al frente con un pie delante, ligeramente inclinado.
+780	Con los codos un poco doblados, junta las asas delante del pecho.
+781	Vuelve despacio y con control.
+782	El peso indicado es por lado.
+783	Aperturas en polea de abajo arriba (pecho alto)
+784	Pon ambas poleas en la posición más baja.
+785	Ponte en el centro, da un paso al frente, brazos abajo y un poco atrás.
+786	Lleva las asas hacia arriba y hacia el centro hasta la altura del pecho alto.
+787	Aperturas en polea de arriba abajo
+788	Pon ambas poleas arriba del todo.
+789	Da un paso al frente inclinándote un poco, brazos bien abiertos.
+790	Tira de las asas hacia abajo y júntalas delante de la cadera.
+791	Aperturas con mancuernas
+792	Túmbate en un banco, mancuernas sobre el pecho, palmas enfrentadas.
+793	Con los codos un poco doblados, abre bien los brazos.
+794	Para cuando notes estiramiento (codos más o menos a la altura del banco).
+795	Vuelve a juntar las mancuernas apretando.
+796	Aperturas inclinadas con mancuernas
+797	Pon el banco a 30°.
+798	Mancuernas sobre la parte alta del pecho, palmas enfrentadas.
+799	Abre bien con los codos suaves hasta notar estiramiento.
+800	Vuelve a juntarlas sobre el pecho.
+801	Press de hombros sentado con mancuernas
+802	Pon el banco casi vertical (80–90°). Mancuernas a la altura de los hombros, palmas hacia delante.
+803	Abdomen firme y espalda pegada al respaldo.
+804	Empuja hasta estirar los brazos por encima de la cabeza.
+805	Baja hasta la altura de las orejas.
+806	Press de hombros en máquina
+807	Ajusta el asiento para que las asas empiecen a la altura de los hombros.
+808	Siéntate con la espalda en el respaldo y coge las asas.
+809	Baja despacio hasta el inicio.
+810	Press de hombros sentado en Smith
+811	Pon un banco vertical bajo la barra Smith para que la barra pase justo delante de tu cara.
+812	Agarre algo más ancho que los hombros.
+813	Suelta la barra y bájala a la altura de la barbilla.
+814	Empuja hasta estirar los brazos.
+815	Press militar de pie con barra
+816	Pon la barra en el rack a la altura de la clavícula. Agarre justo por fuera de los hombros.
+817	Saca la barra, abdomen firme y glúteos apretados.
+818	Empuja la barra recta hacia arriba, echando la cabeza un poco atrás para dejarla pasar.
+819	Bloquea arriba y baja hasta la clavícula.
+820	Press Arnold
+821	Siéntate erguido, mancuernas delante de los hombros, palmas hacia ti.
+822	Al subir, gira las palmas hacia delante.
+823	Termina con los brazos estirados por encima de la cabeza.
+824	Deshaz el giro al bajar.
+825	Elevaciones laterales con mancuernas
+826	De pie, erguido, mancuernas a los lados, codos un poco doblados.
+827	Sube los brazos hacia los lados hasta la altura de los hombros.
+828	Guía con los codos; meñiques un poco hacia arriba.
+829	Baja despacio, sin balancearte.
+830	Elevación lateral en polea
+831	Pon una polea en la posición más baja con un asa simple.
+832	Ponte de lado y coge el asa con la mano más alejada, cruzando el cuerpo.
+833	Sube el brazo hacia el lado hasta la altura del hombro.
+834	Baja despacio. Haz todas las repeticiones y luego cambia de lado.
+835	Contractor inverso
+836	Pon los brazos de la máquina en posición trasera. Siéntate mirando al respaldo.
+837	Coge las asas a la altura de los hombros con los brazos casi rectos.
+838	Face pull en polea
+839	Pon la polea a la altura de la cabeza con la cuerda.
+840	Coge los dos extremos de la cuerda, palmas hacia dentro, y da un paso atrás.
+841	Tira de la cuerda hacia la cara, separando los extremos junto a las orejas.
+842	Junta las escápulas y vuelve despacio.
+843	Muy bueno para la postura y la salud de los hombros.
+844	Pájaros con mancuernas inclinado
+845	Inclínate desde la cadera, espalda recta, mancuernas colgando bajo el pecho.
+846	Con los codos suaves, sube los brazos hacia los lados.
+847	Aprieta la parte alta de la espalda arriba.
+848	Jalón al pecho con agarre ancho
+849	Ajusta el apoyo de muslos para que las piernas queden sujetas.
+850	Coge la barra más ancha que los hombros y siéntate con los brazos estirados.
+851	Tira de la barra hacia la parte alta del pecho, guiando con los codos.
+852	Deja que suba despacio hasta estirar los brazos.
+853	Pecho arriba; no te eches demasiado hacia atrás.
+854	Jalón con agarre estrecho (asa en V)
+855	Pon un asa en V. Sujeta las piernas bajo el apoyo.
+856	Agarre con las palmas enfrentadas, brazos rectos.
+857	Tira del asa hacia la parte alta del pecho, codos pegados al cuerpo.
+858	Dominada asistida
+859	Elige el peso de asistencia: MÁS peso = MÁS fácil.
+860	Coge la barra con las palmas hacia ti, a la anchura de los hombros.
+861	Arrodíllate (o ponte de pie) en el apoyo y cuelga con los brazos rectos.
+862	Sube hasta que la barbilla pase la barra y baja despacio.
+863	Progresa reduciendo la asistencia.
+864	Dominada
+865	Cuélgate de la barra, manos algo más anchas que los hombros, palmas hacia fuera.
+866	Lleva el pecho hacia la barra, empujando los codos hacia abajo.
+867	Sube la barbilla por encima de la barra.
+868	Baja con control hasta estirar los brazos.
+869	Jalón en polea con brazos rectos
+870	Pon una polea alta con barra recta o cuerda.
+871	Da un paso atrás, inclínate un poco, brazos rectos al frente a la altura de la cabeza.
+872	Con los brazos rectos, lleva la barra hasta los muslos.
+873	Remo sentado en polea
+874	Siéntate con los pies en la plataforma, rodillas un poco dobladas, y coge el asa en V.
+875	Siéntate erguido con los brazos rectos.
+876	Tira del asa hacia el abdomen juntando las escápulas.
+877	Vuelve despacio sin redondear la espalda.
+878	Remo cruzado sentado en polea
+879	Siéntate frente a las poleas bajas con un asa en cada mano, cruzadas (asa derecha en la mano izquierda).
+880	Rema con ambas asas hacia los costados.
+881	Remo en máquina con apoyo de pecho
+882	Ajusta el asiento para que las asas queden a la altura del pecho y el pecho apoyado.
+883	Coge las asas con los brazos rectos.
+884	Tira hacia atrás juntando las escápulas.
+885	Remo sentado a una mano en máquina
+886	Carga discos. Ajusta el asiento para que el pecho quede en el apoyo y alcances las asas.
+887	Coge una o las dos asas con los brazos rectos.
+888	Lleva el codo o los codos hacia atrás pasando el cuerpo.
+889	Vuelve despacio. Si lo haces con un brazo, haz todas las repeticiones y luego cambia.
+890	Remo a una mano con mancuerna
+891	Apoya una rodilla y una mano en un banco plano, espalda recta.
+892	Sujeta una mancuerna con la otra mano, brazo estirado.
+893	Tira de la mancuerna hacia la cadera, codo pegado al cuerpo.
+894	Remo con mancuernas con apoyo de pecho
+895	Pon el banco a 30–45° y túmbate boca abajo.
+896	Deja colgar las mancuernas rectas hacia abajo.
+897	Sube las dos juntando las escápulas.
+898	Suave con la zona lumbar.
+899	Remo inclinado con barra
+900	Coge la barra en prono e inclínate desde la cadera hasta que el tronco esté a unos 45°.
+901	Espalda recta y rodillas un poco flexionadas.
+902	Lleva la barra hacia las costillas bajas.
+903	Baja hasta estirar los brazos.
+904	Remo en TRX
+905	Coge las asas del TRX, adelanta los pies y échate hacia atrás con los brazos rectos.
+906	Mantén el cuerpo en línea recta.
+907	Sube el pecho hasta las asas.
+908	Baja despacio. Adelanta más los pies para hacerlo más difícil.
+909	Encogimientos con mancuernas
+910	De pie, erguido, mancuernas a los lados.
+911	Mantén un segundo arriba.
+912	Baja despacio. No hagas círculos con los hombros.
+913	Encogimientos en Smith
+914	Pon la barra Smith a mitad del muslo.
+915	Agarre a la anchura de los hombros, de pie, erguido, brazos rectos.
+916	Sube los hombros en línea recta.
+917	Curl de bíceps con mancuernas
+918	De pie, erguido, mancuernas a los lados, palmas hacia delante.
+919	Codos pegados a los costados.
+920	Sube las mancuernas hasta la altura de los hombros.
+921	Baja despacio hasta estirar los brazos.
+922	Curl martillo
+923	Sujeta las mancuernas a los lados con las palmas enfrentadas.
+924	Codos quietos.
+925	Sube con los pulgares arriba.
+926	Curl con barra Z
+927	Coge la barra Z por las zonas inclinadas, palmas arriba.
+928	Codos a los costados.
+929	Sube la barra hasta el pecho.
+930	Baja despacio sin balancearte.
+931	Curl en banco Scott
+932	Ajusta el asiento para que las axilas queden en el borde del apoyo.
+933	Sujeta una barra Z (o mancuerna) con los brazos sobre el apoyo.
+934	Sube hasta que los antebrazos estén verticales.
+935	Baja despacio, sin llegar a bloquear los codos.
+936	Curl en polea
+937	Pon la polea abajo con una barra recta o una cuerda.
+938	Ponte de cara a la máquina, codos a los costados.
+939	Sube el asa hasta el pecho.
+940	Curl inclinado con mancuernas
+941	Pon el banco a 45–60° y recuéstate con los brazos colgando rectos.
+942	Palmas hacia delante.
+943	Sube las dos mancuernas sin mover la parte superior de los brazos.
+944	Baja del todo despacio.
+945	Extensión de tríceps en polea con cuerda
+946	Pon la polea alta con la cuerda.
+947	Codos pegados a los costados, antebrazos arriba.
+948	Empuja la cuerda hacia abajo y separa los extremos abajo.
+949	Vuelve despacio hasta 90°.
+950	Extensión de tríceps con barra recta
+951	Pon la polea alta con una barra recta o angulada.
+952	Agarre en prono, codos pegados a los costados.
+953	Empuja la barra hacia abajo hasta estirar los brazos.
+954	Extensión de tríceps en polea por encima de la cabeza
+955	Pon la polea baja con una cuerda. De espaldas a la máquina, cuerda detrás de la cabeza.
+956	Da un paso al frente con un pie delante, codos apuntando al frente.
+957	Estira los brazos por encima de la cabeza.
+958	Dobla los codos despacio hacia atrás.
+959	Extensión de tríceps sentado con mancuerna
+960	Siéntate erguido y sujeta una mancuerna con las dos manos sobre la cabeza.
+961	Codos hacia arriba y juntos.
+962	Baja la mancuerna detrás de la cabeza.
+963	Vuelve a estirar los brazos.
+964	Press francés con barra Z
+965	Túmbate en un banco con una barra Z sobre el pecho.
+966	Sin mover la parte superior de los brazos, dobla los codos para bajar la barra hacia la frente.
+967	Para justo por encima de la cabeza.
+968	Vuelve a estirar los brazos.
+969	Press de banca con agarre estrecho en Smith
+970	Túmbate bajo la barra Smith, agarre a la anchura de los hombros.
+971	Suelta la barra y bájala a la parte baja del pecho, codos pegados al cuerpo.
+972	Engánchala al terminar.
+973	Fondos asistidos
+974	Coge las asas de fondos y arrodíllate en el apoyo con los brazos rectos.
+975	Baja hasta que la parte superior de los brazos quede más o menos paralela al suelo.
+976	Extensión de tríceps en máquina
+977	Ajusta el asiento para que los codos queden alineados con el eje de la máquina.
+978	Apoya los brazos en el apoyo y coge las asas.
+979	Empuja hacia abajo o hacia delante hasta estirar los brazos.
+980	Fondos en banco
+981	Siéntate en el borde de un banco con las manos junto a la cadera.
+982	Desliza los glúteos fuera del banco con las piernas dobladas.
+983	Dobla los codos para bajar el cuerpo unos 10–15 cm.
+984	Vuelve a subir.
+985	Prensa de piernas
+986	Siéntate con la espalda pegada al respaldo y los pies a la anchura de los hombros en el centro de la plataforma.
+987	Suelta las asas de seguridad.
+988	Baja hasta que las rodillas estén a unos 90°, con la zona lumbar en el respaldo.
+989	Vuelve a empujar sin bloquear las rodillas.
+990	Pies más arriba = más glúteos; más abajo = más cuádriceps.
+991	Sentadilla trasera con barra
+992	Pon la barra en el rack a la altura de los hombros y los topes justo por debajo de la profundidad de la sentadilla.
+993	Barra en la parte alta de la espalda, pies a la anchura de los hombros, puntas un poco hacia fuera.
+994	Abdomen firme, baja hacia atrás y abajo hasta que los muslos estén al menos paralelos.
+995	Sube empujando con todo el pie.
+996	Sentadilla en Smith
+997	Barra en la parte alta de la espalda, pies un poco por delante de la barra.
+998	Suelta la barra.
+999	Baja hasta que los muslos estén más o menos paralelos.
+1000	Vuelve a subir y engancha la barra.
+1001	Sentadilla goblet
+1002	Sujeta una mancuerna en vertical contra el pecho.
+1003	Pies a la anchura de los hombros, puntas un poco hacia fuera.
+1004	Baja entre las rodillas con el pecho arriba.
+1005	Vuelve a levantarte.
+1006	Sentadilla sumo con mancuerna
+1007	Piernas muy abiertas, puntas hacia fuera, una mancuerna entre las piernas.
+1008	Mantén el pecho arriba.
+1009	Baja empujando las rodillas hacia fuera, sobre los pies.
+1010	Aprieta los glúteos para subir.
+1011	Máquina de sentadilla hack
+1012	Ponte en la plataforma con la espalda y los hombros contra los apoyos.
+1013	Pies a la anchura de los hombros. Suelta las asas de seguridad.
+1014	Baja hasta que las rodillas estén a 90° o un poco más.
+1015	Peso muerto rumano con barra
+1016	Sujeta la barra a la altura de los muslos, pies a la anchura de la cadera, rodillas suaves.
+1017	Lleva la cadera atrás deslizando la barra por las piernas.
+1018	Espalda recta; para cuando notes un buen estiramiento de isquiotibiales.
+1019	Empuja la cadera adelante para subir.
+1020	Peso muerto rumano con mancuernas
+1021	Sujeta las mancuernas delante de los muslos, rodillas suaves.
+1022	Lleva la cadera atrás con las mancuernas cerca de las piernas.
+1023	Baja hasta notar estiramiento en los isquiotibiales, espalda recta.
+1024	Peso muerto rumano en Smith
+1025	Pon la barra Smith a mitad del muslo y colócate cerca, pies a la anchura de la cadera.
+1026	Suelta la barra y lleva la cadera atrás, espalda recta.
+1027	Baja hasta notar estiramiento en los isquiotibiales.
+1028	Empuja la cadera adelante para subir.
+1029	Peso muerto convencional
+1030	Barra sobre la mitad del pie, pies a la anchura de la cadera. Agarre justo por fuera de las rodillas.
+1031	Espinillas a la barra, pecho arriba, espalda recta, abdomen muy firme.
+1032	Empuja el suelo y ponte de pie bien erguido.
+1033	Baja llevando la cadera atrás.
+1034	Extensión lumbar a 45°
+1035	Pon el apoyo justo por debajo de los huesos de la cadera y los talones bajo el rodillo.
+1036	Cruza los brazos sobre el pecho.
+1037	Baja el tronco doblándote por la cadera.
+1038	Aprieta los glúteos para volver a quedar en línea recta.
+1039	Pull-through en polea
+1040	Pon una polea baja con la cuerda. De espaldas, con la cuerda entre las piernas.
+1041	Da dos pasos adelante, pies abiertos.
+1042	Inclínate desde la cadera dejando que la cuerda vaya atrás entre las piernas.
+1043	Aprieta los glúteos para ponerte erguido.
+1044	Zancadas caminando con mancuernas
+1045	Sujeta las mancuernas a los lados.
+1046	Da un paso largo adelante y baja la rodilla de atrás hacia el suelo.
+1047	Empuja con el talón de delante y pasa a la siguiente zancada.
+1048	Las repeticiones cuentan por pierna.
+1049	Zancada atrás con mancuernas
+1050	De pie, erguido, con las mancuernas.
+1051	Da un paso atrás con un pie y baja la rodilla de atrás.
+1052	Empuja con el talón de delante para volver.
+1053	Alterna las piernas; las repeticiones cuentan por pierna.
+1054	Más suave para las rodillas que las zancadas hacia delante.
+1055	Sentadilla búlgara
+1056	Ponte delante de un banco y apoya en él el empeine del pie de atrás.
+1057	Baja en vertical hasta que el muslo de delante esté más o menos paralelo.
+1058	Sube empujando con el talón de delante. Haz todas las repeticiones y luego cambia.
+1059	Subida al banco con mancuernas
+1060	Ponte de cara a un banco plano con las mancuernas.
+1061	Apoya un pie entero en el banco.
+1062	Empuja con ese talón para subirte al banco.
+1063	Baja despacio. Haz todas las repeticiones y luego cambia.
+1064	Sentadilla dividida en Smith
+1065	Barra en la parte alta de la espalda, un pie delante y otro detrás en una zancada larga.
+1066	Baja la rodilla de atrás hacia el suelo.
+1067	Sube empujando con el pie de delante. Haz todas las repeticiones y luego cambia.
+1068	Extensión de piernas
+1069	Ajusta el respaldo para que las rodillas queden alineadas con el eje de la máquina.
+1070	Pon el apoyo de las espinillas justo por encima de los tobillos.
+1071	Estira del todo las piernas y aprieta los cuádriceps.
+1072	Máquina de curl femoral
+1073	Ajusta para que las rodillas queden alineadas con el eje y bloquea el apoyo de los muslos.
+1074	El apoyo de las piernas queda justo por encima de los talones.
+1075	Lleva los talones hacia atrás o hacia abajo todo lo que puedas.
+1076	Hip thrust con barra
+1077	Siéntate en el suelo con la parte alta de la espalda contra un banco y la barra sobre la cadera (usa una almohadilla).
+1078	Pies apoyados a la anchura de la cadera, rodillas dobladas.
+1079	Sube la cadera hasta que el cuerpo quede recto de los hombros a las rodillas.
+1080	Aprieta los glúteos arriba y baja despacio.
+1081	Hip thrust en Smith
+1082	Pon un banco de lado junto a la máquina Smith. Parte alta de la espalda en el banco y la barra sobre la cadera (con almohadilla).
+1083	Pies apoyados, rodillas dobladas.
+1084	Suelta la barra y sube la cadera hasta quedar en línea recta.
+1085	Aprieta y baja despacio.
+1086	Máquina de hip thrust
+1087	Siéntate con la parte alta de la espalda en el apoyo y el cinturón o almohadilla sobre la cadera.
+1088	Pies apoyados en la plataforma.
+1089	Sube la cadera hasta quedar recto.
+1090	Aprieta los glúteos y baja despacio.
+1091	Puente de glúteos
+1092	Túmbate boca arriba, rodillas dobladas, pies apoyados cerca de los glúteos.
+1093	Empuja con los talones para subir la cadera.
+1094	Aprieta los glúteos arriba durante 2 segundos.
+1095	Máquina de abducción de cadera
+1096	Siéntate con los apoyos por fuera de las rodillas.
+1097	Siéntate erguido y sujeta las asas.
+1098	Separa las rodillas hacia fuera todo lo que puedas.
+1099	Inclínate un poco hacia delante para trabajar más el glúteo superior.
+1100	Máquina de aducción de cadera
+1101	Siéntate con los apoyos por dentro de las rodillas y las piernas abiertas.
+1102	Abre despacio.
+1103	Patada de glúteo en polea
+1104	Pon una tobillera en una polea baja y colócala en un tobillo.
+1105	Ponte de cara a la máquina, agárrate para apoyarte, un poco inclinado.
+1106	Lleva la pierna recta hacia atrás apretando el glúteo.
+1107	Vuelve despacio. Haz todas las repeticiones y luego cambia.
+1108	Elevación de gemelos en Smith
+1109	Barra en la parte alta de la espalda, parte delantera de los pies sobre un disco o escalón.
+1110	Sube de puntillas todo lo que puedas.
+1111	Baja los talones por debajo del escalón para estirar.
+1112	Elevación de gemelos en prensa
+1113	Siéntate en la prensa y pon la parte delantera de los pies en el borde inferior de la plataforma.
+1114	Piernas casi rectas. Deja puestos los seguros si es posible.
+1115	Empuja la plataforma con las puntas de los pies.
+1116	Deja volver los talones para estirar.
+1117	Elevación de gemelos a una pierna con mancuerna
+1118	Ponte sobre un pie en un escalón o disco, con una mancuerna en el mismo lado.
+1119	Agárrate a algo con la otra mano para mantener el equilibrio.
+1120	Sube de puntillas.
+1121	Baja el talón despacio. Haz todas las repeticiones y luego cambia.
+1122	Máquina de elevación de gemelos sentado
+1123	Siéntate con el apoyo sobre la parte baja de los muslos y la parte delantera de los pies en la plataforma.
+1124	Suelta la palanca de seguridad.
+1125	Sube los talones todo lo que puedas.
+1126	Plancha
+1127	Antebrazos en el suelo, codos bajo los hombros.
+1128	Cuerpo en línea recta de la cabeza a los talones.
+1129	Aprieta los glúteos y el abdomen.
+1130	Mantén el tiempo indicado; respira con normalidad.
+1131	Plancha lateral
+1132	Túmbate de lado con el codo bajo el hombro.
+1133	Sube la cadera hasta que el cuerpo quede recto.
+1134	Mantén el tiempo indicado.
+1135	Cambia de lado (el tiempo es por lado).
+1136	Elevación de rodillas con apoyo de brazos
+1137	Colócate en la estación de elevación de rodillas, antebrazos en los apoyos y espalda contra el respaldo.
+1138	Deja colgar las piernas rectas.
+1139	Sube las rodillas hacia el pecho, enrollando la pelvis hacia arriba.
+1140	Elevación de piernas colgado
+1141	Cuélgate de una barra de dominadas.
+1142	Piernas rectas (o dobladas para que sea más fácil).
+1143	Sube las piernas hasta la altura de la cadera o más.
+1144	Crunch de rodillas en polea
+1145	Pon una polea alta con la cuerda. Arrodíllate de cara a ella, cuerda junto a la cabeza.
+1146	Mantén la cadera quieta.
+1147	Encógete hacia abajo llevando los codos hacia las rodillas.
+1148	Leñadores en polea
+1149	Pon una polea alta. Ponte de lado y coge el asa con las dos manos.
+1150	Tira en diagonal hacia abajo cruzando el cuerpo hasta la cadera contraria.
+1151	Gira el tronco y pivota el pie de atrás.
+1152	Vuelve despacio. Haz todas las repeticiones y luego cambia de lado.
+1153	Leñadores con mancuerna
+1154	Sujeta una mancuerna con las dos manos por encima de un hombro.
+1155	Llévala en diagonal hacia abajo hasta la cadera contraria, girando el tronco.
+1156	Dobla un poco las rodillas abajo.
+1157	Vuelve al inicio. Haz todas las repeticiones y luego cambia.
+1158	Press Pallof
+1159	Pon una polea a la altura del pecho. Ponte de lado y sujeta el asa en el pecho.
+1160	Aléjate hasta que el cable esté tenso.
+1161	Empuja el asa recta al frente, resistiendo el tirón.
+1162	Vuelve a llevarla al pecho. Haz todas las repeticiones y luego cambia.
+1163	Dead bug (bicho muerto)
+1164	Túmbate boca arriba, brazos arriba, rodillas dobladas a 90° sobre la cadera.
+1165	Pega la zona lumbar al suelo.
+1166	Estira despacio un brazo por encima de la cabeza y la pierna contraria.
+1167	Vuelve y cambia de lado.
+1168	Abdominales en banco declinado
+1169	Siéntate en el banco declinado y engancha los pies bajo los rodillos.
+1170	Échate atrás hasta apoyar la espalda, manos cruzadas sobre el pecho.
+1171	Suelta el aire y sube del todo hasta que el tronco quede erguido.
+1172	Baja despacio, vértebra a vértebra, sin dejarte caer.
+1173	¿Demasiado difícil? Baja el ángulo o estira los brazos al frente. Más difícil: manos junto a las orejas o un disco sobre el pecho.
+1174	Máquina de abdominales
+1175	Ajusta el asiento, sujeta las asas o apoya los brazos en los apoyos.
+1176	Encoge el tronco hacia delante y hacia abajo.
+1177	Aprieta el abdomen.
+1178	Máquina de torsión de tronco
+1179	Siéntate frente a las asas y fija el ángulo inicial hacia un lado.
+1180	Afianza las piernas contra los apoyos y sujeta las asas.
+1181	Gira despacio la parte superior del cuerpo hacia el otro lado.
+1182	Muévete despacio y mantén un recorrido cómodo para la espalda.
+1183	Paseo del granjero
+1184	Coge mancuernas pesadas, una en cada mano.
+1185	De pie, erguido, hombros atrás.
+1186	Camina con pasos cortos y firmes durante el tiempo indicado.
+1187	Deja los pesos en el suelo con cuidado.
+1188	Intervalos en cinta
+1189	2 min caminando o trotando suave para calentar.
+1190	Luego repite: 1 min rápido (esfuerzo intenso) + 1 min caminando suave.
+1191	Termina con 2 min caminando suave.
+1192	Usa los pasamanos laterales para bajarte con seguridad al parar.
+1193	Caminata en cinta inclinada
+1194	Pon la inclinación al 8–12 % y la velocidad a 4.5–5.5 km/h.
+1195	Camina sin agarrarte a los pasamanos.
+1196	Busca un esfuerzo en el que puedas hablar, pero cueste.
+1197	Baja la inclinación en el último minuto.
+1198	De bajo impacto y estupendo para perder grasa.
+1199	Elíptica
+1200	Súbete y agarra los manillares móviles.
+1201	Empieza con una resistencia suave durante 2 minutos.
+1202	Sube la resistencia a un esfuerzo constante y moderadamente intenso.
+1203	Empuja y tira también con los brazos.
+1204	Escaladora
+1205	Súbete y empieza a velocidad lenta.
+1206	Mantente erguido; agárrate suavemente a los pasamanos solo para equilibrarte.
+1207	Apoya todo el pie en cada escalón.
+1208	Sube la velocidad poco a poco.
+1209	Bici reclinada
+1210	Ajusta el asiento para que la rodilla quede un poco doblada abajo.
+1211	Empieza suave durante 2 minutos.
+1212	Luego 30 s fuerte / 60 s suave, o un ritmo moderado constante.
+1213	Termina suave los últimos 2 minutos.
+1214	La más suave para las rodillas.
+1215	Bici vertical
+1216	Máquina de remo
+1217	Sujeta los pies con las correas y coge el mango.
+1218	Empuja primero con las piernas, luego échate atrás y después tira con los brazos.
+1219	Vuelve al revés: brazos, tronco, piernas.
+1220	Mantén un ritmo constante.
+1221	Anterior

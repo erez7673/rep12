@@ -132,7 +132,7 @@ function place() {
       <h2>${esc(t(st.title))}</h2>
       <p>${esc(t(st.text))}</p>
       <div class="tour-btns">
-        ${at > 0 ? `<button class="tour-btn" data-act="tour-back">${t('Back')}</button>` : ''}
+        ${at > 0 ? `<button class="tour-btn" data-act="tour-back">${t('Previous')}</button>` : ''}
         ${nextSec ? `<button class="tour-btn" data-act="tour-skip">${t('Skip to {section}', { section: esc(t(nextSec)) })} ›</button>` : ''}
         <button class="tour-btn primary" data-act="tour-next">${last ? t('Finish') : t('Next')}</button>
       </div>

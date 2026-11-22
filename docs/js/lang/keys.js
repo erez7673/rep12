@@ -1220,4 +1220,5 @@ export const KEYS = {
   1218: "Push with your legs first, then lean back, then pull the arms.",
   1219: "Return in reverse: arms, body, legs.",
   1220: "Keep a steady rhythm.",
+  1221: "Previous",
 };

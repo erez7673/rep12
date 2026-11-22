@@ -13,7 +13,9 @@ A free workout app (installable web app) for Android and iPhone: personal 12-wee
 - Warm-up on a cardio machine you pick, for the minutes you set, with a beep when it's done
 - "Add to workout" on any exercise page puts it into one of your workout days
 - Set timer, automatic rest countdown with a beep at the end, screen kept awake during workouts
-- Light / dark mode (button on My Plan, or Profile → Appearance; Auto follows the phone)
+- 11 languages (English, Español, Português, Deutsch, Italiano, Suomi, Svenska, 中文, हिन्दी, العربية, עברית) and metric or US units (lb, ft) – Profile → gear → Settings
+- Light / dark mode (button on My Plan, or Settings → Appearance; Auto follows the phone)
+- A short app tour for new users (replay any time from Profile)
 - Automatic progression: weight goes up when you hit the top of the rep range on every set
 - ~100 exercises with step-by-step instructions and a picture of the equipment, and video clips for most exercises
 - Gym Setup (switch off what your gym doesn't have) + "What is this machine?" photo picker for unknown machines
@@ -63,7 +65,7 @@ Sync backs up both profiles and the gym setup and keeps both phones in step.
    - Execute as: **Me**
    - Who has access: **Anyone**
    - **Deploy**, approve the permissions (it only accesses this one spreadsheet), and copy the **Web app URL** (ends in `/exec`).
-5. In the app on each phone: **Profile → Sync with Google Sheets** → paste the URL and the same secret → **Save** → **Sync now**.
+5. In the app on each phone: **Profile → gear (Settings) → Sync with Google Sheets** → paste the URL and the same secret → **Save** → **Sync now**.
 
 The app syncs automatically when opened, after each workout, and after changes. If both phones change the same profile while offline, the most recent change wins.
 
@@ -87,7 +89,7 @@ The key stays inside your Google Script and never goes to the phones.
 - **Swap an exercise:** on a day preview, tap ⋯ next to an exercise.
 - **Gym tab:** turn equipment on/off to match your gym, then **Rebuild my plan**.
 - **Unknown machine?** Gym tab → **Add a machine with a photo**, answer a few questions about how it moves, and pick the match (or create a custom exercise with generated instructions).
-- **Backup:** Profile → Export file / Import file.
+- **Backup:** Profile → gear → Settings → Export file / Import file.
 
 ## Developing
 

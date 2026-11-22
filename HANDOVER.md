@@ -2,7 +2,7 @@
 
 Read this together with `CLAUDE.md` (the "Exercise animations" section holds the full rules). This file records where the work stands and every approved Higgsfield still, so a new chat can continue without redoing anything.
 
-_Last updated 2026-11-21 (evening), after batch 9, the app changes in `ddd4158` and the Rep12 public release (`c4e7183` to `818343c`)._
+_Last updated 2026-11-22, after batch 9, the Rep12 public release, the app tour, the Settings screen, US units and the 11 languages._
 
 ## Where things stand
 
@@ -41,6 +41,15 @@ These changes don't affect the clips. If a future change adds a JS or CSS file, 
 - **New equipment and exercise:** `decline-bench` (Decline / sit-up bench, under Benches & racks, off by default, no picture yet) and `decline-situp` (Decline Sit-Up, core, avoided for lower back and neck injuries). It needs a clip and a picture.
 - **Day view:** each exercise has a move button (↕) that opens a "Change the order" sheet (Move up / Move down, "Back to the app's order"). A reordered day has `day.manual = true`, which `sortDay` respects.
 - **Add to workout on a full day** offers Add or Swap. Adding raises the exercises-per-day setting (`raiseDayCap`: `p.stats.exPerDay`, or `plan.cap` for ready-made plans), max 8.
+
+## Languages, units and Settings (2026-11-22, pushed)
+
+- **11 languages**, chosen under Profile → gear → Settings: English, Spanish, Portuguese (Brazil), German, Italian, Finnish, Swedish, Chinese (Simplified), Hindi, Arabic, Hebrew (Arabic and Hebrew right-to-left). All 1,221 texts are translated, including every exercise name, step and tip. The translations were written by Claude; a native speaker should review them before any marketing push.
+- **US units**: lb and ft/in, with suggestions on a 5-lb grid. Data stays in kg/cm.
+- **Settings screen** (gear on Profile): language, units, appearance, rest beep, sync, backup, About.
+- **Custom plans** (saved from "Build your custom plan") keep the same sets and reps all 12 weeks; app-built plans step up and deload.
+- **App tour**: starts once for new users, replay from Profile; sections Profile → Settings → My Plan → Workout day → Exercises → Gym → Timer → Progress.
+- **New exercise clips need translations only for their name, steps and tip if they are new exercises**: run `node tools/i18n/extract.mjs`, add the lines to all 10 `tools/i18n/src/*.txt` files, run `node tools/i18n/build.mjs`. Clips themselves have no text.
 
 ## Still to do next month (9 exercises, cardio excluded)
 

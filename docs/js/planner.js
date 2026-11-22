@@ -1,6 +1,7 @@
 // Builds a multi-week plan from a profile, and works out each session's sets, reps and weights.
 import { MUSCLES, WARMUP, COOLDOWN } from './exercises.js';
 import { allExercises, isAvailable, exById, lastLogFor, uid } from './store.js';
+import { t, wStep, fmtW } from './i18n.js';
 
 export const PLAN_WEEKS = 12;
 export const EX_PER_DAY = 4;   // default exercises per workout day (not counting warm-up and cardio finisher)
@@ -22,8 +23,11 @@ export function raiseDayCap(p, n) {
 export const SETS = 4;         // sets per exercise
 const PLAN_FMT = 3;            // bump when the plan shape changes (see upgradePlan)
 
-export const dayName = (i) => `Workout Day ${'ABCDEFG'[i] || i + 1}`;
-const planName = (st) => `${GOALS[st.goal]?.name || 'Training'} · ${st.days || 3} days a week`;
+export const dayName = (i) => t('Workout Day {x}', { x: 'ABCDEFG'[i] || i + 1 });
+const planName = (st) => `${GOALS[st.goal]?.name || t('Training')} · ${t('{n} days a week', { n: st.days || 3 })}`;
+// The plan's name in the current language (the stored name is in the language it was made in).
+export const planTitle = (plan) => plan.template ? (TEMPLATES[plan.template]?.name || plan.name)
+  : `${GOALS[plan.goal]?.name || t('Training')} · ${t('{n} days a week', { n: plan.days.length })}`;
 
 // Muscle areas the user can pick for a workout day. pats: plan slots, taken in order.
 export const AREAS = {
@@ -409,7 +413,7 @@ export function upgradePlan(p) {
     return true;
   }
   const fresh = generatePlan({ ...p, plan: { version: (old.version || 1) - 1 } });
-  p.plan = { ...fresh, id: old.id, version: old.version, createdAt: old.createdAt, done: old.done || {} };
+  p.plan = { ...fresh, id: old.id, version: old.version, createdAt: old.createdAt, done: old.done || {}, ...(old.custom ? { custom: true } : {}) };
   return true;
 }
 
@@ -420,21 +424,28 @@ export function dayFocus(day) {
     if (!ex) continue;
     for (const m of [ex.m]) if (!names.includes(MUSCLES[m])) names.push(MUSCLES[m]);
   }
-  if (day.cardio) names.push('Cardio');
+  if (day.cardio) names.push(MUSCLES.cardio);
   if (names.length <= 1) return names.join('');
-  return names.slice(0, -1).join(', ') + ' & ' + names[names.length - 1];
+  return t('{list} & {last}', { list: names.slice(0, -1).join(', '), last: names[names.length - 1] });
 }
 
 // Phase of the 12-week program.
 export function phaseOf(week) {
-  if (week >= 12) return { key: 'deload', name: 'Deload week – lighter, recover' };
-  if (week >= 9) return { key: 'peak', name: 'Phase 3 · Heavier, fewer reps' };
-  if (week >= 5) return { key: 'build', name: 'Phase 2 · More volume' };
-  return { key: 'base', name: 'Phase 1 · Learn & build the base' };
+  if (week >= 12) return { key: 'deload', name: t('Deload week – lighter, recover') };
+  if (week >= 9) return { key: 'peak', name: t('Phase 3 · Heavier, fewer reps') };
+  if (week >= 5) return { key: 'build', name: t('Phase 2 · More volume') };
+  return { key: 'base', name: t('Phase 1 · Learn & build the base') };
+}
+
+// A plan saved from "Build your custom plan" keeps the same sets and reps all 12 weeks (no phases, no deload).
+// Plans the app builds (new profile, Edit profile → rebuild, ready-made) step up through the phases.
+export const isCustom = (plan) => !!plan?.custom && !plan?.template;
+export function planPhase(plan, week) {
+  return isCustom(plan) ? { key: 'base', name: t('Custom plan · same sets and reps every week') } : phaseOf(week);
 }
 
 // Sets / reps / rest for an exercise in a given week. Always SETS sets; the phases change reps and weight.
-export function prescribe(stats, ex, week, restScale = 1, tpl = null) {
+export function prescribe(stats, ex, week, restScale = 1, tpl = null, custom = false) {
   if (tpl) {
     const b = TPL_RX[phaseOf(week).key];
     const hold = ex.unit === 'sec';
@@ -443,11 +454,11 @@ export function prescribe(stats, ex, week, restScale = 1, tpl = null) {
   const g = GOALS[stats.goal] || GOALS.general;
   const b = ex.iso ? g.iso : g.compound;
   let reps = [...b.reps], rest = b.rest;
-  const ph = phaseOf(week).key;
+  const ph = custom ? 'base' : phaseOf(week).key;
   if (ph === 'build') reps = reps.map(r => r + (stats.goal === 'strength' ? 1 : 2));
   if (ph === 'peak' && (stats.goal === 'strength' || stats.goal === 'hypertrophy')) reps = reps.map(r => Math.max(3, r - 2));
   if (ex.unit === 'sec') {
-    const add = Math.min(30, (week - 1) * 3);
+    const add = custom ? 0 : Math.min(30, (week - 1) * 3);
     reps = [30 + add, 45 + add];
     rest = 60;
   }
@@ -455,7 +466,8 @@ export function prescribe(stats, ex, week, restScale = 1, tpl = null) {
   return { sets: SETS, reps, rest, unit: ex.unit };
 }
 
-const round = (v, inc) => Math.max(0, Math.round(v / inc) * inc);
+// Rounds to the weights a gym has: steps of 2.5 kg (or the exercise's step), or 5 lb in US units.
+const round = (v, inc) => { const g = wStep(inc); return Math.max(0, Math.round(v / g) * g); };
 
 export function estimateWeight(stats, ex) {
   if (!ex.load) return 0;
@@ -479,7 +491,7 @@ export function suggest(p, ex, rx, week) {
   } else if (!last) {
     kg = estimateWeight(p.plan?.template ? { ...p.stats, level: 'beginner', goal: 'general' } : p.stats, ex);
     estimated = !!ex.load;
-    if (estimated) note = 'Starting estimate – tap the sets to change it.';
+    if (estimated) note = t('Starting estimate – tap the sets to change it.');
   } else {
     const done = last.item.sets.filter(s => s.done);
     const lastKg = done.reduce((m, s) => Math.max(m, s.kg || 0), 0);
@@ -487,8 +499,8 @@ export function suggest(p, ex, rx, week) {
     const allTop = done.length >= Math.min(2, last.item.sets.length) && done.every(s => (s.reps || 0) >= top);
     const minReps = Math.min(...done.map(s => s.reps || 0));
     if (allTop && ex.load) {
-      kg = ex.assist ? Math.max(0, lastKg - ex.inc) : lastKg + ex.inc;
-      note = ex.assist ? 'Less assistance – you hit all reps last time!' : `+${ex.inc} kg – you hit all reps last time!`;
+      kg = ex.assist ? Math.max(0, lastKg - wStep(ex.inc)) : lastKg + wStep(ex.inc);
+      note = ex.assist ? t('Less assistance – you hit all reps last time!') : t('+{w} – you hit all reps last time!', { w: fmtW(wStep(ex.inc)) });
       reps = rx.reps[0];
     } else {
       kg = lastKg;
@@ -496,7 +508,7 @@ export function suggest(p, ex, rx, week) {
       if (!ex.load) reps = Math.min(rx.reps[1] + 5, Math.max(rx.reps[0], minReps + 1));
     }
   }
-  if (phaseOf(week).key === 'deload' && kg) { kg = ex.assist ? kg * 1.15 : round(kg * 0.85, ex.inc); note = 'Deload week – lighter on purpose.'; }
+  if (planPhase(p.plan, week).key === 'deload' && kg) { kg = ex.assist ? kg * 1.15 : round(kg * 0.85, ex.inc); note = t('Deload week – lighter on purpose.'); }
   return { kg: round(kg, ex.inc), reps, estimated, note };
 }
 
@@ -511,7 +523,7 @@ export function buildSession(p, week, dayIdx) {
   const items = day.items.map(it => {
     const ex = exById(it.exId);
     if (!ex) return null;
-    const rx = prescribe(st, ex, week, p.plan.restScale || 1, p.plan.template);
+    const rx = prescribe(st, ex, week, p.plan.restScale || 1, p.plan.template, isCustom(p.plan));
     const sg = suggest(p, ex, rx, week);
     const edit = p.plan.edits?.[editKey(week, dayIdx, ex.id)];
     const sets = Array.from({ length: rx.sets }, (_, k) => {
@@ -520,7 +532,7 @@ export function buildSession(p, week, dayIdx) {
     });
     return {
       exId: ex.id, name: ex.name, unit: ex.unit, rest: rx.rest, assist: ex.assist,
-      target: { reps: rx.reps, kg: sg.kg }, note: edit ? 'Edited by you' : sg.note, estimated: sg.estimated && !edit,
+      target: { reps: rx.reps, kg: sg.kg }, note: edit ? t('Edited by you') : sg.note, estimated: sg.estimated && !edit,
       sets,
     };
   }).filter(Boolean);
@@ -536,7 +548,7 @@ export function buildSession(p, week, dayIdx) {
   const cardio = day.cardio?.min > 0 && exById(day.cardio.exId) ? { exId: day.cardio.exId, name: exById(day.cardio.exId).name, min: day.cardio.min, done: false } : null;
 
   return {
-    id: uid('s'), profileId: p.id, planId: p.plan.id, week, dayIdx, title: day.name,
+    id: uid('s'), profileId: p.id, planId: p.plan.id, week, dayIdx, title: dayName(dayIdx),
     focus: dayFocus(day), startedAt: null, items, warm, warmup, cooldown: cool, cardio,
     budget,
   };

@@ -1,6 +1,7 @@
 // Sync profiles and the gym setup with a Google Sheet through a Google Apps Script web app.
 // Newest version wins (compared by updatedAt). See apps-script/Code.gs.
 import { state, save } from './store.js';
+import { t } from './i18n.js';
 
 let timer = null;
 let running = false;
@@ -13,7 +14,7 @@ async function call(body) {
     body: JSON.stringify({ ...body, key: syncKey }),
   });
   const j = await res.json();
-  if (!j.ok) throw new Error(j.error || 'Sync failed');
+  if (!j.ok) throw new Error(j.error || t('Sync failed'));
   return j;
 }
 

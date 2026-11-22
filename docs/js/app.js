@@ -1,12 +1,14 @@
 // App shell: router, bottom navigation, event delegation and the timer loop.
 import { state, profile, touchProfile } from './store.js';
-import { upgradePlan, dayCap, applyProfileAreas } from './planner.js';
+import { upgradePlan, dayCap, applyProfileAreas, dayName } from './planner.js';
+import { t, initSettings, loadLang } from './i18n.js';
+import { localizeData } from './localize.js';
 import { actions, icon, $, closeSheet, fmtClock, applyTheme } from './ui.js';
 import * as W from './workout.js';
 import { syncNow, syncEnabled, scheduleSync } from './sync.js';
 import { planView, dayView, sessionView, summaryView } from './views-plan.js';
 import { libraryView, exerciseView, gymView, identifyView } from './views-gym.js';
-import { onboardView, customPlanView, profileView, progressView } from './views-me.js';
+import { onboardView, customPlanView, profileView, settingsView, progressView } from './views-me.js';
 import { timerView, timerTick } from './views-timer.js';
 import './tour.js';
 
@@ -23,6 +25,7 @@ const ROUTES = [
   [/^#\/identify$/, () => identifyView()],
   [/^#\/progress$/, () => progressView()],
   [/^#\/profile$/, () => profileView()],
+  [/^#\/settings$/, () => settingsView()],
   [/^#\/onboard(\/edit)?$/, (m) => onboardView(!!m[1])],
   [/^#\/custom$/, () => customPlanView()],
 ];
@@ -34,13 +37,13 @@ const TABS = [
   ['#/timer', 'Timer', icon.timer],
   ['#/progress', 'Progress', icon.chart],
   ['#/profile', 'Profile', icon.user],
-];
+]; // labels are translated with t() when drawn
 
 let current = null;
 
 export function render() {
   const hash = location.hash || '#/plan';
-  if (!profile() && !hash.startsWith('#/onboard')) { location.replace('#/onboard'); return; }
+  if (!profile() && !hash.startsWith('#/onboard') && hash !== '#/settings') { location.replace('#/onboard'); return; }
   let view = null;
   for (const [re, fn] of ROUTES) { const m = hash.match(re); if (m) { view = fn(m); break; } }
   if (!view) { location.replace('#/plan'); return; }
@@ -51,9 +54,9 @@ export function render() {
   const full = view.full; // full-screen views hide the nav
   $('#nav').hidden = !!full || !profile();
   const seg = (hash.split('/')[1] || 'plan');
-  const tab = { day: 'plan', summary: 'plan', session: 'plan', ex: 'exercises', identify: 'gym', onboard: 'profile', custom: 'profile' }[seg] || seg;
+  const tab = { day: 'plan', summary: 'plan', session: 'plan', ex: 'exercises', identify: 'gym', onboard: 'profile', custom: 'profile', settings: 'profile' }[seg] || seg;
   $('#nav').innerHTML = TABS.map(([href, label, ic]) =>
-    `<a href="${href}" class="${href === '#/' + tab ? 'on' : ''}">${ic}<span>${label}</span></a>`).join('');
+    `<a href="${href}" class="${href === '#/' + tab ? 'on' : ''}">${ic}<span>${t(label)}</span></a>`).join('');
   renderLiveBar(hash);
   if (!view.keepScroll) window.scrollTo(0, 0);
   view.after?.();
@@ -72,7 +75,7 @@ function renderLiveBar(hash) {
   const s = state.session;
   if (!s?.startedAt || hash === '#/session') { bar.hidden = true; return; }
   bar.hidden = false;
-  bar.innerHTML = `<a href="#/session"><span class="pulse"></span><b>${s.title}</b><span data-t="live">${fmtClock(W.elapsed())}</span><span class="go">Resume ›</span></a>`;
+  bar.innerHTML = `<a href="#/session"><span class="pulse"></span><b>${dayName(s.dayIdx)}</b><span data-t="live">${fmtClock(W.elapsed())}</span><span class="go">${t('Resume')} ›</span></a>`;
 }
 
 // ── Timer loop ──
@@ -145,6 +148,11 @@ function upgradePlans() {
   if (changed) scheduleSync();
   return changed;
 }
+
+// Language and units first, so the first screen is drawn in the chosen language.
+initSettings();
+await loadLang();
+localizeData();
 
 upgradePlans();
 applyTheme();

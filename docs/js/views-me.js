@@ -1,11 +1,12 @@
-// Onboarding / edit profile, Profile & settings, Progress screens.
+// Onboarding / edit profile, Profile, Settings and Progress screens.
 import { state, profile, profileList, createProfile, touchProfile, save, replaceState, exById, today } from './store.js';
-import { esc, icon, register, toast, fmtDate, fmtKg, sheet, closeSheet, setTheme } from './ui.js';
+import { esc, icon, register, toast, fmtDate, sheet, closeSheet, setTheme } from './ui.js';
 import { GOALS, LEVELS, FOCUS, generatePlan, AREAS, areasFor, dayName, exPerDay, setDayAreas, fitDay, MAX_DAYS, MAX_EX_PER_DAY } from './planner.js';
 import { startTour } from './tour.js';
-import { INJURIES, MUSCLES } from './exercises.js';
+import { INJURIES } from './exercises.js';
 import { lineChart, barChart } from './charts.js';
 import { syncNow, syncEnabled, scheduleSync } from './sync.js';
+import { t, LANGS, langChoices, lang, isUS, toW, fromW, wUnit, fmtW, fmtH, toFtIn, locale } from './i18n.js';
 import { rerender } from './app.js';
 
 const COLORS = ['#2f7cf6', '#e84d8a', '#12a37f', '#f08a24', '#8b5cf6'];
@@ -21,33 +22,40 @@ function profileForm(mode) {
   const radio = (name, map, val, attrs = '') => `<div class="seg-ctl">${Object.entries(map).map(([k, v]) => `<label><input type="radio" name="${name}" value="${k}" ${String(val) === String(k) ? 'checked' : ''} ${attrs}><span>${esc(v)}</span></label>`).join('')}</div>`;
   const checks = (name, map, vals) => `<div class="chipwrap">${Object.entries(map).map(([k, v]) => `<label class="chk"><input type="checkbox" name="${name}" value="${k}" ${vals.includes(k) ? 'checked' : ''}><span>${esc(typeof v === 'string' ? v : v.name)}</span></label>`).join('')}</div>`;
   const days = s.days || 3;
+  const [ft, inch] = toFtIn(s.height);
+  const height = isUS()
+    ? `<div class="field"><span>${t('Height')}</span><div class="two">
+          <label class="unitin"><input name="hft" type="number" inputmode="numeric" min="4" max="7" value="${s.height ? ft : ''}" required><i>ft</i></label>
+          <label class="unitin"><input name="hin" type="number" inputmode="numeric" min="0" max="11" value="${s.height ? inch : ''}" required><i>in</i></label></div></div>`
+    : `<label class="field"><span>${t('Height cm')}</span><input name="height" type="number" inputmode="numeric" min="120" max="230" value="${s.height || ''}" required></label>`;
   const personal = `
-        <label class="field"><span>Name</span><input name="name" required value="${esc(p?.name || '')}" placeholder="Your name"></label>
-        <div class="field"><span>Sex</span>${radio('sex', { female: 'Female', male: 'Male' }, s.sex)}</div>
-        <div class="three">
-          <label class="field"><span>Age</span><input name="age" type="number" inputmode="numeric" min="14" max="99" value="${s.age || ''}" required></label>
-          <label class="field"><span>Height cm</span><input name="height" type="number" inputmode="numeric" min="120" max="230" value="${s.height || ''}" required></label>
-          <label class="field"><span>Weight kg</span><input name="weight" type="number" inputmode="decimal" step="0.1" min="30" max="250" value="${s.weight || ''}" required></label>
+        <label class="field"><span>${t('Name')}</span><input name="name" required value="${esc(p?.name || '')}" placeholder="${t('Your name')}"></label>
+        <div class="field"><span>${t('Sex')}</span>${radio('sex', { female: t('Female'), male: t('Male') }, s.sex)}</div>
+        <div class="${isUS() ? 'two' : 'three'}">
+          <label class="field"><span>${t('Age')}</span><input name="age" type="number" inputmode="numeric" min="14" max="99" value="${s.age || ''}" required></label>
+          ${isUS() ? '' : height}
+          <label class="field"><span>${t('Weight {u}', { u: wUnit() })}</span><input name="weight" type="number" inputmode="decimal" step="0.1" min="${isUS() ? 66 : 30}" max="${isUS() ? 550 : 250}" value="${s.weight ? toW(s.weight) : ''}" required></label>
         </div>
-        <div class="field"><span>Experience</span>${radio('level', LEVELS, s.level)}</div>
-        <div class="field"><span>Main goal</span>${radio('goal', Object.fromEntries(Object.entries(GOALS).map(([k, v]) => [k, v.name])), s.goal)}</div>
-        <div class="field"><span>Training days per week</span>${radio('days', range(2, MAX_DAYS), days)}</div>`;
+        ${isUS() ? height : ''}
+        <div class="field"><span>${t('Experience')}</span>${radio('level', LEVELS, s.level)}</div>
+        <div class="field"><span>${t('Main goal')}</span>${radio('goal', Object.fromEntries(Object.entries(GOALS).map(([k, v]) => [k, v.name])), s.goal)}</div>
+        <div class="field"><span>${t('Training days per week')}</span>${radio('days', range(2, MAX_DAYS), days)}</div>`;
   const planFields = `
-        <div class="field"><span>Exercises per workout day <small>(4 sets each, plus warm-up and cooldown)</small></span>${radio('exPerDay', range(1, MAX_EX_PER_DAY), exPerDay(s))}</div>
-        ${mode === 'custom' ? `<div class="field"><span>Muscle areas per workout day <small>(leave a day empty and the app chooses)</small></span>
-          ${Array.from({ length: days }, (_, i) => `<div class="dayareas"><b>${dayName(i)}</b>${checks('areas' + i, AREAS, areasFor(p, i))}</div>`).join('')}
+        <div class="field"><span>${t('Exercises per workout day')} <small>${t('(4 sets each, plus warm-up and cooldown)')}</small></span>${radio('exPerDay', range(1, MAX_EX_PER_DAY), exPerDay(s))}</div>
+        ${mode === 'custom' ? `<div class="field"><span>${t('Muscle areas per workout day')} <small>${t('(leave a day empty and the app chooses)')}</small></span>
+          ${Array.from({ length: days }, (_, i) => `<div class="dayareas"><b>${esc(dayName(i))}</b>${checks('areas' + i, AREAS, areasFor(p, i))}</div>`).join('')}
         </div>` : ''}
-        <div class="field"><span>Session length</span>${radio('minutes', { 30: '30 min', 45: '45 min', 60: '60 min', 75: '75 min' }, s.minutes)}</div>
-        <div class="field"><span>Warm-up</span>${radio('warmup', { 0: 'None', 3: '3 min', 5: '5 min', 8: '8 min' }, s.warmup)}</div>
-        <label class="toggle-line"><input type="checkbox" name="cardio" ${s.cardio ? 'checked' : ''}> Add a cardio finisher (treadmill, elliptical, stairs, bike)</label>
-        <div class="field"><span>Injuries or limitations <small>(exercises that load these are avoided)</small></span>${checks('injuries', INJURIES, s.injuries || [])}</div>
-        <div class="field"><span>Extra focus <small>(adds exercises for these)</small></span>${checks('focus', FOCUS, s.focus || [])}</div>`;
-  const colour = `<div class="field"><span>Colour</span><div class="colors">${COLORS.map((c, i) => `<label><input type="radio" name="color" value="${c}" ${i === profileList().length % COLORS.length ? 'checked' : ''}><i style="background:${c}"></i></label>`).join('')}</div></div>`;
-  const buttons = mode === 'new' ? `<button class="btn primary big" data-act="create-profile">Build my plan</button>`
-    : mode === 'custom' ? `<button class="btn primary big" data-act="save-profile" data-mode="custom" data-rebuild="1">Build my custom plan</button>
-                  <button class="btn" data-act="save-profile" data-mode="custom">Save without changing the plan</button>`
-    : `<button class="btn primary big" data-act="save-profile" data-mode="edit" data-rebuild="1">Save & rebuild plan</button>
-                  <button class="btn" data-act="save-profile" data-mode="edit">Save without changing the plan</button>`;
+        <div class="field"><span>${t('Session length')}</span>${radio('minutes', { 30: t('{n} min', { n: 30 }), 45: t('{n} min', { n: 45 }), 60: t('{n} min', { n: 60 }), 75: t('{n} min', { n: 75 }) }, s.minutes)}</div>
+        <div class="field"><span>${t('Warm-up')}</span>${radio('warmup', { 0: t('None'), 3: t('{n} min', { n: 3 }), 5: t('{n} min', { n: 5 }), 8: t('{n} min', { n: 8 }) }, s.warmup)}</div>
+        <label class="toggle-line"><input type="checkbox" name="cardio" ${s.cardio ? 'checked' : ''}> ${t('Add a cardio finisher (treadmill, elliptical, stairs, bike)')}</label>
+        <div class="field"><span>${t('Injuries or limitations')} <small>${t('(exercises that load these are avoided)')}</small></span>${checks('injuries', INJURIES, s.injuries || [])}</div>
+        <div class="field"><span>${t('Extra focus')} <small>${t('(adds exercises for these)')}</small></span>${checks('focus', FOCUS, s.focus || [])}</div>`;
+  const colour = `<div class="field"><span>${t('Colour')}</span><div class="colors">${COLORS.map((c, i) => `<label><input type="radio" name="color" value="${c}" ${i === profileList().length % COLORS.length ? 'checked' : ''}><i style="background:${c}"></i></label>`).join('')}</div></div>`;
+  const buttons = mode === 'new' ? `<button class="btn primary big" data-act="create-profile">${t('Build my plan')}</button>`
+    : mode === 'custom' ? `<button class="btn primary big" data-act="save-profile" data-mode="custom" data-rebuild="1">${t('Build my custom plan')}</button>
+                  <button class="btn" data-act="save-profile" data-mode="custom">${t('Save without changing the plan')}</button>`
+    : `<button class="btn primary big" data-act="save-profile" data-mode="edit" data-rebuild="1">${t('Save & rebuild plan')}</button>
+                  <button class="btn" data-act="save-profile" data-mode="edit">${t('Save without changing the plan')}</button>`;
   return `<form id="pform" class="form" data-act-submit>
         ${mode !== 'custom' ? personal : ''}
         ${mode !== 'edit' ? planFields : ''}
@@ -56,34 +64,44 @@ function profileForm(mode) {
       </form>`;
 }
 
+const DISCLAIMER = () => t('This app gives general fitness guidance, not medical advice. If you have an injury or a health condition, or haven\'t trained for a long time, check with a doctor or physiotherapist first. Stop any exercise that hurts.');
+
 export function onboardView(edit) {
   const first = !profileList().length;
   return {
     full: first,
-    html: `<header class="bar">${first ? '<span></span>' : `<button class="iconbtn" data-act="back">${icon.back}</button>`}<h2>${edit ? 'Edit profile' : first ? 'Welcome 👋' : 'New profile'}</h2><span></span></header>
-      ${first ? '<p class="lead">Let\'s build your personal plan. You can add more profiles afterwards, for example for a partner.</p><p class="muted small">This app gives general fitness guidance, not medical advice. If you have an injury or a health condition, or haven\'t trained for a long time, check with a doctor or physiotherapist first. Stop any exercise that hurts.</p>' : ''}
+    html: `<header class="bar">${first ? '<span></span>' : `<button class="iconbtn" data-act="back">${icon.back}</button>`}<h2>${edit ? t('Edit profile') : first ? t('Welcome') + ' 👋' : t('New profile')}</h2><span></span></header>
+      ${first ? `<p class="lead">${t('Let\'s build your personal plan. You can add more profiles afterwards, for example for a partner.')}</p>
+        <p class="muted small">${DISCLAIMER()}</p>
+        <div class="card list"><a class="eqrow" href="#/settings"><span>${t('Language and units')}</span><span class="muted">${esc(LANGS[lang()])} · ${isUS() ? 'lb, ft' : 'kg, cm'} ${icon.chev}</span></a></div>` : ''}
       ${profileForm(edit ? 'edit' : 'new')}
-      ${edit ? '<p class="muted small">Exercises per day, muscle areas, session length, warm-up, cardio, injuries and extra focus are under Profile → Build your custom plan.</p>' : ''}`,
+      ${edit ? `<p class="muted small">${t('Exercises per day, muscle areas, session length, warm-up, cardio, injuries and extra focus are under Profile → Build your custom plan.')}</p>` : ''}`,
   };
 }
 
 export function customPlanView() {
   const p = profile();
   return {
-    html: `<header class="bar"><button class="iconbtn" data-act="back">${icon.back}</button><h2>Build your custom plan</h2><span></span></header>
-      <p class="muted small">Choose how each of your ${p.stats.days || 3} workout days looks. Change the number of days under Edit profile.</p>
+    html: `<header class="bar"><button class="iconbtn" data-act="back">${icon.back}</button><h2>${t('Build your custom plan')}</h2><span></span></header>
+      <p class="muted small">${t('Choose how each of your {n} workout days looks. Change the number of days under Edit profile.', { n: p.stats.days || 3 })}</p>
+      <p class="muted small">${t('A custom plan keeps the same sets and reps all 12 weeks. A plan built from Edit profile gets harder in steps.')}</p>
       ${profileForm('custom')}`,
   };
 }
 
 // Reads only the fields that are on the form, so the edit and custom-plan screens each change their own part.
+// Weight and height are always stored in kg and cm.
 function readForm() {
   const f = document.getElementById('pform');
   if (!f.reportValidity()) return null;
   const fd = new FormData(f);
   const has = (n) => !!f.querySelector(`[name="${n}"]`);
   const stats = {};
-  if (has('age')) Object.assign(stats, { sex: fd.get('sex'), age: +fd.get('age'), height: +fd.get('height'), weight: +fd.get('weight'), level: fd.get('level'), goal: fd.get('goal'), days: +fd.get('days') });
+  if (has('age')) {
+    const height = has('hft') ? Math.round((+fd.get('hft') * 12 + +fd.get('hin')) * 2.54) : +fd.get('height');
+    const weight = Math.round(fromW(fd.get('weight')) * 10) / 10;
+    Object.assign(stats, { sex: fd.get('sex'), age: +fd.get('age'), height, weight, level: fd.get('level'), goal: fd.get('goal'), days: +fd.get('days') });
+  }
   if (has('minutes')) Object.assign(stats, { minutes: +fd.get('minutes'), warmup: +fd.get('warmup'), cardio: fd.get('cardio') === 'on', injuries: fd.getAll('injuries'), focus: fd.getAll('focus'), exPerDay: +fd.get('exPerDay') || 4 });
   if (has('areas0')) stats.dayAreas = Array.from({ length: profile().stats.days || 3 }, (_, i) => fd.getAll('areas' + i));
   return { name: has('name') ? fd.get('name').trim() : null, color: fd.get('color'), stats };
@@ -107,7 +125,7 @@ register({
     const p = createProfile(d);
     p.plan = generatePlan(p);
     touchProfile(p); scheduleSync(1000);
-    toast(`Plan ready, ${p.name}!`);
+    toast(t('Plan ready, {name}!', { name: p.name }));
     location.hash = '#/plan';
     // A new user gets the app tour once, right after making their first profile.
     if (first && !state.settings.tourDone) setTimeout(() => startTour(), 600);
@@ -117,84 +135,106 @@ register({
     const p = profile();
     if (d.name) p.name = d.name;
     const oldW = p.stats.weight;
-    if (el.dataset.rebuild && p.plan && Object.keys(p.plan.done).length && !confirm('Rebuilding restarts your plan at week 1 (history is kept). Continue?')) return;
+    if (el.dataset.rebuild && p.plan && Object.keys(p.plan.done).length && !confirm(t('Rebuilding restarts your plan at week 1 (history is kept). Continue?'))) return;
     p.stats = { ...p.stats, ...d.stats };
-    if (d.stats.weight && d.stats.weight !== oldW) p.bodyweight.push({ date: today(), kg: d.stats.weight });
+    if (d.stats.weight && Math.abs(d.stats.weight - oldW) > 0.05) p.bodyweight.push({ date: today(), kg: d.stats.weight });
     if (el.dataset.rebuild) p.plan = generatePlan(p);
     else applyDayChanges(p);
+    // Saved from "Build your custom plan": the plan keeps the same sets and reps every week.
+    if (el.dataset.mode === 'custom' && p.plan && !p.plan.template) p.plan.custom = true;
     touchProfile(p); scheduleSync();
-    toast('Saved'); location.hash = el.dataset.rebuild ? '#/plan' : '#/profile';
+    toast(t('Saved')); location.hash = el.dataset.rebuild ? '#/plan' : '#/profile';
   },
 });
 
-// ───────────── Profile & settings ─────────────
+// ───────────── Profile ─────────────
 export function profileView() {
   const p = profile();
   const s = p.stats;
-  const st = state.settings;
-  const last = st.lastSync ? new Date(st.lastSync).toLocaleString('en-GB') : 'never';
+  const n = profileList().length;
   return {
-    html: `<header class="top"><h1>Profile</h1></header>
+    html: `<header class="top"><h1>${t('Profile')}</h1><button class="iconbtn gear" data-act="go" data-href="#/settings" aria-label="${t('Settings')}">${icon.gear}</button></header>
       <div class="card me"><span class="avatar lg" style="--c:${p.color}">${esc(p.name[0])}</span>
-        <div><b>${esc(p.name)}</b><small>${s.age} y · ${s.height} cm · ${fmtKg(s.weight)} kg · ${esc(LEVELS[s.level])}</small>
-        <small>${esc(GOALS[s.goal].name)} · ${s.days} days × ${s.minutes} min</small></div></div>
+        <div><b>${esc(p.name)}</b><small>${t('{n} y', { n: s.age })} · ${fmtH(s.height)} · ${fmtW(s.weight)} · ${esc(LEVELS[s.level])}</small>
+        <small>${esc(GOALS[s.goal].name)} · ${t('{d} days × {m} min', { d: s.days, m: s.minutes })}</small></div></div>
       <div class="card list">
-        <a class="eqrow" href="#/onboard/edit"><span>Edit profile</span>${icon.chev}</a>
-        <a class="eqrow" href="#/custom"><span>Build your custom plan</span>${icon.chev}</a>
-        <button class="eqrow" data-act="tpl-open"><span>Ready-made plans (beginner, 50+)</span>${icon.chev}</button>
-        <button class="eqrow" data-act="switch-profile"><span>Switch profile</span><span class="muted">${profileList().length} profiles ${icon.chev}</span></button>
-        <a class="eqrow" href="#/onboard"><span>Add a profile</span>${icon.plus}</a>
-        <a class="eqrow" href="#/gym"><span>Gym setup</span>${icon.chev}</a>
-        <button class="eqrow" data-act="tour-start"><span>Take the app tour</span>${icon.chev}</button>
+        <a class="eqrow" href="#/onboard/edit"><span>${t('Edit profile')}</span>${icon.chev}</a>
+        <a class="eqrow" href="#/custom"><span>${t('Build your custom plan')}</span>${icon.chev}</a>
+        <button class="eqrow" data-act="tpl-open"><span>${t('Ready-made plans (beginner, 50+)')}</span>${icon.chev}</button>
+        <button class="eqrow" data-act="switch-profile"><span>${t('Switch profile')}</span><span class="muted">${n === 1 ? t('1 profile') : t('{n} profiles', { n })} ${icon.chev}</span></button>
+        <a class="eqrow" href="#/onboard"><span>${t('Add a profile')}</span>${icon.plus}</a>
+        <a class="eqrow" href="#/gym"><span>${t('Gym setup')}</span>${icon.chev}</a>
+        <button class="eqrow" data-act="tour-start"><span>${t('Take the app tour')}</span>${icon.chev}</button>
+      </div>
+      <button class="btn ghost danger" data-act="del-profile">${t('Delete {name}\'s profile', { name: esc(p.name) })}</button>`,
+  };
+}
+
+// ───────────── Settings (gear on the Profile screen) ─────────────
+export function settingsView() {
+  const st = state.settings;
+  const last = st.lastSync ? new Date(st.lastSync).toLocaleString(locale()) : t('never');
+  const seg = (name, act, cur, opts) => `<div class="seg-ctl ${name}-ctl">${opts.map(([k, v]) =>
+    `<label><input type="radio" name="${name}" value="${k}" ${cur === k ? 'checked' : ''} data-change="${act}"><span>${v}</span></label>`).join('')}</div>`;
+  return {
+    html: `<header class="bar"><button class="iconbtn" data-act="back">${icon.back}</button><h2>${t('Settings')}</h2><span></span></header>
+      <h3>${t('Language')}</h3>
+      <div class="card"><select class="selectline lang-sel" data-change="set-lang" aria-label="${t('Language')}">${Object.entries(langChoices()).map(([k, v]) =>
+        `<option value="${k}" ${lang() === k ? 'selected' : ''}>${v}</option>`).join('')}</select></div>
+
+      <h3>${t('Units')}</h3>
+      ${seg('units', 'set-units', st.units || 'metric', [['metric', t('Metric (kg, cm)')], ['us', t('US (lb, ft)')]])}
+      <p class="muted small">${t('Your data is kept the same; only how weights and heights are shown changes.')}</p>
+
+      <h3>${t('Appearance')}</h3>
+      ${seg('theme', 'set-theme', st.theme || 'auto', [['auto', t('Auto')], ['light', '☀️ ' + t('Light')], ['dark', '🌙 ' + t('Dark')]])}
+      <p class="muted small">${t('Auto follows your phone\'s setting.')}</p>
+
+      <h3>${t('Workout')}</h3>
+      <div class="card list beep-card">
+        <label class="eqrow"><span>${t('Beep when rest ends')}</span><input type="checkbox" class="switch" ${st.sound ? 'checked' : ''} data-change="set-flag" data-k="sound"></label>
+        <button class="eqrow" data-act="test-beep"><span>${t('Test the beep')}</span><span class="muted">🔊</span></button>
+      </div>
+      <p class="muted small">${t('The screen stays on during a workout so the timer can beep. Turn the phone\'s volume up and silent mode off.')}</p>
+
+      <h3>${t('Sync with Google Sheets')}</h3>
+      <div class="card sync-card">
+        <p class="muted small">${t('Backs up all profiles and the gym setup to your own Google Sheet, and keeps your phones in sync. Set-up steps are in the README.')}</p>
+        <label class="field"><span>${t('Apps Script web app URL')}</span><input id="syncUrl" value="${esc(st.syncUrl)}" placeholder="https://script.google.com/macros/s/…/exec"></label>
+        <label class="field"><span>${t('Secret key (same as in the script)')}</span><input id="syncKey" value="${esc(st.syncKey)}" placeholder="${t('your shared secret')}"></label>
+        <div class="btnrow"><button class="btn" data-act="save-sync">${t('Save')}</button><button class="btn primary" data-act="sync-now" ${syncEnabled() ? '' : 'disabled'}>${icon.sync} ${t('Sync now')}</button></div>
+        <p class="muted small">${t('Last sync: {when}', { when: esc(last) })}${st.lastSyncError ? ` · <span class="warn">${esc(st.lastSyncError)}</span>` : ''}</p>
+        <label class="toggle-line"><input type="checkbox" ${st.aiEnabled ? 'checked' : ''} data-change="set-flag" data-k="aiEnabled"> ${t('Experimental: AI machine recognition (needs a Claude API key in the script)')}</label>
       </div>
 
-      <h3>Appearance</h3>
-      <div class="seg-ctl theme-ctl">${[['auto', 'Auto'], ['light', '☀️ Light'], ['dark', '🌙 Dark']].map(([k, v]) =>
-        `<label><input type="radio" name="theme" value="${k}" ${(st.theme || 'auto') === k ? 'checked' : ''} data-change="set-theme"><span>${v}</span></label>`).join('')}</div>
-      <p class="muted small">Auto follows your phone's setting.</p>
-
-      <h3>Workout</h3>
-      <div class="card list">
-        <label class="eqrow"><span>Beep when rest ends</span><input type="checkbox" class="switch" ${st.sound ? 'checked' : ''} data-change="set-flag" data-k="sound"></label>
-        <button class="eqrow" data-act="test-beep"><span>Test the beep</span><span class="muted">🔊</span></button>
-      </div>
-      <p class="muted small">The screen stays on during a workout so the timer can beep. Turn the phone's volume up and silent mode off.</p>
-
-      <h3>Sync with Google Sheets</h3>
-      <div class="card">
-        <p class="muted small">Backs up all profiles and the gym setup to your own Google Sheet, and keeps your phones in sync. Set-up steps are in the README.</p>
-        <label class="field"><span>Apps Script web app URL</span><input id="syncUrl" value="${esc(st.syncUrl)}" placeholder="https://script.google.com/macros/s/…/exec"></label>
-        <label class="field"><span>Secret key (same as in the script)</span><input id="syncKey" value="${esc(st.syncKey)}" placeholder="your shared secret"></label>
-        <div class="btnrow"><button class="btn" data-act="save-sync">Save</button><button class="btn primary" data-act="sync-now" ${syncEnabled() ? '' : 'disabled'}>${icon.sync} Sync now</button></div>
-        <p class="muted small">Last sync: ${esc(last)}${st.lastSyncError ? ` · <span class="warn">${esc(st.lastSyncError)}</span>` : ''}</p>
-        <label class="toggle-line"><input type="checkbox" ${st.aiEnabled ? 'checked' : ''} data-change="set-flag" data-k="aiEnabled"> Experimental: AI machine recognition (needs a Claude API key in the script)</label>
+      <h3>${t('Backup')}</h3>
+      <div class="card btnrow backup-card">
+        <button class="btn" data-act="export">${t('Export file')}</button>
+        <label class="btn">${t('Import file')}<input type="file" accept="application/json" hidden data-change="import"></label>
       </div>
 
-      <h3>Backup</h3>
-      <div class="card btnrow">
-        <button class="btn" data-act="export">Export file</button>
-        <label class="btn">Import file<input type="file" accept="application/json" hidden data-change="import"></label>
-      </div>
-      <button class="btn ghost danger" data-act="del-profile">Delete ${esc(p.name)}'s profile</button>
-      <h3>About</h3>
-      <div class="card"><p class="muted small">Your data stays on this phone. Nothing is sent anywhere unless you set up Google Sheets sync, which sends it only to your own sheet.</p>
-        <p class="muted small">This app gives general fitness guidance, not medical advice. If you have an injury or a health condition, check with a doctor or physiotherapist before you start. Stop any exercise that hurts.</p></div>
-      <p class="muted small center">Rep12 · v1.0</p>`,
+      <h3>${t('About')}</h3>
+      <div class="card about-card"><p class="muted small">${t('Your data stays on this phone. Nothing is sent anywhere unless you set up Google Sheets sync, which sends it only to your own sheet.')}</p>
+        <p class="muted small">${DISCLAIMER()}</p></div>
+      <p class="muted small center">Rep12 · v1.1</p>`,
   };
 }
 
 register({
   'set-flag': (el) => { state.settings[el.dataset.k] = el.checked; save(); },
   'set-theme': (el) => { setTheme(el.value); },
+  // A new language needs a fresh start so every screen and the exercise texts are loaded in it.
+  'set-lang': (el) => { state.settings.lang = el.value; save(true); location.reload(); },
+  'set-units': (el) => { state.settings.units = el.value; save(); rerender(); },
   'save-sync': () => {
     state.settings.syncUrl = document.getElementById('syncUrl').value.trim();
     state.settings.syncKey = document.getElementById('syncKey').value.trim();
-    save(true); toast('Saved'); rerender();
+    save(true); toast(t('Saved')); rerender();
   },
   'sync-now': async () => {
-    toast('Syncing…');
-    try { const r = await syncNow(); toast(r.skipped ? 'Offline or not set up' : `Synced · ${r.pulled} updated, ${r.pushed} sent`); }
-    catch (e) { toast('Sync failed: ' + e.message); }
+    toast(t('Syncing…'));
+    try { const r = await syncNow(); toast(r.skipped ? t('Offline or not set up') : t('Synced · {a} updated, {b} sent', { a: r.pulled, b: r.pushed })); }
+    catch (e) { toast(t('Sync failed: {msg}', { msg: e.message })); }
     rerender();
   },
   'export': () => {
@@ -209,15 +249,15 @@ register({
     const f = el.files?.[0]; if (!f) return;
     try {
       const data = JSON.parse(await f.text());
-      if (!data.profiles) throw new Error('Not a backup file from this app');
-      if (!confirm('Replace all data on this phone with the backup?')) return;
+      if (!data.profiles) throw new Error(t('Not a backup file from this app'));
+      if (!confirm(t('Replace all data on this phone with the backup?'))) return;
       data.settings = { ...data.settings, ...state.settings };
-      replaceState(data); toast('Backup restored'); location.hash = '#/plan'; rerender();
-    } catch (e) { toast('Import failed: ' + e.message); }
+      replaceState(data); toast(t('Backup restored')); location.hash = '#/plan'; rerender();
+    } catch (e) { toast(t('Import failed: {msg}', { msg: e.message })); }
   },
   'del-profile': () => {
     const p = profile();
-    if (!confirm(`Delete ${p.name}'s profile and all their history from this phone? This cannot be undone.`)) return;
+    if (!confirm(t('Delete {name}\'s profile and all their history from this phone? This cannot be undone.', { name: p.name }))) return;
     delete state.profiles[p.id];
     state.activeProfile = Object.keys(state.profiles)[0] || null;
     save(true); location.hash = state.activeProfile ? '#/plan' : '#/onboard';
@@ -232,15 +272,15 @@ export function progressView() {
   const h = p.history;
   const now = Date.now();
   const monthAgo = now - 30 * 864e5;
-  const volume = Math.round(h.reduce((a, r) => a + r.items.reduce((b, it) => b + it.sets.reduce((c, x) => c + (it.unit === 'reps' ? x.reps * x.kg : 0), 0), 0), 0));
+  const volume = toW(h.reduce((a, r) => a + r.items.reduce((b, it) => b + it.sets.reduce((c, x) => c + (it.unit === 'reps' ? x.reps * x.kg : 0), 0), 0), 0));
 
   // Workouts per week, last 8 weeks.
-  const weekStart = (t) => { const d = new Date(t); d.setHours(0, 0, 0, 0); d.setDate(d.getDate() - ((d.getDay() + 6) % 7)); return d.getTime(); };
+  const weekStart = (ts) => { const d = new Date(ts); d.setHours(0, 0, 0, 0); d.setDate(d.getDate() - ((d.getDay() + 6) % 7)); return d.getTime(); };
   const thisWeek = weekStart(now);
   const weeks = Array.from({ length: 8 }, (_, i) => {
     const start = thisWeek - (7 - i) * 7 * 864e5;
     const n = h.filter(r => r.date >= start && r.date < start + 7 * 864e5).length;
-    return { label: new Date(start).toLocaleDateString('en-GB', { day: 'numeric', month: 'numeric' }), y: n };
+    return { label: new Date(start).toLocaleDateString(locale(), { day: 'numeric', month: 'numeric' }), y: n };
   });
 
   // Exercises with history.
@@ -250,49 +290,51 @@ export function progressView() {
   const ex = progEx && exById(progEx);
   const exPts = progEx ? h.flatMap(r => r.items.filter(it => it.exId === progEx).map(it => {
     const best = it.sets.reduce((m, s) => Math.max(m, ex?.load ? (s.kg || 0) * (1 + (s.reps || 0) / 30) : s.reps || 0), 0);
-    return { x: r.date, y: Math.round(best * 10) / 10 };
+    return { x: r.date, y: ex?.load ? toW(best) : Math.round(best * 10) / 10 };
   })) : [];
 
-  const bw = p.bodyweight.map(b => ({ x: new Date(b.date).getTime(), y: b.kg }));
+  const bw = p.bodyweight.map(b => ({ x: new Date(b.date).getTime(), y: toW(b.kg) }));
+  const big = isUS() ? (volume >= 100000 ? Math.round(volume / 1000) + 'k' : Math.round(volume).toLocaleString(locale())) : (volume >= 10000 ? Math.round(volume / 1000) + 't' : Math.round(volume));
 
   return {
-    html: `<header class="top"><h1>Progress</h1></header>
+    html: `<header class="top"><h1>${t('Progress')}</h1></header>
       <div class="statrow">
-        <div class="stat"><b>${h.length}</b><small>Workouts</small></div>
-        <div class="stat"><b>${h.filter(r => r.date > monthAgo).length}</b><small>Last 30 days</small></div>
-        <div class="stat"><b>${volume >= 10000 ? Math.round(volume / 1000) + 't' : volume}</b><small>kg lifted</small></div>
+        <div class="stat"><b>${h.length}</b><small>${t('Workouts')}</small></div>
+        <div class="stat"><b>${h.filter(r => r.date > monthAgo).length}</b><small>${t('Last 30 days')}</small></div>
+        <div class="stat"><b>${big}</b><small>${t('{u} lifted', { u: wUnit() })}</small></div>
       </div>
-      <h3>Workouts per week</h3>
+      <h3>${t('Workouts per week')}</h3>
       <div class="card">${barChart(weeks)}</div>
 
-      <h3>Strength</h3>
+      <h3>${t('Strength')}</h3>
       <div class="card">
         ${exIds.length ? `<select class="selectline" data-change="prog-ex">${exIds.map(id => `<option value="${id}" ${id === progEx ? 'selected' : ''}>${esc(exById(id)?.name || id)}</option>`).join('')}</select>
-        ${lineChart(exPts, { unit: ex?.load ? ' kg' : '' })}
-        <p class="muted small">${ex?.load ? 'Estimated 1-rep max from your best set (Epley formula).' : 'Best reps per session.'}</p>` : '<p class="muted">Log a workout to see your strength trends.</p>'}
+        ${lineChart(exPts, { unit: ex?.load ? ' ' + wUnit() : '' })}
+        <p class="muted small">${ex?.load ? t('Estimated 1-rep max from your best set (Epley formula).') : t('Best reps per session.')}</p>` : `<p class="muted">${t('Log a workout to see your strength trends.')}</p>`}
       </div>
 
-      <h3>Body weight</h3>
-      <div class="card">${lineChart(bw, { unit: ' kg' })}
-        <div class="btnrow"><input id="bwIn" type="number" inputmode="decimal" step="0.1" placeholder="Today's weight (kg)"><button class="btn" data-act="add-bw">Add</button></div>
+      <h3>${t('Body weight')}</h3>
+      <div class="card">${lineChart(bw, { unit: ' ' + wUnit() })}
+        <div class="btnrow"><input id="bwIn" type="number" inputmode="decimal" step="0.1" placeholder="${t('Today\'s weight ({u})', { u: wUnit() })}"><button class="btn" data-act="add-bw">${t('Add')}</button></div>
       </div>
 
-      <h3>History</h3>
-      <div class="card list">${h.length ? [...h].reverse().slice(0, 40).map(r => `<a class="eqrow" href="#/summary/${r.id}"><span><b>${esc(r.title)}</b><small>${fmtDate(r.date)} · ${Math.round(r.duration / 60)} min · ${r.items.length} exercises</small></span>${icon.chev}</a>`).join('') : '<p class="muted">No workouts yet.</p>'}</div>`,
+      <h3>${t('History')}</h3>
+      <div class="card list">${h.length ? [...h].reverse().slice(0, 40).map(r => `<a class="eqrow" href="#/summary/${r.id}"><span><b>${esc(r.dayIdx != null ? dayName(r.dayIdx) : t(r.title))}</b><small>${fmtDate(r.date)} · ${t('{n} min', { n: Math.round(r.duration / 60) })} · ${t('{n} exercises', { n: r.items.length })}</small></span>${icon.chev}</a>`).join('') : `<p class="muted">${t('No workouts yet.')}</p>`}</div>`,
   };
 }
 
 register({
   'prog-ex': (el) => { progEx = el.value; rerender(); },
   'add-bw': () => {
-    const v = +document.getElementById('bwIn').value;
-    if (!v || v < 30 || v > 250) return toast('Enter a weight in kg');
+    const typed = +document.getElementById('bwIn').value;
+    const v = Math.round(fromW(typed) * 10) / 10;
+    if (!typed || v < 30 || v > 250) return toast(t('Enter a weight in {u}', { u: wUnit() }));
     const p = profile();
-    const t = today();
-    p.bodyweight = p.bodyweight.filter(b => b.date !== t);
-    p.bodyweight.push({ date: t, kg: v });
+    const d = today();
+    p.bodyweight = p.bodyweight.filter(b => b.date !== d);
+    p.bodyweight.push({ date: d, kg: v });
     p.bodyweight.sort((a, b) => a.date.localeCompare(b.date));
     p.stats.weight = v;
-    touchProfile(p); scheduleSync(); rerender(); toast('Weight saved');
+    touchProfile(p); scheduleSync(); rerender(); toast(t('Weight saved'));
   },
 });

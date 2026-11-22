@@ -2,6 +2,7 @@
 // or builds a custom exercise from a movement template. Optional AI hook via Apps Script.
 import { EXERCISES, TEMPLATES, MOTIONS } from './exercises.js';
 import { state, uid } from './store.js';
+import { t as tr } from './i18n.js';
 
 export const POSITIONS = {
   seated: 'Sitting', lying: 'Lying (on back or front)', incline: 'Leaning back on an incline',
@@ -52,7 +53,7 @@ export function customExercise(machine, a) {
     pos: a.pos || 'seated', grip: a.grip || 'handles', mot: a.mot, iso: !!t.iso, lvl: 1, avoid: [],
     load: t.pat === 'cardio' ? 0 : (t.iso ? 0.2 : 0.4), inc: 5, unit: t.pat === 'cardio' ? 'min' : 'reps',
     assist: false, perHand: false,
-    steps: [...t.steps, 'Start light: do one test set of 10 easy reps to learn the movement, then adjust the weight.'],
+    steps: [...t.steps, tr('Start light: do one test set of 10 easy reps to learn the movement, then adjust the weight.')],
     tip: machine.brand || machine.model ? `${[machine.brand, machine.model].filter(Boolean).join(' ')}` : '',
   };
 }

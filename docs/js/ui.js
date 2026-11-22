@@ -1,6 +1,7 @@
 // Small UI helpers: escaping, icons, toasts, bottom sheets, action registry, light/dark theme.
 import { state, save } from './store.js';
 import { picFor } from './pictures.js';
+import { t, toW, wUnit, locale } from './i18n.js';
 
 export const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 export const $ = (sel, root = document) => root.querySelector(sel);
@@ -16,8 +17,8 @@ export const icon = {
   check: P('<path d="M5 12l5 5L20 7"/>', 'stroke-width="3"'),
   pause: P('<path d="M9 5v14M15 5v14"/>', 'stroke-width="3"'),
   play: P('<path d="M7 4l13 8-13 8z" fill="currentColor"/>'),
-  back: P('<path d="M15 18l-6-6 6-6"/>', 'stroke-width="2.5"'),
-  chev: P('<path d="M9 18l6-6-6-6"/>', 'stroke-width="2.5"'),
+  back: P('<path d="M15 18l-6-6 6-6"/>', 'stroke-width="2.5" class="dir"'),
+  chev: P('<path d="M9 18l6-6-6-6"/>', 'stroke-width="2.5" class="dir"'),
   dots: P('<circle cx="5" cy="12" r="1.5" fill="currentColor"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/><circle cx="19" cy="12" r="1.5" fill="currentColor"/>'),
   info: P('<circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>'),
   camera: P('<path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/>'),
@@ -33,6 +34,7 @@ export const icon = {
   move: P('<path d="M12 3v18M8 7l4-4 4 4M8 17l4 4 4-4"/>'),
   up: P('<path d="M12 19V5M6 11l6-6 6 6"/>', 'stroke-width="2.5"'),
   down: P('<path d="M12 5v14M6 13l6 6 6-6"/>', 'stroke-width="2.5"'),
+  gear: P('<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/>'),
   search: P('<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>'),
 };
 
@@ -74,35 +76,37 @@ const darkMQ = window.matchMedia('(prefers-color-scheme: dark)');
 export const isDark = () => state.settings.theme === 'dark' || (state.settings.theme !== 'light' && darkMQ.matches);
 
 export function applyTheme() {
-  const t = state.settings.theme || 'auto';
-  if (t === 'auto') delete document.documentElement.dataset.theme;
-  else document.documentElement.dataset.theme = t;
+  const th = state.settings.theme || 'auto';
+  if (th === 'auto') delete document.documentElement.dataset.theme;
+  else document.documentElement.dataset.theme = th;
   const bg = isDark() ? '#0e0f11' : '#f4f4f5';
   document.querySelectorAll('meta[name="theme-color"]').forEach(m => m.setAttribute('content', bg));
   document.querySelectorAll('[data-act="toggle-theme"]').forEach(b => {
     b.innerHTML = isDark() ? SUN : MOON;
-    b.setAttribute('aria-label', isDark() ? 'Switch to light mode' : 'Switch to dark mode');
+    b.setAttribute('aria-label', isDark() ? t('Switch to light mode') : t('Switch to dark mode'));
   });
-  document.querySelectorAll('input[name="theme"]').forEach(r => { r.checked = r.value === t; });
+  document.querySelectorAll('input[name="theme"]').forEach(r => { r.checked = r.value === th; });
 }
-export function setTheme(t) { state.settings.theme = t; save(); applyTheme(); }
+export function setTheme(th) { state.settings.theme = th; save(); applyTheme(); }
 darkMQ.addEventListener?.('change', applyTheme);
 
-export const themeButton = () => `<button class="iconbtn" data-act="toggle-theme" aria-label="${isDark() ? 'Switch to light mode' : 'Switch to dark mode'}">${isDark() ? SUN : MOON}</button>`;
+export const themeButton = () => `<button class="iconbtn" data-act="toggle-theme" aria-label="${isDark() ? t('Switch to light mode') : t('Switch to dark mode')}">${isDark() ? SUN : MOON}</button>`;
 register({ 'toggle-theme': () => setTheme(isDark() ? 'light' : 'dark') });
 
 export const fmtClock = (sec) => {
   sec = Math.max(0, Math.round(sec));
   return `${Math.floor(sec / 60)}:${String(sec % 60).padStart(2, '0')}`;
 };
-export const fmtDur = (sec) => sec < 60 ? `${sec} s` : sec % 60 ? `${Math.floor(sec / 60)}:${String(sec % 60).padStart(2, '0')} min` : `${sec / 60} min`;
-export const fmtKg =(kg) => (Math.round(kg * 100) / 100).toString();
-export const fmtDate = (ts) => new Date(ts).toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
+export const fmtDur = (sec) => sec < 60 ? t('{n} s', { n: sec }) : sec % 60 ? t('{n} min', { n: `${Math.floor(sec / 60)}:${String(sec % 60).padStart(2, '0')}` }) : t('{n} min', { n: sec / 60 });
+// A weight as a number in the user's unit (lb or kg), for inputs and labels.
+export const fmtKg = (kg) => String(toW(kg));
+export const fmtDate = (ts) => new Date(ts).toLocaleDateString(locale(), { weekday: 'short', day: 'numeric', month: 'short' });
 
 export function setLabel(set, unit) {
-  if (unit === 'sec') return `${set.reps} s${set.kg ? ` × ${fmtKg(set.kg)} kg` : ''}`;
-  if (unit === 'min') return `${set.reps} min`;
-  return set.kg ? `${set.reps} × ${fmtKg(set.kg)} kg` : `${set.reps} reps`;
+  const w = set.kg ? ` × ${fmtKg(set.kg)} ${wUnit()}` : '';
+  if (unit === 'sec') return t('{n} s', { n: set.reps }) + w;
+  if (unit === 'min') return t('{n} min', { n: set.reps });
+  return set.kg ? `${set.reps}${w}` : t('{n} reps', { n: set.reps });
 }
 
 // Resize an image file to a small JPEG data URL (for machine photos).

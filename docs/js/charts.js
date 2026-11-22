@@ -1,8 +1,9 @@
 // Minimal SVG charts that follow the app's colour tokens (light & dark).
 import { esc } from './ui.js';
+import { t, locale } from './i18n.js';
 
 export function lineChart(points, { unit = '', height = 170 } = {}) {
-  if (!points.length) return '<p class="muted center">No data yet.</p>';
+  if (!points.length) return `<p class="muted center">${t('No data yet.')}</p>`;
   const W = 340, H = height, pl = 34, pr = 12, pt = 14, pb = 24;
   const xs = points.map(p => p.x), ys = points.map(p => p.y);
   let x0 = Math.min(...xs), x1 = Math.max(...xs);
@@ -15,7 +16,7 @@ export function lineChart(points, { unit = '', height = 170 } = {}) {
   const d = points.map((p, i) => `${i ? 'L' : 'M'}${X(p.x).toFixed(1)},${Y(p.y).toFixed(1)}`).join('');
   const area = `${d}L${X(points.at(-1).x).toFixed(1)},${H - pb}L${X(points[0].x).toFixed(1)},${H - pb}Z`;
   const ticks = [y0, (y0 + y1) / 2, y1];
-  const fd = t => new Date(t).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+  const fd = t => new Date(t).toLocaleDateString(locale(), { day: 'numeric', month: 'short' });
   return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img">
     ${ticks.map(t => `<line x1="${pl}" x2="${W - pr}" y1="${Y(t)}" y2="${Y(t)}" class="grid"/><text x="${pl - 6}" y="${Y(t) + 4}" text-anchor="end" class="axis">${Math.round(t)}</text>`).join('')}
     <path d="${area}" class="area"/>
@@ -27,7 +28,7 @@ export function lineChart(points, { unit = '', height = 170 } = {}) {
 }
 
 export function barChart(bars, { height = 150 } = {}) {
-  if (!bars.length) return '<p class="muted center">No data yet.</p>';
+  if (!bars.length) return `<p class="muted center">${t('No data yet.')}</p>`;
   const W = 340, H = height, pb = 22, pt = 16;
   const max = Math.max(...bars.map(b => b.y), 1);
   const bw = (W - 8) / bars.length;

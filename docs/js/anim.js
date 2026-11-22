@@ -7,6 +7,7 @@
 // so the hands stay on the handles and the feet on the platform while the equipment moves.
 import { MUSCLES } from './exercises.js';
 import { esc } from './ui.js';
+import { t } from './i18n.js';
 
 // Body sizes in drawing units (the picture is 260 × 220, floor at y = 205).
 const L = { torso: 60, neck: 8, head: 12, upper: 32, fore: 30, thigh: 46, shin: 44, foot: 13 };
@@ -222,13 +223,13 @@ export function animHTML(ex, sex) {
   if (VIDEOS.has(ex.id)) {
     const f = `media/anim/${ex.id}-${sex === 'male' ? 'm' : 'f'}`;
     return `<figure class="anim vid">
-      <video src="${f}.mp4" poster="${f}.jpg" autoplay muted loop playsinline preload="auto" aria-label="${esc(ex.name)} animation"></video>
+      <video src="${f}.mp4" poster="${f}.jpg" autoplay muted loop playsinline preload="auto" aria-label="${esc(t('{name} animation', { name: ex.name }))}"></video>
       <figcaption><span class="legend">${leg('pri', [ex.m])}${leg('sec', ex.s || [])}</span></figcaption>
     </figure>`;
   }
   return `<figure class="anim" data-anim="${ex.id}">
-      <svg viewBox="0 0 260 220" role="img" aria-label="${esc(ex.name)} animation">${svgFor(ex.id, ex, 0)}</svg>
-      <figcaption><b data-anim-word>${esc(DEFS[ex.id].words[0])}</b>
+      <svg viewBox="0 0 260 220" role="img" aria-label="${esc(t('{name} animation', { name: ex.name }))}">${svgFor(ex.id, ex, 0)}</svg>
+      <figcaption><b data-anim-word>${esc(t(DEFS[ex.id].words[0]))}</b>
         <span class="legend">${leg('pri', [ex.m])}${leg('sec', ex.s || [])}</span></figcaption>
     </figure>`;
 }
@@ -245,7 +246,7 @@ export function startAnims(exById) {
       if (!el.isConnected) return;
       const [p, w] = phase(now - t0);
       svg.innerHTML = svgFor(id, ex, p);
-      if (w !== lastWord) { lastWord = w; word.textContent = DEFS[id].words[w]; }
+      if (w !== lastWord) { lastWord = w; word.textContent = t(DEFS[id].words[w]); }
       requestAnimationFrame(step);
     };
     requestAnimationFrame(step);

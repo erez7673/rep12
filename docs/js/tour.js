@@ -4,32 +4,40 @@
 import { state, save, profile } from './store.js';
 import { currentWeek } from './planner.js';
 import { icon, esc, closeSheet, register } from './ui.js';
+import { t } from './i18n.js';
 
 // Routes that depend on the plan: this week's first workout day and its first exercise.
 const dayRoute = () => { const p = profile(); return p?.plan ? `#/day/${currentWeek(p.plan)}/0` : '#/plan'; };
 const exRoute = () => { const id = profile()?.plan?.days[0]?.items[0]?.exId; return id ? `#/ex/${encodeURIComponent(id)}` : '#/exercises'; };
 
 // sec: section name. route: screen to open (string or function). sel: part to highlight (none = card in the middle).
+// Texts are English here and translated with t() when shown.
 // fixed: the part doesn't scroll with the page (bottom tabs, Start button).
 const STEPS = [
   // ── Profile ──
   { sec: 'Profile', route: '#/profile', title: 'Welcome to Rep12 👋', text: 'This short tour shows you around the app. Tap Next to go on, Skip to jump to the next part, or the X to close the tour. You can start it again any time from the Profile tab.' },
-  { sec: 'Profile', route: '#/profile', sel: '#nav a[href="#/profile"]', fixed: true, title: 'The Profile tab', text: 'We start here, with your own details and the app\'s settings.' },
+  { sec: 'Profile', route: '#/profile', sel: '#nav a[href="#/profile"]', fixed: true, title: 'The Profile tab', text: 'We start here, with your own details. The app\'s settings come right after.' },
   { sec: 'Profile', route: '#/profile', sel: '.card.me', title: 'Your profile', text: 'Your name, age, height, weight, experience, goal, and how many days a week you train. Your plan and starting weights are based on these.' },
   { sec: 'Profile', route: '#/profile', sel: 'a.eqrow[href="#/onboard/edit"]', title: 'Edit profile', text: 'Change your personal details, goal or training days per week. Choose "Save & rebuild plan" to get a new plan that fits.' },
-  { sec: 'Profile', route: '#/profile', sel: 'a.eqrow[href="#/custom"]', title: 'Build your custom plan', text: 'Choose how many exercises each workout day has, which muscle areas each day trains, how long a session is, the warm-up, a cardio finisher, any injuries to protect, and extra focus areas.' },
+  { sec: 'Profile', route: '#/profile', sel: 'a.eqrow[href="#/custom"]', title: 'Build your custom plan', text: 'Choose how many exercises each workout day has, which muscle areas each day trains, how long a session is, the warm-up, a cardio finisher, any injuries to protect, and extra focus areas. A custom plan keeps the same sets and reps all 12 weeks.' },
   { sec: 'Profile', route: '#/profile', sel: '[data-act="tpl-open"]', title: 'Ready-made plans', text: 'Simple full-body plans for beginners and people over 50. Pick one instead of a custom plan if you prefer.' },
   { sec: 'Profile', route: '#/profile', sel: '[data-act="switch-profile"]', title: 'More than one person', text: 'Add a profile for someone else who trains on this phone, and switch between profiles here. Each person gets their own plan and history.' },
   { sec: 'Profile', route: '#/profile', sel: 'a.eqrow[href="#/gym"]', title: 'Gym setup', text: 'Tell the app which equipment your gym has, so your plan only uses what\'s there. More about this in the Gym tab.' },
-  { sec: 'Profile', route: '#/profile', sel: '.theme-ctl', title: 'Light or dark', text: 'Choose a light or dark look. Auto follows your phone\'s setting.' },
-  { sec: 'Profile', route: '#/profile', sel: '.card.list:has([data-k="sound"])', title: 'Rest timer beep', text: 'The app beeps when your rest is over. Use "Test the beep" to check the volume. Keep silent mode off during workouts.' },
-  { sec: 'Profile', route: '#/profile', sel: '.card:has(#syncUrl)', title: 'Sync with Google Sheets (optional)', text: 'Backs up your data to your own Google Sheet and keeps several phones in step. The set-up steps are in the app\'s README. You can skip this.' },
-  { sec: 'Profile', route: '#/profile', sel: '.card:has([data-act="export"])', title: 'Backup', text: 'Save all your data to a file, or restore it from a file, for example when you get a new phone.' },
   { sec: 'Profile', route: '#/profile', sel: '[data-act="tour-start"]', title: 'Take the tour again', text: 'Start this tour again from here whenever you need a refresher.' },
+  { sec: 'Profile', route: '#/profile', sel: '.gear', title: 'Settings', text: 'The gear opens the app\'s settings: language, units, light or dark, the rest timer beep, sync and backup.' },
+
+  // ── Settings ──
+  { sec: 'Settings', route: '#/settings', sel: '.lang-sel', title: 'Language', text: 'Choose the app\'s language. The app restarts in the new language; your data stays the same.' },
+  { sec: 'Settings', route: '#/settings', sel: '.units-ctl', title: 'Units', text: 'Metric shows kilograms and centimetres. US shows pounds and feet. Switching only changes how weights and heights are shown.' },
+  { sec: 'Settings', route: '#/settings', sel: '.theme-ctl', title: 'Light or dark', text: 'Choose a light or dark look. Auto follows your phone\'s setting.' },
+  { sec: 'Settings', route: '#/settings', sel: '.beep-card', title: 'Rest timer beep', text: 'The app beeps when your rest is over. Use "Test the beep" to check the volume. Keep silent mode off during workouts.' },
+  { sec: 'Settings', route: '#/settings', sel: '.sync-card', title: 'Sync with Google Sheets (optional)', text: 'Backs up your data to your own Google Sheet and keeps several phones in step. The set-up steps are in the app\'s README. You can skip this.' },
+  { sec: 'Settings', route: '#/settings', sel: '.backup-card', title: 'Backup', text: 'Save all your data to a file, or restore it from a file, for example when you get a new phone.' },
+  { sec: 'Settings', route: '#/settings', sel: '.about-card', title: 'About', text: 'How your data is kept private, and a reminder that the app gives general guidance, not medical advice.' },
 
   // ── My Plan ──
   { sec: 'My Plan', route: '#/plan', sel: '#nav a[href="#/plan"]', fixed: true, title: 'The My Plan tab', text: 'Your 12-week plan. This is where you start every workout.' },
-  { sec: 'My Plan', route: '#/plan', sel: '.weekbar', title: 'Your 12 weeks', text: 'Each bar is a week and fills up as you finish its workouts. Tap a week to look at it. The plan gets harder in steps, and week 12 is an easier recovery week.' },
+  { sec: 'My Plan', route: '#/plan', sel: '.weekbar', title: 'Your 12 weeks', text: 'Each bar is a week and fills up as you finish its workouts. Tap a week to look at it. A plan the app builds for you gets harder in steps, and week 12 is an easier recovery week. A plan from "Build your custom plan" keeps the same sets and reps every week.' },
   { sec: 'My Plan', route: '#/plan', sel: '[data-act="plan-info"]', title: 'About your plan', text: 'Tap the plan\'s name to see how it works, or to switch to a ready-made plan.' },
   { sec: 'My Plan', route: '#/plan', sel: '.days', title: 'Workout days', text: 'One card per workout day. "Next" marks the one to do now, and finished days get a tick. Tap a day to open it.' },
 
@@ -119,14 +127,14 @@ function place() {
   root.innerHTML = `
     ${r ? spot(r, vh) : '<div class="tour-dim"></div>'}
     <div class="tour-card ${cardTop ? 'at-top' : ''}">
-      <button class="tour-x" data-act="tour-close" aria-label="Close the tour">${icon.x}</button>
-      <small class="tour-sec">${esc(st.sec)} · ${inSec.indexOf(st) + 1} of ${inSec.length}</small>
-      <h2>${esc(st.title)}</h2>
-      <p>${esc(st.text)}</p>
+      <button class="tour-x" data-act="tour-close" aria-label="${t('Close the tour')}">${icon.x}</button>
+      <small class="tour-sec">${esc(t(st.sec))} · ${t('{a} of {b}', { a: inSec.indexOf(st) + 1, b: inSec.length })}</small>
+      <h2>${esc(t(st.title))}</h2>
+      <p>${esc(t(st.text))}</p>
       <div class="tour-btns">
-        ${at > 0 ? '<button class="tour-btn" data-act="tour-back">Back</button>' : ''}
-        ${nextSec ? `<button class="tour-btn" data-act="tour-skip">Skip to ${esc(nextSec)} ›</button>` : ''}
-        <button class="tour-btn primary" data-act="tour-next">${last ? 'Finish' : 'Next'}</button>
+        ${at > 0 ? `<button class="tour-btn" data-act="tour-back">${t('Back')}</button>` : ''}
+        ${nextSec ? `<button class="tour-btn" data-act="tour-skip">${t('Skip to {section}', { section: esc(t(nextSec)) })} ›</button>` : ''}
+        <button class="tour-btn primary" data-act="tour-next">${last ? t('Finish') : t('Next')}</button>
       </div>
     </div>`;
 }

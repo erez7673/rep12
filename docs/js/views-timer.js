@@ -3,6 +3,7 @@
 // Kept on this phone only (state.timer is not synced).
 import { state, save } from './store.js';
 import { icon, register, fmtClock } from './ui.js';
+import { t as tr } from './i18n.js';
 import * as W from './workout.js';
 import { rerender } from './app.js';
 
@@ -40,31 +41,31 @@ export function timerView() {
   if (t.mode === 'stopwatch') {
     const running = !!t.sw.startAt;
     body = `<div class="bigtime" data-t="tsw">${fmtClock(Math.floor(swSec(t)))}</div>
-      <p>Counts up. Handy for planks, holds or timing your rests.</p>
+      <p>${tr('Counts up. Handy for planks, holds or timing your rests.')}</p>
       <div class="hd-btns">
-        <button class="pillbtn light" data-act="t-sw">${running ? 'Pause' : swSec(t) ? 'Continue' : 'Start'}</button>
-        <button class="pillbtn" data-act="t-sw-reset" ${swSec(t) ? '' : 'disabled'}>Reset</button>
+        <button class="pillbtn light" data-act="t-sw">${running ? tr('Pause') : swSec(t) ? tr('Continue') : tr('Start')}</button>
+        <button class="pillbtn" data-act="t-sw-reset" ${swSec(t) ? '' : 'disabled'}>${tr('Reset')}</button>
       </div>`;
   } else {
     const running = !!t.cd.endAt;
     const left = cdSec(t);
     body = `<div class="bigtime" data-t="tcd">${fmtClock(Math.ceil(left))}</div>
-      <p>${running ? 'The phone beeps when the time is up.' : left ? `Set to ${fmtClock(t.cd.total)}.` : 'Time is up!'}</p>
+      <p>${running ? tr('The phone beeps when the time is up.') : left ? tr('Set to {time}.', { time: fmtClock(t.cd.total) }) : tr('Time is up!')}</p>
       <div class="hd-btns">
-        <button class="pillbtn" data-act="t-cd-add" data-v="-15">−15 s</button>
-        <button class="pillbtn" data-act="t-cd-add" data-v="15">+15 s</button>
-        <button class="pillbtn light" data-act="t-cd">${running ? 'Pause' : left && left < t.cd.total ? 'Continue' : 'Start'}</button>
-        <button class="pillbtn" data-act="t-cd-reset">Reset</button>
+        <button class="pillbtn" data-act="t-cd-add" data-v="-15">${tr('−15 s')}</button>
+        <button class="pillbtn" data-act="t-cd-add" data-v="15">${tr('+15 s')}</button>
+        <button class="pillbtn light" data-act="t-cd">${running ? tr('Pause') : left && left < t.cd.total ? tr('Continue') : tr('Start')}</button>
+        <button class="pillbtn" data-act="t-cd-reset">${tr('Reset')}</button>
       </div>`;
   }
   return {
-    html: `<header class="top"><h1>Timer</h1></header>
-      <div class="tabs2">${tab('countdown', 'Countdown')}${tab('stopwatch', 'Stopwatch')}</div>
+    html: `<header class="top"><h1>${tr('Timer')}</h1></header>
+      <div class="tabs2">${tab('countdown', tr('Countdown'))}${tab('stopwatch', tr('Stopwatch'))}</div>
       <div class="timer-card hd">${body}</div>
-      ${t.mode === 'countdown' ? `<h3>Quick set</h3>
-        <div class="choices grid3">${PRESETS.map(s => `<button class="choice ${t.cd.total === s ? 'on' : ''}" data-act="t-cd-set" data-v="${s}">${s < 60 ? s + ' s' : fmtClock(s)}</button>`).join('')}</div>` : ''}
-      <p class="muted small">${icon.info} The timer keeps running when you switch tabs or lock the phone. During a workout the rest timer still runs on its own.</p>
-      <button class="btn ghost" data-act="toggle-sound-t">Sound: ${state.settings.sound ? 'On' : 'Off'}</button>`,
+      ${t.mode === 'countdown' ? `<h3>${tr('Quick set')}</h3>
+        <div class="choices grid3">${PRESETS.map(s => `<button class="choice ${t.cd.total === s ? 'on' : ''}" data-act="t-cd-set" data-v="${s}">${s < 60 ? tr('{n} s', { n: s }) : fmtClock(s)}</button>`).join('')}</div>` : ''}
+      <p class="muted small">${icon.info} ${tr('The timer keeps running when you switch tabs or lock the phone. During a workout the rest timer still runs on its own.')}</p>
+      <button class="btn ghost" data-act="toggle-sound-t">${tr('Sound')}: ${state.settings.sound ? tr('On') : tr('Off')}</button>`,
   };
 }
 

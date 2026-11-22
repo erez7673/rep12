@@ -94,7 +94,7 @@ export const coachSettingsBlock = () => !coachAvailable() ? '' :
   `<h3>${t('Coach')}</h3><div class="card list"><button class="eqrow" data-act="coach-open"><span>${esc(coachName() || t('No coach'))}</span>${icon.chev}</button></div>`;
 
 // ── Moments ──
-// "Let's go!" for two seconds when a workout starts. It never takes taps, so it can't block a button.
+// "Let's go!" for about two and a half seconds when a workout starts (the clip is cut to that length). It never takes taps, so it can't block a button.
 export function coachStart() {
   const k = coachKey();
   if (!k) return;
@@ -103,10 +103,10 @@ export function coachStart() {
   const el = document.createElement('div');
   el.id = 'coach-overlay';
   el.setAttribute('role', 'status');
-  el.innerHTML = `<span class="coach-av" style="--s:84px" aria-hidden="true"><b>${esc(COACHES[k].name[0])}</b><img src="media/coach/${k}-idle.jpg" alt="" onerror="this.remove()">${motionReduced() ? '' : `<video src="media/coach/${k}-letsgo.mp4" poster="media/coach/${k}-idle.jpg" muted autoplay playsinline onerror="this.remove()"></video>`}</span><p>${esc(line)}</p>`;
+  el.innerHTML = `<span class="coach-av sq" style="--s:150px" aria-hidden="true"><b>${esc(COACHES[k].name[0])}</b><img src="media/coach/${k}-idle.jpg" alt="" onerror="this.remove()">${motionReduced() ? '' : `<video src="media/coach/${k}-letsgo.mp4" poster="media/coach/${k}-idle.jpg" muted autoplay playsinline onerror="this.remove()"></video>`}</span><p>${esc(line)}</p>`;
   document.body.append(el);
   if (speakOn()) say(line);
-  setTimeout(() => el.remove(), 2200);
+  setTimeout(() => el.remove(), 2700);
 }
 export const coachSpeakFinish = () => { if (coachOn() && speakOn()) say(sig('finish')); };
 

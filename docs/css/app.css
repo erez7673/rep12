@@ -501,6 +501,7 @@ body:has(.cta) #livebar { bottom: calc(var(--nav-h) + env(safe-area-inset-bottom
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
 /* ── AI personal coaches (coach.js) ── */
 .coach-av { position: relative; flex: none; width: var(--s, 40px); height: var(--s, 40px); border-radius: 50%; overflow: hidden; background: linear-gradient(135deg, #3a4a6a, #1c1c1e); color: #fff; display: grid; place-items: center; box-shadow: 0 0 0 1.5px rgba(127,127,127,.45); }
+.coach-av.sq { border-radius: 18px; } /* the start overlay shows the whole clip, not a round crop */
 .coach-av b { font-size: calc(var(--s, 40px) * .45); font-weight: 800; }
 .coach-av img, .coach-av video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .coachcard { display: flex; align-items: center; gap: 12px; width: 100%; padding: 12px 14px; margin: 12px 0; border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow); text-align: start; }

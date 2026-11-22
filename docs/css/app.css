@@ -317,8 +317,8 @@ body:has(.cta) #livebar { bottom: calc(var(--nav-h) + env(safe-area-inset-bottom
 
 #nav { position: fixed; bottom: 0; left: 0; right: 0; height: calc(var(--nav-h) + env(safe-area-inset-bottom)); padding-bottom: env(safe-area-inset-bottom); background: var(--card); border-top: 1px solid var(--line); display: flex; z-index: 30; }
 #nav[hidden] { display: none; }
-#nav a { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; color: var(--ink3); font-size: 12px; font-weight: 600; }
-#nav a svg { width: 24px; height: 24px; }
+#nav a { flex: 1 1 0; min-width: 0; padding: 0 2px; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; color: var(--ink3); font-size: 12px; font-weight: 600; }
+#nav a svg { width: 24px; height: 24px; flex: none; }
 #nav a.on { color: var(--blue); }
 
 #sheet { position: fixed; inset: 0; z-index: 50; pointer-events: none; }
@@ -363,7 +363,8 @@ body:has(.cta) #livebar { bottom: calc(var(--nav-h) + env(safe-area-inset-bottom
 .choices.grid3 { grid-template-columns: 1fr 1fr 1fr; }
 .choices.grid3 .choice { text-align: center; padding: 14px 8px; }
 .muted.small svg { width: 14px; height: 14px; vertical-align: -2px; }
-#nav a span { font-size: 11px; }
+/* One line only (a second line pushes the icon out of the bar); fitNav() shrinks a long translation to fit. */
+#nav a span { font-size: 11px; line-height: 1.2; white-space: nowrap; max-width: 100%; }
 /* Muscle-area headers in a day's exercise list */
 .exgroup { font-size: 17px; font-weight: 800; color: var(--blue); margin: 18px 0 4px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
 .exgroup:first-child { margin-top: 0; }

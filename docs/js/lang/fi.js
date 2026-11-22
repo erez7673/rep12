@@ -216,7 +216,7 @@ export default {
   214: "Varmuuskopio palautettu",
   215: "Tuonti epäonnistui: {msg}",
   216: "Poistetaanko profiili ({name}) ja koko historia tästä puhelimesta? Tätä ei voi perua.",
-  217: "Edistyminen",
+  217: "Kehitys",
   218: "Treenit",
   219: "Viimeiset 30 päivää",
   220: "{u} nostettu",

@@ -364,7 +364,7 @@ export default {
   362: "Final",
   363: "Vuelta a la calma",
   364: "estiramientos",
-  365: "Temporizador",
+  365: "Cronómetro",
   366: "Descartar entreno",
   367: "¡Todas las series registradas!",
   368: "Descanso −15 s",

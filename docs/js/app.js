@@ -57,10 +57,23 @@ export function render() {
   const tab = { day: 'plan', summary: 'plan', session: 'plan', ex: 'exercises', identify: 'gym', onboard: 'profile', custom: 'profile', settings: 'profile' }[seg] || seg;
   $('#nav').innerHTML = TABS.map(([href, label, ic]) =>
     `<a href="${href}" class="${href === '#/' + tab ? 'on' : ''}">${ic}<span>${t(label)}</span></a>`).join('');
+  fitNav();
   renderLiveBar(hash);
   if (!view.keepScroll) window.scrollTo(0, 0);
   view.after?.();
 }
+
+// Shrinks a tab label that is wider than its tab (long translations), down to 8.5 px, so text and icon stay whole.
+function fitNav() {
+  for (const s of document.querySelectorAll('#nav a span')) {
+    s.style.fontSize = '';
+    const room = s.parentElement.clientWidth - 4;
+    if (room <= 0) continue; // bar hidden
+    let f = 11;
+    while (s.scrollWidth > room && f > 8.5) s.style.fontSize = (f -= 0.5) + 'px';
+  }
+}
+addEventListener('resize', fitNav);
 
 export function rerender() {
   const y = window.scrollY;

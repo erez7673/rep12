@@ -420,7 +420,7 @@ export default {
   418: "Säkerhetskopierar dina data till ditt eget Google-kalkylark och håller flera telefoner i takt. Stegen finns i appens README. Du kan hoppa över detta.",
   419: "Spara all din data i en fil eller återställ från en fil, till exempel när du byter telefon.",
   420: "Hur dina data hålls privata, och en påminnelse om att appen ger allmänna råd, inte medicinska råd.",
-  421: "Mitt program",
+  421: "Program",
   422: "Fliken Mitt program",
   423: "Ditt 12-veckorsprogram. Här startar du varje pass.",
   424: "Dina 12 veckor",

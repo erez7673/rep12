@@ -100,7 +100,7 @@ export function logSet(i, si, reps, kg) {
   s.phase = 'rest';
   s.restTotal = it.rest;
   s.restEnd = Date.now() + it.rest * 1000;
-  s.restFired = false;
+  s.restFired = false; s.rest10 = false;
   save();
   return 'rest';
 }
@@ -158,6 +158,7 @@ export function tick() {
     beep(3);
     return 'rest-done';
   }
+  if (s.phase === 'rest' && !s.rest10 && s.restTotal > 20 && restLeft(s) <= 10) { s.rest10 = true; return 'rest-10'; }
   const it = s.items[s.cur?.i];
   if (s.phase === 'work' && it?.unit === 'sec') {
     const target = it.sets[s.cur.s]?.reps || 30;

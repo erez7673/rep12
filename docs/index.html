@@ -16,14 +16,14 @@
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
   <link rel="stylesheet" href="css/app.css">
   <script>
-    // Apply the saved light/dark choice before the page paints (avoids a flash).
-    try { var t = JSON.parse(localStorage.getItem('fressi.v1') || '{}').settings?.theme; if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
+    // Apply the saved light/dark and accessibility choices before the page paints (avoids a flash).
+    try { var s = JSON.parse(localStorage.getItem('fressi.v1') || '{}').settings || {}, d = document.documentElement.dataset; if (s.theme === 'light' || s.theme === 'dark') d.theme = s.theme; if (s.textSize && s.textSize !== 'normal') d.text = s.textSize; if (s.contrast) d.contrast = 'high'; if (s.bigButtons) d.big = '1'; } catch (e) {}
   </script>
 </head>
 <body>
   <main id="view"></main>
   <div id="livebar" hidden></div>
-  <nav id="nav" hidden></nav>
+  <nav id="nav" hidden aria-label="Main"></nav>
   <div id="sheet"></div>
   <div id="toast" role="status" aria-live="polite"></div>
   <noscript>This app needs JavaScript.</noscript>

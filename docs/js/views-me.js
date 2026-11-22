@@ -1,6 +1,7 @@
 // Onboarding / edit profile, Profile, Settings and Progress screens.
 import { state, profile, profileList, createProfile, touchProfile, save, replaceState, exById, today } from './store.js';
-import { esc, icon, register, toast, fmtDate, sheet, closeSheet, setTheme } from './ui.js';
+import { esc, icon, register, toast, fmtDate, sheet, closeSheet, setTheme, applyA11y } from './ui.js';
+import { say, canSpeak } from './speak.js';
 import { GOALS, LEVELS, FOCUS, generatePlan, AREAS, areasFor, dayName, exPerDay, setDayAreas, fitDay, MAX_DAYS, MAX_EX_PER_DAY } from './planner.js';
 import { startTour } from './tour.js';
 import { INJURIES } from './exercises.js';
@@ -70,7 +71,7 @@ export function onboardView(edit) {
   const first = !profileList().length;
   return {
     full: first,
-    html: `<header class="bar">${first ? '<span></span>' : `<button class="iconbtn" data-act="back">${icon.back}</button>`}<h2>${edit ? t('Edit profile') : first ? t('Welcome') + ' 👋' : t('New profile')}</h2><span></span></header>
+    html: `<header class="bar">${first ? `<button class="iconbtn a11y-btn" data-act="go" data-href="#/access" aria-label="${t('Accessibility')}">${icon.access}</button>` : `<button class="iconbtn" data-act="back" aria-label="${t('Back')}">${icon.back}</button>`}<h2>${edit ? t('Edit profile') : first ? t('Welcome') + ' 👋' : t('New profile')}</h2><span></span></header>
       ${first ? `<p class="lead">${t('Let\'s build your personal plan. You can add more profiles afterwards, for example for a partner.')}</p>
         <p class="muted small">${DISCLAIMER()}</p>
         <div class="card list"><a class="eqrow" href="#/settings"><span>${t('Language and units')}</span><span class="muted">${esc(LANGS[lang()])} · ${isUS() ? 'lb, ft' : 'kg, cm'} ${icon.chev}</span></a></div>` : ''}
@@ -82,7 +83,7 @@ export function onboardView(edit) {
 export function customPlanView() {
   const p = profile();
   return {
-    html: `<header class="bar"><button class="iconbtn" data-act="back">${icon.back}</button><h2>${t('Build your custom plan')}</h2><span></span></header>
+    html: `<header class="bar"><button class="iconbtn" data-act="back" aria-label="${t('Back')}">${icon.back}</button><h2>${t('Build your custom plan')}</h2><span></span></header>
       <p class="muted small">${t('Choose how each of your {n} workout days looks. Change the number of days under Edit profile.', { n: p.stats.days || 3 })}</p>
       <p class="muted small">${t('A custom plan keeps the same sets and reps all 12 weeks. A plan built from Edit profile gets harder in steps.')}</p>
       ${profileForm('custom')}`,
@@ -153,7 +154,7 @@ export function profileView() {
   const s = p.stats;
   const n = profileList().length;
   return {
-    html: `<header class="top"><h1>${t('Profile')}</h1><button class="iconbtn gear" data-act="go" data-href="#/settings" aria-label="${t('Settings')}">${icon.gear}</button></header>
+    html: `<header class="top"><h1>${t('Profile')}</h1><span class="hdr-btns"><button class="iconbtn a11y-btn" data-act="go" data-href="#/access" aria-label="${t('Accessibility')}">${icon.access}</button><button class="iconbtn gear" data-act="go" data-href="#/settings" aria-label="${t('Settings')}">${icon.gear}</button></span></header>
       <div class="card me"><span class="avatar lg" style="--c:${p.color}">${esc(p.name[0])}</span>
         <div><b>${esc(p.name)}</b><small>${t('{n} y', { n: s.age })} · ${fmtH(s.height)} · ${fmtW(s.weight)} · ${esc(LEVELS[s.level])}</small>
         <small>${esc(GOALS[s.goal].name)} · ${t('{d} days × {m} min', { d: s.days, m: s.minutes })}</small></div></div>
@@ -170,6 +171,37 @@ export function profileView() {
   };
 }
 
+// ───────────── Accessibility (icon on Profile and on the welcome screen; also in Settings) ─────────────
+export function accessView() {
+  const st = state.settings;
+  const size = st.textSize || 'normal';
+  const sw = (k, label, help) => `<label class="eqrow"><span>${label}${help ? `<small>${help}</small>` : ''}</span><input type="checkbox" class="switch" ${st[k] ? 'checked' : ''} data-change="set-a11y" data-k="${k}"></label>`;
+  return {
+    html: `<header class="bar"><button class="iconbtn" data-act="back" aria-label="${t('Back')}">${icon.back}</button><h2>${t('Accessibility')}</h2><span></span></header>
+      <h3>${t('Text size')}</h3>
+      <div class="seg-ctl text-ctl" role="radiogroup" aria-label="${t('Text size')}">${[['normal', t('Normal')], ['large', t('Large')], ['xl', t('Extra large')]].map(([k, v]) =>
+        `<label><input type="radio" name="textSize" value="${k}" ${size === k ? 'checked' : ''} data-change="set-text"><span>${v}</span></label>`).join('')}</div>
+      <p class="muted small">${t('Makes all the text in the app bigger. Your phone\'s own text size setting is not changed.')}</p>
+
+      <h3>${t('Seeing the screen')}</h3>
+      <div class="card list a11y-card">
+        ${sw('contrast', t('High contrast'), t('Darker text, stronger lines and colours that stand out more.'))}
+        ${sw('bigButtons', t('Bigger buttons'), t('Larger buttons and more space between them, so they are easier to tap.'))}
+      </div>
+
+      <h3>${t('Spoken workout cues')}</h3>
+      <div class="card list speak-card">
+        ${canSpeak() ? sw('speak', t('Speak during workouts'), t('The phone says when a set is logged, when 10 seconds of rest are left, when rest is over and which set is next.'))
+          : `<p class="muted small">${t('This phone has no text-to-speech voice for the app.')}</p>`}
+        ${canSpeak() ? `<button class="eqrow" data-act="test-voice"><span>${t('Test the voice')}</span><span aria-hidden="true">🔊</span></button>` : ''}
+      </div>
+      <p class="muted small">${t('Uses your phone\'s voice in the app\'s language. Turn the volume up and silent mode off.')}</p>
+
+      <h3>${t('Screen readers')}</h3>
+      <div class="card"><p class="muted small">${t('Rep12 works with VoiceOver (iPhone) and TalkBack (Android): every button has a spoken name. Turn them on in your phone\'s accessibility settings.')}</p></div>`,
+  };
+}
+
 // ───────────── Settings (gear on the Profile screen) ─────────────
 export function settingsView() {
   const st = state.settings;
@@ -177,7 +209,7 @@ export function settingsView() {
   const seg = (name, act, cur, opts) => `<div class="seg-ctl ${name}-ctl">${opts.map(([k, v]) =>
     `<label><input type="radio" name="${name}" value="${k}" ${cur === k ? 'checked' : ''} data-change="${act}"><span>${v}</span></label>`).join('')}</div>`;
   return {
-    html: `<header class="bar"><button class="iconbtn" data-act="back">${icon.back}</button><h2>${t('Settings')}</h2><span></span></header>
+    html: `<header class="bar"><button class="iconbtn" data-act="back" aria-label="${t('Back')}">${icon.back}</button><h2>${t('Settings')}</h2><span></span></header>
       <h3>${t('Language')}</h3>
       <div class="card"><select class="selectline lang-sel" data-change="set-lang" aria-label="${t('Language')}">${Object.entries(langChoices()).map(([k, v]) =>
         `<option value="${k}" ${lang() === k ? 'selected' : ''}>${v}</option>`).join('')}</select></div>
@@ -189,6 +221,9 @@ export function settingsView() {
       <h3>${t('Appearance')}</h3>
       ${seg('theme', 'set-theme', st.theme || 'auto', [['auto', t('Auto')], ['light', '☀️ ' + t('Light')], ['dark', '🌙 ' + t('Dark')]])}
       <p class="muted small">${t('Auto follows your phone\'s setting.')}</p>
+
+      <h3>${t('Accessibility')}</h3>
+      <div class="card list"><a class="eqrow a11y-row" href="#/access"><span>${icon.access} ${t('Text size, contrast, bigger buttons, spoken cues')}</span>${icon.chev}</a></div>
 
       <h3>${t('Workout')}</h3>
       <div class="card list beep-card">
@@ -222,6 +257,12 @@ export function settingsView() {
 
 register({
   'set-flag': (el) => { state.settings[el.dataset.k] = el.checked; save(); },
+  'set-a11y': (el) => {
+    state.settings[el.dataset.k] = el.checked; save(); applyA11y();
+    if (el.dataset.k === 'speak' && el.checked) say(t('Spoken workout cues are on.'));
+  },
+  'set-text': (el) => { state.settings.textSize = el.value; save(); applyA11y(); },
+  'test-voice': () => say(t('{name}, set {a} of {b}.', { name: exById('leg-press')?.name || 'Leg Press', a: 2, b: 4 }), true),
   'set-theme': (el) => { setTheme(el.value); },
   // A new language needs a fresh start so every screen and the exercise texts are loaded in it.
   'set-lang': (el) => { state.settings.lang = el.value; save(true); location.reload(); },
@@ -315,7 +356,7 @@ export function progressView() {
 
       <h3>${t('Body weight')}</h3>
       <div class="card">${lineChart(bw, { unit: ' ' + wUnit() })}
-        <div class="btnrow"><input id="bwIn" type="number" inputmode="decimal" step="0.1" placeholder="${t('Today\'s weight ({u})', { u: wUnit() })}"><button class="btn" data-act="add-bw">${t('Add')}</button></div>
+        <div class="btnrow"><input id="bwIn" aria-label="${t('Today\'s weight ({u})', { u: wUnit() })}" type="number" inputmode="decimal" step="0.1" placeholder="${t('Today\'s weight ({u})', { u: wUnit() })}"><button class="btn" data-act="add-bw">${t('Add')}</button></div>
       </div>
 
       <h3>${t('History')}</h3>

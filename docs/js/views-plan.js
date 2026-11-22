@@ -4,6 +4,7 @@ import { esc, icon, thumb, register, sheet, closeSheet, toast, fmtClock, fmtKg, 
 import { currentWeek, planProgress, dayFocus, planPhase, isCustom, buildSession, estimateMinutes, estimateCalories, swapOptions, generatePlan, sortDay, itemArea, editKey, AREAS, setDayAreas, exPerDay, dayCap, warmOptions, warmPref, sessionBudget, TEMPLATES, TPL_PHASES, generateTemplatePlan, templateDayText, tplRx, dayName, planTitle } from './planner.js';
 import { MUSCLES } from './exercises.js';
 import * as W from './workout.js';
+import { say, setCue } from './speak.js';
 import { t, wUnit, fromW, toW, locale, listJoin } from './i18n.js';
 import { rerender } from './app.js';
 import { scheduleSync } from './sync.js';
@@ -158,7 +159,7 @@ export function dayView(w, d) {
     const header = area !== lastArea ? `<h4 class="exgroup">${esc(AREAS[area]?.name || '')}</h4>` : '';
     lastArea = area;
     return `${header}<div class="exrow">
-      <a href="#/ex/${encodeURIComponent(ex.id)}">${thumb(ex, photoFor(ex.id))}</a>
+      <a href="#/ex/${encodeURIComponent(ex.id)}" aria-label="${esc(t('How to do it') + ': ' + ex.name)}">${thumb(ex, photoFor(ex.id))}</a>
       <div class="exbody">
         <a href="#/ex/${encodeURIComponent(ex.id)}" class="exname">${esc(ex.name)}</a>
         <button class="chips editable" data-act="edit-sets" data-w="${w}" data-d="${d}" data-i="${i}" aria-label="${t('Edit reps and weight')}">${it.sets.map(s => `<span class="chip">${setLabel(s, it.unit)}</span>`).join('')}<span class="chip edit">${icon.edit} ${t('Edit')}</span></button>
@@ -172,7 +173,7 @@ export function dayView(w, d) {
 
   return {
     cls: 'with-cta',
-    html: `<header class="bar"><button class="iconbtn" data-act="back">${icon.back}</button><h2>${esc(dayName(d))}</h2><span></span></header>
+    html: `<header class="bar"><button class="iconbtn" data-act="back" aria-label="${t('Back')}">${icon.back}</button><h2>${esc(dayName(d))}</h2><span></span></header>
       <button class="chips editable lead-chips" data-act="areas-open" data-d="${d}" aria-label="${t('Choose muscle areas')}">${(day.muscles?.length ? day.muscles.map(a => AREAS[a]?.name) : [dayFocus(day)]).filter(Boolean).map(n => `<span class="chip on">${esc(n)}</span>`).join('')}<span class="chip edit">${icon.edit} ${t('Muscle areas')}</span></button>
       <div class="statrow">
         <div class="stat">${icon.clock}<b>${t('{n} min', { n: mins })}</b><small>${t('Workout time')}</small></div>
@@ -181,7 +182,7 @@ export function dayView(w, d) {
       <p class="phase">${t('Week {w}', { w })} · ${esc(planPhase(plan, w).name)}</p>
       ${rec ? `<a class="card donecard" href="#/summary/${rec.id}">${icon.check} ${t('Done on {date} – view log', { date: fmtDate(rec.date) })}</a>` : ''}
       <h3>${t('Warm-up')}</h3>
-      ${preview.warm ? `<div class="exrow"><a href="#/ex/${encodeURIComponent(preview.warm.exId)}">${thumb(exById(preview.warm.exId))}</a>
+      ${preview.warm ? `<div class="exrow"><a href="#/ex/${encodeURIComponent(preview.warm.exId)}" aria-label="${esc(t('How to do it') + ': ' + (exById(preview.warm.exId)?.name || ''))}">${thumb(exById(preview.warm.exId))}</a>
           <div class="exbody"><b class="exname">${esc(exName(preview.warm.exId, preview.warm.name))}</b>
           <button class="chips editable" data-act="warm-open" aria-label="${t('Change warm-up')}"><span class="chip">${t('{n} min', { n: preview.warm.min })}</span><span class="chip edit">${icon.edit} ${t('Change')}</span></button></div></div>
         ${preview.warmup.length ? `<button class="row mobility-btn" data-act="mobility-open" data-w="${w}" data-d="${d}">${icon.info}<span><b>${t('Then a quick mobility routine')}</b><small>${t('{n} moves', { n: preview.warmup.length })} · ${t('{n} min', { n: Math.round(preview.warmup.reduce((a, m) => a + m.sec, 0) / 60) })}</small></span><span class="chev arw">›</span></button>` : ''}`
@@ -189,7 +190,7 @@ export function dayView(w, d) {
       <h3>${t('Exercise List')}</h3>
       <div class="exlist">${items}</div>
       <h3>${t('Cardio finisher')}</h3>
-      ${preview.cardio ? `<div class="exrow"><a href="#/ex/${encodeURIComponent(preview.cardio.exId)}">${thumb(exById(preview.cardio.exId))}</a>
+      ${preview.cardio ? `<div class="exrow"><a href="#/ex/${encodeURIComponent(preview.cardio.exId)}" aria-label="${esc(t('How to do it') + ': ' + (exById(preview.cardio.exId)?.name || ''))}">${thumb(exById(preview.cardio.exId))}</a>
           <div class="exbody"><b class="exname">${esc(exName(preview.cardio.exId, preview.cardio.name))}</b>
           <button class="chips editable" data-act="cardio-open" data-d="${d}" aria-label="${t('Change cardio finisher')}"><span class="chip">${t('{n} min', { n: preview.cardio.min })}</span><span class="chip edit">${icon.edit} ${t('Change')}</span></button></div></div>`
       : `<button class="btn" data-act="cardio-open" data-d="${d}">${icon.plus} ${t('Add a cardio finisher')}</button>`}
@@ -211,8 +212,8 @@ function openSetEditor(w, d, i) {
     <p class="muted small">${t('Week {w} · target {a}–{b} {u}. Changing a set also changes the sets after it.', { w, a: it.target.reps[0], b: it.target.reps[1], u: it.unit === 'sec' ? t('s') : t('reps') })}</p>
     <table class="sets"><thead><tr><th>${t('Set')}</th><th>${it.unit === 'sec' ? t('Sec') : t('Reps')}</th><th>${weightHead(it.assist)}</th></tr></thead><tbody>
     ${it.sets.map((s, k) => `<tr><td><span class="setno">${k + 1}</span></td>
-      <td><input type="number" inputmode="numeric" min="0" value="${s.reps}" ${attrs(k, 'reps')}></td>
-      <td>${ex.load || s.kg ? `<input type="number" inputmode="decimal" min="0" step="0.5" value="${fmtKg(s.kg)}" ${attrs(k, 'kg')}>` : `<span class="muted">${t('body weight')}</span>`}</td></tr>`).join('')}
+      <td><input type="number" inputmode="numeric" min="0" value="${s.reps}" ${attrs(k, 'reps')} aria-label="${t('Set {n}: {what}', { n: k + 1, what: it.unit === 'sec' ? t('Sec') : t('Reps') })}"></td>
+      <td>${ex.load || s.kg ? `<input type="number" inputmode="decimal" min="0" step="0.5" value="${fmtKg(s.kg)}" ${attrs(k, 'kg')} aria-label="${t('Set {n}: {what}', { n: k + 1, what: wUnit() })}">` : `<span class="muted">${t('body weight')}</span>`}</td></tr>`).join('')}
     </tbody></table>
     ${edited ? `<button class="btn ghost" data-act="pv-reset" data-w="${w}" data-d="${d}" data-i="${i}" data-ex="${it.exId}">${t('Back to the app\'s suggestion')}</button>` : ''}
     <button class="btn primary" data-act="sheet-close">${t('Done')}</button>`);
@@ -417,7 +418,7 @@ let openItem = null;
 
 export function sessionView() {
   const s = state.session;
-  if (!s?.startedAt) return { html: `<header class="bar"><button class="iconbtn" data-act="back">${icon.back}</button><h2>${t('Workout')}</h2><span></span></header><div class="card center"><p>${t('No workout in progress.')}</p><a class="btn primary" href="#/plan">${t('Go to my plan')}</a></div>` };
+  if (!s?.startedAt) return { html: `<header class="bar"><button class="iconbtn" data-act="back" aria-label="${t('Back')}">${icon.back}</button><h2>${t('Workout')}</h2><span></span></header><div class="card center"><p>${t('No workout in progress.')}</p><a class="btn primary" href="#/plan">${t('Go to my plan')}</a></div>` };
   const cur = s.items[s.cur.i];
   const set = cur?.sets[s.cur.s];
   if (openItem === null || openItem >= s.items.length) openItem = s.cur.i;
@@ -455,7 +456,7 @@ export function sessionView() {
           <button class="round" data-act="log-cur" aria-label="${t('Log set')}">${icon.check}</button>
         </div>
       </div>
-      <div class="hd-name"><b>${esc(exName(cur.exId, cur.name))}</b><button class="iconbtn inv" data-act="go" data-href="#/ex/${encodeURIComponent(cur.exId)}">${icon.info}</button></div>
+      <div class="hd-name"><b>${esc(exName(cur.exId, cur.name))}</b><button class="iconbtn inv" data-act="go" data-href="#/ex/${encodeURIComponent(cur.exId)}" aria-label="${t('How to do it')}">${icon.info}</button></div>
       <small>${t('Set {a} of {b}', { a: s.cur.s + 1, b: cur.sets.length })} · ${timed ? t('hold timer') : t('set timer')} <b data-t="work">${fmtClock(W.workElapsed())}</b>${s.paused ? ' · ' + t('PAUSED') : ''}</small>
     </div>`;
   }
@@ -474,14 +475,14 @@ export function sessionView() {
     const unitLbl = it.unit === 'sec' ? t('Sec') : t('Reps');
     return `<div class="exopen">
       <div class="exrow flat">${thumb(e, photoFor(it.exId))}<div class="exbody"><a class="exname blue" href="#/ex/${encodeURIComponent(it.exId)}">${esc(exName(it.exId, it.name))}</a>${it.note ? `<small class="note">${esc(it.note)}</small>` : ''}</div>
-        <button class="iconbtn" data-act="sess-menu" data-i="${i}">${icon.dots}</button></div>
+        <button class="iconbtn" data-act="sess-menu" data-i="${i}" aria-label="${t('More options')}">${icon.dots}</button></div>
       <table class="sets"><thead><tr><th>${t('Set')}</th><th>${unitLbl}</th><th>${weightHead(it.assist)}</th><th>${t('Log')}</th></tr></thead><tbody>
       ${it.sets.map((x, si) => {
         const isCur = s.cur.i === i && s.cur.s === si && !x.done;
         return `<tr class="${x.done ? 'done' : ''} ${isCur ? 'cur' : ''}">
           <td><button class="setno" data-act="jump" data-i="${i}" data-s="${si}">${si + 1}</button></td>
-          <td><input type="number" inputmode="numeric" min="0" value="${x.reps}" data-change="set-val" data-i="${i}" data-s="${si}" data-f="reps"></td>
-          <td><input type="number" inputmode="decimal" min="0" step="0.5" value="${fmtKg(x.kg)}" data-change="set-val" data-i="${i}" data-s="${si}" data-f="kg"></td>
+          <td><input type="number" inputmode="numeric" min="0" value="${x.reps}" data-change="set-val" data-i="${i}" data-s="${si}" data-f="reps" aria-label="${t('Set {n}: {what}', { n: si + 1, what: unitLbl })}"></td>
+          <td><input type="number" inputmode="decimal" min="0" step="0.5" value="${fmtKg(x.kg)}" data-change="set-val" data-i="${i}" data-s="${si}" data-f="kg" aria-label="${t('Set {n}: {what}', { n: si + 1, what: wUnit() })}"></td>
           <td><button class="logbtn ${x.done ? 'on' : ''}" data-act="log-row" data-i="${i}" data-s="${si}" aria-label="${t('Log set {n}', { n: si + 1 })}">${icon.check}</button></td>
         </tr>`;
       }).join('')}
@@ -497,7 +498,7 @@ export function sessionView() {
     if (!c) return '';
     const running = c.endAt && !c.done;
     return `<div class="card cardio-card">
-      <a href="#/ex/${encodeURIComponent(c.exId)}">${thumb(exById(c.exId), photoFor(c.exId), 'sm')}</a>
+      <a href="#/ex/${encodeURIComponent(c.exId)}" aria-label="${esc(t('How to do it') + ': ' + (exById(c.exId)?.name || ''))}">${thumb(exById(c.exId), photoFor(c.exId), 'sm')}</a>
       <div><b>${esc(exName(c.exId, c.name))}</b><small>${label} · ${t('{n} min', { n: c.min })}${c.done ? ' · ' + t('done') + ' ✓' : ''}</small></div>
       ${running ? `<b class="bigtime sm" data-t="${k}">${fmtClock(Math.ceil((c.endAt - Date.now()) / 1000))}</b><button class="pillbtn" data-act="timer-stop" data-k="${k}">${t('Stop')}</button>`
         : `${k === 'warm' ? `<button class="iconbtn" data-act="warm-open" aria-label="${t('Change warm-up')}">${icon.edit}</button>` : !c.done && s.planId === profile().plan.id ? `<button class="iconbtn" data-act="cardio-open" data-d="${s.dayIdx}" aria-label="${t('Change cardio finisher')}">${icon.edit}</button>` : ''}<button class="pillbtn dark" data-act="timer-start" data-k="${k}">${c.done ? t('Again') : t('Start')}</button>`}
@@ -515,7 +516,7 @@ export function sessionView() {
   return {
     full: true, cls: 'session',
     html: `<div class="sess-head ${resting ? 'resting' : ''}">
-        <div class="sess-top"><button class="iconbtn inv" data-act="go" data-href="#/plan">${icon.back}</button><span>${esc(dayName(s.dayIdx))} · <b data-t="elapsed">${fmtClock(W.elapsed())}</b></span><span class="hdr-btns"><a class="iconbtn inv" href="#/timer" aria-label="${t('Timer')}">${icon.timer}</a><button class="iconbtn inv" data-act="sess-options">${icon.dots}</button></span></div>
+        <div class="sess-top"><button class="iconbtn inv" data-act="go" data-href="#/plan" aria-label="${t('Back')}">${icon.back}</button><span>${esc(dayName(s.dayIdx))} · <b data-t="elapsed">${fmtClock(W.elapsed())}</b></span><span class="hdr-btns"><a class="iconbtn inv" href="#/timer" aria-label="${t('Timer')}">${icon.timer}</a><button class="iconbtn inv" data-act="sess-options" aria-label="${t('More options')}">${icon.dots}</button></span></div>
         ${head}
       </div>
       <div class="sess-body">
@@ -544,7 +545,8 @@ function doLog(i, si) {
   const v = readRow(i, si);
   const r = W.logSet(i, si, v.reps, v.kg);
   openItem = s.cur.i;
-  if (r === 'finished') toast(t('All sets logged!') + ' 💪');
+  if (r === 'finished') { toast(t('All sets logged!') + ' 💪'); say(t('All sets logged! Tap Finish to save the workout.')); }
+  else say(t('Set done. Rest {n} seconds.', { n: s.items[i].rest }) + ' ' + t('Next:') + ' ' + setCue(s));
   rerender();
 }
 
@@ -626,7 +628,7 @@ register({
 export function summaryView(id) {
   const p = profile();
   const rec = p.history.find(h => h.id === id);
-  if (!rec) return { html: `<header class="bar"><button class="iconbtn" data-act="back">${icon.back}</button><h2>${t('Workout')}</h2><span></span></header><p>${t('Not found')}</p>` };
+  if (!rec) return { html: `<header class="bar"><button class="iconbtn" data-act="back" aria-label="${t('Back')}">${icon.back}</button><h2>${t('Workout')}</h2><span></span></header><p>${t('Not found')}</p>` };
   const sets = rec.items.reduce((a, it) => a + it.sets.length, 0);
   const volume = Math.round(toW(rec.items.reduce((a, it) => a + it.sets.reduce((b, x) => b + (it.unit === 'reps' ? x.reps * x.kg : 0), 0), 0)));
   // Personal records: best weight this session vs. all earlier sessions.
@@ -642,7 +644,7 @@ export function summaryView(id) {
   const mins = Math.round(rec.duration / 60);
   const title = rec.dayIdx != null ? dayName(rec.dayIdx) : t(rec.title);
   return {
-    html: `<header class="bar"><button class="iconbtn" data-act="go" data-href="#/plan">${icon.back}</button><h2>${esc(title)}</h2><span></span></header>
+    html: `<header class="bar"><button class="iconbtn" data-act="go" data-href="#/plan" aria-label="${t('Back')}">${icon.back}</button><h2>${esc(title)}</h2><span></span></header>
       <p class="lead">${fmtDate(rec.date)}${rec.week ? ` · ${t('Week {w}', { w: rec.week })}` : ''}</p>
       <div class="statrow">
         <div class="stat"><b>${t('{n} min', { n: mins })}</b><small>${t('Duration')}</small></div>

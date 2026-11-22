@@ -5,6 +5,7 @@ import { state, save } from './store.js';
 import { icon, register, fmtClock } from './ui.js';
 import { t as tr } from './i18n.js';
 import * as W from './workout.js';
+import { say } from './speak.js';
 import { rerender } from './app.js';
 
 const PRESETS = [30, 45, 60, 90, 120, 180];
@@ -27,7 +28,7 @@ export function timerTick() {
   if (!t) return;
   if (t.cd?.endAt && !t.cd.fired && Date.now() >= t.cd.endAt) {
     t.cd.fired = true; t.cd.endAt = null; t.cd.left = 0;
-    W.beep(4); save();
+    W.beep(4); save(); say(tr('Time is up.'));
     if (location.hash === '#/timer') rerender();
   }
   for (const el of document.querySelectorAll('[data-t="tsw"]')) el.textContent = fmtClock(Math.floor(swSec(t)));

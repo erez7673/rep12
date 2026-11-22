@@ -622,3 +622,42 @@
 1233	Ohjelmia, joissa on kiinteä viikkorakenne: koko kehon ohjelmat 2 tai 3 päivälle viikossa, AB-ohjelma ja Ylävartalo / Alavartalo 4 päivälle viikossa sekä istuen tehtävä ohjelma ilman seisten tai lattialla tehtäviä liikkeitä. Valitse sellainen oman ohjelman sijaan, jos haluat.
 1234	Istuen · 3 päivää viikossa
 1235	Jokainen liike tehdään istuen laitteessa tai penkillä, ei seisten eikä lattialla – pyörätuolin käyttäjille ja kaikille, joilla on tasapaino- tai jalkarajoitteita. Päivässä B on kaksi jalkalaitetta; poista ne, jos ne eivät sovi sinulle. Kevyt alku: 2–3 sarjaa 10–15 toistolla.
+1236	Päävalikko
+1237	Aika loppui. Kirjaa sarja.
+1238	10 sekuntia jäljellä.
+1239	Valmis!
+1240	Lämmittely valmis.
+1241	Cardio valmis. Hienoa!
+1242	{name}, viimeinen sarja.
+1243	{name}, sarja {a}/{b}.
+1244	Lepo ohi.
+1245	Näytä kuva isompana
+1246	Lisää valintoja
+1247	Saavutettavuus
+1248	Tekstin koko
+1249	Normaali
+1250	Suuri
+1251	Erittäin suuri
+1252	Suurentaa kaiken sovelluksen tekstin. Puhelimesi oma tekstikoko ei muutu.
+1253	Näytön näkeminen
+1254	Suuri kontrasti
+1255	Tummempi teksti, vahvemmat viivat ja värit, jotka erottuvat paremmin.
+1256	Isommat painikkeet
+1257	Isommat painikkeet ja enemmän tilaa niiden välissä, joten niihin on helpompi osua.
+1258	Puhutut ohjeet treenissä
+1259	Puhu treenin aikana
+1260	Puhelin kertoo, kun sarja on kirjattu, kun lepoa on 10 sekuntia jäljellä, kun lepo on ohi ja mikä sarja on seuraavaksi.
+1261	Tässä puhelimessa ei ole puhesynteesiääntä sovellukselle.
+1262	Kokeile ääntä
+1263	Käyttää puhelimesi ääntä sovelluksen kielellä. Laita äänet kovemmalle ja äänetön tila pois.
+1264	Ruudunlukijat
+1265	Rep12 toimii VoiceOverin (iPhone) ja TalkBackin (Android) kanssa: jokaisella painikkeella on puhuttu nimi. Ota ne käyttöön puhelimen saavutettavuusasetuksista.
+1266	Tekstin koko, kontrasti, isommat painikkeet, puhutut ohjeet
+1267	Puhutut ohjeet ovat päällä.
+1268	Sarja {n}: {what}
+1269	Kaikki sarjat kirjattu! Tallenna treeni napauttamalla Lopeta.
+1270	Sarja tehty. Lepää {n} sekuntia.
+1271	Seuraavaksi:
+1272	Aika loppui.
+1273	Henkilökuvake avaa saavutettavuusvalinnat: isompi teksti, suuri kontrasti, isommat painikkeet ja puhutut ohjeet treenin aikana. Sovellus toimii myös VoiceOverin ja TalkBackin kanssa.
+1274	Saavutettavuusvalinnat löytyvät myös täältä.

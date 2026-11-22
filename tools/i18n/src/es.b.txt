@@ -623,3 +623,42 @@
 1233	Planes con una estructura semanal fija: planes de cuerpo completo para 2 o 3 días por semana, el Plan AB y Superior / Inferior para 4 días por semana, y un plan Sentado sin ejercicios de pie ni en el suelo. Elige uno en lugar de un plan personalizado si lo prefieres.
 1234	Sentado · 3 días por semana
 1235	Todos los ejercicios se hacen sentado en una máquina o un banco, sin estar de pie ni en el suelo – para usuarios de silla de ruedas y para quien tenga problemas de equilibrio o de piernas. El día B tiene dos máquinas de piernas; quítalas si no te van bien. Empieza suave, con 2–3 series de 10–15 repeticiones.
+1236	Principal
+1237	Se acabó el tiempo. Registra la serie.
+1238	Quedan 10 segundos.
+1239	¡Hecho!
+1240	Calentamiento terminado.
+1241	Cardio terminado. ¡Bien hecho!
+1242	{name}, última serie.
+1243	{name}, serie {a} de {b}.
+1244	Descanso terminado.
+1245	Ver la imagen más grande
+1246	Más opciones
+1247	Accesibilidad
+1248	Tamaño del texto
+1249	Normal
+1250	Grande
+1251	Muy grande
+1252	Hace más grande todo el texto de la app. No cambia el tamaño de texto de tu teléfono.
+1253	Ver la pantalla
+1254	Alto contraste
+1255	Texto más oscuro, líneas más marcadas y colores que destacan más.
+1256	Botones más grandes
+1257	Botones más grandes y con más espacio entre ellos, para pulsarlos con facilidad.
+1258	Avisos hablados en el entrenamiento
+1259	Hablar durante los entrenamientos
+1260	El teléfono avisa cuando registras una serie, cuando quedan 10 segundos de descanso, cuando termina el descanso y qué serie sigue.
+1261	Este teléfono no tiene una voz de texto a voz para la app.
+1262	Probar la voz
+1263	Usa la voz de tu teléfono en el idioma de la app. Sube el volumen y quita el modo silencio.
+1264	Lectores de pantalla
+1265	Rep12 funciona con VoiceOver (iPhone) y TalkBack (Android): cada botón tiene un nombre hablado. Actívalos en los ajustes de accesibilidad de tu teléfono.
+1266	Tamaño del texto, contraste, botones más grandes, avisos hablados
+1267	Los avisos hablados están activados.
+1268	Serie {n}: {what}
+1269	¡Todas las series registradas! Toca Terminar para guardar el entrenamiento.
+1270	Serie hecha. Descansa {n} segundos.
+1271	Siguiente:
+1272	Se acabó el tiempo.
+1273	El icono de la persona abre las opciones de accesibilidad: texto más grande, alto contraste, botones más grandes y avisos hablados durante el entrenamiento. La app también funciona con VoiceOver y TalkBack.
+1274	Las opciones de accesibilidad también están aquí.

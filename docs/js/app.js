@@ -3,12 +3,13 @@ import { state, profile, touchProfile } from './store.js';
 import { upgradePlan, dayCap, applyProfileAreas, dayName } from './planner.js';
 import { t, initSettings, loadLang } from './i18n.js';
 import { localizeData } from './localize.js';
-import { actions, icon, $, closeSheet, fmtClock, applyTheme } from './ui.js';
+import { actions, icon, $, closeSheet, fmtClock, applyTheme, applyA11y } from './ui.js';
+import { say, setCue } from './speak.js';
 import * as W from './workout.js';
 import { syncNow, syncEnabled, scheduleSync } from './sync.js';
 import { planView, dayView, sessionView, summaryView } from './views-plan.js';
 import { libraryView, exerciseView, gymView, identifyView } from './views-gym.js';
-import { onboardView, customPlanView, profileView, settingsView, progressView } from './views-me.js';
+import { onboardView, customPlanView, profileView, settingsView, accessView, progressView } from './views-me.js';
 import { timerView, timerTick } from './views-timer.js';
 import './tour.js';
 
@@ -26,6 +27,7 @@ const ROUTES = [
   [/^#\/progress$/, () => progressView()],
   [/^#\/profile$/, () => profileView()],
   [/^#\/settings$/, () => settingsView()],
+  [/^#\/access$/, () => accessView()],
   [/^#\/onboard(\/edit)?$/, (m) => onboardView(!!m[1])],
   [/^#\/custom$/, () => customPlanView()],
 ];
@@ -43,7 +45,7 @@ let current = null;
 
 export function render() {
   const hash = location.hash || '#/plan';
-  if (!profile() && !hash.startsWith('#/onboard') && hash !== '#/settings') { location.replace('#/onboard'); return; }
+  if (!profile() && !hash.startsWith('#/onboard') && hash !== '#/settings' && hash !== '#/access') { location.replace('#/onboard'); return; }
   let view = null;
   for (const [re, fn] of ROUTES) { const m = hash.match(re); if (m) { view = fn(m); break; } }
   if (!view) { location.replace('#/plan'); return; }
@@ -54,9 +56,10 @@ export function render() {
   const full = view.full; // full-screen views hide the nav
   $('#nav').hidden = !!full || !profile();
   const seg = (hash.split('/')[1] || 'plan');
-  const tab = { day: 'plan', summary: 'plan', session: 'plan', ex: 'exercises', identify: 'gym', onboard: 'profile', custom: 'profile', settings: 'profile' }[seg] || seg;
+  const tab = { day: 'plan', summary: 'plan', session: 'plan', ex: 'exercises', identify: 'gym', onboard: 'profile', custom: 'profile', settings: 'profile', access: 'profile' }[seg] || seg;
   $('#nav').innerHTML = TABS.map(([href, label, ic]) =>
-    `<a href="${href}" class="${href === '#/' + tab ? 'on' : ''}">${ic}<span>${t(label)}</span></a>`).join('');
+    `<a href="${href}" class="${href === '#/' + tab ? 'on' : ''}"${href === '#/' + tab ? ' aria-current="page"' : ''}>${ic}<span>${t(label)}</span></a>`).join('');
+  $('#nav').setAttribute('aria-label', t('Main'));
   fitNav();
   renderLiveBar(hash);
   if (!view.keepScroll) window.scrollTo(0, 0);
@@ -69,7 +72,7 @@ function fitNav() {
     s.style.fontSize = '';
     const room = s.parentElement.clientWidth - 4;
     if (room <= 0) continue; // bar hidden
-    let f = 11;
+    let f = parseFloat(getComputedStyle(s).fontSize) || 11; // larger with Accessibility → Text size
     while (s.scrollWidth > room && f > 8.5) s.style.fontSize = (f -= 0.5) + 'px';
   }
 }
@@ -96,6 +99,10 @@ setInterval(() => {
   timerTick();
   const ev = W.tick();
   if (ev === 'rest-done' || ev === 'hold-done') { if (location.hash === '#/session') rerender(); }
+  // Spoken workout cues (Accessibility).
+  if (ev === 'rest-done') say(setCue(state.session, true));
+  else if (ev === 'hold-done') say(t('Time is up. Log the set.'));
+  else if (ev === 'rest-10') say(t('10 seconds left.'));
   const s = state.session;
   if (!s?.startedAt) return;
   for (const el of document.querySelectorAll('[data-t]')) {
@@ -104,7 +111,7 @@ setInterval(() => {
     else if (k === 'rest') el.textContent = fmtClock(Math.ceil(W.restLeft()));
     else if (k === 'work') {
       const it = s.items[s.cur?.i];
-      if (it?.unit === 'sec') { const left = (it.sets[s.cur.s]?.reps || 0) - W.workElapsed(); el.textContent = left > 0 ? fmtClock(Math.ceil(left)) : 'Done!'; }
+      if (it?.unit === 'sec') { const left = (it.sets[s.cur.s]?.reps || 0) - W.workElapsed(); el.textContent = left > 0 ? fmtClock(Math.ceil(left)) : t('Done!'); }
       else el.textContent = fmtClock(W.workElapsed());
     } else if (k === 'restbar') {
       const pct = s.restTotal ? Math.max(0, Math.min(100, W.restLeft() / s.restTotal * 100)) : 0;
@@ -112,8 +119,8 @@ setInterval(() => {
     } else if ((k === 'cardio' || k === 'warm') && s[k]?.endAt) {
       // Timed cardio (warm-up machine or finisher): beep once when the time is up.
       const left = (s[k].endAt - Date.now()) / 1000;
-      el.textContent = left > 0 ? fmtClock(Math.ceil(left)) : 'Done!';
-      if (left <= 0 && !s[k].fired) { s[k].fired = true; W.timerDone(k); W.beep(4); rerender(); }
+      el.textContent = left > 0 ? fmtClock(Math.ceil(left)) : t('Done!');
+      if (left <= 0 && !s[k].fired) { s[k].fired = true; W.timerDone(k); W.beep(4); say(k === 'warm' ? t('Warm-up done.') : t('Cardio done. Well done!')); rerender(); }
     }
   }
 }, 250);
@@ -126,6 +133,12 @@ document.addEventListener('click', (e) => {
   if (!fn) return console.warn('no action', el.dataset.act);
   e.preventDefault();
   fn(el, e);
+});
+// Keyboard and switch access: Enter or Space on a non-button control (role="button") acts like a tap.
+document.addEventListener('keydown', (e) => {
+  if (e.key !== 'Enter' && e.key !== ' ') return;
+  const el = e.target.closest?.('[role="button"][data-act]');
+  if (el && actions[el.dataset.act]) { e.preventDefault(); actions[el.dataset.act](el, e); }
 });
 document.addEventListener('change', (e) => {
   const el = e.target.closest('[data-change]');
@@ -168,7 +181,7 @@ await loadLang();
 localizeData();
 
 upgradePlans();
-applyTheme();
+applyTheme(); applyA11y();
 render();
 applyTheme();
 if (syncEnabled()) syncNow().then(r => { if (upgradePlans() || r?.pulled) rerender(); }).catch(() => {});

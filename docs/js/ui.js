@@ -7,8 +7,10 @@ export const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp
 export const $ = (sel, root = document) => root.querySelector(sel);
 export const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
-const P = (d, extra = '') => `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ${extra}>${d}</svg>`;
+// Icons are decoration for screen readers: the button or link around them carries the label.
+const P = (d, extra = '') => `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ${extra}>${d}</svg>`;
 export const icon = {
+  access: P('<circle cx="12" cy="4.5" r="2"/><path d="M4.5 8.5L12 10l7.5-1.5M12 10v4.5M12 14.5L8.5 21M12 14.5l3.5 6.5"/>'),
   plan: P('<rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18M8 15l2 2 4-4"/>'),
   list: P('<path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>'),
   gym: P('<path d="M6.5 6.5v11M17.5 6.5v11M3 9v6M21 9v6M6.5 12h11"/>'),
@@ -58,12 +60,24 @@ export function toast(msg) {
   toastTimer = setTimeout(() => t.classList.remove('show'), 2600);
 }
 
+let sheetOpener = null;
 export function sheet(html) {
   const root = $('#sheet');
-  root.innerHTML = `<div class="sheet-bg" data-act="sheet-close"></div><div class="sheet-card"><div class="grab"></div>${html}</div>`;
+  if (!root.classList.contains('open')) sheetOpener = document.activeElement;
+  root.innerHTML = `<div class="sheet-bg" data-act="sheet-close" aria-hidden="true"></div><div class="sheet-card" role="dialog" aria-modal="true" tabindex="-1"><div class="grab"></div>${html}</div>`;
   root.classList.add('open');
+  // Screen readers start reading at the sheet, and the keyboard focus moves into it.
+  const card = root.querySelector('.sheet-card');
+  const h = card.querySelector('h2');
+  if (h) { h.id = 'sheet-title'; card.setAttribute('aria-labelledby', 'sheet-title'); }
+  card.focus({ preventScroll: true });
 }
-export function closeSheet() { const r = $('#sheet'); r.classList.remove('open'); r.innerHTML = ''; }
+export function closeSheet() {
+  const r = $('#sheet'); const was = r.classList.contains('open');
+  r.classList.remove('open'); r.innerHTML = '';
+  if (was && sheetOpener?.isConnected) sheetOpener.focus({ preventScroll: true });
+  sheetOpener = null;
+}
 
 // Global action registry for data-act="name" click handlers and data-change inputs.
 export const actions = {};
@@ -86,6 +100,13 @@ export function applyTheme() {
     b.setAttribute('aria-label', isDark() ? t('Switch to light mode') : t('Switch to dark mode'));
   });
   document.querySelectorAll('input[name="theme"]').forEach(r => { r.checked = r.value === th; });
+}
+// Accessibility settings (per phone): text size, high contrast, bigger buttons. CSS reads them from <html>.
+export function applyA11y() {
+  const st = state.settings, d = document.documentElement.dataset;
+  if (st.textSize && st.textSize !== 'normal') d.text = st.textSize; else delete d.text;
+  if (st.contrast) d.contrast = 'high'; else delete d.contrast;
+  if (st.bigButtons) d.big = '1'; else delete d.big;
 }
 export function setTheme(th) { state.settings.theme = th; save(); applyTheme(); }
 darkMQ.addEventListener?.('change', applyTheme);

@@ -15,7 +15,7 @@ import { scheduleSync } from './sync.js';
 const eqThumb = (id) => {
   const pic = EQUIP_PIC[id];
   return pic
-    ? `<span class="thumb pic sm zoomable" data-act="pic-zoom"><img src="${pic.url}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></span>`
+    ? `<span class="thumb pic sm zoomable" data-act="pic-zoom" role="button" tabindex="0" aria-label="${t('Show the picture larger')}"><img src="${pic.url}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></span>`
     : `<span class="thumb sm"><span class="ico">${icon.gym}</span></span>`;
 };
 const eqName = (id) => EQUIPMENT.find(e => e.id === id)?.name || state.gym.machines.find(m => m.id === id)?.name || id;
@@ -42,7 +42,7 @@ export function libraryView() {
   const muscles = Object.entries(MUSCLES).filter(([k]) => k !== 'forearms');
   return {
     html: `<header class="top"><h1>${t('Exercises')}</h1></header>
-      <label class="search">${icon.search}<input type="search" placeholder="${t('Search exercises')}" value="${esc(filter.q)}" data-input="lib-q"></label>
+      <label class="search">${icon.search}<input type="search" aria-label="${t('Search exercises')}" placeholder="${t('Search exercises')}" value="${esc(filter.q)}" data-input="lib-q"></label>
       <div class="chipscroll">
         <button class="chip sel ${!filter.m ? 'on' : ''}" data-act="lib-m" data-m="">${t('All')}</button>
         ${muscles.map(([k, v]) => `<button class="chip sel ${filter.m === k ? 'on' : ''}" data-act="lib-m" data-m="${k}">${esc(v)}</button>`).join('')}
@@ -61,7 +61,7 @@ register({
 // ───────────── Exercise details ─────────────
 export function exerciseView(id) {
   const ex = exById(id);
-  const back = `<header class="bar"><button class="iconbtn" data-act="back">${icon.back}</button><h2></h2><span></span></header>`;
+  const back = `<header class="bar"><button class="iconbtn" data-act="back" aria-label="${t('Back')}">${icon.back}</button><h2></h2><span></span></header>`;
   if (!ex) return { html: back + `<p>${t('Exercise not found.')}</p>` };
   const p = profile();
   const photo = photoFor(ex.id);
@@ -185,10 +185,10 @@ export function gymView() {
       <p class="muted small">${t('Switch off anything your gym doesn\'t have. The plan only uses items that are on.')}</p>
       ${machines.length ? `<h3>${t('My machines')}</h3><div class="exlist">${machines.map(m => {
         const exs = (m.exerciseIds || []).map(exById).filter(Boolean);
-        return `<div class="exrow"><span class="zoomable" data-act="pic-zoom" data-title="${esc(m.name)}">${m.photo ? `<div class="thumb md"><img src="${m.photo}" alt=""></div>` : thumb(exs[0])}</span>
+        return `<div class="exrow"><span class="zoomable" data-act="pic-zoom" role="button" tabindex="0" aria-label="${t('Show the picture larger')}" data-title="${esc(m.name)}">${m.photo ? `<div class="thumb md"><img src="${m.photo}" alt=""></div>` : thumb(exs[0])}</span>
           <div class="exbody"><b class="exname">${esc(m.name)}</b><small>${esc([m.brand, m.model].filter(Boolean).join(' · '))}</small>
           <div class="chips">${exs.map(e => `<a class="chip on" href="#/ex/${encodeURIComponent(e.id)}">${esc(e.name)}</a>`).join('')}</div></div>
-          <button class="iconbtn" data-act="machine-menu" data-id="${m.id}">${icon.dots}</button></div>`;
+          <button class="iconbtn" data-act="machine-menu" data-id="${m.id}" aria-label="${t('More options')}">${icon.dots}</button></div>`;
       }).join('')}</div>` : ''}
       ${EQUIP_CATS.map(cat => `<h3>${esc(cat)}</h3><div class="card list">${EQUIPMENT.filter(e => e.cat === cat).map(e => `
         <label class="eqrow"><span class="eqname">${eqThumb(e.id)}<span>${esc(e.name)}</span></span>
@@ -284,7 +284,7 @@ export function identifyView() {
   }
   return {
     full: true,
-    html: `<header class="bar"><button class="iconbtn" data-act="wiz-back">${icon.back}</button><h2>${t('What is this machine?')}</h2><button class="iconbtn" data-act="wiz-cancel">${icon.x}</button></header>
+    html: `<header class="bar"><button class="iconbtn" data-act="wiz-back" aria-label="${t('Back')}">${icon.back}</button><h2>${t('What is this machine?')}</h2><button class="iconbtn" data-act="wiz-cancel" aria-label="${t('Cancel')}">${icon.x}</button></header>
       <div class="wizdots">${dots}</div>${body}`,
   };
 }

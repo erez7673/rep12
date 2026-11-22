@@ -61,6 +61,26 @@ Deploy = commit and push to `main`; GitHub Pages is live about 30 s later. On ph
 - `views-plan.js`: plan, day preview with the set editor, session, summary. In the day preview the warm-up machine (`warm-open`, profile-wide `p.warm`) and the cardio finisher (`cardio-open`, per day: `plan.days[d].cardio = {exId, min}`, all weeks; `min: 0` = left out, `buildSession` skips it) each have a Change sheet; both also update an open workout whose timer hasn't started. The mobility routine is a button that opens the moves in a sheet (`mobility-open`).
 - `views-gym.js`: exercise library, exercise page, Gym Setup, identify.
 - `views-me.js`: profile forms, profile, **Settings** (`#/settings`, the gear at the top of Profile: language, units, appearance, rest beep, Google Sheets sync, backup, About with the privacy note and health disclaimer; the welcome screen shows the disclaimer too), progress (charts in `charts.js`). `profileForm(mode)` builds three forms: `new` (onboarding: everything except muscle areas), `edit` (`#/onboard/edit`: name to training days per week) and `custom` (`#/custom`, "Build your custom plan": exercises per day, muscle areas per day, session length, warm-up, cardio, injuries, extra focus). `readForm` only reads the fields present, so each screen changes only its own part of `p.stats`.
+- **Accessibility (`#/access`, `accessView` in `views-me.js`).** Opened from the person icon at the top of Profile (`.a11y-btn`, next to the gear), on the welcome screen, and from Settings. Settings are per phone (`state.settings`, not synced):
+  - `textSize` (`normal`, `large`, `xl`);
+  - `contrast`;
+  - `bigButtons`;
+  - `speak`.
+
+  `applyA11y()` in `ui.js` (and the inline script in `index.html`, before the first paint) writes them to `<html data-text|data-contrast|data-big>`. Effects:
+  - **Text size:** every `font-size` in `app.css` is `calc(Npx * var(--fs))`, so write new font sizes the same way.
+  - **High contrast** redefines the colour tokens.
+  - **Bigger buttons** raises the tap sizes.
+  - **Spoken cues** (`speak.js`, the phone's text-to-speech in the app's language):
+    - "Set done, rest N seconds, next: …" when a set is logged;
+    - "10 seconds left" (rests over 20 s, the `rest-10` event from `W.tick()`);
+    - "Rest over, <exercise>, set a of b" when rest ends;
+    - hold done, warm-up and cardio done, and the Timer countdown.
+
+  Screen readers:
+  - Every icon-only button or link needs an `aria-label` (icons are `aria-hidden`), and every input needs a label.
+  - A clickable non-button gets `role="button" tabindex="0"`.
+  - Sheets are `role="dialog"` and take focus, then give it back when closed.
 - `tour.js`: the app tour. `STEPS` lists each step (`sec` section, `route`, `sel` = part to highlight, `fixed` for parts that don't scroll); the overlay `#tour` dims the page, highlights the part and shows a card (white on light blue in light mode, blue on white in dark mode, the user's choice) with Previous, "Skip to <next section>", Next and a close X. It starts once after the first profile is made (`state.settings.tourDone`, not synced) and from Profile → Take the app tour. Order: Profile → Settings → My Plan → Workout day → Exercises → Gym → Timer → Progress. Its texts are translated like the rest of the app. The highlight is clipped where the card begins, so a tall part or a long translation never ends up under the card. **Every change to the app must update the tour in the same commit** (the user's rule): new features get a step, moved or removed items get their step changed, and every `sel` must still match.
 - `views-timer.js`: the stand-alone Timer tab (`#/timer`): countdown and stopwatch kept in `state.timer` as timestamps (not synced). `timerTick()` runs from the app's 250 ms loop and updates `data-t="tsw|tcd"`.
 

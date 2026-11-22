@@ -51,6 +51,16 @@ These changes don't affect the clips. If a future change adds a JS or CSS file, 
 - **App tour**: starts once for new users, replay from Profile; sections Profile → Settings → My Plan → Workout day → Exercises → Gym → Timer → Progress.
 - **New exercise clips need translations only for their name, steps and tip if they are new exercises**: run `node tools/i18n/extract.mjs`, add the lines to all 10 `tools/i18n/src/*.txt` files, run `node tools/i18n/build.mjs`. Clips themselves have no text.
 
+## Accessibility (2026-11-22, pushed)
+
+- **Accessibility screen** (person icon on Profile and on the welcome screen, also in Settings):
+  - text size: Normal, Large, Extra large;
+  - high contrast;
+  - bigger buttons;
+  - spoken workout cues (set logged, 10 seconds of rest left, rest over with the next set, timers done) in the app's language.
+- **Screen readers (VoiceOver, TalkBack):** every button and input has a spoken name, icons are hidden from readers, sheets act as dialogs, the active tab is announced, and keyboard focus is visible.
+- **Not done (the user didn't pick these):** reduce motion, seated / wheelchair-only plans.
+
 ## Still to do next month (9 exercises, cardio excluded)
 
 | Group | Exercise ids |

@@ -16,6 +16,7 @@ A free workout app (installable web app) for Android and iPhone: personal 12-wee
 - 11 languages (English, Español, Português, Deutsch, Italiano, Suomi, Svenska, 中文, हिन्दी, العربية, עברית) and metric or US units (lb, ft) – Profile → gear → Settings
 - Light / dark mode (button on My Plan, or Settings → Appearance; Auto follows the phone)
 - A short app tour for new users (replay any time from Profile)
+- Accessibility (person icon on Profile): bigger text, high contrast, bigger buttons, spoken workout cues; works with VoiceOver and TalkBack
 - Automatic progression: weight goes up when you hit the top of the rep range on every set
 - ~100 exercises with step-by-step instructions and a picture of the equipment, and video clips for most exercises
 - Gym Setup (switch off what your gym doesn't have) + "What is this machine?" photo picker for unknown machines

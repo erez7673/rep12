@@ -24,12 +24,14 @@ const STEPS = [
   { sec: 'Profile', route: '#/profile', sel: '[data-act="switch-profile"]', title: 'More than one person', text: 'Add a profile for someone else who trains on this phone, and switch between profiles here. Each person gets their own plan and history.' },
   { sec: 'Profile', route: '#/profile', sel: 'a.eqrow[href="#/gym"]', title: 'Gym setup', text: 'Tell the app which equipment your gym has, so your plan only uses what\'s there. More about this in the Gym tab.' },
   { sec: 'Profile', route: '#/profile', sel: '[data-act="tour-start"]', title: 'Take the tour again', text: 'Start this tour again from here whenever you need a refresher.' },
+  { sec: 'Profile', route: '#/profile', sel: '.a11y-btn', title: 'Accessibility', text: 'The person icon opens the accessibility options: bigger text, high contrast, bigger buttons, and spoken cues during workouts. The app also works with VoiceOver and TalkBack.' },
   { sec: 'Profile', route: '#/profile', sel: '.gear', title: 'Settings', text: 'The gear opens the app\'s settings: language, units, light or dark, the rest timer beep, sync and backup.' },
 
   // ── Settings ──
   { sec: 'Settings', route: '#/settings', sel: '.lang-sel', title: 'Language', text: 'Choose the app\'s language. The app restarts in the new language; your data stays the same.' },
   { sec: 'Settings', route: '#/settings', sel: '.units-ctl', title: 'Units', text: 'Metric shows kilograms and centimetres. US shows pounds and feet. Switching only changes how weights and heights are shown.' },
   { sec: 'Settings', route: '#/settings', sel: '.theme-ctl', title: 'Light or dark', text: 'Choose a light or dark look. Auto follows your phone\'s setting.' },
+  { sec: 'Settings', route: '#/settings', sel: '.a11y-row', title: 'Accessibility', text: 'The accessibility options are here too.' },
   { sec: 'Settings', route: '#/settings', sel: '.beep-card', title: 'Rest timer beep', text: 'The app beeps when your rest is over. Use "Test the beep" to check the volume. Keep silent mode off during workouts.' },
   { sec: 'Settings', route: '#/settings', sel: '.sync-card', title: 'Sync with Google Sheets (optional)', text: 'Backs up your data to your own Google Sheet and keeps several phones in step. The set-up steps are in the app\'s README. You can skip this.' },
   { sec: 'Settings', route: '#/settings', sel: '.backup-card', title: 'Backup', text: 'Save all your data to a file, or restore it from a file, for example when you get a new phone.' },

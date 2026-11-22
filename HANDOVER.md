@@ -2,7 +2,30 @@
 
 Read this together with `CLAUDE.md` (the "Exercise animations" section holds the full rules). This file records where the work stands and every approved Higgsfield still, so a new chat can continue without redoing anything.
 
-_Last updated 2026-11-22, after batch 9, the Rep12 public release, the app tour, the Settings screen, US units and the 11 languages._
+_Last updated 2026-11-22 (night), after the Rep12 release, the tour, Settings, US units, 11 languages, Accessibility, new app-built plans and the first version of the AI coaches._
+
+## Start here tomorrow (written 2026-11-22, night)
+
+**Where we paused:** the user is about to try the whole app, including the hidden AI coaches, on their own phone.
+
+**Live and working (public, https://erez7673.github.io/rep12/):** Rep12 with 11 languages, Settings (language, units, appearance, sync, backup), US units, the app tour, the Accessibility screen (text size, high contrast, bigger buttons, reduce motion, spoken workout cues, screen-reader labels), app-built plans (Full body, Short, AB Plan, Upper / Lower, Seated), tab labels that fit every language, and a bigger tour close button. All of this is committed and pushed.
+
+**The AI coaches (Mia and Lucas): built, tested locally, hidden from everyone.**
+- Code: `docs/js/coach.js` and hooks (details in `CLAUDE.md`). `READY = false` hides it on the public site. It is **on automatically on this computer and on the home network** (`isDevHost()`).
+- **Try it on the phone:** the phone must be on the same Wi-Fi. This PC was 192.168.1.240 on Wi-Fi (check again with `ipconfig`). Keep the preview server running (`preview_start` name `fressi`, or `python -m http.server 8765 --directory docs`). On the phone open `http://192.168.1.240:8765/`. If it doesn't load, allow Python through Windows Firewall on the private network. It is a new, empty copy of the app (different address, so a fresh profile): create a profile and the "Meet your coach" card comes up before the tour. No tour step is missing: coach steps appear only when the coach is available.
+- **What to look at on the phone:** the Meet card, the tip card on My Plan, the line on the day screen, the "Let's go!" clip when a workout starts (2.6 s, never takes taps), the tip on the rest card, the cheer clip on the summary, the Coach row in Profile and Settings, Style (Tips and messages / Only the start and the finish), Reduce motion (clips stay still), Extra large text, Hebrew or Arabic, and the spoken cues with "Speak during workouts".
+- **Local-only files (never committed):** `AI personal trainers/` (git-ignored: the six approved pictures `mia|lucas-master|close|34.jpg`, the Flow test clips, `_crops/`, `_frames/`, the guide `FLOW-PROMPTS.md`, the plans `COACH-PLAN.md` and `COACH-USAGE-PLAN.md`; **`lucas-face.png` is the actor's photo: never use it**) and `docs/media/coach/` (excluded in `.git/info/exclude`: `mia|lucas-idle.jpg`, `-letsgo.mp4`, `-cheer.mp4`, all made in Flow, so only placeholders for now).
+
+**Open decisions and next steps (in this order)**
+1. **The user's phone feedback** on the coach and the rest of the app: fix what they find.
+2. **Flow terms:** the user can read Flow's own terms while signed in (`flow.google.com/terms`). If they clearly allow commercial use, the Flow clips could ship; otherwise remake the pictures' final clips in Higgsfield (credits refresh in December; Higgsfield's terms were read and allow it, see `AI personal trainers/COACH-PLAN.md`). Then set `READY = true`.
+3. **More coach clips and moments (phase 2, not built):** clips `thumbsup`, `highfive`, `breathe`; moments: phase change, week done, weight raised, milestones, welcome back, Progress line. Use the single-action prompts in `FLOW-PROMPTS.md` (Part 9, "Lessons"). Later: speaking coaches with lip-sync (`COACH-USAGE-PLAN.md` section 10).
+4. **December (Higgsfield credits back):** batch 10 exercise clips (9 exercises, see below), the ~44 generic equipment pictures, and the final coach clips.
+5. Native-speaker review of the translations (all written by Claude, 1,318 texts per language).
+
+**Credits:** Flow (Google AI Pro) about 920 of 1,000 left on 2026-11-22. Higgsfield: none until December.
+
+**Flow facts that cost time (full guide in `AI personal trainers/FLOW-PROMPTS.md`):** images cost no credits (daily limits); videos use Veo 3.1 Lite (10 credits, 8 s only, 16:9); turn on **Return silent videos** (if a try says "Audio generation failed", press retry; failed tries are refunded); keep prompts to one simple action, no counts, no left/right words; no visible watermark appeared with Visible watermarking off; the Frames (start + end) mode was not available in this layout.
 
 ## Where things stand
 

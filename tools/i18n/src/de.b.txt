@@ -1,0 +1,610 @@
+611	Mit gestreckten Armen über dem Kopf beginnen.
+612	Nach unten ziehen, die Ellbogen Richtung Hüfte führen.
+613	Langsam zurück zu gestreckten Armen.
+614	Sitz so einstellen, dass die Griffe auf Brusthöhe sind.
+615	Ellbogen leicht gebeugt und so halten.
+616	Arme vor der Brust zusammenführen und anspannen.
+617	Langsam öffnen, bis du eine Dehnung spürst.
+618	So einstellen, dass die Griffe auf Schulterhöhe sind.
+619	Arme fast gestreckt vor dir.
+620	Arme nach hinten und außen führen, bis sie in einer Linie mit dem Körper sind.
+621	Langsam zurück.
+622	So einstellen, dass die Drehachse auf Höhe deiner Schultern ist.
+623	Mit den Armen seitlich am Körper beginnen.
+624	Arme seitlich bis auf Schulterhöhe heben.
+625	Langsam senken.
+626	Aufrecht stehen oder sitzen und die Griffe halten.
+627	Schultern gerade Richtung Ohren hochziehen.
+628	Oben 1 s halten.
+629	So einstellen, dass die Ellbogen auf Höhe der Drehachse des Geräts sind.
+630	Oberarme auf dem Polster, Handflächen nach oben.
+631	Griffe Richtung Schultern hochcurlen.
+632	Langsam senken, bis die Arme fast gestreckt sind.
+633	Oberarme auf dem Polster.
+634	Arme ganz strecken und den Trizeps anspannen.
+635	Sitz/Rückenpolster so einstellen, dass die Knie zu Beginn etwa 90° haben.
+636	Füße schulterbreit, Rücken flach am Polster.
+637	Mit dem ganzen Fuß drücken, bis die Beine fast gestreckt sind.
+638	Langsam absenken – der untere Rücken bleibt am Polster.
+639	Knie auf Höhe der Drehachse ausrichten.
+640	Polster knapp über den Knöcheln.
+641	Beine strecken und anspannen.
+642	Polster knapp über den Fersen.
+643	Fersen so weit wie möglich nach hinten ziehen.
+644	So aufbauen, dass Polster oder Gewicht auf Hüfthöhe ist.
+645	Rücken gerade, Knie leicht gebeugt.
+646	In der Hüfte nach vorn beugen, bis die hinteren Oberschenkel dehnen.
+647	Po anspannen, um wieder hochzukommen.
+648	Oberer Rücken auf dem Polster, Polster oder Gurt über der Hüfte.
+649	Füße flach, Knie oben etwa 90° gebeugt.
+650	Hüfte nach oben drücken und den Po anspannen.
+651	Polster hinter Ferse oder Knie einstellen.
+652	Griffe halten, Oberkörper ruhig.
+653	Bein nach hinten drücken und den Po anspannen.
+654	Langsam zurück. Bein wechseln.
+655	Setz dich mit den Polstern außen an den Knien.
+656	Aufrecht sitzen.
+657	Knie auseinanderdrücken.
+658	Setz dich mit den Polstern innen an den Knien.
+659	Beine zusammendrücken.
+660	Fußballen auf die Kante der Plattform.
+661	Beine gestreckt (stehend) oder Polster auf den Oberschenkeln (sitzend).
+662	So hoch wie möglich auf die Zehenspitzen.
+663	Langsam absenken bis zur vollen Dehnung.
+664	Sitz einstellen und die Griffe halten.
+665	Ausatmen und nach vorn einrollen, die Wirbelsäule runden.
+666	Bauch 1 s anspannen.
+667	Aufrecht sitzen oder stehen, Hüfte nach vorn.
+668	Oberkörper gegen den Widerstand zu einer Seite drehen.
+669	Langsam zur Mitte zurück.
+670	Alle Wiederholungen machen, dann Seite wechseln.
+671	Mit angespanntem Rumpf in Position gehen.
+672	Gegen den Widerstand stillhalten.
+673	Gleichmäßig atmen.
+674	Langsam lösen.
+675	2 Minuten auf leichter Stufe beginnen.
+676	Auf eine mittelschwere Belastung steigern.
+677	Gleichmäßigen Rhythmus und gute Haltung halten.
+678	Mit 2 lockeren Minuten abschließen.
+679	Kurzhanteln (Ablage)
+680	Olympia-Langhantel + Scheiben
+681	SZ-Stange / feste Langhanteln
+682	Kettlebells
+683	Flachbank
+684	Verstellbare Bank
+685	Power Rack / Kniebeugenständer
+686	Multipresse (Smith Machine)
+687	Scottbank
+688	Negativbank / Sit-up-Bank
+689	Kabelturm (verstellbare Rolle)
+690	Kabelzugstation / Doppelrolle
+691	Latzug
+692	Rudern am Kabel sitzend (tiefe Rolle)
+693	Brustpresse-Maschine
+694	Schulterpresse-Maschine
+695	Butterfly / Reverse Butterfly
+696	Ruder-Maschine sitzend (mit Brustpolster)
+697	Beinstrecker
+698	Beinbeuger (sitzend oder liegend)
+699	Abduktor (Außenseite Oberschenkel)
+700	Adduktor (Innenseite Oberschenkel)
+701	Trizeps-Maschine
+702	Rumpfrotation (sitzend drehen)
+703	Bauchmaschine
+704	Wadenheben sitzend
+705	Brustpresse mit Scheiben
+706	Schrägbankpresse mit Scheiben
+707	Rudern mit Scheiben
+708	Beinpresse
+709	Hackenschmidt-Kniebeuge
+710	Hip-Thrust-Maschine
+711	Klimmzugstange
+712	Unterstützte Klimmzug-/Dip-Maschine
+713	Knieheber-Station (Captain's Chair)
+714	45°-Rückenstrecker
+715	TRX-Schlingentrainer
+716	Laufbänder
+717	Crosstrainer
+718	Stepper (Treppensteiger)
+719	Liegeergometer
+720	Fahrradergometer
+721	Rudergerät
+722	Bankdrücken mit Langhantel
+723	Leg dich so auf die Bank, dass die Augen unter der Stange sind, Füße flach auf dem Boden.
+724	Griff etwas breiter als schulterbreit, Schulterblätter zusammendrücken.
+725	Stange ausheben, zur Brustmitte senken, Ellbogen etwa 45° vom Körper.
+726	Hochdrücken, bis die Arme gestreckt sind. Bei schweren Gewichten mit Partner oder Sicherheitsablagen.
+727	Po bleibt auf der Bank, Handgelenke über den Ellbogen.
+728	Bankdrücken an der Multipresse
+729	Stell eine Flachbank so unter die Multipresse, dass die Stange über der unteren Brust ist.
+730	Griff etwas breiter als schulterbreit, Stange zum Aushängen drehen.
+731	Langsam zur Brust senken, Ellbogen etwa 45° vom Körper.
+732	Zu gestreckten Armen hochdrücken; am Ende die Stange zurück in die Haken drehen.
+733	Sicherheitsstopps knapp über Brusthöhe einstellen.
+734	Bankdrücken mit Kurzhanteln
+735	Setz dich mit den Kurzhanteln auf den Oberschenkeln hin, leg dich zurück und bring sie auf Brusthöhe.
+736	Handflächen nach vorn (oder leicht nach innen), Schulterblätter zurück.
+737	Hochdrücken, bis sich die Hanteln über der Brust fast berühren.
+738	Langsam senken, bis du eine Dehnung in der Brust spürst.
+739	Kurzhanteln schonen die Schultern mehr als eine Langhantel.
+740	Schrägbankdrücken mit Kurzhanteln
+741	Bank auf 30° stellen. Zurücklehnen, Kurzhanteln auf Schulterhöhe.
+742	Nach oben und leicht nach innen über die obere Brust drücken.
+743	Kontrolliert senken, bis die Ellbogen knapp unter der Banklinie sind.
+744	Schulterblätter die ganze Zeit zusammengedrückt halten.
+745	Trainiert die obere Brust.
+746	Schrägbankdrücken an der Multipresse
+747	Eine verstellbare Bank auf 30° unter die Multipresse stellen.
+748	Die Stange sollte zur oberen Brust kommen.
+749	Aushängen, langsam zur oberen Brust senken.
+750	Zu gestreckten Armen hochdrücken, dann wieder einhängen.
+751	Brustpresse an der Maschine
+752	Sitz so einstellen, dass die Griffe auf Höhe der Brustmitte sind.
+753	Mit flachem Rücken ans Polster setzen, Füße auf dem Boden.
+754	Griffe nach vorn drücken, bis die Arme fast gestreckt sind.
+755	Langsam zurück, bis du eine Dehnung in der Brust spürst.
+756	Eine tolle, sichere erste Druckübung für Einsteiger.
+757	Brustpresse mit Scheiben
+758	Auf beide Seiten gleich viele Scheiben laden. Sitz so einstellen, dass die Griffe auf Brustmitte sind.
+759	Zurücklehnen, Griffe fassen, Schulterblätter zurück.
+760	Nach vorn drücken, bis die Arme fast gestreckt sind.
+761	Langsam senken. Jeder Arm bewegt sich einzeln – gleichmäßig halten.
+762	Angezeigtes Gewicht ist die Summe der geladenen Scheiben.
+763	Schrägbankpresse mit Scheiben
+764	Gleich viele Scheiben laden. Sitz so einstellen, dass die Griffe auf Höhe der oberen Brust starten.
+765	Zurücklehnen, Brust raus, Schulterblätter zusammen.
+766	Nach oben und vorn drücken, bis die Arme fast gestreckt sind.
+767	Langsam bis zu einer angenehmen Dehnung senken.
+768	Liegestütz
+769	Hände etwas breiter als schulterbreit, Körper in einer geraden Linie.
+770	Brust bis knapp über den Boden senken, Ellbogen etwa 45°.
+771	Zu schwer? Hände auf eine Bank stützen oder auf den Knien machen.
+772	Butterfly an der Maschine
+773	Sitz so einstellen, dass die Griffe auf Brusthöhe sind. Arme der Maschine in die vordere Position bringen.
+774	Mit dem Rücken am Polster sitzen, Griffe mit leicht gebeugten Ellbogen fassen.
+775	Griffe vor der Brust zusammenführen.
+776	Langsam öffnen, bis du eine Dehnung spürst, ohne über die Schultern hinauszugehen.
+777	Butterfly am Kabelzug
+778	Beide Rollen auf Schulterhöhe mit Einzelgriffen einstellen.
+779	In Schrittstellung nach vorn gehen, leicht nach vorn lehnen.
+780	Mit leicht gebeugten Ellbogen die Griffe vor der Brust zusammenführen.
+781	Langsam und kontrolliert zurück.
+782	Angezeigtes Gewicht gilt pro Seite.
+783	Kabel-Butterfly von unten nach oben (obere Brust)
+784	Beide Rollen ganz nach unten stellen.
+785	In die Mitte stellen, einen Schritt nach vorn, Arme unten und leicht hinten.
+786	Griffe nach oben und zusammen bis auf Höhe der oberen Brust führen.
+787	Kabel-Butterfly von oben nach unten
+788	Beide Rollen ganz nach oben stellen.
+789	Einen Schritt nach vorn mit leichter Vorlage, Arme weit offen.
+790	Griffe nach unten ziehen und vor der Hüfte zusammenführen.
+791	Fliegende mit Kurzhanteln
+792	Auf die Bank legen, Kurzhanteln über der Brust, Handflächen zueinander.
+793	Mit leicht gebeugten Ellbogen die Arme weit öffnen.
+794	Stoppen, wenn du eine Dehnung spürst (Ellbogen etwa auf Bankhöhe).
+795	Die Kurzhanteln wieder zusammenführen.
+796	Schräge Fliegende mit Kurzhanteln
+797	Bank auf 30° stellen.
+798	Kurzhanteln über der oberen Brust, Handflächen zueinander.
+799	Mit lockeren Ellbogen weit öffnen, bis du eine Dehnung spürst.
+800	Über der Brust wieder zusammenführen.
+801	Schulterdrücken sitzend mit Kurzhanteln
+802	Bank aufrecht stellen (80–90°). Kurzhanteln auf Schulterhöhe, Handflächen nach vorn.
+803	Rumpf anspannen, Rücken am Polster.
+804	Hochdrücken, bis die Arme über dem Kopf gestreckt sind.
+805	Bis auf Ohrhöhe senken.
+806	Schulterpresse an der Maschine
+807	Sitz so einstellen, dass die Griffe auf Schulterhöhe starten.
+808	Mit dem Rücken am Polster sitzen, Griffe fassen.
+809	Langsam zum Start senken.
+810	Schulterdrücken sitzend an der Multipresse
+811	Eine aufrechte Bank so unter die Multipresse stellen, dass die Stange knapp vor deinem Gesicht vorbeigeht.
+812	Griff etwas breiter als schulterbreit.
+813	Aushängen und auf Kinnhöhe senken.
+814	Zu gestreckten Armen hochdrücken.
+815	Schulterdrücken stehend mit Langhantel
+816	Stange im Rack auf Schlüsselbeinhöhe. Griff knapp außerhalb der Schultern.
+817	Ausheben, Rumpf anspannen, Po anspannen.
+818	Stange gerade nach oben drücken, den Kopf leicht zurücknehmen, damit sie vorbeikommt.
+819	Oben ausstrecken, dann zum Schlüsselbein senken.
+820	Arnold Press
+821	Aufrecht sitzen, Kurzhanteln vor den Schultern, Handflächen zu dir.
+822	Beim Hochdrücken die Handflächen nach vorn drehen.
+823	Mit gestreckten Armen über dem Kopf enden.
+824	Beim Senken die Drehung umkehren.
+825	Seitheben mit Kurzhanteln
+826	Aufrecht stehen, Kurzhanteln seitlich, Ellbogen leicht gebeugt.
+827	Arme seitlich bis auf Schulterhöhe heben.
+828	Mit den Ellbogen führen; kleine Finger leicht nach oben.
+829	Langsam senken – ohne Schwung.
+830	Seitheben am Kabel
+831	Eine Rolle ganz unten mit Einzelgriff einstellen.
+832	Seitlich hinstellen, den Griff mit der äußeren Hand quer vor dem Körper halten.
+833	Arm seitlich bis auf Schulterhöhe heben.
+834	Langsam senken. Alle Wiederholungen machen, dann Seite wechseln.
+835	Reverse Butterfly
+836	Arme der Maschine in die hintere Position bringen. Mit dem Gesicht zum Polster setzen.
+837	Griffe auf Schulterhöhe mit fast gestreckten Armen fassen.
+838	Face Pull am Kabel
+839	Rolle auf Kopfhöhe mit Seil einstellen.
+840	Beide Seilenden fassen, Handflächen nach innen, einen Schritt zurück.
+841	Seil zum Gesicht ziehen und die Enden neben den Ohren auseinanderziehen.
+842	Schulterblätter zusammendrücken, dann langsam zurück.
+843	Super für Haltung und gesunde Schultern.
+844	Vorgebeugtes Reverse Fly mit Kurzhanteln
+845	In der Hüfte nach vorn beugen, Rücken gerade, Kurzhanteln hängen unter der Brust.
+846	Mit lockeren Ellbogen die Arme seitlich heben.
+847	Oben den oberen Rücken anspannen.
+848	Latziehen breiter Griff
+849	Oberschenkelpolster so einstellen, dass die Beine fixiert sind.
+850	Stange breiter als schulterbreit greifen und mit gestreckten Armen hinsetzen.
+851	Stange zur oberen Brust ziehen, die Ellbogen führen.
+852	Langsam hochgehen lassen, bis die Arme gestreckt sind.
+853	Brust raus; nicht zu weit nach hinten lehnen.
+854	Latziehen enger Griff (V-Griff)
+855	V-Griff einhängen. Beine unter dem Polster fixieren.
+856	Griff mit Handflächen zueinander, Arme gestreckt.
+857	Griff zur oberen Brust ziehen, Ellbogen nah am Körper.
+858	Unterstützter Klimmzug (Untergriff)
+859	Unterstützungsgewicht wählen – MEHR Gewicht = LEICHTER.
+860	Stange schulterbreit greifen, Handflächen zu dir.
+861	Auf das Polster knien (oder stellen) und mit gestreckten Armen hängen.
+862	Hochziehen, bis das Kinn über der Stange ist, dann langsam senken.
+863	Fortschritt machst du, indem du die Unterstützung verringerst.
+864	Klimmzug
+865	An die Stange hängen, Hände etwas breiter als schulterbreit, Handflächen von dir weg.
+866	Brust Richtung Stange ziehen, Ellbogen nach unten.
+867	Kinn über die Stange bringen.
+868	Kontrolliert zu gestreckten Armen senken.
+869	Überzüge am Kabel mit gestreckten Armen
+870	Eine Rolle oben mit gerader Stange oder Seil einstellen.
+871	Einen Schritt zurück, leicht nach vorn beugen, Arme gestreckt vor dir auf Kopfhöhe.
+872	Mit gestreckten Armen die Stange zu den Oberschenkeln führen.
+873	Rudern am Kabel sitzend
+874	Füße auf die Plattform, Knie leicht gebeugt, V-Griff fassen.
+875	Aufrecht sitzen, Arme gestreckt.
+876	Griff zum Bauch ziehen und die Schulterblätter zusammendrücken.
+877	Langsam zurück, ohne den Rücken rund zu machen.
+878	Gekreuztes Rudern am Kabel sitzend
+879	Vor die tiefen Rollen setzen und die Einzelgriffe über Kreuz halten (rechter Griff in der linken Hand).
+880	Beide Griffe nach hinten zu den Seiten rudern.
+881	Rudern an der Maschine mit Brustpolster
+882	Sitz so einstellen, dass die Griffe auf Brusthöhe sind und die Brust am Polster liegt.
+883	Griffe mit gestreckten Armen fassen.
+884	Nach hinten ziehen und die Schulterblätter zusammendrücken.
+885	Einarmiges Rudern an der Maschine sitzend
+886	Scheiben laden. Sitz so einstellen, dass die Brust am Polster liegt und du die Griffe erreichst.
+887	Einen oder beide Griffe mit gestreckten Armen fassen.
+888	Ellbogen am Körper vorbei nach hinten ziehen.
+889	Langsam zurück. Bei einem Arm: alle Wiederholungen machen, dann wechseln.
+890	Einarmiges Kurzhantelrudern
+891	Ein Knie und eine Hand auf eine Flachbank, Rücken gerade.
+892	Kurzhantel in der anderen Hand, Arm gestreckt.
+893	Kurzhantel zur Hüfte ziehen, Ellbogen nah am Körper.
+894	Kurzhantelrudern auf der Schrägbank
+895	Bank auf 30–45° stellen, bäuchlings darauflegen.
+896	Kurzhanteln gerade nach unten hängen lassen.
+897	Beide hochrudern und die Schulterblätter zusammendrücken.
+898	Schont den unteren Rücken.
+899	Vorgebeugtes Rudern mit Langhantel
+900	Stange im Obergriff halten, in der Hüfte beugen, bis der Oberkörper etwa 45° hat.
+901	Rücken gerade, Knie locker.
+902	Stange zu den unteren Rippen ziehen.
+903	Zu gestreckten Armen senken.
+904	TRX-Rudern
+905	TRX-Griffe halten, mit den Füßen nach vorn gehen und mit gestreckten Armen zurücklehnen.
+906	Körper in einer geraden Linie halten.
+907	Brust zu den Griffen ziehen.
+908	Langsam senken. Füße weiter nach vorn, um es schwerer zu machen.
+909	Schulterheben mit Kurzhanteln
+910	Aufrecht stehen, Kurzhanteln seitlich.
+911	Oben eine Sekunde halten.
+912	Langsam senken. Die Schultern nicht kreisen.
+913	Schulterheben an der Multipresse
+914	Stange der Multipresse auf Höhe der Oberschenkelmitte einstellen.
+915	Schulterbreit greifen, aufrecht stehen, Arme gestreckt.
+916	Schultern gerade nach oben ziehen.
+917	Bizepscurl mit Kurzhanteln
+918	Aufrecht stehen, Kurzhanteln seitlich, Handflächen nach vorn.
+919	Ellbogen fest an den Seiten.
+920	Gewichte bis auf Schulterhöhe curlen.
+921	Langsam zu gestreckten Armen senken.
+922	Hammercurl
+923	Kurzhanteln seitlich halten, Handflächen zueinander.
+924	Ellbogen ruhig halten.
+925	Hochcurlen, Daumen bleiben oben.
+926	SZ-Curl
+927	SZ-Stange an den schrägen Griffen halten, Handflächen nach oben.
+928	Ellbogen an den Seiten.
+929	Stange zur Brust curlen.
+930	Langsam ohne Schwung senken.
+931	Scottcurl
+932	Sitz so einstellen, dass die Achseln oben am Polster liegen.
+933	SZ-Stange (oder Kurzhantel) halten, Arme auf dem Polster.
+934	Hochcurlen, bis die Unterarme senkrecht sind.
+935	Langsam senken und kurz vor dem Durchstrecken der Ellbogen stoppen.
+936	Kabelcurl
+937	Rolle unten mit gerader Stange oder Seil einstellen.
+938	Mit dem Gesicht zum Gerät stehen, Ellbogen an den Seiten.
+939	Griff zur Brust curlen.
+940	Schrägbank-Curl mit Kurzhanteln
+941	Bank auf 45–60° stellen, zurücklehnen, Arme hängen gerade nach unten.
+942	Handflächen nach vorn.
+943	Beide Kurzhanteln hochcurlen, ohne die Oberarme zu bewegen.
+944	Ganz langsam ganz nach unten.
+945	Trizepsdrücken am Kabel mit Seil
+946	Rolle oben mit Seil einstellen.
+947	Ellbogen fest an den Seiten, Unterarme oben.
+948	Seil nach unten drücken und unten die Enden auseinanderziehen.
+949	Langsam zurück bis 90°.
+950	Trizepsdrücken mit gerader Stange
+951	Rolle oben mit gerader oder gewinkelter Stange einstellen.
+952	Obergriff, Ellbogen eng an den Seiten.
+953	Stange nach unten drücken, bis die Arme gestreckt sind.
+954	Trizepsstrecken über Kopf am Kabel
+955	Rolle unten mit Seil einstellen. Mit dem Rücken zum Gerät, Seil hinter dem Kopf.
+956	In Schrittstellung nach vorn gehen, Ellbogen zeigen nach vorn.
+957	Arme über dem Kopf strecken.
+958	Ellbogen langsam wieder beugen.
+959	Trizepsstrecken über Kopf sitzend mit Kurzhantel
+960	Aufrecht sitzen, eine Kurzhantel mit beiden Händen über dem Kopf halten.
+961	Ellbogen zeigen nach oben und bleiben eng.
+962	Kurzhantel hinter den Kopf senken.
+963	Arme wieder strecken.
+964	French Press mit SZ-Stange
+965	Auf eine Bank legen, SZ-Stange über der Brust halten.
+966	Oberarme ruhig halten, Ellbogen beugen und die Stange Richtung Stirn senken.
+967	Knapp über dem Kopf stoppen.
+968	Arme wieder strecken.
+969	Enges Bankdrücken an der Multipresse
+970	Unter die Stange der Multipresse legen, schulterbreit greifen.
+971	Aushängen und zur unteren Brust senken, Ellbogen nah am Körper.
+972	Am Ende wieder einhängen.
+973	Unterstützte Dips
+974	Dip-Griffe fassen und mit gestreckten Armen aufs Polster knien.
+975	Senken, bis die Oberarme etwa parallel zum Boden sind.
+976	Trizepsstrecken an der Maschine
+977	Sitz so einstellen, dass die Ellbogen auf Höhe der Drehachse des Geräts sind.
+978	Oberarme aufs Polster legen, Griffe fassen.
+979	Nach unten/vorn drücken, bis die Arme gestreckt sind.
+980	Bank-Dips
+981	Auf die Bankkante setzen, Hände neben der Hüfte.
+982	Mit dem Po von der Bank rutschen, Beine gebeugt.
+983	Ellbogen beugen und den Körper etwa 10–15 cm senken.
+984	Wieder hochdrücken.
+985	Beinpresse
+986	Mit flachem Rücken ans Polster setzen, Füße schulterbreit in der Mitte der Plattform.
+987	Sicherheitsgriffe lösen.
+988	Senken, bis die Knie etwa 90° haben; der untere Rücken bleibt am Polster.
+989	Wieder hochdrücken, ohne die Knie durchzustrecken.
+990	Füße höher = mehr Po, tiefer = mehr vordere Oberschenkel.
+991	Kniebeuge mit Langhantel
+992	Stange im Rack auf Schulterhöhe, Sicherheitsablagen knapp unter der Beugetiefe.
+993	Stange auf dem oberen Rücken, Füße schulterbreit, Zehen leicht nach außen.
+994	Rumpf anspannen, nach hinten unten setzen, bis die Oberschenkel mindestens parallel sind.
+995	Mit dem ganzen Fuß hochdrücken.
+996	Kniebeuge an der Multipresse
+997	Stange auf dem oberen Rücken, Füße leicht vor der Stange.
+998	Stange aushängen.
+999	Runtergehen, bis die Oberschenkel etwa parallel sind.
+1000	Wieder hochdrücken, dann einhängen.
+1001	Goblet Squat
+1002	Eine Kurzhantel senkrecht vor der Brust halten.
+1003	Füße schulterbreit, Zehen leicht nach außen.
+1004	Zwischen die Knie runtergehen, Brust raus.
+1005	Wieder aufstehen.
+1006	Sumo-Kniebeuge mit Kurzhantel
+1007	Breiter Stand, Zehen nach außen, eine Kurzhantel zwischen den Beinen halten.
+1008	Brust oben halten.
+1009	Runtergehen und die Knie nach außen über die Zehen drücken.
+1010	Po anspannen, um aufzustehen.
+1011	Hackenschmidt-Maschine
+1012	Auf die Plattform stellen, Rücken und Schultern an den Polstern.
+1013	Füße schulterbreit. Sicherheitsgriffe lösen.
+1014	Senken, bis die Knie 90° oder etwas tiefer haben.
+1015	Rumänisches Kreuzheben mit Langhantel
+1016	Stange an den Oberschenkeln halten, Füße hüftbreit, Knie locker.
+1017	Hüfte nach hinten schieben, die Stange an den Beinen entlang gleiten lassen.
+1018	Rücken gerade; stoppen, wenn die hinteren Oberschenkel deutlich dehnen.
+1019	Hüfte nach vorn schieben, um aufzustehen.
+1020	Rumänisches Kreuzheben mit Kurzhanteln
+1021	Kurzhanteln vor den Oberschenkeln halten, Knie locker.
+1022	Hüfte nach hinten schieben, Kurzhanteln nah an den Beinen.
+1023	Runtergehen, bis die hinteren Oberschenkel dehnen, Rücken gerade.
+1024	Rumänisches Kreuzheben an der Multipresse
+1025	Stange der Multipresse auf Oberschenkelmitte, nah davorstellen, Füße hüftbreit.
+1026	Aushängen und die Hüfte nach hinten schieben, Rücken gerade.
+1027	Senken, bis die hinteren Oberschenkel dehnen.
+1028	Hüfte nach vorn schieben, um aufzustehen.
+1029	Kreuzheben
+1030	Stange über der Fußmitte, Füße hüftbreit. Griff knapp außerhalb der Knie.
+1031	Schienbeine an die Stange, Brust raus, Rücken gerade, fest anspannen.
+1032	Den Boden wegdrücken und aufrecht hinstellen.
+1033	Durch Zurückschieben der Hüfte senken.
+1034	Rückenstrecker 45°
+1035	Polster knapp unter die Hüftknochen, Fersen unter das Fußpolster.
+1036	Arme vor der Brust verschränken.
+1037	Oberkörper durch Beugen in der Hüfte senken.
+1038	Po anspannen, um wieder in eine gerade Linie zu kommen.
+1039	Pull-Through am Kabel
+1040	Rolle unten mit Seil. Mit dem Rücken zum Gerät, Seil zwischen den Beinen.
+1041	Zwei Schritte nach vorn, Füße breit.
+1042	In der Hüfte beugen und das Seil zwischen den Beinen nach hinten gehen lassen.
+1043	Po anspannen, um aufrecht zu stehen.
+1044	Ausfallschritte gehend mit Kurzhanteln
+1045	Kurzhanteln seitlich halten.
+1046	Einen großen Schritt nach vorn und das hintere Knie Richtung Boden senken.
+1047	Über die vordere Ferse drücken und in den nächsten Ausfallschritt gehen.
+1048	Wiederholungen zählen pro Bein.
+1049	Ausfallschritt rückwärts mit Kurzhanteln
+1050	Aufrecht mit den Kurzhanteln stehen.
+1051	Einen Fuß nach hinten setzen und das hintere Knie senken.
+1052	Über die vordere Ferse zurückdrücken.
+1053	Beine abwechseln; Wiederholungen zählen pro Bein.
+1054	Schonender für die Knie als Ausfallschritte nach vorn.
+1055	Bulgarische Kniebeuge
+1056	Vor eine Bank stellen, den Spann des hinteren Fußes darauflegen.
+1057	Gerade nach unten senken, bis der vordere Oberschenkel etwa parallel ist.
+1058	Über die vordere Ferse hochdrücken. Alle Wiederholungen machen, dann wechseln.
+1059	Step-up mit Kurzhanteln
+1060	Mit Kurzhanteln vor eine Flachbank stellen.
+1061	Einen ganzen Fuß auf die Bank setzen.
+1062	Über diese Ferse auf die Bank steigen.
+1063	Langsam heruntersteigen. Alle Wiederholungen machen, dann wechseln.
+1064	Split Squat an der Multipresse
+1065	Stange auf dem oberen Rücken, ein Fuß vorn und einer hinten in langer Schrittstellung.
+1066	Das hintere Knie Richtung Boden senken.
+1067	Über den vorderen Fuß hochdrücken. Alle Wiederholungen machen, dann wechseln.
+1068	Beinstrecker
+1069	Rückenlehne so einstellen, dass die Knie auf Höhe der Drehachse des Geräts sind.
+1070	Schienbeinpolster knapp über den Knöcheln einstellen.
+1071	Beine ganz strecken und die vorderen Oberschenkel anspannen.
+1072	Beinbeuger-Maschine
+1073	So einstellen, dass die Knie auf Höhe der Drehachse sind; Oberschenkelpolster festmachen.
+1074	Das Beinpolster liegt knapp über den Fersen.
+1075	Fersen so weit wie möglich nach hinten/unten ziehen.
+1076	Hip Thrust mit Langhantel
+1077	Auf den Boden setzen, oberer Rücken an einer Bank, Stange über der Hüfte (mit Polster).
+1078	Füße flach, hüftbreit, Knie gebeugt.
+1079	Hüfte hochdrücken, bis der Körper von den Schultern bis zu den Knien gerade ist.
+1080	Oben den Po anspannen, langsam senken.
+1081	Hip Thrust an der Multipresse
+1082	Eine Bank quer neben die Multipresse stellen. Oberer Rücken auf der Bank, Stange über der Hüfte (mit Polster).
+1083	Füße flach, Knie gebeugt.
+1084	Aushängen und die Hüfte bis zu einer geraden Linie hochdrücken.
+1085	Anspannen, dann langsam senken.
+1086	Hip-Thrust-Maschine
+1087	Mit dem oberen Rücken ans Polster setzen, Gurt/Polster über der Hüfte.
+1088	Füße flach auf der Plattform.
+1089	Hüfte hochdrücken, bis du gerade bist.
+1090	Po anspannen, langsam senken.
+1091	Glute Bridge
+1092	Auf den Rücken legen, Knie gebeugt, Füße flach nahe am Po.
+1093	Über die Fersen drücken und die Hüfte heben.
+1094	Oben 2 Sekunden den Po anspannen.
+1095	Abduktor-Maschine
+1096	Mit den Polstern außen an den Knien setzen.
+1097	Aufrecht sitzen, Griffe halten.
+1098	Knie so weit wie möglich nach außen drücken.
+1099	Leicht nach vorn lehnen, um den oberen Po stärker zu treffen.
+1100	Adduktor-Maschine
+1101	Mit den Polstern innen an den Knien setzen, Beine geöffnet.
+1102	Langsam öffnen.
+1103	Kickback am Kabel
+1104	Eine Fußschlaufe an der unteren Rolle einhängen und um einen Knöchel legen.
+1105	Mit dem Gesicht zum Gerät stellen, festhalten, leicht nach vorn lehnen.
+1106	Bein gestreckt nach hinten kicken und den Po anspannen.
+1107	Langsam zurück. Alle Wiederholungen machen, dann wechseln.
+1108	Wadenheben an der Multipresse
+1109	Stange auf dem oberen Rücken, Fußballen auf einer Scheibe oder Stufe.
+1110	So hoch wie möglich auf die Zehenspitzen gehen.
+1111	Fersen unter die Stufe senken, um zu dehnen.
+1112	Wadenheben an der Beinpresse
+1113	In die Beinpresse setzen, Fußballen auf die untere Kante der Plattform.
+1114	Beine fast gestreckt. Sicherheitsgriffe nach Möglichkeit verriegelt lassen.
+1115	Die Plattform mit den Zehen wegdrücken.
+1116	Fersen zur Dehnung zurückkommen lassen.
+1117	Einbeiniges Wadenheben mit Kurzhantel
+1118	Auf einem Fuß auf einer Stufe oder Scheibe stehen, Kurzhantel auf derselben Seite.
+1119	Mit der anderen Hand zur Balance festhalten.
+1120	Auf die Zehenspitzen hochgehen.
+1121	Ferse langsam senken. Alle Wiederholungen machen, dann wechseln.
+1122	Wadenheben sitzend an der Maschine
+1123	Setzen, Polster auf den unteren Oberschenkeln, Fußballen auf der Plattform.
+1124	Sicherheitshebel lösen.
+1125	Fersen so hoch wie möglich heben.
+1126	Plank (Unterarmstütz)
+1127	Unterarme auf dem Boden, Ellbogen unter den Schultern.
+1128	Körper in einer geraden Linie von Kopf bis Fersen.
+1129	Po und Bauch anspannen.
+1130	Die angezeigte Zeit halten – normal atmen.
+1131	Seitstütz
+1132	Auf die Seite legen, Ellbogen unter der Schulter.
+1133	Hüfte heben, bis der Körper gerade ist.
+1134	Die angezeigte Zeit halten.
+1135	Seite wechseln (Zeit gilt pro Seite).
+1136	Knieheben gestützt (gebeugte Knie)
+1137	In die Knieheber-Station stellen, Unterarme auf den Polstern, Rücken am Polster.
+1138	Beine gestreckt hängen lassen.
+1139	Knie Richtung Brust heben und das Becken einrollen.
+1140	Hängendes Beinheben
+1141	An eine Klimmzugstange hängen.
+1142	Beine gestreckt (oder gebeugt, damit es leichter ist).
+1143	Beine bis auf Hüfthöhe oder höher heben.
+1144	Kniende Kabel-Crunches
+1145	Rolle oben mit Seil einstellen. Mit dem Gesicht zur Rolle knien, Seil neben dem Kopf.
+1146	Hüfte ruhig halten.
+1147	Nach unten einrollen, Ellbogen Richtung Knie.
+1148	Holzhacker am Kabel
+1149	Eine Rolle oben einstellen. Seitlich stellen, Griff mit beiden Händen halten.
+1150	Diagonal nach unten quer über den Körper zur gegenüberliegenden Hüfte ziehen.
+1151	Oberkörper drehen und den hinteren Fuß mitdrehen.
+1152	Langsam zurück. Alle Wiederholungen machen, dann Seite wechseln.
+1153	Holzhacker mit Kurzhantel
+1154	Eine Kurzhantel mit beiden Händen über einer Schulter halten.
+1155	Diagonal nach unten zur gegenüberliegenden Hüfte hacken und den Oberkörper drehen.
+1156	Unten die Knie leicht beugen.
+1157	Zurück zum Start. Alle Wiederholungen machen, dann wechseln.
+1158	Pallof Press
+1159	Rolle auf Brusthöhe einstellen. Seitlich stellen, Griff an der Brust halten.
+1160	Wegtreten, bis das Kabel gespannt ist.
+1161	Griff gerade nach vorn drücken und dem Zug widerstehen.
+1162	Zurück zur Brust führen. Alle Wiederholungen machen, dann wechseln.
+1163	Dead Bug
+1164	Auf den Rücken legen, Arme hoch, Knie 90° über der Hüfte gebeugt.
+1165	Den unteren Rücken in den Boden drücken.
+1166	Langsam einen Arm über den Kopf und das gegenüberliegende Bein ausstrecken.
+1167	Zurück und Seite wechseln.
+1168	Sit-up auf der Negativbank
+1169	Auf die Negativbank setzen und die Füße unter die Fußrollen haken.
+1170	Zurücklegen, bis der Rücken auf dem Polster liegt, Hände vor der Brust verschränkt.
+1171	Ausatmen und ganz hochrollen, bis der Oberkörper aufrecht ist.
+1172	Langsam Wirbel für Wirbel senken, ohne zurückzufallen.
+1173	Zu schwer? Flacheren Winkel einstellen oder die Arme nach vorn strecken. Schwerer: Hände an die Ohren oder eine Hantelscheibe auf der Brust.
+1174	Bauchmaschine
+1175	Sitz einstellen, Griffe halten oder Arme auf die Polster legen.
+1176	Oberkörper nach vorn und unten einrollen.
+1177	Bauch anspannen.
+1178	Rumpfrotation an der Maschine
+1179	Mit dem Gesicht zu den Griffen setzen und den Startwinkel zu einer Seite einstellen.
+1180	Beine gegen die Polster stemmen und die Griffe halten.
+1181	Oberkörper langsam zur anderen Seite drehen.
+1182	Langsam bewegen und den Bewegungsumfang für den Rücken angenehm halten.
+1183	Farmer's Walk
+1184	Schwere Kurzhanteln aufnehmen, eine in jede Hand.
+1185	Aufrecht stehen, Schultern zurück.
+1186	Mit kurzen, gleichmäßigen Schritten für die angezeigte Zeit gehen.
+1187	Die Gewichte vorsichtig abstellen.
+1188	Laufband-Intervalle
+1189	2 Min. locker gehen/joggen zum Aufwärmen.
+1190	Dann wiederholen: 1 Min. schnell (hart) + 1 Min. locker gehen.
+1191	Mit 2 Min. lockerem Gehen abschließen.
+1192	Zum Anhalten die seitlichen Haltegriffe nutzen und sicher absteigen.
+1193	Gehen auf dem Laufband mit Steigung
+1194	Steigung auf 8–12 % und Tempo auf 4.5–5.5 km/h stellen.
+1195	Gehen, ohne sich an den Griffen festzuhalten.
+1196	Eine Belastung anstreben, bei der Sprechen möglich, aber anstrengend ist.
+1197	In der letzten Minute die Steigung senken.
+1198	Gelenkschonend und super zum Abnehmen.
+1199	Crosstrainer
+1200	Aufsteigen und die beweglichen Griffe fassen.
+1201	2 Minuten mit leichtem Widerstand beginnen.
+1202	Widerstand auf eine gleichmäßige, mittelschwere Belastung erhöhen.
+1203	Mit den Armen auch drücken und ziehen.
+1204	Stepper (Treppensteiger)
+1205	Aufsteigen und langsam beginnen.
+1206	Aufrecht stehen; die Griffe nur leicht zur Balance halten.
+1207	Mit dem ganzen Fuß auf jede Stufe treten.
+1208	Tempo allmählich steigern.
+1209	Liegeergometer
+1210	Sitz so einstellen, dass das Knie unten leicht gebeugt ist.
+1211	2 Minuten locker beginnen.
+1212	Dann 30 s hart / 60 s locker oder ein gleichmäßiges mittleres Tempo.
+1213	Die letzten 2 Minuten locker ausfahren.
+1214	Am schonendsten für die Knie.
+1215	Fahrradergometer
+1216	Rudergerät
+1217	Füße festschnallen, Griff fassen.
+1218	Zuerst mit den Beinen drücken, dann zurücklehnen, dann mit den Armen ziehen.
+1219	In umgekehrter Reihenfolge zurück: Arme, Oberkörper, Beine.
+1220	Gleichmäßigen Rhythmus halten.

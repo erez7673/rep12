@@ -1,0 +1,611 @@
+1	Animation: {name}
+2	Fortsetzen
+3	Noch keine Daten.
+4	lb
+5	kg
+6	Leicht anfangen: einen Testsatz mit 10 lockeren Wiederholungen machen, um die Bewegung zu lernen, dann das Gewicht anpassen.
+7	Trainingstag {x}
+8	Training
+9	{n} Tage pro Woche
+10	{list} und {last}
+11	Deload-Woche – leichter, erholen
+12	Phase 3 · Schwerer, weniger Wiederholungen
+13	Phase 2 · Mehr Volumen
+14	Phase 1 · Lernen und Grundlage aufbauen
+15	Eigener Plan · jede Woche gleiche Sätze und Wiederholungen
+16	Startschätzung – tippe auf die Sätze, um sie zu ändern.
+17	Weniger Unterstützung – du hast letztes Mal alle Wiederholungen geschafft!
+18	+{w} – du hast letztes Mal alle Wiederholungen geschafft!
+19	Deload-Woche – absichtlich leichter.
+20	Von dir geändert
+21	Synchronisierung fehlgeschlagen
+22	Tour schließen
+23	{a} von {b}
+24	Rücken
+25	Springen zu: {section}
+26	Fertig
+27	Weiter
+28	Zum hellen Modus wechseln
+29	Zum dunklen Modus wechseln
+30	{n} s
+31	{n} Min.
+32	{n} Wdh.
+33	Ohne Geräte
+34	oder
+35	Keine passenden Übungen.
+36	Übungen
+37	Übungen suchen
+38	Alle
+39	Nur was es in meinem Studio gibt
+40	Übung nicht gefunden.
+41	nicht in deiner Studio-Ausstattung
+42	Zum Training hinzufügen
+43	Dein Gerät:
+44	Als riskant markiert für: {parts} – wenig Gewicht nehmen oder tauschen.
+45	So geht's
+46	Schritte zum Lesen
+47	An unterstützten Geräten hilft dir das Gewicht – mehr Gewicht = leichter. Die App senkt es, wenn du stärker wirst.
+48	Angezeigtes Gewicht gilt pro Kurzhantel.
+49	Dein Verlauf
+50	Favorit
+51	Gefällt mir
+52	Gemieden
+53	Meiden
+54	Vorlieben und gemiedene Übungen werden beim nächsten Neuerstellen deines Plans berücksichtigt.
+55	als Cardio-Abschluss von:
+56	hinzugefügt zu jeder Woche von:
+57	hat {n} – tippen zum Hinzufügen oder Tauschen
+58	Schon enthalten
+59	Als mein Aufwärmen verwenden
+60	Alle Trainingstage
+61	Abbrechen
+62	Cardio-Abschluss von {day}
+63	Hinzufügen oder tauschen
+64	{day} hat {n} Übungen.
+65	{name} hinzufügen
+66	{day} bekommt {n} Übungen
+67	, und du kannst an jedem Trainingstag bis zu {n} haben
+68	{n} Übungen sind das Maximum pro Tag.
+69	Oder tauschen gegen
+70	Zu {day} hinzugefügt ({a} von {b})
+71	Zu {day} hinzugefügt ({n} Übungen)
+72	{name} ist jetzt in {day}
+73	Als dein Aufwärmen festgelegt
+74	Studio-Ausstattung
+75	{a}/{b} eingeschaltet
+76	Gerät mit Foto hinzufügen
+77	Schalte alles aus, was dein Studio nicht hat. Der Plan nutzt nur eingeschaltete Geräte.
+78	Meine Geräte
+79	Ausstattung geändert?
+80	Erstelle deinen Plan neu, damit er nur Eingeschaltetes nutzt.
+81	Plan neu erstellen
+82	Schließen
+83	Plan mit der aktuellen Ausstattung neu erstellen? Dein Verlauf bleibt erhalten, aber der Planfortschritt beginnt wieder bei Woche 1.
+84	Plan neu erstellt
+85	Umbenennen
+86	Als verfügbar markieren
+87	Als nicht verfügbar markieren
+88	Gerät löschen
+89	Name des Geräts
+90	Dieses Gerät und sein Foto löschen? Dafür erstellte eigene Übungen werden ebenfalls entfernt.
+91	Mach ein Foto vom Gerät
+92	Es wird mit dem Gerät gespeichert, damit du es später wiedererkennst.
+93	Tippen, um ein Foto zu machen
+94	Name (falls bekannt)
+95	z. B. Rudern sitzend
+96	Marke
+97	optional
+98	Modell (auf dem Typenschild)
+99	Mit KI erkennen
+100	Wie ist dein Körper positioniert?
+101	Was hältst du fest oder wogegen drückst du?
+102	Welche Bewegung machst du?
+103	Probier das Gerät ohne Gewicht aus, wenn du unsicher bist.
+104	Wo spürst du es?
+105	(optional, beliebig viele)
+106	Treffer anzeigen
+107	Ist es eins davon?
+108	Ja, das ist es
+109	Keine ähnliche Übung in der Bibliothek.
+110	Nichts davon?
+111	Erstelle aus deinen Antworten eine eigene Übung – die App schreibt kurze Anleitungen für diese Art von Bewegung.
+112	Eigene Übung erstellen
+113	Was ist das für ein Gerät?
+114	Mein Gerät
+115	Wähle eine Bewegung
+116	Das Foto konnte nicht gelesen werden
+117	Frage die KI …
+118	Die KI ist nicht eingerichtet
+119	KI-Fehler: {msg}
+120	Gerät gespeichert
+121	Wähle zuerst eine Bewegung
+122	{kind}-Gerät
+123	Eigene
+124	Eigene Übung erstellt
+125	Größe
+126	Größe (cm)
+127	Name
+128	Dein Name
+129	Geschlecht
+130	Weiblich
+131	Männlich
+132	Alter
+133	Gewicht ({u})
+134	Erfahrung
+135	Hauptziel
+136	Trainingstage pro Woche
+137	Übungen pro Trainingstag
+138	(je 4 Sätze, plus Aufwärmen und Cool-down)
+139	Muskelgruppen pro Trainingstag
+140	(lass einen Tag leer und die App wählt)
+141	Trainingsdauer
+142	Aufwärmen
+143	Keins
+144	Cardio-Abschluss hinzufügen (Laufband, Crosstrainer, Stepper, Rad)
+145	Verletzungen oder Einschränkungen
+146	(Übungen, die diese Bereiche belasten, werden vermieden)
+147	Extra-Fokus
+148	(fügt Übungen für diese Bereiche hinzu)
+149	Farbe
+150	Meinen Plan erstellen
+151	Meinen eigenen Plan erstellen
+152	Speichern, ohne den Plan zu ändern
+153	Speichern und Plan neu erstellen
+154	Diese App gibt allgemeine Fitness-Hinweise, keinen medizinischen Rat. Wenn du eine Verletzung oder Erkrankung hast oder lange nicht trainiert hast, sprich vorher mit einer Ärztin, einem Arzt oder Physiotherapie. Brich jede Übung ab, die schmerzt.
+155	Profil bearbeiten
+156	Willkommen
+157	Neues Profil
+158	Lass uns deinen persönlichen Plan erstellen. Danach kannst du weitere Profile anlegen, zum Beispiel für deine Partnerin oder deinen Partner.
+159	Sprache und Einheiten
+160	Übungen pro Tag, Muskelgruppen, Trainingsdauer, Aufwärmen, Cardio, Verletzungen und Extra-Fokus findest du unter Profil → Eigenen Plan erstellen.
+161	Eigenen Plan erstellen
+162	Lege fest, wie jeder deiner {n} Trainingstage aussieht. Die Anzahl der Tage änderst du unter Profil bearbeiten.
+163	Ein eigener Plan behält alle 12 Wochen dieselben Sätze und Wiederholungen. Ein Plan aus „Profil bearbeiten“ wird stufenweise schwerer.
+164	Plan fertig, {name}!
+165	Beim Neuerstellen beginnt dein Plan wieder bei Woche 1 (der Verlauf bleibt). Fortfahren?
+166	Gespeichert
+167	Profil
+168	Einstellungen
+169	{n} J.
+170	{d} Tage × {m} Min.
+171	Fertige Pläne (Einsteiger, 50+)
+172	Profil wechseln
+173	1 Profil
+174	{n} Profile
+175	Profil hinzufügen
+176	Studio-Ausstattung
+177	App-Tour starten
+178	Profil von {name} löschen
+179	nie
+180	Sprache
+181	Einheiten
+182	Metrisch (kg, cm)
+183	US (lb, ft)
+184	Deine Daten bleiben gleich; nur die Anzeige von Gewicht und Größe ändert sich.
+185	Darstellung
+186	Auto
+187	Hell
+188	Dunkel
+189	Auto folgt der Einstellung deines Handys.
+190	Training
+191	Piepton am Ende der Pause
+192	Piepton testen
+193	Der Bildschirm bleibt während des Trainings an, damit der Timer piepen kann. Mach das Handy laut und schalte den Stummmodus aus.
+194	Mit Google Sheets synchronisieren
+195	Sichert alle Profile und die Studio-Ausstattung in deiner eigenen Google-Tabelle und hält deine Handys synchron. Die Einrichtung steht in der README.
+196	URL der Apps-Script-Web-App
+197	Geheimer Schlüssel (derselbe wie im Skript)
+198	euer gemeinsames Geheimwort
+199	Speichern
+200	Jetzt synchronisieren
+201	Letzte Synchronisierung: {when}
+202	Experimentell: Geräteerkennung mit KI (braucht einen Claude-API-Schlüssel im Skript)
+203	Datensicherung
+204	Datei exportieren
+205	Datei importieren
+206	Über die App
+207	Deine Daten bleiben auf diesem Handy. Nichts wird irgendwohin gesendet, außer du richtest die Synchronisierung mit Google Sheets ein – dann nur in deine eigene Tabelle.
+208	Synchronisiere …
+209	Offline oder nicht eingerichtet
+210	Synchronisiert · {a} aktualisiert, {b} gesendet
+211	Synchronisierung fehlgeschlagen: {msg}
+212	Keine Sicherungsdatei dieser App
+213	Alle Daten auf diesem Handy durch die Sicherung ersetzen?
+214	Sicherung wiederhergestellt
+215	Import fehlgeschlagen: {msg}
+216	Profil von {name} und den gesamten Verlauf von diesem Handy löschen? Das kann nicht rückgängig gemacht werden.
+217	Fortschritt
+218	Trainings
+219	Letzte 30 Tage
+220	{u} bewegt
+221	Trainings pro Woche
+222	Kraft
+223	Geschätztes 1RM aus deinem besten Satz (Epley-Formel).
+224	Beste Wiederholungen pro Training.
+225	Logge ein Training, um deine Kraftentwicklung zu sehen.
+226	Körpergewicht
+227	Heutiges Gewicht ({u})
+228	Hinzufügen
+229	Verlauf
+230	{n} Übungen
+231	Noch keine Trainings.
+232	Gib ein Gewicht in {u} ein
+233	Gewicht gespeichert
+234	Unterst. {u}
+235	Hallo {name}
+236	Du hast noch keinen Plan.
+237	Oder wähle einen fertigen Plan
+238	Woche {w}
+239	Manche Geräte sind aus – tippen zum Tauschen
+240	von {n}
+241	{a}/{b} erledigt
+242	zurück zur aktuellen Woche
+243	Plan geschafft
+244	Geloggte Trainings
+245	Pro Training
+246	Plan fertig!
+247	Aufwärmen
+248	Cardio-Abschluss
+249	{w} Wochen · {d} Tage pro Woche · {m}-Min.-Trainings
+250	Jeden Tag:
+251	{n} Übungen, plus Aufwärmen{walk} und Cool-down. Tippe auf einen Tag, um Übungen zu tauschen, hinzuzufügen oder zu entfernen und Sätze, Wiederholungen und Gewicht zu ändern.
+252	, ein kurzer Spaziergang
+253	{n} × 4 Sätze, plus {extras} und Cool-down. Öffne einen Tag, um seine Muskelgruppen zu wählen oder das Aufwärmen zu ändern.
+254	1 Übung
+255	Eigener Plan:
+256	jede Woche dieselben Sätze und Wiederholungen. Erstelle einen Plan über „Profil bearbeiten“, wenn die App ihn stufenweise schwerer machen soll.
+257	Wochen 1–4
+258	die Bewegungen lernen, deine Arbeitsgewichte finden.
+259	Wochen 5–8
+260	mehr Wiederholungen pro Satz.
+261	Wochen 9–11
+262	schwerer mit weniger Wiederholungen.
+263	weiter Wiederholungen und Gewicht steigern.
+264	Woche 12
+265	Deload – leichter, damit sich dein Körper erholt.
+266	Die App erhöht das Gewicht automatisch, wenn du in allen Sätzen das obere Ende des Wiederholungsbereichs schaffst. Tippe auf die Sätze eines Tages, um Wiederholungen oder Gewicht zu ändern.
+267	Fertige Pläne
+268	Planeinstellungen
+269	Feste Ganzkörperpläne für Frauen, die um die 50+ anfangen. Sie folgen der Forschung zum Krafttraining in diesem Alter: ganzer Körper, zuerst Geräte, 4–6 Übungen pro Tag, 2–3 Sätze mit 10–15 Wiederholungen, leichter Start. Du kannst trotzdem an jedem Tag Übungen tauschen, hinzufügen oder entfernen und Sätze, Wiederholungen und Gewicht ändern.
+270	Aktuell
+271	Diesen Plan neu starten
+272	Diesen Plan nutzen
+273	Ein neuer Plan beginnt bei Woche 1 (dein Verlauf bleibt). Fortfahren?
+274	Wer trainiert?
+275	Aktiv
+276	Reihenfolge ändern
+277	für alle Wochen
+278	Nach oben
+279	Nach unten
+280	Zurück zur Reihenfolge der App (große Muskeln zuerst)
+281	Fertig
+282	Nicht gefunden
+283	Wiederholungen und Gewicht bearbeiten
+284	Bearbeiten
+285	Gerät als nicht verfügbar markiert – tauschen
+286	Nach oben oder unten
+287	Optionen
+288	Pause: {n} s
+289	Muskelgruppen wählen
+290	Muskelgruppen
+291	Trainingszeit
+292	Kalorien (ca.)
+293	Erledigt am {date} – Log ansehen
+294	Aufwärmen ändern
+295	Ändern
+296	Danach eine kurze Mobility-Routine
+297	{n} Übungen
+298	Aufwärmen hinzufügen
+299	Übungsliste
+300	Cardio-Abschluss
+301	Cardio-Abschluss ändern
+302	Cardio-Abschluss hinzufügen
+303	Dehnübungen zum Cool-down
+304	Starten (ersetzt das laufende Training)
+305	Nochmal machen
+306	Starten
+307	Woche {w} · Ziel {a}–{b} {u}. Eine Satzänderung ändert auch die folgenden Sätze.
+308	s
+309	Wdh.
+310	Satz
+311	Sek.
+312	Wdh.
+313	Körpergewicht
+314	Zurück zum Vorschlag der App
+315	{day}: Muskelgruppen
+316	Wähle eine oder mehrere. Die App sucht dafür {n} Übung(en) aus (die Anzahl legst du unter Profil → Eigenen Plan erstellen fest), passend zur Ausstattung deines Studios. Einzelne Übungen kannst du danach noch tauschen oder entfernen.
+317	Übungen für diese Gruppen wählen
+318	Die App die Gruppen wählen lassen
+319	Minuten
+320	Eine Minute weniger
+321	Eine Minute mehr
+322	Gilt für alle deine Trainingstage. Tippe im Training auf Starten, und die App piept, wenn die Zeit um ist.
+323	Gerät
+324	Ausgewählt
+325	In der Studio-Ausstattung sind keine Cardiogeräte eingeschaltet.
+326	Gilt für {day} in jeder Woche. Setze die Minuten auf 0, um ihn wegzulassen.
+327	Kurze Mobility-Routine
+328	Mach diese direkt nach dem Aufwärmgerät.
+329	Neue Übungen für alle Wochen gewählt
+330	Es läuft schon ein Training. Verwerfen und dieses starten?
+331	Gegen eine andere Übung für {area} tauschen
+332	Keine Alternativen mit deiner aktuellen Ausstattung.
+333	Von diesem Tag entfernen
+334	Übung in allen Wochen getauscht
+335	Kein Training läuft.
+336	Zu meinem Plan
+337	AUFWÄRMEN
+338	Das Handy piept, wenn die Zeit um ist.
+339	Aufwärmen jetzt beenden
+340	PAUSE · als Nächstes: {name} · Satz {a}/{b}
+341	−15 s
+342	+15 s
+343	Pause überspringen
+344	Alle Sätze geschafft
+345	Mach zum Schluss Cardio und Cool-down und tippe dann auf Fertig.
+346	Mach zum Schluss das Cool-down und tippe dann auf Fertig.
+347	Training beenden
+348	Pause
+349	Satz loggen
+350	Satz {a} von {b}
+351	Haltezeit
+352	Satzzeit
+353	PAUSIERT
+354	Pause: {n}
+355	Log
+356	Satz {n} loggen
+357	Satz hinzufügen
+358	erledigt
+359	Stopp
+360	Nochmal
+361	Danach: kurze Mobility
+362	Abschluss
+363	Cool-down
+364	Dehnübungen
+365	Timer
+366	Training verwerfen
+367	Alle Sätze geloggt!
+368	Pause −15 s
+369	jetzt {n} s
+370	Pause +15 s
+371	Letzten Satz entfernen
+372	Diese Übung heute auslassen
+373	Ton
+374	An
+375	Aus
+376	Piepton testen
+377	Keine Sätze geloggt. Dieses Training verwerfen?
+378	{n} Satz/Sätze nicht geloggt. Trotzdem beenden?
+379	Dieses Training verwerfen? Geloggte Sätze gehen verloren.
+380	Dauer
+381	Sätze
+382	{n} kcal
+383	geschätzt
+384	Neue persönliche Bestleistungen
+385	Diesen Log löschen
+386	Diesen Trainingslog löschen? Das kann nicht rückgängig gemacht werden.
+387	Zählt hoch. Praktisch für Planks, Halteübungen oder zum Messen deiner Pausen.
+388	Weiter
+389	Zurücksetzen
+390	Eingestellt auf {time}.
+391	Zeit ist um!
+392	Countdown
+393	Stoppuhr
+394	Schnellwahl
+395	Der Timer läuft weiter, wenn du den Tab wechselst oder das Handy sperrst. Im Training läuft der Pausentimer unabhängig davon.
+396	Willkommen bei Rep12 👋
+397	Diese kurze Tour zeigt dir die App. Tippe auf Weiter, um fortzufahren, auf Springen, um zum nächsten Teil zu springen, oder auf das X, um die Tour zu schließen. Du kannst sie jederzeit im Tab Profil neu starten.
+398	Der Tab Profil
+399	Wir starten hier, mit deinen Angaben. Danach kommen die Einstellungen der App.
+400	Dein Profil
+401	Dein Name, Alter, Größe, Gewicht, Erfahrung, Ziel und wie viele Tage pro Woche du trainierst. Dein Plan und die Startgewichte beruhen darauf.
+402	Ändere deine persönlichen Angaben, dein Ziel oder deine Trainingstage pro Woche. Wähle „Speichern und Plan neu erstellen“ für einen neuen, passenden Plan.
+403	Lege fest, wie viele Übungen jeder Trainingstag hat, welche Muskelgruppen jeder Tag trainiert, wie lange ein Training dauert, das Aufwärmen, einen Cardio-Abschluss, zu schonende Verletzungen und Extra-Fokus. Ein eigener Plan behält alle 12 Wochen dieselben Sätze und Wiederholungen.
+404	Einfache Ganzkörperpläne für Einsteiger und Menschen über 50. Wähle einen statt eines eigenen Plans, wenn dir das lieber ist.
+405	Mehr als eine Person
+406	Füge ein Profil für jemand anderen hinzu, der mit diesem Handy trainiert, und wechsle hier zwischen den Profilen. Jede Person bekommt ihren eigenen Plan und Verlauf.
+407	Sag der App, welche Geräte dein Studio hat, damit dein Plan nur diese nutzt. Mehr dazu im Tab Studio.
+408	Tour wiederholen
+409	Starte diese Tour hier jederzeit neu, wenn du eine Auffrischung brauchst.
+410	Das Zahnrad öffnet die Einstellungen der App: Sprache, Einheiten, hell oder dunkel, den Pausen-Piepton, Synchronisierung und Datensicherung.
+411	Wähle die Sprache der App. Die App startet in der neuen Sprache neu; deine Daten bleiben gleich.
+412	Metrisch zeigt Kilogramm und Zentimeter. US zeigt Pfund und Fuß. Der Wechsel ändert nur die Anzeige von Gewicht und Größe.
+413	Hell oder dunkel
+414	Wähle ein helles oder dunkles Aussehen. Auto folgt der Einstellung deines Handys.
+415	Pausen-Piepton
+416	Die App piept, wenn deine Pause vorbei ist. Mit „Piepton testen“ prüfst du die Lautstärke. Schalte beim Training den Stummmodus aus.
+417	Mit Google Sheets synchronisieren (optional)
+418	Sichert deine Daten in deiner eigenen Google-Tabelle und hält mehrere Handys auf dem gleichen Stand. Die Schritte stehen in der README der App. Du kannst das überspringen.
+419	Speichere alle deine Daten in einer Datei oder stelle sie daraus wieder her, zum Beispiel bei einem neuen Handy.
+420	Wie deine Daten privat bleiben, und der Hinweis, dass die App allgemeine Tipps gibt, keinen medizinischen Rat.
+421	Mein Plan
+422	Der Tab Mein Plan
+423	Dein 12-Wochen-Plan. Hier startest du jedes Training.
+424	Deine 12 Wochen
+425	Jeder Balken ist eine Woche und füllt sich, wenn du ihre Trainings abschließt. Tippe auf eine Woche, um sie anzusehen. Ein Plan, den die App für dich erstellt, wird stufenweise schwerer, und Woche 12 ist eine leichtere Erholungswoche. Ein Plan aus „Eigenen Plan erstellen“ behält jede Woche dieselben Sätze und Wiederholungen.
+426	Über deinen Plan
+427	Tippe auf den Namen des Plans, um zu sehen, wie er funktioniert, oder um zu einem fertigen Plan zu wechseln.
+428	Trainingstage
+429	Eine Karte pro Trainingstag. „Weiter“ markiert den aktuellen, erledigte Tage bekommen ein Häkchen. Tippe auf einen Tag, um ihn zu öffnen.
+430	Trainingstag
+431	Ein Trainingstag
+432	Hier siehst du ein ganzes Training und kannst es vor dem Start anpassen. Änderungen gelten für diesen Tag in jeder Woche.
+433	Die Muskeln, die dieser Tag trainiert. Tippe, um andere Gruppen zu wählen, und die App sucht passende Übungen aus.
+434	Ein paar Minuten an einem Cardiogerät, danach eine kurze Mobility-Routine. Tippe auf Ändern, um Gerät und Minuten zu wählen.
+435	Sätze, Wiederholungen und Gewicht
+436	Jedes Kästchen ist ein Satz. Tippe auf Bearbeiten, um Wiederholungen oder Gewicht vor dem Start zu ändern. Die ersten Gewichte sind Schätzungen – passe sie in der ersten Woche an.
+437	Schiebe eine Übung im Training nach oben oder unten.
+438	Tauschen oder entfernen
+439	Sieh dir an, wie die Übung geht, tausche sie gegen eine andere für dieselben Muskeln oder entferne sie von diesem Tag.
+440	Optionales Cardio am Ende des Trainings. Tippe, um Gerät und Minuten zu wählen, oder lass es weg.
+441	Training starten
+442	Tippe im Training nach jedem Satz auf ✓. Der Pausentimer startet von selbst und piept, wenn der nächste Satz dran ist. Der Bildschirm bleibt an, und die Gewichte steigen, wenn du stärker wirst.
+443	Der Tab Übungen
+444	Alle Übungen der App, mit Videos zur Ausführung.
+445	Suchen und filtern
+446	Suche nach Namen oder tippe auf einen Muskel, um nur seine Übungen zu sehen. „Nur was es in meinem Studio gibt“ blendet Übungen für Geräte aus, die du nicht hast.
+447	Eine Übung
+448	Tippe auf eine Übung, um sie zu öffnen. Unter „So geht's“ gibt es ein kurzes Video (bei den meisten) und eine Schritt-für-Schritt-Anleitung.
+449	Füge diese Übung einem deiner Trainingstage hinzu – als zusätzliche Übung oder anstelle einer anderen.
+450	Mögen oder meiden
+451	Markiere Übungen, die du magst oder meiden willst. Die App berücksichtigt das beim nächsten Erstellen deines Plans.
+452	Studio
+453	Der Tab Studio
+454	Die Geräte deines Studios.
+455	Schalte alles aus, was dein Studio nicht hat. Tippe auf ein Bild, um es größer zu sehen.
+456	Plan neu erstellen
+457	Erstelle nach einer Änderung der Ausstattung deinen Plan neu, damit er nur Eingeschaltetes nutzt.
+458	Gerät unbekannt?
+459	Mach ein Foto, beantworte ein paar Fragen zur Bewegung, und die App zeigt dir, welche Übungen du daran machen kannst.
+460	Der Tab Timer
+461	Ein Countdown und eine Stoppuhr für alles außerhalb deines Plans, etwa eine Plank oder eine Dehnung.
+462	Countdown und Stoppuhr
+463	Oben wechselst du zwischen beiden. Der Countdown piept, wenn die Zeit um ist.
+464	Der Tab Fortschritt
+465	Diagramme zu deinen Trainings pro Woche, deiner Kraft und deinem Körpergewicht. Sie füllen sich, wenn du Trainings loggst.
+466	Alles bereit!
+467	Öffne deinen nächsten Trainingstag unter Mein Plan und tippe auf Starten. Viel Spaß beim Training!
+468	Nach vorn drücken
+469	Langsam zurück
+470	Plattform wegdrücken
+471	Knie langsam beugen
+472	Stange zur Brust ziehen
+473	Langsam hochgehen lassen
+474	Brust
+475	Schultern
+476	Hintere Schultern
+477	Nacken (Trapez)
+478	Bizeps
+479	Trizeps
+480	Unterarme
+481	Oberschenkel vorn
+482	Oberschenkel hinten
+483	Po
+484	Innenseite Oberschenkel
+485	Waden
+486	Rumpf
+487	Cardio
+488	Schulter
+489	Ellbogen
+490	Handgelenk
+491	Nacken
+492	Unterer Rücken
+493	Hüfte
+494	Knie
+495	Sprunggelenk
+496	Von der Brust wegdrücken
+497	Über Kopf nach oben drücken
+498	Körper hochdrücken / nach unten drücken (Dips)
+499	Zum Körper ziehen (Rudern)
+500	Von oben nach unten ziehen / mich hochziehen
+501	Arme vorn zusammenführen
+502	Arme nach außen / hinten öffnen
+503	Arme seitlich anheben
+504	Schultern hochziehen
+505	Ellbogen beugen (Curl)
+506	Ellbogen strecken
+507	Mit den Beinen drücken (Kniebeuge / Presse)
+508	Knie strecken (nach oben kicken)
+509	Knie beugen (Fersen nach hinten ziehen)
+510	In der Hüfte nach vorn beugen und aufrichten
+511	Hüfte nach oben drücken
+512	Bein nach hinten kicken
+513	Beine auseinanderdrücken
+514	Beine zusammendrücken
+515	Auf die Zehenspitzen gehen
+516	Crunch / Knie anheben
+517	Oberkörper drehen
+518	Stillhalten (Anti-Bewegung)
+519	Gehen / laufen / treten / steigen
+520	Brustpresse
+521	Schulterpresse
+522	Rudern
+523	Latziehen
+524	Butterfly
+525	Seitliche Schultern
+526	Kniebeuge / Beinpresse
+527	Hüftbeuge
+528	Einbeinig
+529	Einsteiger
+530	Fortgeschritten
+531	Erfahren
+532	Sitzend
+533	Liegend (auf Rücken oder Bauch)
+534	Schräg zurückgelehnt
+535	Stehend
+536	Kniend
+537	Hängend / auf den Armen gestützt
+538	Griffe
+539	Eine gerade oder gebogene Stange
+540	Ein Kabel mit Griff oder Seil
+541	Polster an den Armen
+542	Polster an den Beinen
+543	Eine Fußplatte
+544	Freie Gewichte
+545	Schlaufen
+546	Nichts – nur mein Körper
+547	Vorderseite der Arme
+548	Rückseite der Arme
+549	Vorderseite der Oberschenkel
+550	Rückseite der Oberschenkel
+551	Po / Gesäß
+552	Bauch / Rumpf
+553	Bänke und Racks
+554	Kabelzüge
+555	Steckgewichtsgeräte
+556	Hantelscheiben-Geräte
+557	Körpergewichtsstationen
+558	Muskeln aufbauen
+559	Fett verlieren / straffen
+560	Allgemeine Fitness
+561	Beine
+562	Arme
+563	Rumpf / Bauch
+564	Sanfter Start · 2 Tage pro Woche
+565	2 Tage pro Woche
+566	Der sanfteste Einstieg: zwei Ganzkörpertage mit ein oder zwei Ruhetagen dazwischen. Steig auf 3 Tage um, wenn es leicht fällt.
+567	Ganzkörper für Einsteiger · 3 Tage pro Woche
+568	3 Tage pro Woche
+569	Drei Ganzkörpertage (zum Beispiel Mo, Mi, Fr). Jede Muskelgruppe wird zweimal oder öfter pro Woche trainiert.
+570	Kurzes Ganzkörpertraining · 3 Tage pro Woche
+571	3 kurze Tage pro Woche
+572	Drei Ganzkörpertage mit nur 4 Übungen – Beine, Drücken, Ziehen und Hüfte oder Rumpf –, sodass ein Training mit Aufwärmen und Cool-down etwa 35–40 Minuten dauert.
+573	2 Sätze × 12–15 Wiederholungen, leichte Gewichte. Die Bewegungen lernen.
+574	3 Sätze × 10–12 Wiederholungen. Etwas mehr Gewicht, wenn sich alle Wiederholungen gut anfühlen.
+575	3 Sätze × 8–10 Wiederholungen, schwerer. Kontrolliert bleiben.
+576	2 Sätze × 10–12 Wiederholungen, leichter. Erholen.
+577	Lockeres Cardio (Rad, Crosstrainer oder Laufband)
+578	Armkreisen vorwärts und rückwärts
+579	Kniebeugen ohne Gewicht
+580	Hüftkreisen / Beinschwingen
+581	Band- oder leichte Kabel-Pull-aparts / Face Pulls
+582	Leichter Aufwärmsatz der ersten Übung
+583	Brustdehnung im Türrahmen
+584	Kindhaltung / Latissimus-Dehnung
+585	Schulterdehnung über die Brust (jede Seite)
+586	Trizepsdehnung über Kopf (jede Seite)
+587	Bizepsdehnung an der Wand
+588	Oberschenkeldehnung im Stehen (jede Seite)
+589	Dehnung der hinteren Oberschenkel im Sitzen
+590	Po-Dehnung in Vierer-Position (jede Seite)
+591	Wadendehnung an der Wand (jede Seite)
+592	Kobra-Dehnung
+593	Langsames, tiefes Atmen im Liegen
+594	Stell den Sitz so ein, dass die Griffe auf Höhe der Brustmitte sind.
+595	Setz dich mit flachem Rücken ans Polster und zieh die Schulterblätter zurück.
+596	Drück nach vorn, bis die Arme fast gestreckt sind – Ellbogen nicht durchstrecken.
+597	Langsam (2–3 s) zurück, bis du eine Dehnung in der Brust spürst.
+598	Stell den Sitz so ein, dass die Griffe auf Schulterhöhe starten.
+599	Rücken flach am Polster, Rumpf angespannt.
+600	Nach oben drücken, bis die Arme fast gestreckt sind.
+601	Langsam zurück auf Schulterhöhe senken.
+602	Wähle ein Gewicht, mit dem du die Wiederholungen sauber schaffst (an unterstützten Geräten: mehr Gewicht = leichter).
+603	Mit gestreckten Armen beginnen, Schultern tief, weg von den Ohren.
+604	Durch Beugen der Ellbogen auf etwa 90° absenken.
+605	Wieder hochdrücken, bis die Arme gestreckt sind.
+606	Sitz/Brustpolster so einstellen, dass du die Griffe mit gestreckten Armen erreichst.
+607	Aufrecht sitzen, Brust raus.
+608	Griffe zum Körper ziehen und dabei die Schulterblätter zusammendrücken.
+609	Langsam zurück, bis die Arme gestreckt sind.
+610	Sitz oder Kniepolster so einstellen, dass du fest sitzt.
+1221	Zurück

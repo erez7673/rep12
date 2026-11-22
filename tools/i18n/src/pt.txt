@@ -1,0 +1,611 @@
+1	Animação: {name}
+2	Continuar
+3	Ainda não há dados.
+4	lb
+5	kg
+6	Comece leve: faça uma série de teste com 10 repetições fáceis para aprender o movimento e depois ajuste o peso.
+7	Dia de treino {x}
+8	Treino
+9	{n} dias por semana
+10	{list} e {last}
+11	Semana de descarga: mais leve, recupere-se
+12	Fase 3 · Mais peso, menos repetições
+13	Fase 2 · Mais volume
+14	Fase 1 · Aprenda e crie a base
+15	Plano personalizado · mesmas séries e repetições toda semana
+16	Estimativa inicial: toque nas séries para mudar.
+17	Menos assistência: você fez todas as repetições da última vez!
+18	+{w}: você fez todas as repetições da última vez!
+19	Semana de descarga: mais leve de propósito.
+20	Editado por você
+21	Falha na sincronização
+22	Fechar o tour
+23	{a} de {b}
+24	Costas
+25	Pular para {section}
+26	Concluir
+27	Próximo
+28	Mudar para o modo claro
+29	Mudar para o modo escuro
+30	{n} s
+31	{n} min
+32	{n} reps
+33	Sem equipamento
+34	ou
+35	Nenhum exercício encontrado.
+36	Exercícios
+37	Buscar exercícios
+38	Todos
+39	Só o que há na minha academia
+40	Exercício não encontrado.
+41	não está na sua academia
+42	Adicionar ao treino
+43	Sua máquina:
+44	Marcado como arriscado para: {parts}. Use pouco peso ou troque.
+45	Como fazer
+46	Passo a passo
+47	Nas máquinas assistidas o peso ajuda você: mais peso = mais fácil. O app diminui o peso conforme você fica mais forte.
+48	O peso mostrado é por halter.
+49	Seu histórico
+50	Favorito
+51	Gostei
+52	Evitado
+53	Evitar
+54	As curtidas e os evitados são usados na próxima vez que você refizer o plano.
+55	como cardio final de:
+56	adicionado a todas as semanas de:
+57	tem {n}: toque para adicionar ou trocar
+58	Já está nele
+59	Usar como meu aquecimento
+60	Todos os dias de treino
+61	Cancelar
+62	Cardio final de {day}
+63	Adicionar ou trocar
+64	{day} tem {n} exercícios.
+65	Adicionar {name}
+66	{day} fica com {n} exercícios
+67	, e você pode ter até {n} em cada dia de treino
+68	{n} exercícios é o máximo por dia.
+69	Ou trocar por
+70	Adicionado a {day} ({a} de {b})
+71	Adicionado a {day} ({n} exercícios)
+72	{name} agora está em {day}
+73	Definido como seu aquecimento
+74	Equipamentos da academia
+75	{a}/{b} ativados
+76	Adicionar uma máquina com foto
+77	Desative o que sua academia não tem. O plano só usa o que está ativado.
+78	Minhas máquinas
+79	Mudou o equipamento?
+80	Refaça seu plano para usar só o que está ativado.
+81	Refazer meu plano
+82	Fechar
+83	Refazer seu plano com o equipamento atual? Seu histórico é mantido, mas o progresso do plano volta para a semana 1.
+84	Plano refeito
+85	Renomear
+86	Marcar como disponível
+87	Marcar como indisponível
+88	Excluir máquina
+89	Nome da máquina
+90	Excluir esta máquina e a foto? Os exercícios personalizados criados para ela também são removidos.
+91	Tire uma foto da máquina
+92	Ela é salva com a máquina para você reconhecê-la depois.
+93	Toque para tirar uma foto
+94	Nome (se souber)
+95	ex.: remada sentada
+96	Marca
+97	opcional
+98	Modelo (na placa da estrutura)
+99	Identificar com IA
+100	Como está a posição do seu corpo?
+101	O que você segura ou empurra?
+102	Que movimento você faz?
+103	Se não tiver certeza, teste a máquina sem peso.
+104	Onde você sente?
+105	(opcional, escolha quantos quiser)
+106	Ver resultados
+107	É um destes?
+108	Sim, é este
+109	Nada parecido na biblioteca.
+110	Nenhum destes?
+111	Crie um exercício personalizado com suas respostas: o app escreve instruções curtas para esse tipo de movimento.
+112	Criar exercício personalizado
+113	Que máquina é esta?
+114	Minha máquina
+115	Escolha um movimento
+116	Não foi possível ler essa foto
+117	Perguntando à IA…
+118	A IA não está configurada
+119	Falha da IA: {msg}
+120	Máquina salva
+121	Escolha um movimento primeiro
+122	Máquina de {kind}
+123	Personalizado
+124	Exercício personalizado criado
+125	Altura
+126	Altura (cm)
+127	Nome
+128	Seu nome
+129	Sexo
+130	Feminino
+131	Masculino
+132	Idade
+133	Peso ({u})
+134	Experiência
+135	Objetivo principal
+136	Dias de treino por semana
+137	Exercícios por dia de treino
+138	(4 séries cada, mais aquecimento e desaquecimento)
+139	Grupos musculares por dia de treino
+140	(deixe um dia vazio e o app escolhe)
+141	Duração da sessão
+142	Aquecimento
+143	Nenhum
+144	Adicionar cardio final (esteira, elíptico, escada, bicicleta)
+145	Lesões ou limitações
+146	(exercícios que sobrecarregam essas áreas são evitados)
+147	Foco extra
+148	(adiciona exercícios para estas áreas)
+149	Cor
+150	Criar meu plano
+151	Criar meu plano personalizado
+152	Salvar sem mudar o plano
+153	Salvar e refazer o plano
+154	Este app dá orientações gerais de exercício, não conselho médico. Se você tem uma lesão ou um problema de saúde, ou não treina há muito tempo, consulte antes um médico ou fisioterapeuta. Pare qualquer exercício que doa.
+155	Editar perfil
+156	Boas-vindas
+157	Novo perfil
+158	Vamos criar seu plano pessoal. Depois você pode adicionar mais perfis, por exemplo para seu par.
+159	Idioma e unidades
+160	Exercícios por dia, grupos musculares, duração, aquecimento, cardio, lesões e foco extra ficam em Perfil → Crie seu plano personalizado.
+161	Crie seu plano personalizado
+162	Escolha como é cada um dos seus {n} dias de treino. Mude o número de dias em Editar perfil.
+163	Um plano personalizado mantém as mesmas séries e repetições nas 12 semanas. Um plano criado em Editar perfil fica mais difícil em etapas.
+164	Plano pronto, {name}!
+165	Refazer reinicia o plano na semana 1 (o histórico é mantido). Continuar?
+166	Salvo
+167	Perfil
+168	Configurações
+169	{n} anos
+170	{d} dias × {m} min
+171	Planos prontos (iniciantes, 50+)
+172	Trocar de perfil
+173	1 perfil
+174	{n} perfis
+175	Adicionar um perfil
+176	Equipamentos
+177	Fazer o tour do app
+178	Excluir o perfil de {name}
+179	nunca
+180	Idioma
+181	Unidades
+182	Métrico (kg, cm)
+183	EUA (lb, ft)
+184	Seus dados continuam iguais; só muda a forma como pesos e alturas são mostrados.
+185	Aparência
+186	Auto
+187	Claro
+188	Escuro
+189	Auto segue a configuração do seu celular.
+190	Treino
+191	Bipe no fim do descanso
+192	Testar o bipe
+193	A tela fica ligada durante o treino para o timer poder apitar. Aumente o volume e desligue o modo silencioso.
+194	Sincronizar com o Google Sheets
+195	Faz backup de todos os perfis e dos equipamentos na sua própria planilha do Google e mantém seus celulares sincronizados. Os passos de configuração estão no README.
+196	URL do app da web do Apps Script
+197	Chave secreta (a mesma do script)
+198	sua chave compartilhada
+199	Salvar
+200	Sincronizar agora
+201	Última sincronização: {when}
+202	Experimental: reconhecimento de máquinas por IA (precisa de uma chave de API do Claude no script)
+203	Backup
+204	Exportar arquivo
+205	Importar arquivo
+206	Sobre
+207	Seus dados ficam neste celular. Nada é enviado para lugar nenhum, a menos que você configure a sincronização com o Google Sheets, que envia só para a sua própria planilha.
+208	Sincronizando…
+209	Offline ou não configurado
+210	Sincronizado · {a} atualizados, {b} enviados
+211	Falha na sincronização: {msg}
+212	Não é um arquivo de backup deste app
+213	Substituir todos os dados deste celular pelo backup?
+214	Backup restaurado
+215	Falha na importação: {msg}
+216	Excluir o perfil de {name} e todo o histórico deste celular? Não é possível desfazer.
+217	Progresso
+218	Treinos
+219	Últimos 30 dias
+220	{u} levantados
+221	Treinos por semana
+222	Força
+223	1RM estimado a partir da sua melhor série (fórmula de Epley).
+224	Melhores repetições por sessão.
+225	Registre um treino para ver sua evolução de força.
+226	Peso corporal
+227	Peso de hoje ({u})
+228	Adicionar
+229	Histórico
+230	{n} exercícios
+231	Ainda não há treinos.
+232	Digite um peso em {u}
+233	Peso salvo
+234	Assist. {u}
+235	Olá, {name}
+236	Você ainda não tem um plano.
+237	Ou escolha um plano pronto
+238	Semana {w}
+239	Há equipamento desativado: toque para trocar
+240	de {n}
+241	{a}/{b} feitos
+242	voltar à semana atual
+243	Plano concluído
+244	Treinos registrados
+245	Por sessão
+246	Plano pronto!
+247	aquecimento
+248	cardio final
+249	{w} semanas · {d} dias por semana · sessões de {m} min
+250	Todo dia:
+251	{n} exercícios, mais aquecimento{walk} e desaquecimento. Toque em qualquer dia para trocar, adicionar ou remover exercícios e mudar séries, repetições e peso.
+252	, uma caminhada curta
+253	{n} × 4 séries, mais {extras} e desaquecimento. Abra um dia para escolher os grupos musculares ou mudar o aquecimento.
+254	1 exercício
+255	Plano personalizado:
+256	as mesmas séries e repetições toda semana. Crie um plano em Editar perfil se quiser que o app aumente a dificuldade em etapas.
+257	Semanas 1–4
+258	aprenda os movimentos e encontre seus pesos de trabalho.
+259	Semanas 5–8
+260	mais repetições por série.
+261	Semanas 9–11
+262	mais peso com menos repetições.
+263	continue aumentando repetições e peso.
+264	Semana 12
+265	descarga: mais leve para o corpo se recuperar.
+266	O app aumenta o peso automaticamente quando você chega ao topo da faixa de repetições em todas as séries. Toque nas séries de um dia para mudar repetições ou peso.
+267	Planos prontos
+268	Configurações do plano
+269	Planos fixos de corpo inteiro para mulheres que começam por volta dos 50+. Seguem as pesquisas sobre treino de força nessa idade: corpo inteiro, máquinas primeiro, 4–6 exercícios por dia, 2–3 séries de 10–15 repetições, começo leve. Você ainda pode trocar, adicionar ou remover exercícios e mudar séries, repetições e peso em todos os dias.
+270	Atual
+271	Reiniciar este plano
+272	Usar este plano
+273	Um plano novo começa na semana 1 (seu histórico é mantido). Continuar?
+274	Quem vai treinar?
+275	Ativo
+276	Mudar a ordem
+277	para todas as semanas
+278	Subir
+279	Descer
+280	Voltar à ordem do app (músculos maiores primeiro)
+281	Pronto
+282	Não encontrado
+283	Editar repetições e peso
+284	Editar
+285	Equipamento marcado como indisponível: troque
+286	Subir ou descer
+287	Opções
+288	Descanso: {n} s
+289	Escolher grupos musculares
+290	Grupos musculares
+291	Duração do treino
+292	Calorias (estim.)
+293	Feito em {date}: ver registro
+294	Mudar aquecimento
+295	Mudar
+296	Depois, uma rotina rápida de mobilidade
+297	{n} movimentos
+298	Adicionar aquecimento
+299	Lista de exercícios
+300	Cardio final
+301	Mudar o cardio final
+302	Adicionar cardio final
+303	Alongamentos de desaquecimento
+304	Começar (substitui o treino atual)
+305	Fazer de novo
+306	Começar
+307	Semana {w} · meta {a}–{b} {u}. Mudar uma série também muda as seguintes.
+308	s
+309	reps
+310	Série
+311	Seg
+312	Reps
+313	peso corporal
+314	Voltar à sugestão do app
+315	{day}: grupos musculares
+316	Escolha um ou mais. O app escolhe {n} exercício(s) para eles (o número é definido em Perfil → Crie seu plano personalizado) com os equipamentos da sua academia. Depois você ainda pode trocar ou remover exercícios.
+317	Escolher exercícios para estes grupos
+318	Deixar o app escolher os grupos
+319	Minutos
+320	Um minuto a menos
+321	Um minuto a mais
+322	Usado em todos os seus dias de treino. No treino, toque em Começar e o app apita quando o tempo acabar.
+323	Máquina
+324	Selecionado
+325	Nenhuma máquina de cardio está ativada nos equipamentos.
+326	Usado em {day} toda semana. Defina 0 minutos para tirar.
+327	Rotina rápida de mobilidade
+328	Faça logo depois da máquina de aquecimento.
+329	Novos exercícios escolhidos para todas as semanas
+330	Já há um treino em andamento. Descartar e começar este?
+331	Trocar por outro exercício de {area}
+332	Não há alternativas com seus equipamentos atuais.
+333	Remover deste dia
+334	Exercício trocado em todas as semanas
+335	Nenhum treino em andamento.
+336	Ir para meu plano
+337	AQUECIMENTO
+338	O celular apita quando o tempo acabar.
+339	Terminar o aquecimento agora
+340	DESCANSO · próximo: {name} · série {a}/{b}
+341	−15 s
+342	+15 s
+343	Pular descanso
+344	Todas as séries feitas
+345	Termine com o cardio e o desaquecimento e depois toque em Concluir.
+346	Termine com o desaquecimento e depois toque em Concluir.
+347	Concluir treino
+348	Pausar
+349	Registrar série
+350	Série {a} de {b}
+351	tempo de sustentação
+352	tempo da série
+353	PAUSADO
+354	Descanso: {n}
+355	Registro
+356	Registrar série {n}
+357	Adicionar série
+358	feito
+359	Parar
+360	De novo
+361	Depois: mobilidade rápida
+362	Final
+363	Desaquecimento
+364	alongamentos
+365	Timer
+366	Descartar treino
+367	Todas as séries registradas!
+368	Descanso −15 s
+369	agora {n} s
+370	Descanso +15 s
+371	Remover a última série
+372	Pular este exercício hoje
+373	Som
+374	Ligado
+375	Desligado
+376	Testar bipe
+377	Nenhuma série registrada. Descartar este treino?
+378	{n} série(s) não registrada(s). Concluir mesmo assim?
+379	Descartar este treino? As séries registradas serão perdidas.
+380	Duração
+381	Séries
+382	{n} kcal
+383	estimado
+384	Novos recordes pessoais
+385	Excluir este registro
+386	Excluir o registro deste treino? Não é possível desfazer.
+387	Conta para cima. Útil para pranchas, isometrias ou para cronometrar o descanso.
+388	Continuar
+389	Zerar
+390	Definido para {time}.
+391	O tempo acabou!
+392	Contagem regressiva
+393	Cronômetro
+394	Ajuste rápido
+395	O timer continua rodando quando você troca de aba ou bloqueia o celular. Durante um treino, o descanso conta sozinho.
+396	Boas-vindas ao Rep12 👋
+397	Este tour rápido mostra o app. Toque em Próximo para avançar, em Pular para ir à próxima parte ou no X para fechar. Você pode refazer o tour a qualquer momento na aba Perfil.
+398	A aba Perfil
+399	Começamos aqui, com seus dados. As configurações do app vêm logo depois.
+400	Seu perfil
+401	Seu nome, idade, altura, peso, experiência, objetivo e quantos dias por semana você treina. Seu plano e os pesos iniciais se baseiam nisso.
+402	Mude seus dados pessoais, objetivo ou dias de treino por semana. Escolha "Salvar e refazer o plano" para ter um plano novo que combine.
+403	Escolha quantos exercícios cada dia tem, quais grupos musculares cada dia treina, quanto dura a sessão, o aquecimento, um cardio final, as lesões a proteger e áreas de foco extra. Um plano personalizado mantém as mesmas séries e repetições nas 12 semanas.
+404	Planos simples de corpo inteiro para iniciantes e pessoas com mais de 50. Escolha um no lugar de um plano personalizado, se preferir.
+405	Mais de uma pessoa
+406	Adicione um perfil para outra pessoa que treina com este celular e troque de perfil aqui. Cada pessoa tem seu próprio plano e histórico.
+407	Diga ao app quais equipamentos sua academia tem, para o plano usar só o que existe lá. Mais sobre isso na aba Academia.
+408	Refazer o tour
+409	Comece este tour de novo aqui sempre que precisar relembrar.
+410	A engrenagem abre as configurações do app: idioma, unidades, claro ou escuro, o bipe do descanso, sincronização e backup.
+411	Escolha o idioma do app. O app reinicia no novo idioma; seus dados continuam iguais.
+412	Métrico mostra quilos e centímetros. EUA mostra libras e pés. Trocar só muda a forma como pesos e alturas aparecem.
+413	Claro ou escuro
+414	Escolha um visual claro ou escuro. Auto segue a configuração do seu celular.
+415	Bipe do descanso
+416	O app apita quando o descanso acaba. Use "Testar o bipe" para conferir o volume. Desligue o modo silencioso durante os treinos.
+417	Sincronizar com o Google Sheets (opcional)
+418	Faz backup dos seus dados na sua própria planilha do Google e mantém vários celulares em dia. Os passos estão no README do app. Você pode pular isso.
+419	Salve todos os seus dados em um arquivo ou restaure a partir de um, por exemplo ao trocar de celular.
+420	Como seus dados ficam privados e um lembrete de que o app dá orientações gerais, não conselho médico.
+421	Meu plano
+422	A aba Meu plano
+423	Seu plano de 12 semanas. É aqui que você começa cada treino.
+424	Suas 12 semanas
+425	Cada barra é uma semana e enche conforme você termina os treinos dela. Toque em uma semana para vê-la. Um plano criado pelo app fica mais difícil em etapas, e a semana 12 é mais leve para recuperação. Um plano de "Crie seu plano personalizado" mantém as mesmas séries e repetições toda semana.
+426	Sobre seu plano
+427	Toque no nome do plano para ver como funciona ou para trocar para um plano pronto.
+428	Dias de treino
+429	Um cartão por dia de treino. "Próximo" marca o de agora, e os dias concluídos ganham um visto. Toque em um dia para abri-lo.
+430	Dia de treino
+431	Um dia de treino
+432	Aqui você vê tudo de um treino e pode ajustar antes de começar. As mudanças valem para este dia em todas as semanas.
+433	Os músculos que este dia treina. Toque para escolher outros grupos, e o app escolhe exercícios adequados.
+434	Alguns minutos numa máquina de cardio e depois uma rotina curta de mobilidade. Toque em Mudar para escolher a máquina e os minutos.
+435	Séries, repetições e peso
+436	Cada etiqueta é uma série. Toque em Editar para mudar as repetições ou o peso antes de começar. Os primeiros pesos são estimativas, então ajuste na primeira semana.
+437	Suba ou desça um exercício dentro do treino.
+438	Trocar ou remover
+439	Veja como fazer o exercício, troque por outro para os mesmos músculos ou remova deste dia.
+440	Cardio opcional no fim do treino. Toque para escolher a máquina e os minutos, ou tire.
+441	Começar o treino
+442	Durante o treino, toque em ✓ depois de cada série. O descanso começa sozinho e apita na hora da próxima série. A tela fica ligada, e os pesos sobem conforme você fica mais forte.
+443	A aba Exercícios
+444	Todos os exercícios do app, com vídeos de como fazer.
+445	Buscar e filtrar
+446	Busque pelo nome ou toque em um músculo para ver só os exercícios dele. "Só o que há na minha academia" esconde exercícios de equipamentos que você não tem.
+447	Um exercício
+448	Toque em qualquer exercício para abri-lo. Em "Como fazer" há um vídeo curto (na maioria) e instruções passo a passo.
+449	Coloque este exercício em um dos seus dias de treino, como exercício extra ou no lugar de outro.
+450	Gostei ou evitar
+451	Marque os exercícios de que gosta ou quer evitar. O app usa isso na próxima vez que criar seu plano.
+452	Academia
+453	A aba Academia
+454	Os equipamentos da sua academia.
+455	Desative o que sua academia não tem. Toque em uma imagem para vê-la maior.
+456	Refaça seu plano
+457	Depois de mudar os equipamentos, refaça seu plano para usar só o que está ativado.
+458	Não conhece uma máquina?
+459	Tire uma foto, responda algumas perguntas sobre como ela se move e o app diz quais exercícios você pode fazer nela.
+460	A aba Timer
+461	Uma contagem regressiva e um cronômetro para o que estiver fora do plano, como uma prancha ou um alongamento.
+462	Contagem regressiva e cronômetro
+463	Troque entre eles no topo. A contagem regressiva apita quando o tempo acaba.
+464	A aba Progresso
+465	Gráficos dos seus treinos por semana, da sua força e do seu peso corporal. Eles enchem conforme você registra treinos.
+466	Tudo pronto!
+467	Abra seu próximo dia de treino em Meu plano e toque em Começar. Bom treino!
+468	Empurre para a frente
+469	Volte devagar
+470	Empurre a plataforma
+471	Dobre os joelhos devagar
+472	Puxe a barra até o peito
+473	Deixe subir devagar
+474	Peito
+475	Ombros
+476	Deltoides posteriores
+477	Trapézio
+478	Bíceps
+479	Tríceps
+480	Antebraços
+481	Quadríceps
+482	Posteriores de coxa
+483	Glúteos
+484	Parte interna das coxas
+485	Panturrilhas
+486	Core
+487	Cardio
+488	Ombro
+489	Cotovelo
+490	Punho
+491	Pescoço
+492	Lombar
+493	Quadril
+494	Joelho
+495	Tornozelo
+496	Empurrar para longe do peito
+497	Empurrar acima da cabeça
+498	Levantar o corpo / empurrar para baixo (paralelas)
+499	Puxar em direção ao corpo (remada)
+500	Puxar de cima para baixo / subir o corpo
+501	Juntar os braços na frente
+502	Abrir os braços para fora / para trás
+503	Levantar os braços para os lados
+504	Levantar os ombros
+505	Dobrar os cotovelos (rosca)
+506	Esticar os cotovelos
+507	Empurrar com as pernas (agachamento / leg press)
+508	Esticar os joelhos (chute para cima)
+509	Dobrar os joelhos (calcanhares para trás)
+510	Inclinar o quadril para a frente e voltar
+511	Subir o quadril
+512	Chutar a perna para trás
+513	Afastar as pernas
+514	Apertar as pernas uma contra a outra
+515	Ficar na ponta dos pés
+516	Abdominal / subir os joelhos
+517	Girar o tronco
+518	Ficar parado (antimovimento)
+519	Andar / correr / pedalar / subir
+520	Supino
+521	Desenvolvimento
+522	Remada
+523	Puxada
+524	Crucifixo
+525	Deltoides laterais
+526	Agachamento / leg press
+527	Dobradiça de quadril
+528	Uma perna
+529	Iniciante
+530	Intermediário
+531	Avançado
+532	Sentado
+533	Deitado (de costas ou de bruços)
+534	Recostado num banco inclinado
+535	Em pé
+536	Ajoelhado
+537	Pendurado / apoiado nos braços
+538	Pegadores
+539	Uma barra reta ou curvada
+540	Um cabo com pegador ou corda
+541	Apoios contra os braços
+542	Apoios contra as pernas
+543	Uma plataforma para os pés
+544	Pesos livres
+545	Alças
+546	Nada, só meu corpo
+547	Frente dos braços
+548	Parte de trás dos braços
+549	Frente das coxas
+550	Parte de trás das coxas
+551	Glúteos / bumbum
+552	Abdômen / core
+553	Bancos e racks
+554	Máquinas de cabo
+555	Máquinas de placas
+556	Máquinas de anilhas
+557	Estações de peso corporal
+558	Ganhar músculo
+559	Perder gordura / tonificar
+560	Condicionamento geral
+561	Pernas
+562	Braços
+563	Core / abdômen
+564	Começo suave · 2 dias por semana
+565	2 dias por semana
+566	O jeito mais suave de começar: dois dias de corpo inteiro com um ou dois dias de descanso entre eles. Passe para 3 dias quando ficar fácil.
+567	Corpo inteiro para iniciantes · 3 dias por semana
+568	3 dias por semana
+569	Três dias de corpo inteiro (por exemplo seg, qua e sex). Cada grupo muscular é treinado duas vezes ou mais por semana.
+570	Corpo inteiro curto · 3 dias por semana
+571	3 dias curtos por semana
+572	Três dias de corpo inteiro com só 4 exercícios cada (pernas, um empurrar, um puxar e quadril ou core), então a sessão leva uns 35–40 minutos com aquecimento e desaquecimento.
+573	2 séries × 12–15 repetições, pesos leves. Aprenda os movimentos.
+574	3 séries × 10–12 repetições. Um pouco mais de peso quando todas as repetições estiverem boas.
+575	3 séries × 8–10 repetições, mais peso. Mantenha o controle.
+576	2 séries × 10–12 repetições, mais leve. Recupere-se.
+577	Cardio leve (bicicleta, elíptico ou esteira)
+578	Círculos com os braços para a frente e para trás
+579	Agachamentos sem peso
+580	Círculos de quadril / balanço de pernas
+581	Afastamento com elástico ou cabo leve / face pull
+582	Série leve de aquecimento do primeiro exercício
+583	Alongamento de peito no batente da porta
+584	Postura da criança / alongamento do dorsal
+585	Alongamento de ombro cruzando o braço (cada lado)
+586	Alongamento de tríceps acima da cabeça (cada lado)
+587	Alongamento de bíceps na parede
+588	Alongamento de quadríceps em pé (cada lado)
+589	Alongamento de posteriores sentado
+590	Alongamento de glúteo em forma de quatro (cada lado)
+591	Alongamento de panturrilha na parede (cada lado)
+592	Alongamento cobra
+593	Respiração lenta e profunda, deitado
+594	Ajuste o banco para os pegadores ficarem na altura do meio do peito.
+595	Sente com as costas apoiadas e as escápulas para trás.
+596	Empurre para a frente até os braços ficarem quase retos, sem travar os cotovelos.
+597	Volte devagar (2–3 s) até sentir o peito alongar.
+598	Ajuste o banco para os pegadores começarem na altura dos ombros.
+599	Costas apoiadas, abdômen firme.
+600	Empurre para cima até os braços ficarem quase retos.
+601	Desça devagar até a altura dos ombros.
+602	Use um peso que permita fazer as repetições com boa técnica (em máquinas assistidas, mais peso = mais fácil).
+603	Comece com os braços retos e os ombros baixos, longe das orelhas.
+604	Desça dobrando os cotovelos até uns 90°.
+605	Empurre de volta até esticar os braços.
+606	Ajuste o banco ou o apoio do peito para alcançar os pegadores com os braços retos.
+607	Sente ereto, com o peito para cima.
+608	Puxe os pegadores em direção ao corpo, juntando as escápulas.
+609	Volte devagar até os braços ficarem retos.
+610	Ajuste o banco ou o apoio dos joelhos para ficar bem preso.
+1221	Anterior

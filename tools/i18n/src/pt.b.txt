@@ -1,0 +1,610 @@
+611	Comece com os braços esticados acima da cabeça.
+612	Puxe para baixo levando os cotovelos em direção ao quadril.
+613	Volte devagar até esticar os braços.
+614	Ajuste o banco para os pegadores ficarem na altura do peito.
+615	Cotovelos levemente dobrados e fixos.
+616	Junte os braços na frente do peito e aperte.
+617	Abra devagar até sentir alongar.
+618	Ajuste para os pegadores ficarem na altura dos ombros.
+619	Braços quase retos à sua frente.
+620	Leve os braços para trás e para fora até ficarem alinhados com o corpo.
+621	Volte devagar.
+622	Ajuste para o eixo ficar alinhado com os ombros.
+623	Comece com os braços ao lado do corpo.
+624	Levante os braços para os lados até a altura dos ombros.
+625	Desça devagar.
+626	Fique em pé ou sentado ereto, segurando os pegadores.
+627	Suba os ombros em linha reta em direção às orelhas.
+628	Segure 1 s em cima.
+629	Ajuste para os cotovelos ficarem alinhados com o eixo da máquina.
+630	Braços no apoio, palmas para cima.
+631	Suba os pegadores em direção aos ombros.
+632	Desça devagar até os braços ficarem quase retos.
+633	Braços no apoio.
+634	Estique totalmente os braços e contraia o tríceps.
+635	Ajuste o banco ou encosto para os joelhos ficarem a uns 90° no início.
+636	Pés na largura dos ombros, costas apoiadas.
+637	Empurre com o pé inteiro até as pernas ficarem quase retas.
+638	Desça devagar, sem tirar a lombar do encosto.
+639	Alinhe os joelhos com o eixo.
+640	Apoio logo acima dos tornozelos.
+641	Estique as pernas e contraia.
+642	Apoio logo acima dos calcanhares.
+643	Leve os calcanhares para trás o máximo possível.
+644	Posicione-se para o apoio ou o peso ficar na altura do quadril.
+645	Costas retas, joelhos levemente dobrados.
+646	Incline o quadril para a frente até sentir os posteriores alongarem.
+647	Contraia os glúteos para voltar.
+648	Parte alta das costas no apoio, almofada ou cinto sobre o quadril.
+649	Pés apoiados, joelhos a uns 90° em cima.
+650	Suba o quadril e contraia os glúteos.
+651	Coloque o apoio atrás do calcanhar ou do joelho.
+652	Segure os pegadores e mantenha o tronco parado.
+653	Leve a perna para trás e contraia o glúteo.
+654	Volte devagar. Troque de perna.
+655	Sente com os apoios por fora dos joelhos.
+656	Sente ereto.
+657	Afaste os joelhos.
+658	Sente com os apoios por dentro dos joelhos.
+659	Aperte as pernas uma contra a outra.
+660	Parte da frente dos pés na borda da plataforma.
+661	Pernas retas (em pé) ou apoio sobre as coxas (sentado).
+662	Suba na ponta dos pés o máximo que puder.
+663	Desça devagar até alongar totalmente.
+664	Ajuste o banco e segure os pegadores.
+665	Solte o ar e enrole o tronco para a frente, curvando a coluna.
+666	Contraia o abdômen por 1 s.
+667	Sentado ou em pé, ereto, com o quadril voltado para a frente.
+668	Gire o tronco para um lado contra a resistência.
+669	Volte devagar ao centro.
+670	Faça todas as repetições e depois troque de lado.
+671	Fique em posição com o abdômen firme.
+672	Fique parado contra a resistência.
+673	Respire de forma constante.
+674	Solte devagar.
+675	Comece em um nível leve por 2 minutos.
+676	Aumente para um esforço moderadamente intenso.
+677	Mantenha um ritmo constante e boa postura.
+678	Termine com 2 minutos leves.
+679	Halteres (suporte)
+680	Barra olímpica + anilhas
+681	Barra W / barras fixas
+682	Kettlebells
+683	Banco reto
+684	Banco ajustável
+685	Gaiola / rack de agachamento
+686	Máquina Smith
+687	Banco Scott
+688	Banco declinado / de abdominais
+689	Polia simples (ajustável)
+690	Crossover / polia dupla
+691	Puxada alta
+692	Remada baixa sentada (polia baixa)
+693	Máquina de supino
+694	Máquina de desenvolvimento
+695	Voador / crucifixo inverso
+696	Máquina de remada sentada (apoio no peito)
+697	Cadeira extensora
+698	Mesa ou cadeira flexora
+699	Abdução de quadril (parte externa da coxa)
+700	Adução de quadril (parte interna da coxa)
+701	Máquina de extensão de tríceps
+702	Rotação de tronco (giro sentado)
+703	Máquina de abdominal
+704	Panturrilha sentado
+705	Supino articulado de anilhas
+706	Supino inclinado articulado de anilhas
+707	Remada articulada de anilhas
+708	Leg press
+709	Hack squat
+710	Máquina de elevação pélvica
+711	Barra fixa
+712	Máquina assistida de barra / paralelas
+713	Estação de elevação de joelhos (cadeira do capitão)
+714	Banco de extensão lombar 45°
+715	Fitas de suspensão TRX
+716	Esteiras
+717	Elípticos
+718	Simulador de escada
+719	Bicicleta ergométrica (horizontal)
+720	Bicicleta ergométrica (vertical)
+721	Remo ergômetro
+722	Supino reto com barra
+723	Deite no banco com os olhos sob a barra e os pés no chão.
+724	Pegada um pouco mais larga que os ombros, junte as escápulas.
+725	Tire a barra do suporte e desça até o meio do peito, cotovelos a uns 45° do corpo.
+726	Empurre até esticar os braços. Use um ajudante ou as travas de segurança com peso alto.
+727	Mantenha o bumbum no banco e os punhos alinhados sobre os cotovelos.
+728	Supino reto no Smith
+729	Coloque um banco reto sob a barra do Smith, com a barra acima da parte baixa do peito.
+730	Pegada um pouco mais larga que os ombros; gire a barra para soltá-la.
+731	Desça devagar até o peito, cotovelos a uns 45° do corpo.
+732	Empurre até esticar os braços; no fim, gire a barra para prendê-la.
+733	Ajuste as travas de segurança logo acima da altura do peito.
+734	Supino reto com halteres
+735	Sente com os halteres nas coxas, deite e leve-os à altura do peito.
+736	Palmas para a frente (ou um pouco para dentro), escápulas para trás.
+737	Empurre até os halteres quase se tocarem acima do peito.
+738	Desça devagar até sentir o peito alongar.
+739	Halteres são mais gentis com os ombros do que a barra.
+740	Supino inclinado com halteres
+741	Ajuste o banco a 30°. Recoste com os halteres na altura dos ombros.
+742	Empurre para cima e um pouco para dentro, sobre a parte alta do peito.
+743	Desça com controle até os cotovelos ficarem um pouco abaixo da linha do banco.
+744	Mantenha as escápulas juntas o tempo todo.
+745	Trabalha a parte alta do peito.
+746	Supino inclinado no Smith
+747	Coloque um banco ajustável a 30° sob a barra do Smith.
+748	A barra deve descer até a parte alta do peito.
+749	Solte a barra e desça devagar até a parte alta do peito.
+750	Empurre até esticar os braços e prenda de novo.
+751	Supino na máquina
+752	Ajuste o banco para os pegadores ficarem na altura do meio do peito.
+753	Sente com as costas apoiadas e os pés no chão.
+754	Empurre os pegadores para a frente até os braços ficarem quase retos.
+755	Volte devagar até sentir o peito alongar.
+756	Um ótimo primeiro supino, seguro para iniciantes.
+757	Supino articulado de anilhas
+758	Coloque as mesmas anilhas dos dois lados. Ajuste o banco para os pegadores ficarem no meio do peito.
+759	Recoste, segure os pegadores, escápulas para trás.
+760	Empurre para a frente até os braços ficarem quase retos.
+761	Desça devagar. Cada braço se move sozinho: mantenha os dois iguais.
+762	O peso mostrado é o total de anilhas.
+763	Supino inclinado articulado de anilhas
+764	Coloque as mesmas anilhas. Ajuste o banco para os pegadores começarem na altura da parte alta do peito.
+765	Recoste com o peito para cima e as escápulas juntas.
+766	Empurre para cima e para a frente até os braços ficarem quase retos.
+767	Desça devagar até um alongamento confortável.
+768	Flexão de braço
+769	Mãos um pouco mais abertas que os ombros, corpo em linha reta.
+770	Desça o peito até quase o chão, cotovelos a uns 45°.
+771	Muito difícil? Apoie as mãos num banco ou faça com os joelhos no chão.
+772	Crucifixo no voador
+773	Ajuste o banco para os pegadores ficarem na altura do peito. Coloque os braços da máquina na posição da frente.
+774	Sente com as costas no apoio e segure os pegadores com os cotovelos um pouco dobrados.
+775	Junte os pegadores na frente do peito.
+776	Abra devagar até sentir alongar, sem passar da linha dos ombros.
+777	Crucifixo no crossover
+778	Coloque as duas polias na altura dos ombros com pegadores simples.
+779	Dê um passo à frente com um pé na frente, tronco levemente inclinado.
+780	Com os cotovelos um pouco dobrados, junte os pegadores na frente do peito.
+781	Volte devagar e com controle.
+782	O peso mostrado é por lado.
+783	Crucifixo na polia de baixo para cima (peito alto)
+784	Coloque as duas polias na posição mais baixa.
+785	Fique no meio, dê um passo à frente, braços para baixo e um pouco para trás.
+786	Leve os pegadores para cima e para o centro até a altura do peito alto.
+787	Crucifixo na polia de cima para baixo
+788	Coloque as duas polias no alto.
+789	Dê um passo à frente com leve inclinação, braços bem abertos.
+790	Puxe os pegadores para baixo e junte-os na frente do quadril.
+791	Crucifixo com halteres
+792	Deite num banco, halteres acima do peito, palmas uma para a outra.
+793	Com os cotovelos levemente dobrados, abra bem os braços.
+794	Pare quando sentir alongar (cotovelos mais ou menos na linha do banco).
+795	Junte os halteres de novo, apertando.
+796	Crucifixo inclinado com halteres
+797	Ajuste o banco a 30°.
+798	Halteres acima da parte alta do peito, palmas uma para a outra.
+799	Abra bem com os cotovelos suaves até sentir alongar.
+800	Junte-os de novo sobre o peito.
+801	Desenvolvimento sentado com halteres
+802	Coloque o banco quase reto (80–90°). Halteres na altura dos ombros, palmas para a frente.
+803	Abdômen firme e costas apoiadas.
+804	Empurre até esticar os braços acima da cabeça.
+805	Desça até a altura das orelhas.
+806	Desenvolvimento na máquina
+807	Ajuste o banco para os pegadores começarem na altura dos ombros.
+808	Sente com as costas no apoio e segure os pegadores.
+809	Desça devagar até o início.
+810	Desenvolvimento sentado no Smith
+811	Coloque um banco reto sob a barra do Smith, com a barra passando logo à frente do rosto.
+812	Pegada um pouco mais larga que os ombros.
+813	Solte a barra e desça até a altura do queixo.
+814	Empurre até esticar os braços.
+815	Desenvolvimento militar em pé com barra
+816	Coloque a barra no rack na altura da clavícula. Pegada logo por fora dos ombros.
+817	Tire a barra, firme o abdômen e contraia os glúteos.
+818	Empurre a barra reto para cima, levando a cabeça um pouco para trás para ela passar.
+819	Estenda tudo em cima e desça até a clavícula.
+820	Desenvolvimento Arnold
+821	Sente ereto, halteres na frente dos ombros, palmas viradas para você.
+822	Ao subir, gire as palmas para a frente.
+823	Termine com os braços esticados acima da cabeça.
+824	Desfaça o giro ao descer.
+825	Elevação lateral com halteres
+826	Fique em pé, ereto, halteres ao lado do corpo, cotovelos levemente dobrados.
+827	Levante os braços para os lados até a altura dos ombros.
+828	Guie com os cotovelos; dedinhos um pouco para cima.
+829	Desça devagar, sem balançar.
+830	Elevação lateral na polia
+831	Coloque uma polia na posição mais baixa com um pegador simples.
+832	Fique de lado e segure o pegador com a mão de fora, cruzando o corpo.
+833	Levante o braço para o lado até a altura do ombro.
+834	Desça devagar. Faça todas as repetições e depois troque de lado.
+835	Voador inverso
+836	Coloque os braços da máquina na posição de trás. Sente de frente para o apoio.
+837	Segure os pegadores na altura dos ombros com os braços quase retos.
+838	Face pull na polia
+839	Coloque a polia na altura da cabeça com a corda.
+840	Segure as duas pontas da corda, palmas para dentro, e dê um passo para trás.
+841	Puxe a corda em direção ao rosto, separando as pontas ao lado das orelhas.
+842	Junte as escápulas e volte devagar.
+843	Ótimo para a postura e a saúde dos ombros.
+844	Crucifixo inverso inclinado com halteres
+845	Incline o quadril para a frente, costas retas, halteres pendurados sob o peito.
+846	Com os cotovelos suaves, levante os braços para os lados.
+847	Contraia a parte alta das costas em cima.
+848	Puxada alta com pegada aberta
+849	Ajuste o apoio das coxas para as pernas ficarem presas.
+850	Segure a barra mais aberta que os ombros e sente com os braços esticados.
+851	Puxe a barra até a parte alta do peito, guiando com os cotovelos.
+852	Deixe subir devagar até os braços ficarem retos.
+853	Peito para cima; não incline demais para trás.
+854	Puxada com pegada fechada (triângulo)
+855	Coloque o triângulo. Prenda as pernas sob o apoio.
+856	Pegada com as palmas uma para a outra, braços retos.
+857	Puxe o triângulo até a parte alta do peito, cotovelos junto ao corpo.
+858	Barra fixa assistida (supinada)
+859	Escolha o peso da assistência: MAIS peso = MAIS fácil.
+860	Segure a barra com as palmas viradas para você, na largura dos ombros.
+861	Ajoelhe (ou fique em pé) no apoio e fique pendurado com os braços retos.
+862	Suba até o queixo passar da barra e desça devagar.
+863	Evolua diminuindo a assistência.
+864	Barra fixa
+865	Pendure-se na barra, mãos um pouco mais abertas que os ombros, palmas para fora.
+866	Leve o peito em direção à barra, puxando os cotovelos para baixo.
+867	Passe o queixo acima da barra.
+868	Desça com controle até esticar os braços.
+869	Pulldown na polia com braços retos
+870	Coloque uma polia alta com barra reta ou corda.
+871	Dê um passo para trás, incline um pouco, braços retos à frente na altura da cabeça.
+872	Com os braços retos, leve a barra até as coxas.
+873	Remada baixa sentada
+874	Sente com os pés na plataforma, joelhos um pouco dobrados, e segure o triângulo.
+875	Sente ereto com os braços retos.
+876	Puxe o pegador até a barriga, juntando as escápulas.
+877	Volte devagar sem arredondar as costas.
+878	Remada cruzada sentada na polia
+879	Sente de frente para as polias baixas, com um pegador em cada mão, cruzados (pegador direito na mão esquerda).
+880	Puxe os dois pegadores para trás, em direção às laterais do corpo.
+881	Remada na máquina com apoio no peito
+882	Ajuste o banco para os pegadores ficarem na altura do peito e o peito apoiado.
+883	Segure os pegadores com os braços retos.
+884	Puxe para trás, juntando as escápulas.
+885	Remada unilateral sentada na máquina
+886	Coloque as anilhas. Ajuste o banco para o peito ficar no apoio e os pegadores ao alcance.
+887	Segure um ou os dois pegadores com os braços retos.
+888	Leve o(s) cotovelo(s) para trás, passando do corpo.
+889	Volte devagar. Se fizer um braço por vez, faça todas as repetições e depois troque.
+890	Remada unilateral com halter
+891	Apoie um joelho e uma mão num banco reto, costas retas.
+892	Segure um halter com a outra mão, braço esticado.
+893	Puxe o halter até o quadril, cotovelo junto ao corpo.
+894	Remada com halteres apoiada no banco
+895	Ajuste o banco a 30–45° e deite de bruços nele.
+896	Deixe os halteres pendurados retos para baixo.
+897	Puxe os dois para cima, juntando as escápulas.
+898	Leve para a lombar.
+899	Remada curvada com barra
+900	Segure a barra com pegada pronada e incline o quadril até o tronco ficar a uns 45°.
+901	Costas retas e joelhos levemente dobrados.
+902	Puxe a barra até a parte de baixo das costelas.
+903	Desça até esticar os braços.
+904	Remada no TRX
+905	Segure os pegadores do TRX, ande com os pés para a frente e incline para trás com os braços retos.
+906	Mantenha o corpo em linha reta.
+907	Puxe o peito até os pegadores.
+908	Desça devagar. Leve os pés mais à frente para dificultar.
+909	Encolhimento com halteres
+910	Fique em pé, ereto, halteres ao lado do corpo.
+911	Segure um segundo em cima.
+912	Desça devagar. Não gire os ombros.
+913	Encolhimento no Smith
+914	Coloque a barra do Smith na altura do meio da coxa.
+915	Pegada na largura dos ombros, em pé, ereto, braços retos.
+916	Suba os ombros em linha reta.
+917	Rosca direta com halteres
+918	Fique em pé, ereto, halteres ao lado do corpo, palmas para a frente.
+919	Cotovelos colados ao corpo.
+920	Suba os pesos até a altura dos ombros.
+921	Desça devagar até esticar os braços.
+922	Rosca martelo
+923	Segure os halteres ao lado do corpo com as palmas uma para a outra.
+924	Cotovelos parados.
+925	Suba com os polegares para cima.
+926	Rosca com barra W
+927	Segure a barra W nas partes inclinadas, palmas para cima.
+928	Cotovelos ao lado do corpo.
+929	Suba a barra até o peito.
+930	Desça devagar sem balançar.
+931	Rosca Scott
+932	Ajuste o banco para as axilas ficarem na borda do apoio.
+933	Segure uma barra W (ou halter) com os braços no apoio.
+934	Suba até os antebraços ficarem na vertical.
+935	Desça devagar, parando pouco antes de travar os cotovelos.
+936	Rosca na polia
+937	Coloque a polia embaixo com uma barra reta ou corda.
+938	Fique de frente para a máquina, cotovelos ao lado do corpo.
+939	Suba o pegador até o peito.
+940	Rosca inclinada com halteres
+941	Ajuste o banco a 45–60° e recoste com os braços pendurados retos.
+942	Palmas para a frente.
+943	Suba os dois halteres sem mexer a parte de cima dos braços.
+944	Desça devagar até embaixo.
+945	Tríceps na polia com corda
+946	Coloque a polia no alto com a corda.
+947	Cotovelos colados ao lado do corpo, antebraços para cima.
+948	Empurre a corda para baixo e separe as pontas embaixo.
+949	Volte devagar até 90°.
+950	Tríceps na polia com barra reta
+951	Coloque a polia no alto com uma barra reta ou angulada.
+952	Pegada pronada, cotovelos colados ao corpo.
+953	Empurre a barra para baixo até esticar os braços.
+954	Tríceps francês na polia
+955	Coloque a polia embaixo com uma corda. De costas para a máquina, corda atrás da cabeça.
+956	Dê um passo à frente com um pé na frente, cotovelos apontando para a frente.
+957	Estique os braços acima da cabeça.
+958	Dobre os cotovelos devagar para trás.
+959	Tríceps francês sentado com halter
+960	Sente ereto e segure um halter com as duas mãos acima da cabeça.
+961	Cotovelos para cima e próximos.
+962	Desça o halter atrás da cabeça.
+963	Estique os braços de volta.
+964	Tríceps testa com barra W
+965	Deite num banco segurando uma barra W acima do peito.
+966	Sem mexer a parte de cima dos braços, dobre os cotovelos para levar a barra em direção à testa.
+967	Pare logo acima da cabeça.
+968	Estique os braços de volta.
+969	Supino fechado no Smith
+970	Deite sob a barra do Smith, pegada na largura dos ombros.
+971	Solte a barra e desça até a parte baixa do peito, cotovelos junto ao corpo.
+972	Prenda a barra no fim.
+973	Paralelas assistidas
+974	Segure os pegadores das paralelas e ajoelhe no apoio com os braços retos.
+975	Desça até a parte de cima dos braços ficar mais ou menos paralela ao chão.
+976	Extensão de tríceps na máquina
+977	Ajuste o banco para os cotovelos ficarem alinhados com o eixo da máquina.
+978	Apoie a parte de cima dos braços no apoio e segure os pegadores.
+979	Empurre para baixo ou para a frente até esticar os braços.
+980	Tríceps banco
+981	Sente na beira de um banco, mãos ao lado do quadril.
+982	Tire o bumbum do banco, pernas dobradas.
+983	Dobre os cotovelos para descer o corpo uns 10–15 cm.
+984	Empurre de volta.
+985	Leg press
+986	Sente com as costas apoiadas e os pés na largura dos ombros, no meio da plataforma.
+987	Solte as travas de segurança.
+988	Desça até os joelhos ficarem a uns 90°, com a lombar no encosto.
+989	Empurre de volta sem travar os joelhos.
+990	Pés mais altos = mais glúteos; mais baixos = mais quadríceps.
+991	Agachamento livre com barra
+992	Coloque a barra no rack na altura dos ombros e as travas de segurança logo abaixo da profundidade do agachamento.
+993	Barra na parte alta das costas, pés na largura dos ombros, pontas um pouco para fora.
+994	Firme o abdômen, desça para trás e para baixo até as coxas ficarem pelo menos paralelas.
+995	Suba empurrando com o pé inteiro.
+996	Agachamento no Smith
+997	Barra na parte alta das costas, pés um pouco à frente da barra.
+998	Solte a barra.
+999	Agache até as coxas ficarem mais ou menos paralelas.
+1000	Suba de volta e prenda a barra.
+1001	Agachamento goblet
+1002	Segure um halter na vertical junto ao peito.
+1003	Pés na largura dos ombros, pontas um pouco para fora.
+1004	Agache entre os joelhos, peito para cima.
+1005	Levante-se de novo.
+1006	Agachamento sumô com halter
+1007	Pernas bem abertas, pontas para fora, um halter entre as pernas.
+1008	Mantenha o peito para cima.
+1009	Agache empurrando os joelhos para fora, na direção dos pés.
+1010	Contraia os glúteos para subir.
+1011	Máquina de hack squat
+1012	Fique na plataforma com as costas e os ombros nos apoios.
+1013	Pés na largura dos ombros. Solte as travas de segurança.
+1014	Desça até os joelhos ficarem a 90° ou um pouco mais.
+1015	Levantamento terra romeno com barra
+1016	Segure a barra na altura das coxas, pés na largura do quadril, joelhos suaves.
+1017	Leve o quadril para trás, deslizando a barra pelas pernas.
+1018	Costas retas; pare quando sentir os posteriores bem alongados.
+1019	Empurre o quadril para a frente para subir.
+1020	Levantamento terra romeno com halteres
+1021	Segure os halteres na frente das coxas, joelhos suaves.
+1022	Leve o quadril para trás, halteres perto das pernas.
+1023	Desça até sentir os posteriores alongarem, costas retas.
+1024	Levantamento terra romeno no Smith
+1025	Coloque a barra do Smith no meio da coxa e fique perto, pés na largura do quadril.
+1026	Solte a barra e leve o quadril para trás, costas retas.
+1027	Desça até sentir os posteriores alongarem.
+1028	Empurre o quadril para a frente para subir.
+1029	Levantamento terra convencional
+1030	Barra sobre o meio do pé, pés na largura do quadril. Pegada logo por fora dos joelhos.
+1031	Canelas na barra, peito para cima, costas retas, abdômen bem firme.
+1032	Empurre o chão e fique em pé, ereto.
+1033	Desça levando o quadril para trás.
+1034	Extensão lombar 45°
+1035	Coloque o apoio logo abaixo dos ossos do quadril e os calcanhares sob o rolo.
+1036	Cruze os braços sobre o peito.
+1037	Desça o tronco dobrando no quadril.
+1038	Contraia os glúteos para voltar à linha reta.
+1039	Pull-through na polia
+1040	Coloque uma polia baixa com a corda. De costas, corda entre as pernas.
+1041	Dê dois passos à frente, pés afastados.
+1042	Incline o quadril deixando a corda ir para trás entre as pernas.
+1043	Contraia os glúteos para ficar em pé, ereto.
+1044	Avanço caminhando com halteres
+1045	Segure os halteres ao lado do corpo.
+1046	Dê um passo longo à frente e desça o joelho de trás em direção ao chão.
+1047	Empurre com o calcanhar da frente e vá para o próximo avanço.
+1048	As repetições contam por perna.
+1049	Avanço para trás com halteres
+1050	Fique em pé, ereto, segurando os halteres.
+1051	Dê um passo para trás com um pé e desça o joelho de trás.
+1052	Empurre com o calcanhar da frente para voltar.
+1053	Alterne as pernas; as repetições contam por perna.
+1054	Mais leve para os joelhos do que o avanço para a frente.
+1055	Agachamento búlgaro
+1056	Fique de frente, com um banco atrás, e apoie nele o peito do pé de trás.
+1057	Desça reto até a coxa da frente ficar mais ou menos paralela.
+1058	Suba empurrando com o calcanhar da frente. Faça todas as repetições e depois troque.
+1059	Subida no banco com halteres
+1060	Fique de frente para um banco reto segurando halteres.
+1061	Coloque um pé inteiro no banco.
+1062	Empurre com esse calcanhar para subir no banco.
+1063	Desça devagar. Faça todas as repetições e depois troque.
+1064	Agachamento afundo no Smith
+1065	Barra na parte alta das costas, um pé à frente e um atrás, em passo longo.
+1066	Desça o joelho de trás em direção ao chão.
+1067	Suba empurrando com o pé da frente. Faça todas as repetições e depois troque.
+1068	Cadeira extensora
+1069	Ajuste o encosto para os joelhos ficarem alinhados com o eixo da máquina.
+1070	Coloque o apoio das canelas logo acima dos tornozelos.
+1071	Estique totalmente as pernas e contraia o quadríceps.
+1072	Máquina flexora
+1073	Ajuste para os joelhos ficarem alinhados com o eixo e trave o apoio das coxas.
+1074	O apoio das pernas fica logo acima dos calcanhares.
+1075	Leve os calcanhares para trás ou para baixo o máximo possível.
+1076	Elevação pélvica com barra
+1077	Sente no chão com a parte alta das costas num banco e a barra sobre o quadril (use uma almofada).
+1078	Pés apoiados na largura do quadril, joelhos dobrados.
+1079	Suba o quadril até o corpo ficar reto dos ombros aos joelhos.
+1080	Contraia os glúteos em cima e desça devagar.
+1081	Elevação pélvica no Smith
+1082	Coloque um banco de lado perto do Smith. Parte alta das costas no banco e a barra sobre o quadril (com almofada).
+1083	Pés apoiados, joelhos dobrados.
+1084	Solte a barra e suba o quadril até ficar em linha reta.
+1085	Contraia e desça devagar.
+1086	Máquina de elevação pélvica
+1087	Sente com a parte alta das costas no apoio e o cinto ou almofada sobre o quadril.
+1088	Pés apoiados na plataforma.
+1089	Suba o quadril até ficar reto.
+1090	Contraia os glúteos e desça devagar.
+1091	Ponte de glúteos
+1092	Deite de costas, joelhos dobrados, pés apoiados perto do bumbum.
+1093	Empurre com os calcanhares para subir o quadril.
+1094	Contraia os glúteos em cima por 2 segundos.
+1095	Máquina de abdução
+1096	Sente com os apoios por fora dos joelhos.
+1097	Sente ereto e segure os pegadores.
+1098	Afaste os joelhos para fora o máximo possível.
+1099	Incline um pouco para a frente para trabalhar mais o glúteo superior.
+1100	Máquina de adução
+1101	Sente com os apoios por dentro dos joelhos, pernas afastadas.
+1102	Abra devagar.
+1103	Coice de glúteo na polia
+1104	Prenda uma tornozeleira numa polia baixa e coloque-a num tornozelo.
+1105	Fique de frente para a máquina, segure-se nela, tronco levemente inclinado.
+1106	Leve a perna reta para trás, contraindo o glúteo.
+1107	Volte devagar. Faça todas as repetições e depois troque.
+1108	Panturrilha em pé no Smith
+1109	Barra na parte alta das costas, parte da frente dos pés numa anilha ou degrau.
+1110	Suba na ponta dos pés o máximo que puder.
+1111	Desça os calcanhares abaixo do degrau para alongar.
+1112	Panturrilha no leg press
+1113	Sente no leg press e coloque a parte da frente dos pés na borda de baixo da plataforma.
+1114	Pernas quase retas. Mantenha as travas de segurança fechadas, se possível.
+1115	Empurre a plataforma com a ponta dos pés.
+1116	Deixe os calcanhares voltarem para alongar.
+1117	Panturrilha unilateral com halter
+1118	Fique num pé só num degrau ou anilha, com um halter do mesmo lado.
+1119	Segure em algo com a outra mão para se equilibrar.
+1120	Suba na ponta do pé.
+1121	Desça o calcanhar devagar. Faça todas as repetições e depois troque.
+1122	Máquina de panturrilha sentado
+1123	Sente com o apoio sobre a parte de baixo das coxas e a frente dos pés na plataforma.
+1124	Solte a alavanca de segurança.
+1125	Suba os calcanhares o máximo possível.
+1126	Prancha
+1127	Antebraços no chão, cotovelos sob os ombros.
+1128	Corpo em linha reta da cabeça aos calcanhares.
+1129	Contraia os glúteos e firme a barriga.
+1130	Segure pelo tempo indicado, respirando normalmente.
+1131	Prancha lateral
+1132	Deite de lado com o cotovelo sob o ombro.
+1133	Suba o quadril até o corpo ficar reto.
+1134	Segure pelo tempo indicado.
+1135	Troque de lado (o tempo é por lado).
+1136	Elevação de joelhos com apoio nos braços
+1137	Fique na estação de elevação de joelhos, antebraços nos apoios e costas no encosto.
+1138	Deixe as pernas penduradas retas.
+1139	Suba os joelhos em direção ao peito, enrolando a pelve para cima.
+1140	Elevação de pernas na barra
+1141	Pendure-se numa barra fixa.
+1142	Pernas retas (ou dobradas para facilitar).
+1143	Suba as pernas até a altura do quadril ou mais.
+1144	Abdominal ajoelhado na polia
+1145	Coloque uma polia alta com a corda. Ajoelhe de frente para ela, corda ao lado da cabeça.
+1146	Mantenha o quadril parado.
+1147	Enrole o tronco para baixo, levando os cotovelos aos joelhos.
+1148	Lenhador na polia
+1149	Coloque uma polia alta. Fique de lado e segure o pegador com as duas mãos.
+1150	Puxe na diagonal para baixo, cruzando o corpo até o quadril oposto.
+1151	Gire o tronco e gire o pé de trás.
+1152	Volte devagar. Faça todas as repetições e depois troque de lado.
+1153	Lenhador com halter
+1154	Segure um halter com as duas mãos acima de um ombro.
+1155	Leve-o na diagonal para baixo até o quadril oposto, girando o tronco.
+1156	Dobre um pouco os joelhos embaixo.
+1157	Volte ao início. Faça todas as repetições e depois troque.
+1158	Pallof press
+1159	Coloque uma polia na altura do peito. Fique de lado e segure o pegador no peito.
+1160	Afaste-se até o cabo ficar esticado.
+1161	Empurre o pegador reto para a frente, resistindo à puxada.
+1162	Traga de volta ao peito. Faça todas as repetições e depois troque.
+1163	Dead bug (inseto morto)
+1164	Deite de costas, braços para cima, joelhos dobrados a 90° sobre o quadril.
+1165	Pressione a lombar contra o chão.
+1166	Estique devagar um braço acima da cabeça e a perna oposta.
+1167	Volte e troque de lado.
+1168	Abdominal no banco declinado
+1169	Sente no banco declinado e prenda os pés sob os rolos.
+1170	Deite para trás até as costas apoiarem, mãos cruzadas sobre o peito.
+1171	Solte o ar e suba até o tronco ficar ereto.
+1172	Desça devagar, vértebra por vértebra, sem se jogar.
+1173	Muito difícil? Diminua a inclinação ou estique os braços à frente. Mais difícil: mãos perto das orelhas ou uma anilha sobre o peito.
+1174	Máquina de abdominal
+1175	Ajuste o banco, segure os pegadores ou apoie os braços nos apoios.
+1176	Enrole o tronco para a frente e para baixo.
+1177	Contraia o abdômen.
+1178	Máquina de rotação de tronco
+1179	Sente de frente para os pegadores e ajuste o ângulo inicial para um lado.
+1180	Firme as pernas contra os apoios e segure os pegadores.
+1181	Gire devagar a parte de cima do corpo para o outro lado.
+1182	Movimente-se devagar e mantenha uma amplitude confortável para as costas.
+1183	Caminhada do fazendeiro
+1184	Pegue halteres pesados, um em cada mão.
+1185	Fique em pé, ereto, ombros para trás.
+1186	Ande com passos curtos e firmes pelo tempo indicado.
+1187	Coloque os pesos no chão com cuidado.
+1188	Intervalos na esteira
+1189	2 min de caminhada ou trote leve para aquecer.
+1190	Depois repita: 1 min rápido (esforço forte) + 1 min de caminhada leve.
+1191	Termine com 2 min de caminhada leve.
+1192	Use as barras laterais para sair com segurança ao parar.
+1193	Caminhada inclinada na esteira
+1194	Coloque a inclinação em 8–12 % e a velocidade em 4.5–5.5 km/h.
+1195	Ande sem se segurar nas barras.
+1196	Busque um esforço em que dá para falar, mas com dificuldade.
+1197	Diminua a inclinação no último minuto.
+1198	Baixo impacto e ótimo para perder gordura.
+1199	Elíptico
+1200	Suba e segure os pegadores móveis.
+1201	Comece com resistência leve por 2 minutos.
+1202	Aumente a resistência para um esforço constante e moderadamente forte.
+1203	Empurre e puxe com os braços também.
+1204	Simulador de escada
+1205	Suba e comece em velocidade lenta.
+1206	Fique ereto; segure as barras de leve só para se equilibrar.
+1207	Pise com o pé inteiro em cada degrau.
+1208	Aumente a velocidade aos poucos.
+1209	Bicicleta horizontal
+1210	Ajuste o banco para o joelho ficar levemente dobrado embaixo.
+1211	Comece leve por 2 minutos.
+1212	Depois 30 s forte / 60 s leve, ou um ritmo moderado constante.
+1213	Termine leve nos últimos 2 minutos.
+1214	A mais leve para os joelhos.
+1215	Bicicleta vertical
+1216	Remo ergômetro
+1217	Prenda os pés nas tiras e segure o puxador.
+1218	Empurre primeiro com as pernas, depois incline para trás e por fim puxe com os braços.
+1219	Volte na ordem inversa: braços, tronco, pernas.
+1220	Mantenha um ritmo constante.

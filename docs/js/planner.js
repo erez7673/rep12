@@ -98,7 +98,18 @@ const TPL_DAYS = {
     ['lat-pulldown', 'close-pulldown', 'assisted-chin'], ['glute-bridge', 'hip-thrust-machine']],
   shortC: [['stepup', 'reverse-lunge', 'split-squat'], ['db-bench', 'machine-chest-press', 'pushup'],
     ['seated-cable-row', 'machine-row', 'db-row'], ['back-ext', 'db-rdl', 'glute-bridge']],
+  // Seated days: every exercise is done sitting on a machine seat or bench (or lying on a bench), with no standing
+  // and no floor work, for wheelchair users and people with balance or leg limitations. Legs only on machines, day B.
+  seatA: [['machine-chest-press', 'plate-chest-press', 'db-bench'], ['machine-row', 'seated-cable-row', 'plate-row'],
+    ['machine-shoulder-press', 'db-shoulder-press'], ['preacher-curl', 'incline-db-curl'], ['triceps-machine', 'db-overhead-ext'], ['ab-machine', 'rotary-torso']],
+  seatB: [['lat-pulldown', 'close-pulldown'], ['pec-deck', 'machine-chest-press', 'db-fly'], ['reverse-pec-deck', 'incline-db-row'],
+    ['leg-extension', 'leg-press'], ['leg-curl', 'hip-thrust-machine'], ['rotary-torso', 'ab-machine']],
+  seatC: [['plate-incline-press', 'db-incline', 'smith-incline'], ['seated-cable-row', 'crossover-row', 'machine-row'],
+    ['arnold-press', 'machine-shoulder-press', 'db-shoulder-press'], ['incline-db-curl', 'preacher-curl'], ['db-overhead-ext', 'triceps-machine', 'skull-crusher'], ['ab-machine', 'rotary-torso']],
 };
+// Exercises done sitting on a seat or bench, or lying on a bench (never on the floor or standing), for seated plans.
+const FLOOR = ['pushup', 'glute-bridge', 'plank', 'side-plank', 'dead-bug', 'decline-situp', 'bench-dip', 'hip-thrust', 'smith-hip-thrust', 'rower'];
+export const isSeatedEx = (e) => ['seated', 'incline', 'lying'].includes(e?.pos) && !FLOOR.includes(e.id);
 
 const AB_A = ['chest', 'biceps', 'back'], AB_B = ['shoulders', 'triceps', 'legs'];
 const UP_AREAS = ['chest', 'back', 'shoulders', 'biceps', 'triceps'], LOW_AREAS = ['legs', 'glutes', 'calves', 'core'];
@@ -115,6 +126,8 @@ export const TEMPLATES = {
   upperlower: { name: 'Upper / Lower · 4 days a week', short: '4 days a week', days: ['upper', 'lower', 'upper', 'lower'], perDay: 6, goalRx: true,
     areas: [UP_AREAS, LOW_AREAS, UP_AREAS, LOW_AREAS],
     blurb: 'Upper body and lower body days in turn: chest, back, shoulders and arms, then legs, glutes, calves and core. Every area is trained twice a week. Sets and reps follow your goal.' },
+  seated: { name: 'Seated · 3 days a week', short: '3 days a week', days: ['seatA', 'seatB', 'seatC'], perDay: 6, seated: true,
+    blurb: 'Every exercise is done sitting on a machine or bench, with no standing and no floor work – for wheelchair users and anyone with balance or leg limitations. Day B has two leg machines; remove them if they don\'t suit you. Starts light, with 2–3 sets of 10–15 reps.' },
 };
 // The app-built plan that uses the gentle sets and reps of TPL_RX (null for split plans, which follow the goal).
 export const tplRx = (plan) => (plan?.template && TEMPLATES[plan.template] && !TEMPLATES[plan.template].goalRx) ? plan.template : null;
@@ -142,14 +155,14 @@ export const templateDayText = (key, di) => {
   return listJoin(a ? a.map(k => AREAS[k]?.name).filter(Boolean) : templateExNames(key, di));
 };
 
-function resolveSlot(st, ids, taken) {
+function resolveSlot(st, ids, taken, seated = false) {
   const inj = st.injuries || [], no = st.dislikes || [];
   for (const id of ids) {
     const e = exById(id);
     if (e && isAvailable(e) && !taken.includes(id) && !no.includes(id) && !e.avoid.some(a => inj.includes(a))) return e;
   }
   const pat = exById(ids[0])?.pat;
-  return pat ? candidates({ ...st, level: 'beginner' }, pat, taken)[0] || null : null;
+  return pat ? candidates({ ...st, level: 'beginner' }, pat, taken).filter(e => !seated || isSeatedEx(e))[0] || null : null;
 }
 
 export function generateTemplatePlan(p, key) {
@@ -162,12 +175,12 @@ export function generateTemplatePlan(p, key) {
     let items = [];
     if (muscles.length) items = itemsForAreas(st, muscles, rng(p.id + muscles.join() + di), used, [], tpl.perDay);
     else for (const alts of TPL_DAYS[dk]) {
-      const ex = resolveSlot(st, alts, items.map(i => i.exId));
+      const ex = resolveSlot(st, alts, items.map(i => i.exId), tpl.seated);
       if (ex) items.push({ exId: ex.id, pat: ex.pat });
     }
     let cardio = null;
     if (st.cardio) {
-      const c = resolveSlot(st, ['incline-walk', 'elliptical', 'bike', 'upright-bike'], []);
+      const c = resolveSlot(st, tpl.seated ? ['upright-bike', 'bike'] : ['incline-walk', 'elliptical', 'bike', 'upright-bike'], [], tpl.seated);
       if (c) cardio = { exId: c.id, min: 8 };
     }
     const day = { key: dk, name: dayName(di), items, cardio, ...(muscles.length ? { muscles } : {}) };
@@ -623,6 +636,7 @@ export function swapOptions(stats, plan, dayIdx, itemIdx) {
   const pats = AREAS[area]?.pats || [];
   return allExercises()
     .filter(e => e.pat !== 'cardio' && !inDay.has(e.id) && isAvailable(e) && !no.includes(e.id) && !e.avoid.some(a => inj.includes(a))
-      && (areaOfEx(e) === area || pats.includes(e.pat)))
+      && (areaOfEx(e) === area || pats.includes(e.pat))
+      && (!TEMPLATES[plan.template]?.seated || isSeatedEx(e))) // a Seated plan only offers seated exercises
     .sort((a, b) => (b.pat === it.pat) - (a.pat === it.pat) || (areaOfEx(b) === area) - (areaOfEx(a) === area) || a.iso - b.iso || a.name.localeCompare(b.name));
 }

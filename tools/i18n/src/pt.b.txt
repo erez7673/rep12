@@ -619,3 +619,6 @@
 1230	Dois treinos que se alternam, com três áreas musculares cada: A é peito, bíceps e costas; B é ombros, tríceps e pernas. Cada área é treinada duas vezes por semana. As séries e repetições seguem o seu objetivo.
 1231	Superior / Inferior · 4 dias por semana
 1232	Dias de parte superior e inferior que se alternam: peito, costas, ombros e braços; depois pernas, glúteos, panturrilhas e core. Cada área é treinada duas vezes por semana. As séries e repetições seguem o seu objetivo.
+1233	Planos com uma estrutura semanal fixa: planos de corpo inteiro para 2 ou 3 dias por semana, o Plano AB e Superior / Inferior para 4 dias por semana, e um plano Sentado sem exercícios em pé nem no chão. Escolha um no lugar de um plano personalizado, se preferir.
+1234	Sentado · 3 dias por semana
+1235	Todos os exercícios são feitos sentado em uma máquina ou banco, sem ficar em pé e sem exercícios no chão – para usuários de cadeira de rodas e para quem tem limitações de equilíbrio ou nas pernas. O dia B tem duas máquinas de pernas; remova-as se não forem para você. Começa leve, com 2–3 séries de 10–15 repetições.

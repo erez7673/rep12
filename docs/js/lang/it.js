@@ -1232,4 +1232,7 @@ export default {
   1230: "Due allenamenti alternati, con tre aree muscolari ciascuno: A è petto, bicipiti e schiena, B è spalle, tricipiti e gambe. Ogni area viene allenata due volte a settimana. Serie e ripetizioni seguono il tuo obiettivo.",
   1231: "Parte alta / Parte bassa · 4 giorni a settimana",
   1232: "Giorni di parte alta e parte bassa alternati: petto, schiena, spalle e braccia, poi gambe, glutei, polpacci e core. Ogni area viene allenata due volte a settimana. Serie e ripetizioni seguono il tuo obiettivo.",
+  1233: "Piani con una struttura settimanale fissa: piani total body per 2 o 3 giorni a settimana, il Piano AB e Parte alta / Parte bassa per 4 giorni a settimana, e un piano Da seduti senza esercizi in piedi o a terra. Scegline uno al posto di un piano personalizzato, se preferisci.",
+  1234: "Da seduti · 3 giorni a settimana",
+  1235: "Ogni esercizio si fa da seduti su una macchina o una panca, senza stare in piedi e senza esercizi a terra – per chi usa la sedia a rotelle e per chi ha problemi di equilibrio o alle gambe. Il giorno B ha due macchine per le gambe; toglile se non fanno per te. Inizio leggero, con 2–3 serie da 10–15 ripetizioni.",
 };

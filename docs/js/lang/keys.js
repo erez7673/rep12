@@ -1232,4 +1232,7 @@ export const KEYS = {
   1230: "Two workouts in turn, three muscle areas each: A is chest, biceps and back, B is shoulders, triceps and legs. Every area is trained twice a week. Sets and reps follow your goal.",
   1231: "Upper / Lower · 4 days a week",
   1232: "Upper body and lower body days in turn: chest, back, shoulders and arms, then legs, glutes, calves and core. Every area is trained twice a week. Sets and reps follow your goal.",
+  1233: "Plans with a set weekly layout: full-body plans for 2 or 3 days a week, the AB Plan and Upper / Lower for 4 days a week, and a Seated plan with no standing or floor work. Pick one instead of a custom plan if you prefer.",
+  1234: "Seated · 3 days a week",
+  1235: "Every exercise is done sitting on a machine or bench, with no standing and no floor work – for wheelchair users and anyone with balance or leg limitations. Day B has two leg machines; remove them if they don't suit you. Starts light, with 2–3 sets of 10–15 reps.",
 };

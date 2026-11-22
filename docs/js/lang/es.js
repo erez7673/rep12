@@ -1232,4 +1232,7 @@ export default {
   1230: "Dos entrenamientos que se alternan, con tres zonas musculares cada uno: A es pecho, bíceps y espalda; B es hombros, tríceps y piernas. Cada zona se entrena dos veces por semana. Las series y repeticiones siguen tu objetivo.",
   1231: "Superior / Inferior · 4 días por semana",
   1232: "Días de tren superior e inferior que se alternan: pecho, espalda, hombros y brazos; luego piernas, glúteos, gemelos y core. Cada zona se entrena dos veces por semana. Las series y repeticiones siguen tu objetivo.",
+  1233: "Planes con una estructura semanal fija: planes de cuerpo completo para 2 o 3 días por semana, el Plan AB y Superior / Inferior para 4 días por semana, y un plan Sentado sin ejercicios de pie ni en el suelo. Elige uno en lugar de un plan personalizado si lo prefieres.",
+  1234: "Sentado · 3 días por semana",
+  1235: "Todos los ejercicios se hacen sentado en una máquina o un banco, sin estar de pie ni en el suelo – para usuarios de silla de ruedas y para quien tenga problemas de equilibrio o de piernas. El día B tiene dos máquinas de piernas; quítalas si no te van bien. Empieza suave, con 2–3 series de 10–15 repeticiones.",
 };

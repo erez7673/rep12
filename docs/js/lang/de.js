@@ -1232,4 +1232,7 @@ export default {
   1230: "Zwei Trainings im Wechsel, mit je drei Muskelbereichen: A ist Brust, Bizeps und Rücken, B ist Schultern, Trizeps und Beine. Jeder Bereich wird zweimal pro Woche trainiert. Sätze und Wiederholungen richten sich nach deinem Ziel.",
   1231: "Oberkörper / Unterkörper · 4 Tage pro Woche",
   1232: "Oberkörper- und Unterkörpertage im Wechsel: Brust, Rücken, Schultern und Arme, dann Beine, Po, Waden und Rumpf. Jeder Bereich wird zweimal pro Woche trainiert. Sätze und Wiederholungen richten sich nach deinem Ziel.",
+  1233: "Pläne mit festem Wochenaufbau: Ganzkörperpläne für 2 oder 3 Tage pro Woche, der AB-Plan und Oberkörper / Unterkörper für 4 Tage pro Woche und ein Sitzplan ohne Übungen im Stehen oder am Boden. Wähle einen statt eines eigenen Plans, wenn dir das lieber ist.",
+  1234: "Im Sitzen · 3 Tage pro Woche",
+  1235: "Jede Übung wird sitzend an einem Gerät oder auf einer Bank gemacht, ohne Stehen und ohne Bodenübungen – für Menschen im Rollstuhl und alle mit Gleichgewichts- oder Beinproblemen. Tag B hat zwei Beingeräte; entferne sie, wenn sie nicht zu dir passen. Leichter Start mit 2–3 Sätzen à 10–15 Wiederholungen.",
 };

@@ -1232,4 +1232,7 @@ export default {
   1230: "Kaksi treeniä vuorotellen, kummassakin kolme lihasaluetta: A on rinta, hauis ja selkä, B on olkapäät, ojentajat ja jalat. Jokaista aluetta treenataan kahdesti viikossa. Sarjat ja toistot seuraavat tavoitettasi.",
   1231: "Ylävartalo / Alavartalo · 4 päivää viikossa",
   1232: "Ylävartalo- ja alavartalopäivät vuorotellen: rinta, selkä, olkapäät ja kädet, sitten jalat, pakarat, pohkeet ja keskivartalo. Jokaista aluetta treenataan kahdesti viikossa. Sarjat ja toistot seuraavat tavoitettasi.",
+  1233: "Ohjelmia, joissa on kiinteä viikkorakenne: koko kehon ohjelmat 2 tai 3 päivälle viikossa, AB-ohjelma ja Ylävartalo / Alavartalo 4 päivälle viikossa sekä istuen tehtävä ohjelma ilman seisten tai lattialla tehtäviä liikkeitä. Valitse sellainen oman ohjelman sijaan, jos haluat.",
+  1234: "Istuen · 3 päivää viikossa",
+  1235: "Jokainen liike tehdään istuen laitteessa tai penkillä, ei seisten eikä lattialla – pyörätuolin käyttäjille ja kaikille, joilla on tasapaino- tai jalkarajoitteita. Päivässä B on kaksi jalkalaitetta; poista ne, jos ne eivät sovi sinulle. Kevyt alku: 2–3 sarjaa 10–15 toistolla.",
 };

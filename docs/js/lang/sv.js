@@ -1232,4 +1232,7 @@ export default {
   1230: "Två pass som växlar, med tre muskelområden vardera: A är bröst, biceps och rygg, B är axlar, triceps och ben. Varje område tränas två gånger i veckan. Set och repetitioner följer ditt mål.",
   1231: "Överkropp / Underkropp · 4 dagar i veckan",
   1232: "Överkropps- och underkroppsdagar som växlar: bröst, rygg, axlar och armar, sedan ben, säte, vader och bål. Varje område tränas två gånger i veckan. Set och repetitioner följer ditt mål.",
+  1233: "Program med fast veckoupplägg: helkroppsprogram för 2 eller 3 dagar i veckan, AB-programmet och Överkropp / Underkropp för 4 dagar i veckan, samt ett sittande program utan övningar stående eller på golvet. Välj ett i stället för ett eget program om du vill.",
+  1234: "Sittande · 3 dagar i veckan",
+  1235: "Varje övning görs sittande i en maskin eller på en bänk, utan att stå och utan golvövningar – för rullstolsanvändare och alla med balans- eller bensvårigheter. Dag B har två benmaskiner; ta bort dem om de inte passar dig. Lätt start med 2–3 set med 10–15 repetitioner.",
 };

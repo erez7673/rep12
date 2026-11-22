@@ -75,7 +75,7 @@ function renderLiveBar(hash) {
   const s = state.session;
   if (!s?.startedAt || hash === '#/session') { bar.hidden = true; return; }
   bar.hidden = false;
-  bar.innerHTML = `<a href="#/session"><span class="pulse"></span><b>${dayName(s.dayIdx)}</b><span data-t="live">${fmtClock(W.elapsed())}</span><span class="go">${t('Resume')} ›</span></a>`;
+  bar.innerHTML = `<a href="#/session"><span class="pulse"></span><b>${dayName(s.dayIdx)}</b><span data-t="live">${fmtClock(W.elapsed())}</span><span class="go">${t('Resume')} <i class="arw">›</i></span></a>`;
 }
 
 // ── Timer loop ──

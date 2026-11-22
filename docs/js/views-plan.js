@@ -182,7 +182,7 @@ export function dayView(w, d) {
       ${preview.warm ? `<div class="exrow"><a href="#/ex/${encodeURIComponent(preview.warm.exId)}">${thumb(exById(preview.warm.exId))}</a>
           <div class="exbody"><b class="exname">${esc(exName(preview.warm.exId, preview.warm.name))}</b>
           <button class="chips editable" data-act="warm-open" aria-label="${t('Change warm-up')}"><span class="chip">${t('{n} min', { n: preview.warm.min })}</span><span class="chip edit">${icon.edit} ${t('Change')}</span></button></div></div>
-        ${preview.warmup.length ? `<button class="row mobility-btn" data-act="mobility-open" data-w="${w}" data-d="${d}">${icon.info}<span><b>${t('Then a quick mobility routine')}</b><small>${t('{n} moves', { n: preview.warmup.length })} · ${t('{n} min', { n: Math.round(preview.warmup.reduce((a, m) => a + m.sec, 0) / 60) })}</small></span><span class="chev">›</span></button>` : ''}`
+        ${preview.warmup.length ? `<button class="row mobility-btn" data-act="mobility-open" data-w="${w}" data-d="${d}">${icon.info}<span><b>${t('Then a quick mobility routine')}</b><small>${t('{n} moves', { n: preview.warmup.length })} · ${t('{n} min', { n: Math.round(preview.warmup.reduce((a, m) => a + m.sec, 0) / 60) })}</small></span><span class="chev arw">›</span></button>` : ''}`
       : `<button class="btn" data-act="warm-open">${icon.plus} ${t('Add a warm-up')}</button>`}
       <h3>${t('Exercise List')}</h3>
       <div class="exlist">${items}</div>

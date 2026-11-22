@@ -445,3 +445,5 @@ body:has(.cta) #livebar { bottom: calc(var(--nav-h) + env(safe-area-inset-bottom
 [dir="rtl"] .tour-x { right: auto; left: 8px; }
 [dir="rtl"] .tour-card h2 { margin: 4px 0 6px 40px; }
 [dir="rtl"] .anim .legend i { margin-right: 0; margin-left: 5px; }
+.arw { font-style: normal; display: inline-block; }
+[dir="rtl"] .arw { transform: scaleX(-1); }

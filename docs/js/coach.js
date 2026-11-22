@@ -64,6 +64,9 @@ export function dailyTip(p) {
 export const avatarHTML = (size = 40, k = coachKey()) => !k ? '' :
   `<span class="coach-av" style="--s:${size}px" aria-hidden="true"><b>${esc(COACHES[k].name[0])}</b><img src="media/coach/${k}-idle.jpg" alt="" onerror="this.remove()"></span>`;
 const note = (text, size = 40, cls = '') => `<div class="coach-note ${cls}">${avatarHTML(size)}<p>${esc(text)}</p></div>`;
+// A short clip of the coach as a rounded square (the whole figure). The face picture shows first and stays
+// when there is no clip, it can't load, or Reduce motion is on.
+const clipHTML = (k, id, size) => `<span class="coach-av sq" style="--s:${size}px" aria-hidden="true"><b>${esc(COACHES[k].name[0])}</b><img src="media/coach/${k}-idle.jpg" alt="" onerror="this.remove()">${motionReduced() ? '' : `<video src="media/coach/${k}-${id}.mp4" poster="media/coach/${k}-idle.jpg" muted autoplay playsinline onerror="this.remove()"></video>`}</span>`;
 const closeX = () => `<button class="iconbtn sheet-x" data-act="sheet-close" aria-label="${t('Close')}">${icon.x}</button>`;
 
 // My Plan: today's tip, or (for someone who has not chosen yet) a card that offers the coach.
@@ -85,7 +88,8 @@ export function coachRest(it) {
   return `<div class="coach-rest">${avatarHTML(40)}<p>${esc(own ? unitText(t(own)) : dailyTip(profile()))}</p></div>`;
 }
 
-export const coachFinish = () => coachOn() ? note(sig('finish'), 44, 'finish') : '';
+// The note on the workout summary: the coach's cheer clip and the finish line.
+export const coachFinish = () => coachOn() ? `<div class="coach-note finish">${clipHTML(coachKey(), 'cheer', 110)}<p>${esc(sig('finish'))}</p></div>` : '';
 export const coachTipCard = (text) => coachFull()
   ? `<div class="card tip coach-tip">${avatarHTML(36)}<div><small>${t('Tip from {name}', { name: coachName() })}</small>${esc(text)}</div></div>` : '';
 export const coachProfileRow = () => !coachAvailable() ? '' :
@@ -103,7 +107,7 @@ export function coachStart() {
   const el = document.createElement('div');
   el.id = 'coach-overlay';
   el.setAttribute('role', 'status');
-  el.innerHTML = `<span class="coach-av sq" style="--s:150px" aria-hidden="true"><b>${esc(COACHES[k].name[0])}</b><img src="media/coach/${k}-idle.jpg" alt="" onerror="this.remove()">${motionReduced() ? '' : `<video src="media/coach/${k}-letsgo.mp4" poster="media/coach/${k}-idle.jpg" muted autoplay playsinline onerror="this.remove()"></video>`}</span><p>${esc(line)}</p>`;
+  el.innerHTML = `${clipHTML(k, 'letsgo', 150)}<p>${esc(line)}</p>`;
   document.body.append(el);
   if (speakOn()) say(line);
   setTimeout(() => el.remove(), 2700);

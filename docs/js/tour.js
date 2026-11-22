@@ -137,6 +137,13 @@ function place() {
         <button class="tour-btn primary" data-act="tour-next">${last ? t('Finish') : t('Next')}</button>
       </div>
     </div>`;
+  // A part taller than the free space (or a long translation) would end up under the card: highlight only the visible part.
+  const sp = root.querySelector('.tour-spot'), card = root.querySelector('.tour-card');
+  if (sp && card) {
+    const c = card.getBoundingClientRect(), s = sp.getBoundingClientRect();
+    if (!cardTop && s.bottom > c.top - 8) sp.style.height = Math.max(40, c.top - 8 - s.top) + 'px';
+    if (cardTop && s.top < c.bottom + 8) { const top = c.bottom + 8; sp.style.height = Math.max(40, s.bottom - top) + 'px'; sp.style.top = top + 'px'; }
+  }
 }
 
 // The highlight: the part's box plus a small margin, kept inside the screen (the bottom tabs touch its edge).

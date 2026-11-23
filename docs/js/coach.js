@@ -86,10 +86,15 @@ export const coachCardShown = () => coachFull();
 export const coachDayLine = (day) => coachFull() ? note(t('Today: {focus}. Warm up first and take your time.', { focus: dayFocus(day) })) : '';
 
 // The rest card of a workout: a tip for the exercise that comes next (its own tip, else the tip of the day).
-export function coachRest(it) {
+// On a long rest (90 s or more) the coach breathes calmly in a small looping clip, with a reminder to breathe.
+export function coachRest(it, total = 0) {
   if (!coachFull()) return '';
   const own = exById(it?.exId)?.tip;
-  return `<div class="coach-rest">${avatarHTML(40)}<p>${esc(own ? unitText(t(own)) : dailyTip(profile()))}</p></div>`;
+  const tip = esc(own ? unitText(t(own)) : dailyTip(profile()));
+  const k = coachKey();
+  if (total >= 90 && !motionReduced())
+    return `<div class="coach-rest breathe"><span class="coach-clip" aria-hidden="true"><img src="media/coach/${k}-breathe.jpg" alt="" onerror="this.remove()"><video src="media/coach/${k}-breathe.mp4" muted autoplay loop playsinline onerror="this.remove()"></video></span><p><b>${t('Breathe slowly and recover.')}</b> ${tip}</p></div>`;
+  return `<div class="coach-rest">${avatarHTML(40)}<p>${tip}</p></div>`;
 }
 
 // The note on the workout summary: the coach and the finish line; tapping it plays the cheer again.
@@ -122,7 +127,25 @@ function moment(id, line) {
   if (speakOn()) say(line);
 }
 export const coachStart = () => moment('letsgo', sig('start'));
-export const coachFinishMoment = () => moment('cheer', sig('finish'));
+
+// When a workout is finished: a high five for a milestone or a finished week, a thumbs up for a personal best,
+// else the cheer. ev = { count: workouts logged, week: the week just finished (or null), pr: true for a personal best }.
+const MILESTONES = [10, 25, 50, 100, 150, 200, 300, 400, 500];
+export function coachFinishMoment(ev = {}) {
+  if (MILESTONES.includes(ev.count)) return moment('highfive', t('{n} workouts done. High five!', { n: ev.count }));
+  if (ev.week) return moment('highfive', t('Week {w} done. High five!', { w: ev.week }));
+  if (ev.pr) return moment('thumbsup', t('New personal best. Well done!'));
+  return moment('cheer', sig('finish'));
+}
+
+// Welcome back on My Plan after a week or more without a workout (once per break; "Tips and messages" style only).
+export function coachWelcome(p) {
+  if (!coachFull() || !p?.history?.length) return;
+  const last = Math.max(...p.history.map(h => h.date || 0));
+  if (Date.now() - last < 7 * 864e5 || state.settings.coachWelcomed === last) return;
+  state.settings.coachWelcomed = last; save();
+  moment('wave', t('Welcome back! Start a little lighter today and build up again.'));
+}
 
 // ── Choosing a coach ──
 let afterPick = null;
@@ -142,7 +165,7 @@ export function openMeet(then) {
 
 register({
   'coach-meet': () => openMeet(),
-  'coach-cheer': () => coachFinishMoment(),
+  'coach-cheer': () => moment('cheer', sig('finish')),
   'coach-open': () => {
     const cur = state.settings.coach, st = state.settings.coachStyle || 'full';
     sheet(`${closeX()}<h2>${t('Your coach')}</h2>

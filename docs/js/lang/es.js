@@ -1318,4 +1318,12 @@ export default {
   1316: "Los clips de ejercicios y el entrenador se quedan quietos hasta que los reproduzcas, y se detienen los deslizamientos y desvanecimientos. También se respeta el ajuste de tu teléfono.",
   1317: "Consejo del día",
   1318: "Los clips de ejercicios se quedan quietos hasta que los reproduzcas, y se detienen los deslizamientos y desvanecimientos. También se respeta el ajuste de tu teléfono.",
+  1319: "Respira despacio y recupérate.",
+  1320: "{n} entrenamientos hechos. ¡Choca esos cinco!",
+  1321: "Semana {w} terminada. ¡Choca esos cinco!",
+  1322: "Nuevo récord personal. ¡Bien hecho!",
+  1323: "¡Bienvenido de nuevo! Empieza hoy un poco más suave y ve subiendo otra vez.",
+  1324: "Minutos de calentamiento",
+  1325: "(0 = sin calentamiento)",
+  1326: "Elige a Mia o a Lucas, o ningún entrenador. Tu entrenador te anima con consejos y mensajes cortos, un pulgar arriba por cada nuevo récord personal y un choca esos cinco cuando terminas una semana. Cambia cuándo te habla, o desactívalo, cuando quieras.",
 };

@@ -1318,4 +1318,12 @@ export default {
   1316: "Le clip degli esercizi e il coach restano fermi finché non le avvii, e scorrimenti e dissolvenze si fermano. Viene seguita anche l'impostazione del telefono.",
   1317: "Consiglio del giorno",
   1318: "Le clip degli esercizi restano ferme finché non le avvii, e scorrimenti e dissolvenze si fermano. Viene seguita anche l'impostazione del telefono.",
+  1319: "Respira lentamente e recupera.",
+  1320: "{n} allenamenti fatti. Batti cinque!",
+  1321: "Settimana {w} completata. Batti cinque!",
+  1322: "Nuovo record personale. Ben fatto!",
+  1323: "Bentornato! Oggi inizia un po' più leggero e poi aumenta di nuovo.",
+  1324: "Minuti di riscaldamento",
+  1325: "(0 = nessun riscaldamento)",
+  1326: "Scegli Mia o Lucas, oppure nessun coach. Il tuo coach ti incoraggia con brevi consigli e messaggi, un pollice in su per ogni nuovo record personale e un batti cinque quando finisci una settimana. Puoi cambiare quanto spesso parla, o disattivarlo, quando vuoi.",
 };

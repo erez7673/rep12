@@ -609,3 +609,11 @@
 609	Volte devagar até os braços ficarem retos.
 610	Ajuste o banco ou o apoio dos joelhos para ficar bem preso.
 1221	Anterior
+1319	Respire devagar e recupere.
+1320	{n} treinos feitos. Toca aqui!
+1321	Semana {w} concluída. Toca aqui!
+1322	Novo recorde pessoal. Muito bem!
+1323	Bem-vindo de volta! Comece hoje um pouco mais leve e vá aumentando de novo.
+1324	Minutos de aquecimento
+1325	(0 = sem aquecimento)
+1326	Escolha Mia ou Lucas, ou nenhum treinador. Seu treinador te incentiva com dicas e mensagens curtas, um joinha a cada novo recorde pessoal e um toca aqui quando você termina uma semana. Mude a frequência das mensagens, ou desative, quando quiser.

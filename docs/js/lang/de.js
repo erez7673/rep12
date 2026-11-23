@@ -1318,4 +1318,12 @@ export default {
   1316: "Übungsclips und der Coach bleiben stehen, bis du sie abspielst, und Gleiten und Einblenden hören auf. Die Einstellung deines Handys wird ebenfalls beachtet.",
   1317: "Tipp des Tages",
   1318: "Übungsclips bleiben stehen, bis du sie abspielst, und Gleiten und Einblenden hören auf. Die Einstellung deines Handys wird ebenfalls beachtet.",
+  1319: "Atme langsam und erhol dich.",
+  1320: "{n} Workouts geschafft. High five!",
+  1321: "Woche {w} geschafft. High five!",
+  1322: "Neue Bestleistung. Gut gemacht!",
+  1323: "Willkommen zurück! Fang heute etwas leichter an und steigere dich wieder.",
+  1324: "Aufwärmen in Minuten",
+  1325: "(0 = kein Aufwärmen)",
+  1326: "Wähle Mia oder Lucas oder keinen Coach. Dein Coach feuert dich mit kurzen Tipps und Nachrichten an, mit einem Daumen hoch für eine neue Bestleistung und einem High five, wenn du eine Woche geschafft hast. Wie oft er sich meldet, kannst du jederzeit ändern oder ihn ausschalten.",
 };

@@ -5,7 +5,7 @@ import { currentWeek, planProgress, dayFocus, planPhase, isCustom, buildSession,
 import { MUSCLES } from './exercises.js';
 import * as W from './workout.js';
 import { say, setCue } from './speak.js';
-import { coachPlanCard, coachDayLine, coachRest, coachFinish, coachStart, coachFinishMoment } from './coach.js';
+import { coachPlanCard, coachDayLine, coachRest, coachFinish, coachStart, coachFinishMoment, coachWelcome } from './coach.js';
 import { t, wUnit, fromW, toW, locale, listJoin } from './i18n.js';
 import { rerender } from './app.js';
 import { scheduleSync } from './sync.js';
@@ -69,6 +69,7 @@ export function planView() {
         <div class="stat"><b>${p.history.length}</b><small>${t('Workouts logged')}</small></div>
         <div class="stat"><b>${p.stats.minutes}′</b><small>${t('Per session')}</small></div>
       </div>`,
+    after: () => coachWelcome(p),
   };
 }
 
@@ -446,7 +447,7 @@ export function sessionView() {
         <button class="pillbtn" data-act="rest-add" data-v="-15">${t('−15 s')}</button>
         <button class="pillbtn" data-act="rest-add" data-v="15">${t('+15 s')}</button>
         <button class="pillbtn light" data-act="rest-skip">${t('Skip rest')}</button>
-      </div>${coachRest(s.items[s.cur.i])}</div>`;
+      </div>${coachRest(s.items[s.cur.i], s.restTotal)}</div>`;
   } else if (allDone || s.phase === 'ready') {
     head = `<div class="hd"><div class="bigline">${t('All sets done')} 🎉</div><p>${s.cardio && !s.cardio.done ? t('Finish with cardio and the cooldown, then tap Finish.') : t('Finish with the cooldown, then tap Finish.')}</p>
       <div class="hd-btns"><button class="pillbtn light" data-act="finish">${t('Finish workout')}</button></div></div>`;
@@ -621,7 +622,10 @@ register({
     openItem = null;
     scheduleSync(500);
     location.hash = `#/summary/${rec.id}`;
-    coachFinishMoment();
+    const pp = profile();
+    const days = pp.plan?.days?.length || 0;
+    const weekDone = rec.week && pp.plan?.id === rec.planId && days && Array.from({ length: days }, (_, d) => pp.plan.done[`${rec.week}-${d}`]).every(Boolean);
+    coachFinishMoment({ count: pp.history.length, week: weekDone ? rec.week : null, pr: personalRecords(pp, rec).length > 0 });
   },
   'discard': () => {
     if (!confirm(t('Discard this workout? Logged sets will be lost.'))) return;
@@ -630,13 +634,8 @@ register({
 });
 
 // ───────────── Summary ─────────────
-export function summaryView(id) {
-  const p = profile();
-  const rec = p.history.find(h => h.id === id);
-  if (!rec) return { html: `<header class="bar"><button class="iconbtn" data-act="back" aria-label="${t('Back')}">${icon.back}</button><h2>${t('Workout')}</h2><span></span></header><p>${t('Not found')}</p>` };
-  const sets = rec.items.reduce((a, it) => a + it.sets.length, 0);
-  const volume = Math.round(toW(rec.items.reduce((a, it) => a + it.sets.reduce((b, x) => b + (it.unit === 'reps' ? x.reps * x.kg : 0), 0), 0)));
-  // Personal records: best weight this session vs. all earlier sessions.
+// Personal records: best weight this session vs. all earlier sessions.
+function personalRecords(p, rec) {
   const prs = [];
   const idx = p.history.indexOf(rec);
   for (const it of rec.items) {
@@ -646,6 +645,16 @@ export function summaryView(id) {
     const prev = p.history.slice(0, idx).flatMap(h => h.items.filter(x => x.exId === it.exId)).flatMap(x => x.sets.map(y => y.kg || 0));
     if (prev.length && best > Math.max(...prev)) prs.push(`${exName(it.exId, it.name)}: ${fmtKg(best)} ${wUnit()}`);
   }
+  return prs;
+}
+
+export function summaryView(id) {
+  const p = profile();
+  const rec = p.history.find(h => h.id === id);
+  if (!rec) return { html: `<header class="bar"><button class="iconbtn" data-act="back" aria-label="${t('Back')}">${icon.back}</button><h2>${t('Workout')}</h2><span></span></header><p>${t('Not found')}</p>` };
+  const sets = rec.items.reduce((a, it) => a + it.sets.length, 0);
+  const volume = Math.round(toW(rec.items.reduce((a, it) => a + it.sets.reduce((b, x) => b + (it.unit === 'reps' ? x.reps * x.kg : 0), 0), 0)));
+  const prs = personalRecords(p, rec);
   const mins = Math.round(rec.duration / 60);
   const title = rec.dayIdx != null ? dayName(rec.dayIdx) : t(rec.title);
   return {

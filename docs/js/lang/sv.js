@@ -1318,4 +1318,12 @@ export default {
   1316: "Övningsklipp och tränaren står stilla tills du spelar upp dem, och glidande och toning stängs av. Telefonens egen inställning följs också.",
   1317: "Dagens tips",
   1318: "Övningsklipp står stilla tills du spelar upp dem, och glidande och toning stängs av. Telefonens egen inställning följs också.",
+  1319: "Andas lugnt och återhämta dig.",
+  1320: "{n} pass klara. High five!",
+  1321: "Vecka {w} klar. High five!",
+  1322: "Nytt personbästa. Bra jobbat!",
+  1323: "Välkommen tillbaka! Börja lite lättare i dag och öka sedan igen.",
+  1324: "Uppvärmning i minuter",
+  1325: "(0 = ingen uppvärmning)",
+  1326: "Välj Mia eller Lucas, eller ingen coach. Din coach peppar dig med korta tips och meddelanden, en tumme upp för ett nytt personbästa och en high five när du klarat en vecka. Ändra hur ofta coachen hörs av sig, eller stäng av, när du vill.",
 };

@@ -609,3 +609,11 @@
 609	Torna piano fino a distendere le braccia.
 610	Regola sedile o appoggio per le ginocchia in modo da essere ben bloccato.
 1221	Indietro
+1319	Respira lentamente e recupera.
+1320	{n} allenamenti fatti. Batti cinque!
+1321	Settimana {w} completata. Batti cinque!
+1322	Nuovo record personale. Ben fatto!
+1323	Bentornato! Oggi inizia un po' più leggero e poi aumenta di nuovo.
+1324	Minuti di riscaldamento
+1325	(0 = nessun riscaldamento)
+1326	Scegli Mia o Lucas, oppure nessun coach. Il tuo coach ti incoraggia con brevi consigli e messaggi, un pollice in su per ogni nuovo record personale e un batti cinque quando finisci una settimana. Puoi cambiare quanto spesso parla, o disattivarlo, quando vuoi.

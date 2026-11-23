@@ -1318,4 +1318,12 @@ export default {
   1316: "Liikeklipit ja valmentaja pysyvät paikallaan, kunnes toistat ne, ja liukumiset ja häivytykset loppuvat. Myös puhelimesi oma asetus huomioidaan.",
   1317: "Päivän vinkki",
   1318: "Liikeklipit pysyvät paikallaan, kunnes toistat ne, ja liukumiset ja häivytykset loppuvat. Myös puhelimesi oma asetus huomioidaan.",
+  1319: "Hengitä rauhassa ja palaudu.",
+  1320: "{n} treeniä tehty. Ylävitoset!",
+  1321: "Viikko {w} tehty. Ylävitoset!",
+  1322: "Uusi ennätys. Hienoa!",
+  1323: "Tervetuloa takaisin! Aloita tänään vähän kevyemmin ja nosta taas vähitellen.",
+  1324: "Lämmittely minuutteina",
+  1325: "(0 = ei lämmittelyä)",
+  1326: "Valitse Mia tai Lucas, tai ei valmentajaa. Valmentaja kannustaa lyhyillä vinkeillä ja viesteillä, peukulla uudesta ennätyksestä ja ylävitosilla, kun viikko on tehty. Voit muuttaa, kuinka usein valmentaja puhuu, tai poistaa sen käytöstä milloin tahansa.",
 };

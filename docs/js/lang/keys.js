@@ -1318,4 +1318,12 @@ export const KEYS = {
   1316: "Exercise clips and the coach stay still until you play them, and sliding and fading stop. Your phone's own setting is followed too.",
   1317: "Tip of the day",
   1318: "Exercise clips stay still until you play them, and sliding and fading stop. Your phone's own setting is followed too.",
+  1319: "Breathe slowly and recover.",
+  1320: "{n} workouts done. High five!",
+  1321: "Week {w} done. High five!",
+  1322: "New personal best. Well done!",
+  1323: "Welcome back! Start a little lighter today and build up again.",
+  1324: "Warm-up minutes",
+  1325: "(0 = no warm-up)",
+  1326: "Pick Mia or Lucas, or no coach. Your coach cheers you on with short tips and messages, a thumbs up for a new personal best and a high five when you finish a week. Change how often they speak, or turn them off, any time.",
 };

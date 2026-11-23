@@ -609,3 +609,11 @@
 609	Palaa hitaasti, kunnes kädet ovat suorina.
 610	Säädä istuin tai polvituki niin, että pysyt tukevasti paikallasi.
 1221	Edellinen
+1319	Hengitä rauhassa ja palaudu.
+1320	{n} treeniä tehty. Ylävitoset!
+1321	Viikko {w} tehty. Ylävitoset!
+1322	Uusi ennätys. Hienoa!
+1323	Tervetuloa takaisin! Aloita tänään vähän kevyemmin ja nosta taas vähitellen.
+1324	Lämmittely minuutteina
+1325	(0 = ei lämmittelyä)
+1326	Valitse Mia tai Lucas, tai ei valmentajaa. Valmentaja kannustaa lyhyillä vinkeillä ja viesteillä, peukulla uudesta ennätyksestä ja ylävitosilla, kun viikko on tehty. Voit muuttaa, kuinka usein valmentaja puhuu, tai poistaa sen käytöstä milloin tahansa.

@@ -48,7 +48,7 @@ function profileForm(mode) {
           ${Array.from({ length: days }, (_, i) => `<div class="dayareas"><b>${esc(dayName(i))}</b>${checks('areas' + i, AREAS, areasFor(p, i))}</div>`).join('')}
         </div>` : ''}
         <div class="field"><span>${t('Session length')}</span>${radio('minutes', { 30: t('{n} min', { n: 30 }), 45: t('{n} min', { n: 45 }), 60: t('{n} min', { n: 60 }), 75: t('{n} min', { n: 75 }) }, s.minutes)}</div>
-        <div class="field"><span>${t('Warm-up')}</span>${radio('warmup', { 0: t('None'), 3: t('{n} min', { n: 3 }), 5: t('{n} min', { n: 5 }), 8: t('{n} min', { n: 8 }) }, s.warmup)}</div>
+        <label class="field"><span>${t('Warm-up minutes')} <small>${t('(0 = no warm-up)')}</small></span><input name="warmup" type="number" inputmode="numeric" min="0" max="60" step="1" value="${p?.warm?.min ?? s.warmup ?? 5}" required></label>
         <label class="toggle-line"><input type="checkbox" name="cardio" ${s.cardio ? 'checked' : ''}> ${t('Add a cardio finisher (treadmill, elliptical, stairs, bike)')}</label>
         <div class="field"><span>${t('Injuries or limitations')} <small>${t('(exercises that load these are avoided)')}</small></span>${checks('injuries', INJURIES, s.injuries || [])}</div>
         <div class="field"><span>${t('Extra focus')} <small>${t('(adds exercises for these)')}</small></span>${checks('focus', FOCUS, s.focus || [])}</div>`;
@@ -104,7 +104,7 @@ function readForm() {
     const weight = Math.round(fromW(fd.get('weight')) * 10) / 10;
     Object.assign(stats, { sex: fd.get('sex'), age: +fd.get('age'), height, weight, level: fd.get('level'), goal: fd.get('goal'), days: +fd.get('days') });
   }
-  if (has('minutes')) Object.assign(stats, { minutes: +fd.get('minutes'), warmup: +fd.get('warmup'), cardio: fd.get('cardio') === 'on', injuries: fd.getAll('injuries'), focus: fd.getAll('focus'), exPerDay: +fd.get('exPerDay') || 4 });
+  if (has('minutes')) Object.assign(stats, { minutes: +fd.get('minutes'), warmup: Math.max(0, Math.min(60, Math.round(+fd.get('warmup') || 0))), cardio: fd.get('cardio') === 'on', injuries: fd.getAll('injuries'), focus: fd.getAll('focus'), exPerDay: +fd.get('exPerDay') || 4 });
   if (has('areas0')) stats.dayAreas = Array.from({ length: profile().stats.days || 3 }, (_, i) => fd.getAll('areas' + i));
   return { name: has('name') ? fd.get('name').trim() : null, color: fd.get('color'), stats };
 }
@@ -143,6 +143,8 @@ register({
     const oldW = p.stats.weight;
     if (el.dataset.rebuild && p.plan && Object.keys(p.plan.done).length && !confirm(t('Rebuilding restarts your plan at week 1 (history is kept). Continue?'))) return;
     p.stats = { ...p.stats, ...d.stats };
+    // The warm-up typed here also changes the warm-up chosen on the workout day (same setting).
+    if (d.stats.warmup != null && p.warm) p.warm.min = d.stats.warmup;
     if (d.stats.weight && Math.abs(d.stats.weight - oldW) > 0.05) p.bodyweight.push({ date: today(), kg: d.stats.weight });
     if (el.dataset.rebuild) p.plan = generatePlan(p);
     else applyDayChanges(p);

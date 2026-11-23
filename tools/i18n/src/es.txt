@@ -608,3 +608,11 @@
 608	Tira de las asas hacia tu cuerpo juntando las escápulas.
 609	Vuelve despacio hasta tener los brazos rectos.
 610	Ajusta el asiento o el apoyo de rodillas para quedar bien sujeto.
+1319	Respira despacio y recupérate.
+1320	{n} entrenamientos hechos. ¡Choca esos cinco!
+1321	Semana {w} terminada. ¡Choca esos cinco!
+1322	Nuevo récord personal. ¡Bien hecho!
+1323	¡Bienvenido de nuevo! Empieza hoy un poco más suave y ve subiendo otra vez.
+1324	Minutos de calentamiento
+1325	(0 = sin calentamiento)
+1326	Elige a Mia o a Lucas, o ningún entrenador. Tu entrenador te anima con consejos y mensajes cortos, un pulgar arriba por cada nuevo récord personal y un choca esos cinco cuando terminas una semana. Cambia cuándo te habla, o desactívalo, cuando quieras.

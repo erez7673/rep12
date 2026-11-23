@@ -1318,4 +1318,12 @@ export default {
   1316: "Os clipes de exercícios e o treinador ficam parados até você reproduzi-los, e deslizes e esmaecimentos param. A configuração do seu celular também é seguida.",
   1317: "Dica do dia",
   1318: "Os clipes de exercícios ficam parados até você reproduzi-los, e deslizes e esmaecimentos param. A configuração do seu celular também é seguida.",
+  1319: "Respire devagar e recupere.",
+  1320: "{n} treinos feitos. Toca aqui!",
+  1321: "Semana {w} concluída. Toca aqui!",
+  1322: "Novo recorde pessoal. Muito bem!",
+  1323: "Bem-vindo de volta! Comece hoje um pouco mais leve e vá aumentando de novo.",
+  1324: "Minutos de aquecimento",
+  1325: "(0 = sem aquecimento)",
+  1326: "Escolha Mia ou Lucas, ou nenhum treinador. Seu treinador te incentiva com dicas e mensagens curtas, um joinha a cada novo recorde pessoal e um toca aqui quando você termina uma semana. Mude a frequência das mensagens, ou desative, quando quiser.",
 };

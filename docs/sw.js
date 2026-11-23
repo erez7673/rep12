@@ -1,5 +1,5 @@
 // Offline support: network first (so updates show up straight away), cached copy when offline.
-const CACHE = 'rep12-v11';
+const CACHE = 'rep12-v12';
 const PICS = 'rep12-pics-v2';
 const FILES = [
   './', './index.html', './manifest.webmanifest', './css/app.css',

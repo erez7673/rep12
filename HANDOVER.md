@@ -18,9 +18,11 @@ _Last updated 2026-11-23 (evening): coaches live with phase 2, own pictures inst
 
 **Next steps (in this order)**
 1. The user's feedback on today's changes; fix what they find.
-2. **December (Higgsfield credits back): batch 10** — the 9 exercises below, plus mannequins and clips on our Flow machine pictures for the ab machine, rotary torso and **the 7 cardio exercises** (see the reminder under "Still to do next month"). Then add each machine to `EQ_STILL` and bump `PICS` in `sw.js`.
-3. Native-speaker review of the translations (all written by Claude, about 1,340 texts per language).
-4. Coach ideas for later: speaking coaches with lip-sync (`AI personal trainers/COACH-USAGE-PLAN.md` section 10).
+2. **Four new coaches: DONE (2026-11-23)** — Amara, Kenji, Priya, Mateo with the chest logo, 24 clips cut (5 s portrait; hand clips cropped further left, Priya's let's-go at x 260, Amara's high five at x 280) and in the app with traits and lines in all languages. **Mia and Lucas with the logo: DONE too** (new close-ups `*-close-logo.jpg`, all their clips remade; Lucas has no high five of his own and uses his cheer, `CLIP_STANDIN`; his wave is a warm nod, cut at 4.6 s; failed tries in `new clips/rejected/`). Originals of the new clips: `AI personal trainers/new clips/` (exact copies in `duplicates/`).
+   Earlier note: Amara (woman, about 43, warm and energetic), Kenji (man, about 52, calm and precise), Priya (woman, about 28, upbeat), Mateo (man, about 31, playful). All six coaches get the Rep12 logo on the left chest (print version `AI personal trainers/rep12-logo.png`); Mia and Lucas get new close-ups with the logo and remade clips (saved with `-logo`). Prompts: `AI personal trainers/FLOW-NEW-COACHES.md`. When files arrive: check (face, hands, logo sharp and in place), cut with the same 5 s portrait format as the others, add the coaches to `COACHES` with a trait and `SIG` lines in all 11 languages, make the picker fit six, add the files to `docs/media/coach/`.
+3. **December (Higgsfield credits back): batch 10** — the 9 exercises below, plus mannequins and clips on our Flow machine pictures for the ab machine, rotary torso and **the 7 cardio exercises** (see the reminder under "Still to do next month"). Then add each machine to `EQ_STILL` and bump `PICS` in `sw.js`.
+4. Native-speaker review of the translations (all written by Claude, about 1,340 texts per language).
+5. **Speaking coaches, December (decided 2026-11-23):** English speech with lip sync, the line shown as text too (translated in other languages); route 2 = one fixed voice per coach + Seedance 2.0 with the audio as reference. Full plan in `AI personal trainers/COACH-USAGE-PLAN.md` section 10.
 
 **Credits:** Flow (Google AI Pro): about 920 of 1,000 on 2026-11-22, minus roughly 140 for the phase 2 clips (estimate; check in Flow). Flow pictures cost no credits. Higgsfield: none until December.
 

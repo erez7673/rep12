@@ -630,3 +630,20 @@
 1341	Jede Übung wird sitzend an einem Gerät oder auf einer Bank gemacht, ohne Stehen und ohne Bodenübungen – für Menschen im Rollstuhl und alle mit Gleichgewichts- oder Beinproblemen. Tag 2 hat zwei Beingeräte; entferne sie, wenn sie nicht zu dir passen. Leichter Start mit 2–3 Sätzen à 10–15 Wiederholungen.
 1342	Zwei Trainings, A und B, im Wechsel: Training A (Brust, Bizeps und Rücken) an Tag 1 und 3, Training B (Schultern, Trizeps und Beine) an Tag 2 und 4. Jeder Bereich wird zweimal pro Woche trainiert. Sätze und Wiederholungen richten sich nach deinem Ziel.
 1343	Deine nächsten 12 Wochen, geplant.
+1344	Herzlich und energiegeladen
+1345	Ruhig und präzise
+1346	Fröhlich und ermutigend
+1347	Verspielt und voller Energie
+1348	Ich bin Amara. In dir steckt mehr, als du denkst.
+1349	Los geht's!
+1350	So wird das gemacht. Ich bin stolz auf dich!
+1351	Ich bin Kenji. Erst die saubere Technik, das Gewicht kommt dann von selbst.
+1352	Konzentration. Eine gute Wiederholung nach der anderen.
+1353	Saubere Arbeit heute. Gut gemacht.
+1354	Hi, ich bin Priya! Jeder kleine Erfolg zählt.
+1355	Du schaffst das!
+1356	Wieder ein Erfolg für dich heute!
+1357	Hey, ich bin Mateo! Du kommst, ich bringe die Energie mit.
+1358	Auf geht's, bewegen wir uns!
+1359	Du warst da und hast es gerockt!
+1360	Wähle einen von sechs Coaches oder keinen Coach. Dein Coach feuert dich mit kurzen Tipps und Nachrichten an, mit einem Daumen hoch für eine neue Bestleistung und einem High five, wenn du eine Woche geschafft hast. Wie oft er sich meldet, kannst du jederzeit ändern oder ihn ausschalten.

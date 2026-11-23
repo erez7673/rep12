@@ -630,3 +630,20 @@
 1341	Todos os exercícios são feitos sentado em uma máquina ou banco, sem ficar em pé e sem exercícios no chão – para usuários de cadeira de rodas e para quem tem limitações de equilíbrio ou nas pernas. O dia 2 tem duas máquinas de pernas; remova-as se não forem para você. Começa leve, com 2–3 séries de 10–15 repetições.
 1342	Dois treinos, A e B, que se alternam: o treino A (peito, bíceps e costas) nos dias 1 e 3, e o treino B (ombros, tríceps e pernas) nos dias 2 e 4. Cada área é treinada duas vezes por semana. As séries e repetições seguem o seu objetivo.
 1343	Suas próximas 12 semanas, planejadas.
+1344	Calorosa e cheia de energia
+1345	Calmo e preciso
+1346	Alegre e encorajadora
+1347	Brincalhão e cheio de energia
+1348	Eu sou a Amara. Você tem mais dentro de você do que imagina.
+1349	Vamos nessa!
+1350	É assim que se faz. Tenho orgulho de você!
+1351	Eu sou o Kenji. Primeiro a boa técnica, o peso vem depois.
+1352	Foco. Uma boa repetição de cada vez.
+1353	Trabalho limpo hoje. Muito bem.
+1354	Oi, eu sou a Priya! Cada pequena vitória conta.
+1355	Você consegue!
+1356	Mais uma vitória para você hoje!
+1357	E aí, eu sou o Mateo! Você aparece, eu trago a energia.
+1358	Bora se mexer!
+1359	Você veio e arrasou!
+1360	Escolha um dos seis treinadores, ou nenhum. Seu treinador te incentiva com dicas e mensagens curtas, um joinha a cada novo recorde pessoal e um toca aqui quando você termina uma semana. Mude a frequência das mensagens, ou desative, quando quiser.

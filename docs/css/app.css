@@ -514,6 +514,8 @@ body:has(.cta) #livebar { bottom: calc(var(--nav-h) + env(safe-area-inset-bottom
 .coachcard > svg { width: 18px; height: 18px; color: var(--ink3); }
 .coach-pair { display: flex; flex: none; }
 .coach-pair .coach-av + .coach-av { margin-inline-start: -12px; box-shadow: 0 0 0 2px var(--card); }
+.coachcard.meet { flex-wrap: wrap; row-gap: 8px; } /* the six faces on their own row, the text below */
+.coachcard.meet .coach-pair { flex-basis: 100%; }
 .coach-note { display: flex; align-items: center; gap: 12px; margin: 12px 0; padding: 12px 14px; border-radius: var(--radius); background: var(--blue-soft); }
 .coach-note p { margin: 0; font-size: calc(16px * var(--fs)); line-height: 1.4; }
 .coach-note.big { margin-top: 4px; }

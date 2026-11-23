@@ -1,6 +1,6 @@
 // AI personal coaches (Mia and Lucas): a friendly avatar with a speech bubble.
 // No AI runs here: the words are fixed, translated texts picked by simple rules (see COACH-USAGE-PLAN.md).
-// Always optional: per phone (state.settings.coach = 'mia' | 'lucas' | 'none', coachStyle = 'full' | 'key').
+// Always optional: per phone (state.settings.coach = a key of COACHES or 'none', coachStyle = 'full' | 'key').
 import { state, save, profile, exById } from './store.js';
 import { t, unitText } from './i18n.js';
 import { esc, icon, register, sheet, closeSheet, toast, motionReduced } from './ui.js';
@@ -17,19 +17,30 @@ const DEV_HOST = /^(localhost|127\.0\.0\.1|\[::1\]|192\.168\.\d+\.\d+|10\.\d+\.\
 export const isDevHost = (host = globalThis.location?.hostname || '') => DEV_HOST.test(host);
 export const coachAvailable = () => READY || isDevHost() || !!state.settings.coachPreview;
 
-export const COACHES = { mia: { name: 'Mia' }, lucas: { name: 'Lucas' } };
+export const COACHES = {
+  mia: { name: 'Mia' }, lucas: { name: 'Lucas' }, amara: { name: 'Amara' },
+  kenji: { name: 'Kenji' }, priya: { name: 'Priya' }, mateo: { name: 'Mateo' },
+};
 export const coachKey = () => (coachAvailable() && COACHES[state.settings.coach]) ? state.settings.coach : null;
 export const coachOn = () => !!coachKey();
 export const coachName = () => COACHES[coachKey()]?.name || '';
 // "Full" shows tips on My Plan, the day preview, the rest card and the exercise page; "key moments" only the start and the finish.
 export const coachFull = () => coachOn() && state.settings.coachStyle !== 'key';
 
-const trait = (k) => k === 'mia' ? t('Warm and upbeat') : t('Calm and steady');
+const TRAITS = {
+  mia: () => t('Warm and upbeat'), lucas: () => t('Calm and steady'), amara: () => t('Warm and energetic'),
+  kenji: () => t('Calm and precise'), priya: () => t('Cheerful and encouraging'), mateo: () => t('Playful and full of energy'),
+};
+const trait = (k) => TRAITS[k]?.() || '';
 
 // The few lines that differ between the coaches (everything else is shared and neutral).
 const SIG = {
   mia: { greet: () => t('Hi, I\'m Mia! I\'ll cheer you on.'), start: () => t('Let\'s go!'), finish: () => t('Amazing work today!') },
   lucas: { greet: () => t('I\'m Lucas. We train steady, one set at a time.'), start: () => t('Time to train.'), finish: () => t('Well fought. Strong as a longship.') },
+  amara: { greet: () => t('I\'m Amara. You\'ve got more in you than you think.'), start: () => t('Let\'s do this!'), finish: () => t('That\'s how it\'s done. Proud of you!') },
+  kenji: { greet: () => t('I\'m Kenji. Good form first, the weight will follow.'), start: () => t('Focus. One good rep at a time.'), finish: () => t('Clean work today. Well done.') },
+  priya: { greet: () => t('Hi, I\'m Priya! Every small win counts.'), start: () => t('You\'ve got this!'), finish: () => t('Another win for you today!') },
+  mateo: { greet: () => t('Hey, I\'m Mateo! You show up, I bring the energy.'), start: () => t('Let\'s get moving!'), finish: () => t('You showed up and crushed it!') },
 };
 const sig = (moment, k = coachKey()) => SIG[k]?.[moment]?.() || '';
 
@@ -78,7 +89,7 @@ export function coachPlanCard(p) {
   if (!coachAvailable() || !p?.plan) return '';
   if (coachFull()) return `<button class="coachcard" data-act="coach-open">${avatarHTML(44)}<span><b>${esc(coachName())}</b><small>${esc(dailyTip(p))}</small></span>${icon.chev}</button>`;
   if (!state.settings.coach && !state.settings.coachAsked)
-    return `<button class="coachcard meet" data-act="coach-meet"><span class="coach-pair">${avatarHTML(40, 'mia')}${avatarHTML(40, 'lucas')}</span><span><b>${t('Meet your coach')}</b><small>${t('Pick a coach to cheer you on, or skip.')}</small></span>${icon.chev}</button>`;
+    return `<button class="coachcard meet" data-act="coach-meet"><span class="coach-pair">${Object.keys(COACHES).map(k => avatarHTML(32, k)).join('')}</span><span><b>${t('Meet your coach')}</b><small>${t('Pick a coach to cheer you on, or skip.')}</small></span>${icon.chev}</button>`;
   return '';
 }
 export const coachCardShown = () => coachFull();
@@ -109,6 +120,9 @@ export const coachSettingsBlock = () => !coachAvailable() ? '' :
 // ── Moments ──
 // The coach fills the screen for one clip (about 5 s): "Let's go!" when a workout starts, the cheer when it is finished.
 // A tap anywhere closes it; it also closes by itself when the clip ends (after 2.5 s with Reduce motion).
+// A coach without a clean clip for a moment uses another of their own clips (Lucas's high five kept adding a wristband
+// or losing his tattoo, so he cheers instead).
+const CLIP_STANDIN = { lucas: { highfive: 'cheer' } };
 function moment(id, line) {
   const k = coachKey();
   if (!k) return;
@@ -116,7 +130,7 @@ function moment(id, line) {
   const el = document.createElement('div');
   el.id = 'coach-overlay';
   el.setAttribute('role', 'status');
-  el.innerHTML = `<button class="iconbtn sheet-x" aria-label="${t('Close')}">${icon.x}</button>${stageHTML(k, id)}<p>${esc(line)}</p>`;
+  el.innerHTML = `<button class="iconbtn sheet-x" aria-label="${t('Close')}">${icon.x}</button>${stageHTML(k, CLIP_STANDIN[k]?.[id] || id)}<p>${esc(line)}</p>`;
   let timer;
   const close = () => { clearTimeout(timer); el.classList.add('out'); setTimeout(() => el.remove(), 250); };
   el.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); close(); });

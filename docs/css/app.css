@@ -528,12 +528,15 @@ body:has(.cta) #livebar { bottom: calc(var(--nav-h) + env(safe-area-inset-bottom
 .coach-tip small { margin-bottom: 2px; }
 .coach-pick .coach-av { margin-inline-end: 2px; }
 .coach-pick.sel b { color: var(--blue); }
-#coach-overlay { position: fixed; inset: 0; z-index: 60; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: calc(env(safe-area-inset-top) + 16px) 16px calc(env(safe-area-inset-bottom) + 16px); background: rgba(16,16,18,.9); color: #fff; cursor: pointer; animation: coachIn .25s ease-out; transition: opacity .25s; }
+#coach-overlay { position: fixed; inset: 0; z-index: 60; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: calc(env(safe-area-inset-top) + 16px) 0 calc(env(safe-area-inset-bottom) + 120px); background: #1f1f21; color: #fff; cursor: pointer; animation: coachIn .25s ease-out; transition: opacity .25s; }
 #coach-overlay.out { opacity: 0; }
-#coach-overlay .sheet-x { position: absolute; top: calc(env(safe-area-inset-top) + 12px); inset-inline-end: 12px; color: #fff; }
-/* the clip has a plain studio background: its edges fade out, so only the coach seems to stand on the dimmed screen */
-.coach-stage { position: relative; width: min(100%, 62vh); aspect-ratio: 1 / 1; -webkit-mask-image: linear-gradient(to right, transparent, #000 9%, #000 91%, transparent), linear-gradient(to bottom, transparent, #000 5%, #000 80%, transparent); -webkit-mask-composite: source-in; mask-image: linear-gradient(to right, transparent, #000 9%, #000 91%, transparent), linear-gradient(to bottom, transparent, #000 5%, #000 80%, transparent); mask-composite: intersect; }
-.coach-stage img, .coach-stage video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-#coach-overlay p { margin: 0; font-weight: 800; font-size: calc(30px * var(--fs)); text-align: center; }
+#coach-overlay .sheet-x { position: absolute; top: calc(env(safe-area-inset-top) + 12px); inset-inline-end: 12px; color: #fff; background: rgba(255,255,255,.16); z-index: 1; }
+/* full screen: the coach fills the width on a background matching the clips' studio; the edges fade into it */
+/* full screen: the coach fills the width on a background matching the clips' studio. The soft edges are a gradient
+   layer on top of the video, not a CSS mask: phones draw a masked video at the wrong size (zoomed and shifted). */
+.coach-stage { position: relative; width: min(100vw, 78vh); aspect-ratio: 1 / 1; overflow: hidden; }
+.coach-stage::after { content: ''; position: absolute; inset: -1px; pointer-events: none; background: linear-gradient(to right, #1f1f21, rgba(31,31,33,0) 8%, rgba(31,31,33,0) 92%, #1f1f21), linear-gradient(to bottom, #1f1f21, rgba(31,31,33,0) 18%, rgba(31,31,33,0) 78%, #1f1f21); }
+.coach-stage img, .coach-stage video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+#coach-overlay p { position: absolute; left: 16px; right: 16px; bottom: calc(env(safe-area-inset-bottom) + 36px); margin: 0; font-weight: 800; font-size: calc(28px * var(--fs)); line-height: 1.25; text-align: center; }
 @keyframes coachIn { from { opacity: 0; } }
 button.coach-note { width: 100%; text-align: start; color: inherit; font: inherit; }

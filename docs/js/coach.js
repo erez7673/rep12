@@ -13,6 +13,8 @@ import { dayFocus, planPhase, isCustom, currentWeek } from './planner.js';
 const READY = true;
 // On this computer and on the home network (a phone opening http://192.168.x.x:8765) the coach is always on, so it can be
 // tried before the switch is flipped. The public site (github.io) never matches.
+// Coach media version: bump when clips or pictures are replaced, so phones don't keep playing old copies.
+const MV = '?v=2';
 const DEV_HOST = /^(localhost|127\.0\.0\.1|\[::1\]|192\.168\.\d+\.\d+|10\.\d+\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.\d+\.\d+|[\w-]+\.local)$/;
 export const isDevHost = (host = globalThis.location?.hostname || '') => DEV_HOST.test(host);
 export const coachAvailable = () => READY || isDevHost() || !!state.settings.coachPreview;
@@ -77,11 +79,11 @@ export function dailyTip(p) {
 // ── Pieces of markup ──
 // The coach's picture: the initial shows until the picture loads (and stays if there is none).
 export const avatarHTML = (size = 40, k = coachKey()) => !k ? '' :
-  `<span class="coach-av" style="--s:${size}px" aria-hidden="true"><b>${esc(COACHES[k].name[0])}</b><img src="media/coach/${k}-idle.jpg" alt="" onerror="this.remove()"></span>`;
+  `<span class="coach-av" style="--s:${size}px" aria-hidden="true"><b>${esc(COACHES[k].name[0])}</b><img src="media/coach/${k}-idle.jpg${MV}" alt="" onerror="this.remove()"></span>`;
 const note = (text, size = 40, cls = '') => `<div class="coach-note ${cls}">${avatarHTML(size)}<p>${esc(text)}</p></div>`;
 // A full-screen clip of the coach (portrait 3:4, the whole figure, edges fading into the dimmed screen).
 // Its first frame (<coach>-<id>.jpg) shows under it, and alone when the clip can't load or Reduce motion is on.
-const stageHTML = (k, id) => `<span class="coach-stage" aria-hidden="true"><img src="media/coach/${k}-${id}.jpg" alt="" onerror="this.remove()">${motionReduced() ? '' : `<video src="media/coach/${k}-${id}.mp4" muted autoplay playsinline onerror="this.remove()"></video>`}</span>`;
+const stageHTML = (k, id) => `<span class="coach-stage" aria-hidden="true"><img src="media/coach/${k}-${id}.jpg${MV}" alt="" onerror="this.remove()">${motionReduced() ? '' : `<video src="media/coach/${k}-${id}.mp4${MV}" muted autoplay playsinline onerror="this.remove()"></video>`}</span>`;
 const closeX = () => `<button class="iconbtn sheet-x" data-act="sheet-close" aria-label="${t('Close')}">${icon.x}</button>`;
 
 // My Plan: today's tip, or (for someone who has not chosen yet) a card that offers the coach.
@@ -104,7 +106,7 @@ export function coachRest(it) {
   const tip = esc(own ? unitText(t(own)) : dailyTip(profile()));
   const k = coachKey();
   if (!motionReduced())
-    return `<div class="coach-rest breathe"><span class="coach-clip" aria-hidden="true"><img src="media/coach/${k}-breathe.jpg" alt="" onerror="this.remove()"><video src="media/coach/${k}-breathe.mp4" muted autoplay loop playsinline onerror="this.remove()"></video></span><p><b>${t('Breathe slowly and recover.')}</b> ${tip}</p></div>`;
+    return `<div class="coach-rest breathe"><span class="coach-clip" aria-hidden="true"><img src="media/coach/${k}-breathe.jpg${MV}" alt="" onerror="this.remove()"><video src="media/coach/${k}-breathe.mp4${MV}" muted autoplay loop playsinline onerror="this.remove()"></video></span><p><b>${t('Breathe slowly and recover.')}</b> ${tip}</p></div>`;
   return `<div class="coach-rest">${avatarHTML(40)}<p>${tip}</p></div>`;
 }
 

@@ -2,31 +2,30 @@
 
 Read this together with `CLAUDE.md` (the "Exercise animations" section holds the full rules). This file records where the work stands and every approved Higgsfield still, so a new chat can continue without redoing anything.
 
-_Last updated 2026-11-23 (evening): coaches live with phase 2, own pictures instead of maker pictures, new logo._
+_Last updated 2026-11-23 (late evening): six coaches with the Rep12 logo, full-screen coach moments, logo fixes._
 
-## Start here (written 2026-11-23, evening)
+## Start here (written 2026-11-23, late evening)
 
-**Everything is committed and pushed** (last commit `66c67d3`). Live at https://erez7673.github.io/rep12/.
+**Everything is committed and pushed** (last commit `511900b`). Live at https://erez7673.github.io/rep12/.
 
 **Done on 2026-11-23:**
-- **AI coaches (Mia, Lucas) live for everyone** (`READY = true`; the user read Flow's terms: commercial use allowed). Off for each user until they pick a coach. Moments, all full screen 5 s portrait clips except the rest card: "Let's go!" at start; at the finish a high five (week done, 10/25/50/100… workouts), thumbs up (personal best) or cheer; on My Plan a phase-change moment (app-built plans) or a wave after 7+ days away; a small breathe clip on every rest; a coach line on Progress. The Meet card comes after every new profile. Details in CLAUDE.md.
+- **AI coaches live for everyone, now six:** Mia, Lucas, Amara (about 43), Kenji (about 52), Priya, Mateo, all wearing the Rep12 logo on the left chest. Off for each user until they pick one. Moments: "Let's go!" at start; at the finish a high five (week done, 10/25/50/100… workouts), thumbs up (personal best) or cheer; on My Plan a phase-change moment (app-built plans) or a wave after 7+ days away; a small breathe clip on every rest; a coach line on Progress. **Picking a coach** plays their wave with their greeting full screen (the app tour waits for it). Lucas has no high five of his own (it kept adding a wristband or losing his tattoo): he uses his cheer (`CLIP_STANDIN`); his wave is a warm nod.
+- **Coach moments are full screen:** studio-grey background (#1f1f21), the square clip centred full width, soft edges as a gradient layer on top (a CSS mask on the video made phones draw it zoomed and shifted, cutting off heads), the line at the bottom. Clips are centred 480×480 squares. Coach media URLs carry a version (`MV` in `coach.js`): bump it when clips change.
 - **No maker pictures any more:** exercises and equipment show our own clip stills; the 10 items without a clip have Flow product pictures in `docs/media/equip/`.
 - **Workout days are numbered** (Workout Day 1, 2, 3…); the AB Plan text says workout A on days 1 and 3, B on days 2 and 4.
 - **Warm-up minutes are typed** (0–60) in Build your custom plan; saving also updates the workout day's warm-up.
-- **New logo** (12-week dial) and tagline "Your next 12 weeks, planned." (welcome screen, meta, manifest).
-- **Phone testing:** `python tools/devserver.py` (or `preview_start` name `fressi`) never lets the phone keep old files; the phone opens `http://<PC address>:8765` (this PC was 192.168.1.240). A phone that cached files from the old plain server needs its site data cleared once.
+- **New logo** (12-week dial, the "1" and "2" now the same height) and tagline "Your next 12 weeks, planned." The accessibility button uses the universal access symbol (teal disc, white figure; `icon.access` in `ui.js`).
+- **Phone testing:** `python tools/devserver.py` (or `preview_start` name `fressi`) never lets the phone keep old files; the phone opens `http://<PC address>:8765` (this PC was 192.168.1.240).
 
 **Next steps (in this order)**
 1. The user's feedback on today's changes; fix what they find.
-2. **Four new coaches: DONE (2026-11-23)** — Amara, Kenji, Priya, Mateo with the chest logo, 24 clips cut (5 s portrait; hand clips cropped further left, Priya's let's-go at x 260, Amara's high five at x 280) and in the app with traits and lines in all languages. **Mia and Lucas with the logo: DONE too** (new close-ups `*-close-logo.jpg`, all their clips remade; Lucas has no high five of his own and uses his cheer, `CLIP_STANDIN`; his wave is a warm nod, cut at 4.6 s; failed tries in `new clips/rejected/`). Originals of the new clips: `AI personal trainers/new clips/` (exact copies in `duplicates/`).
-   Earlier note: Amara (woman, about 43, warm and energetic), Kenji (man, about 52, calm and precise), Priya (woman, about 28, upbeat), Mateo (man, about 31, playful). All six coaches get the Rep12 logo on the left chest (print version `AI personal trainers/rep12-logo.png`); Mia and Lucas get new close-ups with the logo and remade clips (saved with `-logo`). Prompts: `AI personal trainers/FLOW-NEW-COACHES.md`. When files arrive: check (face, hands, logo sharp and in place), cut with the same 5 s portrait format as the others, add the coaches to `COACHES` with a trait and `SIG` lines in all 11 languages, make the picker fit six, add the files to `docs/media/coach/`.
-3. **December (Higgsfield credits back): batch 10** — the 9 exercises below, plus mannequins and clips on our Flow machine pictures for the ab machine, rotary torso and **the 7 cardio exercises** (see the reminder under "Still to do next month"). Then add each machine to `EQ_STILL` and bump `PICS` in `sw.js`.
-4. Native-speaker review of the translations (all written by Claude, about 1,340 texts per language).
-5. **Speaking coaches, December (decided 2026-11-23):** English speech with lip sync, the line shown as text too (translated in other languages); route 2 = one fixed voice per coach + Seedance 2.0 with the audio as reference. Full plan in `AI personal trainers/COACH-USAGE-PLAN.md` section 10.
+2. **December (Higgsfield credits back): batch 10** — the 9 exercises below, plus mannequins and clips on our Flow machine pictures for the ab machine, rotary torso and **the 7 cardio exercises** (see the reminder under "Still to do next month"). Then add each machine to `EQ_STILL` and bump `PICS` in `sw.js`.
+3. **Speaking coaches, December (decided 2026-11-23):** English speech with lip sync, the line shown as text too (translated in other languages); route 2 = one fixed voice per coach + Seedance 2.0 with the audio as reference, about 10 lines per coach (six coaches now, so about 60 clips). Full plan in `AI personal trainers/COACH-USAGE-PLAN.md` section 10. The coach introduction (picking a coach) is a natural first speaking line.
+4. Native-speaker review of the translations (all written by Claude, about 1,360 texts per language).
 
-**Credits:** Flow (Google AI Pro): about 920 of 1,000 on 2026-11-22, minus roughly 140 for the phase 2 clips (estimate; check in Flow). Flow pictures cost no credits. Higgsfield: none until December.
+**Credits:** Flow (Google AI Pro): about 920 of 1,000 on 2026-11-22, minus roughly 140 for the phase 2 clips and roughly 400 for the new coaches and the logo remakes (estimates; check in Flow). Flow pictures cost no credits. Higgsfield: none until December.
 
-**Local-only files (never committed):** `AI personal trainers/` (coach pictures, Flow clips, prompt guides `FLOW-PROMPTS.md` and `FLOW-PHASE2.md`; **`lucas-face.png` is an actor's photo: never use it**) and `Equipment pictures/` (the 2048 px Flow originals, the prompt sheets and `references/`).
+**Local-only files (never committed):** `AI personal trainers/` (coach pictures and close-ups incl. `*-close-logo.jpg`, the print logo `rep12-logo.png`, Flow clips with the final names in `new clips/` (failed tries in `new clips/rejected/`, exact copies in `new clips/duplicates/`), prompt guides `FLOW-PROMPTS.md`, `FLOW-PHASE2.md`, `FLOW-NEW-COACHES.md`, `FLOW-MIA-LUCAS-LOGO.md`; **`lucas-face.png` is an actor's photo: never use it**) and `Equipment pictures/` (the 2048 px Flow originals, the prompt sheets and `references/`).
 
 **Flow facts that cost time (full guide in `AI personal trainers/FLOW-PROMPTS.md`):** images cost no credits (daily limits); videos use Veo 3.1 Lite (10 credits, 8 s, 16:9); turn on **Return silent videos**; keep prompts to one simple action, no counts, no left/right words; a reference picture of another machine makes Flow copy its shape, so use none for machines without a clip.
 
@@ -35,7 +34,7 @@ _Last updated 2026-11-23 (evening): coaches live with phase 2, own pictures inst
 - **Paused until next month (December 2026).** The Higgsfield credits ran out after batch 9. When they are refilled next month, we finish the remaining animations (batch 10, below).
 - **Done and in the app:** 89 of the app's 105 exercises have male + female clips (`VIDEOS` in `docs/js/anim.js`): leg press plus batches 1–9.
   - The other 16 are the 9 in the table below, plus the 7 cardio exercises (now wanted too, on our Flow machine pictures; see the reminder below).
-- **Git:** everything is committed and pushed (batch 9 is commit `da1264a`; latest `66c67d3`).
+- **Git:** everything is committed and pushed (batch 9 is commit `da1264a`; latest `511900b`).
 - **Credits: 0.66 left (paid "plus" plan, refreshes in December). Nothing can be generated until then.** A `gpt_image_2_6` image was quoted at 0.75 credits on 2026-11-21 (earlier notes said 0.25, so check with `estimate_image_cost`). A seedance video costs 2–2.5. Batch 9 used about 65 credits.
 - **December budget:** batch 10 (9 exercises) about 35–45 credits, plus the equipment pictures about 35–50 credits (see below).
 - **Always check the balance BEFORE sending a batch,** never in the same step.
@@ -79,7 +78,7 @@ These changes don't affect the clips. If a future change adds a JS or CSS file, 
 
 ## Accessibility (2026-11-22, pushed)
 
-- **Accessibility screen** (person icon on Profile and on the welcome screen, also in Settings):
+- **Accessibility screen** (universal access symbol on Profile and on the welcome screen, also in Settings):
   - text size: Normal, Large, Extra large;
   - high contrast;
   - bigger buttons;

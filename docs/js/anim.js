@@ -199,6 +199,7 @@ const VIDEOS = new Set([
   'knee-raise', 'hanging-leg-raise', 'cable-crunch', 'dead-bug',
 ]);
 
+export const hasClip = (id) => VIDEOS.has(id);
 export const hasAnim = (id) => VIDEOS.has(id) || !!DEFS[id];
 
 // Where the effort is in the loop: push (1.1 s), hold, return slowly (1.6 s), pause.

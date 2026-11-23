@@ -1,6 +1,6 @@
 // Offline support: network first (so updates show up straight away), cached copy when offline.
-const CACHE = 'rep12-v9';
-const PICS = 'rep12-pics-v1';
+const CACHE = 'rep12-v10';
+const PICS = 'rep12-pics-v2';
 const FILES = [
   './', './index.html', './manifest.webmanifest', './css/app.css',
   './js/app.js', './js/store.js', './js/ui.js', './js/exercises.js', './js/equipment.js', './js/pictures.js',
@@ -21,16 +21,15 @@ self.addEventListener('activate', (e) => {
 self.addEventListener('fetch', (e) => {
   const url = new URL(e.request.url);
   if (e.request.method !== 'GET') return;
-  // Maker equipment pictures: cache first (they never change), so they show offline at the gym.
-  if ((url.hostname === 'gym80.de' && url.pathname.startsWith('/wp-content/uploads/'))
-    || (url.hostname === 'assets.jhtbrand.co' && url.pathname.startsWith('/files/product/'))) {
+  if (url.origin !== location.origin) return; // sync calls go straight to Google
+  // Exercise and equipment pictures (clip stills, product photos): cache first, so the lists show them offline at the gym.
+  if (url.pathname.includes('/media/') && url.pathname.endsWith('.jpg')) {
     e.respondWith(caches.open(PICS).then(c => c.match(e.request).then(hit => hit || fetch(e.request).then(res => {
-      if (res.ok || res.type === 'opaque') c.put(e.request, res.clone());
+      if (res.ok) c.put(e.request, res.clone());
       return res;
     }))));
     return;
   }
-  if (url.origin !== location.origin) return; // sync calls go straight to Google
   if (url.pathname.includes('/media/')) return; // video clips: Safari streams them with range requests, which a cache can't answer
   e.respondWith(
     fetch(e.request, { cache: 'no-cache' }).then(res => {

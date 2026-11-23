@@ -48,7 +48,7 @@ export function thumb(ex, photo, size = 'md') {
   const fallback = `<span class="ico">${ex?.m === 'cardio' ? CARDIO_ICON : icon.gym}</span>`;
   const pic = picFor(ex);
   if (!pic) return `<div class="thumb ${size}">${fallback}</div>`;
-  return `<div class="thumb pic ${pic.brand.toLowerCase()} ${size}">${fallback}<img src="${pic.url}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>`;
+  return `<div class="thumb pic ${pic.kind} ${size}">${fallback}<img src="${pic.url}" alt="" loading="lazy" onerror="this.remove()"></div>`;
 }
 
 let toastTimer;

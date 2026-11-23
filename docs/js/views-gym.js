@@ -5,8 +5,8 @@ import { MUSCLES, MOTIONS, PATTERN_NAMES, TEMPLATES, INJURIES } from './exercise
 import { EQUIPMENT, EQUIP_CATS } from './equipment.js';
 import { POSITIONS, GRIPS, FEEL, matchExercises, customExercise, identifyWithAI } from './identify.js';
 import { lineChart } from './charts.js';
-import { EQUIP_PIC } from './pictures.js';
-import { hasAnim, animHTML, startAnims } from './anim.js';
+import { equipPic } from './pictures.js';
+import { hasAnim, hasClip, animHTML, startAnims } from './anim.js';
 import { generatePlan, dayFocus, sessionBudget, warmPref, dayCap, sortDay, raiseDayCap, MAX_EX_PER_DAY, dayName } from './planner.js';
 import { t, toW, wUnit, unitText, listJoin } from './i18n.js';
 import { coachTipCard } from './coach.js';
@@ -14,9 +14,9 @@ import { rerender } from './app.js';
 import { scheduleSync } from './sync.js';
 
 const eqThumb = (id) => {
-  const pic = EQUIP_PIC[id];
+  const pic = equipPic(id);
   return pic
-    ? `<span class="thumb pic sm zoomable" data-act="pic-zoom" role="button" tabindex="0" aria-label="${t('Show the picture larger')}"><img src="${pic.url}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></span>`
+    ? `<span class="thumb pic ${pic.kind} sm zoomable" data-act="pic-zoom" role="button" tabindex="0" aria-label="${t('Show the picture larger')}"><img src="${pic.url}" alt="" loading="lazy" onerror="this.remove()"></span>`
     : `<span class="thumb sm"><span class="ico">${icon.gym}</span></span>`;
 };
 const eqName = (id) => EQUIPMENT.find(e => e.id === id)?.name || state.gym.machines.find(m => m.id === id)?.name || id;
@@ -75,7 +75,7 @@ export function exerciseView(id) {
   const steps = `<ol class="steps">${ex.steps.map(s => `<li>${esc(exText(s))}</li>`).join('')}</ol>`;
   return {
     html: `${back}
-      <div class="hero">${photo ? `<img src="${photo}" alt="">` : thumb(ex, null, 'xl')}</div>
+      ${photo ? `<div class="hero"><img src="${photo}" alt=""></div>` : hasClip(ex.id) ? '' : `<div class="hero">${thumb(ex, null, 'xl')}</div>`}
       <h1 class="title">${esc(ex.name)}</h1>
       <div class="chips">
         <span class="chip on">${esc(MUSCLES[ex.m])}</span>${ex.s.map(x => `<span class="chip">${esc(MUSCLES[x])}</span>`).join('')}
@@ -205,7 +205,7 @@ register({
     if (!img) return;
     const title = el.dataset.title || el.closest('.eqrow')?.querySelector('.eqname > span:last-child')?.firstChild?.textContent || '';
     sheet(`<h2>${esc(title.trim())}</h2>
-      <div class="zoom-pic"><img src="${img.src}" alt="" referrerpolicy="no-referrer"></div>
+      <div class="zoom-pic ${el.classList.contains('still') || el.querySelector('.still') ? 'still' : ''}"><img src="${img.src}" alt=""></div>
       <button class="btn" data-act="sheet-close">${t('Close')}</button>`);
   },
   'eq-toggle': (el) => { state.gym.enabled[el.dataset.id] = el.checked; touchGym(); scheduleSync(); },

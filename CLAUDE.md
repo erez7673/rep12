@@ -15,10 +15,10 @@ Rep12 (formerly Fressi Workout): a workout PWA. The site and the repo are reacha
 Run locally (also defined as `fressi` in `.claude/launch.json`, so use `preview_start` with that name):
 
 ```powershell
-python -m http.server 8765 --directory docs
+python tools/devserver.py 8765
 ```
 
-The service worker registers only on https, so localhost always serves fresh files. If the browser still shows stale CSS/JS, re-fetch with `fetch(url, {cache: 'reload'})` and reload.
+`tools/devserver.py` is `http.server` with `Cache-Control: no-store` and no 304 answers, so a phone testing at `http://<PC address>:8765` always gets the newest files (the plain `python -m http.server` let the phone keep running old JS). The service worker registers only on https, so localhost always serves fresh files. If the browser still shows stale CSS/JS, re-fetch with `fetch(url, {cache: 'reload'})` and reload.
 
 Deploy = commit and push to `main`; GitHub Pages is live about 30 s later. On phones, users get updates by closing and reopening the app (the service worker is network-first).
 
@@ -115,10 +115,11 @@ Deploy = commit and push to `main`; GitHub Pages is live about 30 s later. On ph
 - Anything under `/media/` bypasses the service worker: iPhone Safari loads video with range requests, which the cache can't answer. Clips and their posters are therefore not available offline (beyond the browser's own HTTP cache).
 
 **AI personal coaches (`coach.js`, built but hidden).** Mia and Lucas; plan in the git-ignored `AI personal trainers/` folder (`COACH-USAGE-PLAN.md`), status in `HANDOVER.md`. Coaches use original faces only: never a real person's or actor's face as a reference.
-- **Hidden until the pictures exist:** `READY = false` in `coach.js` hides every coach element (and the coach tour steps). On this computer and on the home network (`localhost`, `192.168.x.x`, `10.x`, `172.16–31.x`, `*.local`: `isDevHost()`) the coach is always on, so it can be tried on a phone at `http://<PC address>:8765`; elsewhere set `state.settings.coachPreview = true`. The public site never matches. The placeholder media in `docs/media/coach/` is excluded from git (`.git/info/exclude`) because Flow's commercial-use terms are not settled. When `docs/media/coach/` has approved `<coach>-idle.jpg`, `-letsgo.mp4` and `-cheer.mp4` made with a tool whose terms allow it, set `READY = true` and remove the exclude line.
+- **Hidden until the pictures exist:** `READY = false` in `coach.js` hides every coach element (and the coach tour steps). On this computer and on the home network (`localhost`, `192.168.x.x`, `10.x`, `172.16–31.x`, `*.local`: `isDevHost()`) the coach is always on, so it can be tried on a phone at `http://<PC address>:8765`; elsewhere set `state.settings.coachPreview = true`. The public site never matches. The placeholder media in `docs/media/coach/` is excluded from git (`.git/info/exclude`) because Flow's commercial-use terms are not settled. When `docs/media/coach/` has approved `<coach>-idle.jpg` (round face crop), `-letsgo.mp4|.jpg` and `-cheer.mp4|.jpg` (clip and its first frame; portrait 480×640, about 5 s, silent, the whole figure on a plain studio background) made with a tool whose terms allow it, set `READY = true` and remove the exclude line.
 - **No AI at run time:** words are fixed, translated texts (`t()`), picked by simple rules: a tip of the day (rotating, plus a tip for the plan's phase on app-built plans), the exercise's own tip on the rest card and exercise page, a line for the day's focus. Most texts are shared and neutral; only a few signature lines (`SIG`) differ per coach, so keep new coach texts shared where possible.
 - **Settings (per phone, not synced):** `coach` (`mia`, `lucas`, `none`), `coachStyle` (`full`, `key` = only start and finish), `coachAsked`. Off by default; chosen on the "Meet your coach" card after the first profile (the tour starts after it), or from Profile → Coach / Settings. Existing users see a one-time card on My Plan.
-- **Where it shows:** My Plan tip card, day preview line, "Let's go!" overlay at workout start (never takes taps), rest card tip, summary note (plays the coach's cheer clip), exercise page tip. The avatar falls back to the coach's initial when the picture is missing; clips are skipped with Reduce motion.
+- **Where it shows:** My Plan tip card, day preview line, rest card tip, exercise page tip, and two full-screen moments (`moment()` in `coach.js`: the clip fills the screen, its edges fade into the dimmed page, the line shows below; a tap anywhere closes it, otherwise it closes when the clip ends): "Let's go!" at workout start and the cheer when a workout is finished (the summary's coach note replays it, `coach-cheer`). The avatar falls back to the coach's initial when the picture is missing; with Reduce motion the moments show the clip's still frame for 2.5 s.
+- **Meet card:** shown after every new profile (the coach is per phone, so the current one is marked); after the first profile the tour starts once it is answered. The My Plan offer card shows only while no coach was ever chosen (`coachAsked`).
 - **Disclosure:** the coach sheet says the coaches are AI-generated characters and the tips are general guidance, not medical advice.
 - Add a tour step for anything new (steps with `when:` are skipped when the coach is hidden).
 

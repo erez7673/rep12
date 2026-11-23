@@ -501,7 +501,6 @@ body:has(.cta) #livebar { bottom: calc(var(--nav-h) + env(safe-area-inset-bottom
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
 /* ── AI personal coaches (coach.js) ── */
 .coach-av { position: relative; flex: none; width: var(--s, 40px); height: var(--s, 40px); border-radius: 50%; overflow: hidden; background: linear-gradient(135deg, #3a4a6a, #1c1c1e); color: #fff; display: grid; place-items: center; box-shadow: 0 0 0 1.5px rgba(127,127,127,.45); }
-.coach-av.sq { border-radius: 18px; } /* the start overlay shows the whole clip, not a round crop */
 .coach-av b { font-size: calc(var(--s, 40px) * .45); font-weight: 800; }
 .coach-av img, .coach-av video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .coachcard { display: flex; align-items: center; gap: 12px; width: 100%; padding: 12px 14px; margin: 12px 0; border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow); text-align: start; }
@@ -519,5 +518,12 @@ body:has(.cta) #livebar { bottom: calc(var(--nav-h) + env(safe-area-inset-bottom
 .coach-tip small { margin-bottom: 2px; }
 .coach-pick .coach-av { margin-inline-end: 2px; }
 .coach-pick.sel b { color: var(--blue); }
-#coach-overlay { position: fixed; z-index: 40; left: 50%; top: calc(env(safe-area-inset-top) + 76px); transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 14px 22px; border-radius: 20px; background: rgba(20,20,22,.92); color: #fff; pointer-events: none; }
-#coach-overlay p { margin: 0; font-weight: 800; font-size: calc(20px * var(--fs)); }
+#coach-overlay { position: fixed; inset: 0; z-index: 60; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: calc(env(safe-area-inset-top) + 16px) 16px calc(env(safe-area-inset-bottom) + 16px); background: rgba(16,16,18,.9); color: #fff; cursor: pointer; animation: coachIn .25s ease-out; transition: opacity .25s; }
+#coach-overlay.out { opacity: 0; }
+#coach-overlay .sheet-x { position: absolute; top: calc(env(safe-area-inset-top) + 12px); inset-inline-end: 12px; color: #fff; }
+/* the clip has a plain studio background: its edges fade out, so only the coach seems to stand on the dimmed screen */
+.coach-stage { position: relative; width: min(100%, calc(72vh * .75)); aspect-ratio: 3 / 4; -webkit-mask-image: linear-gradient(to right, transparent, #000 14%, #000 86%, transparent), linear-gradient(to bottom, transparent, #000 5%, #000 80%, transparent); -webkit-mask-composite: source-in; mask-image: linear-gradient(to right, transparent, #000 14%, #000 86%, transparent), linear-gradient(to bottom, transparent, #000 5%, #000 80%, transparent); mask-composite: intersect; }
+.coach-stage img, .coach-stage video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+#coach-overlay p { margin: 0; font-weight: 800; font-size: calc(30px * var(--fs)); text-align: center; }
+@keyframes coachIn { from { opacity: 0; } }
+button.coach-note { width: 100%; text-align: start; color: inherit; font: inherit; }

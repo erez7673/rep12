@@ -5,7 +5,7 @@ import { currentWeek, planProgress, dayFocus, planPhase, isCustom, buildSession,
 import { MUSCLES } from './exercises.js';
 import * as W from './workout.js';
 import { say, setCue } from './speak.js';
-import { coachPlanCard, coachDayLine, coachRest, coachFinish, coachStart, coachSpeakFinish } from './coach.js';
+import { coachPlanCard, coachDayLine, coachRest, coachFinish, coachStart, coachFinishMoment } from './coach.js';
 import { t, wUnit, fromW, toW, locale, listJoin } from './i18n.js';
 import { rerender } from './app.js';
 import { scheduleSync } from './sync.js';
@@ -618,10 +618,10 @@ register({
     if (left && !confirm(t('{n} set(s) not logged. Finish anyway?', { n: left }))) return;
     closeSheet();
     const rec = W.finish();
-    coachSpeakFinish();
     openItem = null;
     scheduleSync(500);
     location.hash = `#/summary/${rec.id}`;
+    coachFinishMoment();
   },
   'discard': () => {
     if (!confirm(t('Discard this workout? Logged sets will be lost.'))) return;

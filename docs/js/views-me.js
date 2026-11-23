@@ -130,11 +130,11 @@ register({
     toast(t('Plan ready, {name}!', { name: p.name }));
     location.hash = '#/plan';
     // A new user gets the app tour once, right after making their first profile.
-    if (first && !state.settings.tourDone) {
-      // The coach card comes first (when the coaches are available); the tour starts once it is answered.
-      if (coachAvailable() && !state.settings.coachAsked) setTimeout(() => openMeet(() => startTour()), 500);
-      else setTimeout(() => startTour(), 600);
-    }
+    const tour = first && !state.settings.tourDone;
+    // Every new profile meets the coaches (the coach is per phone, so the current one shows as chosen);
+    // the tour starts once the card is answered.
+    if (coachAvailable()) setTimeout(() => openMeet(tour ? () => startTour() : null), 500);
+    else if (tour) setTimeout(() => startTour(), 600);
   },
   'save-profile': (el) => {
     const d = readForm(); if (!d) return;

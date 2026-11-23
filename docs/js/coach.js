@@ -68,9 +68,9 @@ export function dailyTip(p) {
 export const avatarHTML = (size = 40, k = coachKey()) => !k ? '' :
   `<span class="coach-av" style="--s:${size}px" aria-hidden="true"><b>${esc(COACHES[k].name[0])}</b><img src="media/coach/${k}-idle.jpg" alt="" onerror="this.remove()"></span>`;
 const note = (text, size = 40, cls = '') => `<div class="coach-note ${cls}">${avatarHTML(size)}<p>${esc(text)}</p></div>`;
-// A short clip of the coach as a rounded square (the whole figure). The face picture shows first and stays
-// when there is no clip, it can't load, or Reduce motion is on.
-const clipHTML = (k, id, size) => `<span class="coach-av sq" style="--s:${size}px" aria-hidden="true"><b>${esc(COACHES[k].name[0])}</b><img src="media/coach/${k}-idle.jpg" alt="" onerror="this.remove()">${motionReduced() ? '' : `<video src="media/coach/${k}-${id}.mp4" poster="media/coach/${k}-idle.jpg" muted autoplay playsinline onerror="this.remove()"></video>`}</span>`;
+// A full-screen clip of the coach (portrait 3:4, the whole figure, edges fading into the dimmed screen).
+// Its first frame (<coach>-<id>.jpg) shows under it, and alone when the clip can't load or Reduce motion is on.
+const stageHTML = (k, id) => `<span class="coach-stage" aria-hidden="true"><img src="media/coach/${k}-${id}.jpg" alt="" onerror="this.remove()">${motionReduced() ? '' : `<video src="media/coach/${k}-${id}.mp4" muted autoplay playsinline onerror="this.remove()"></video>`}</span>`;
 const closeX = () => `<button class="iconbtn sheet-x" data-act="sheet-close" aria-label="${t('Close')}">${icon.x}</button>`;
 
 // My Plan: today's tip, or (for someone who has not chosen yet) a card that offers the coach.
@@ -92,8 +92,8 @@ export function coachRest(it) {
   return `<div class="coach-rest">${avatarHTML(40)}<p>${esc(own ? unitText(t(own)) : dailyTip(profile()))}</p></div>`;
 }
 
-// The note on the workout summary: the coach's cheer clip and the finish line.
-export const coachFinish = () => coachOn() ? `<div class="coach-note finish">${clipHTML(coachKey(), 'cheer', 110)}<p>${esc(sig('finish'))}</p></div>` : '';
+// The note on the workout summary: the coach and the finish line; tapping it plays the cheer again.
+export const coachFinish = () => coachOn() ? `<button class="coach-note finish" data-act="coach-cheer">${avatarHTML(56)}<p>${esc(sig('finish'))}</p></button>` : '';
 export const coachTipCard = (text) => coachFull()
   ? `<div class="card tip coach-tip">${avatarHTML(36)}<div><small>${t('Tip from {name}', { name: coachName() })}</small>${esc(text)}</div></div>` : '';
 export const coachProfileRow = () => !coachAvailable() ? '' :
@@ -102,21 +102,27 @@ export const coachSettingsBlock = () => !coachAvailable() ? '' :
   `<h3>${t('Coach')}</h3><div class="card list"><button class="eqrow" data-act="coach-open"><span>${esc(coachName() || t('No coach'))}</span>${icon.chev}</button></div>`;
 
 // ── Moments ──
-// "Let's go!" for about two and a half seconds when a workout starts (the clip is cut to that length). It never takes taps, so it can't block a button.
-export function coachStart() {
+// The coach fills the screen for one clip (about 5 s): "Let's go!" when a workout starts, the cheer when it is finished.
+// A tap anywhere closes it; it also closes by itself when the clip ends (after 2.5 s with Reduce motion).
+function moment(id, line) {
   const k = coachKey();
   if (!k) return;
-  const line = sig('start');
   document.getElementById('coach-overlay')?.remove();
   const el = document.createElement('div');
   el.id = 'coach-overlay';
   el.setAttribute('role', 'status');
-  el.innerHTML = `${clipHTML(k, 'letsgo', 150)}<p>${esc(line)}</p>`;
+  el.innerHTML = `<button class="iconbtn sheet-x" aria-label="${t('Close')}">${icon.x}</button>${stageHTML(k, id)}<p>${esc(line)}</p>`;
+  let timer;
+  const close = () => { clearTimeout(timer); el.classList.add('out'); setTimeout(() => el.remove(), 250); };
+  el.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); close(); });
+  const v = el.querySelector('video');
+  if (v) v.addEventListener('ended', () => { timer = setTimeout(close, 400); });
+  timer = setTimeout(close, v ? 6500 : 2500); // fallback when the clip never plays
   document.body.append(el);
   if (speakOn()) say(line);
-  setTimeout(() => el.remove(), 2700);
 }
-export const coachSpeakFinish = () => { if (coachOn() && speakOn()) say(sig('finish')); };
+export const coachStart = () => moment('letsgo', sig('start'));
+export const coachFinishMoment = () => moment('cheer', sig('finish'));
 
 // ── Choosing a coach ──
 let afterPick = null;
@@ -129,13 +135,14 @@ export function openMeet(then) {
   afterPick = then || null;
   sheet(`${closeX()}<h2>${t('Meet your coach')}</h2>
     <p class="muted small">${t('Pick a coach to cheer you on, or skip. You can change this any time under Profile → Coach.')}</p>
-    ${Object.keys(COACHES).map(k => pickRow(k, null)).join('')}
+    ${Object.keys(COACHES).map(k => pickRow(k, state.settings.coach)).join('')}
     <button class="btn ghost" data-act="coach-pick" data-k="none">${t('No coach')}</button>
     <p class="muted small">${DISCLOSURE()}</p>`);
 }
 
 register({
   'coach-meet': () => openMeet(),
+  'coach-cheer': () => coachFinishMoment(),
   'coach-open': () => {
     const cur = state.settings.coach, st = state.settings.coachStyle || 'full';
     sheet(`${closeX()}<h2>${t('Your coach')}</h2>

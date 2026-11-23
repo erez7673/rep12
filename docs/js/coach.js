@@ -10,7 +10,7 @@ import { dayFocus, planPhase, isCustom, currentWeek } from './planner.js';
 
 // Switch to true when docs/media/coach/ has the approved pictures and clips (<coach>-idle.jpg, -letsgo.mp4 ...).
 // Until then the whole feature stays hidden on the public site (testing elsewhere: set state.settings.coachPreview = true).
-const READY = false;
+const READY = true;
 // On this computer and on the home network (a phone opening http://192.168.x.x:8765) the coach is always on, so it can be
 // tried before the switch is flipped. The public site (github.io) never matches.
 const DEV_HOST = /^(localhost|127\.0\.0\.1|\[::1\]|192\.168\.\d+\.\d+|10\.\d+\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.\d+\.\d+|[\w-]+\.local)$/;

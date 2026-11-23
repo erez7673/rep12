@@ -1356,4 +1356,8 @@ export default {
   1358: "Nu sätter vi igång!",
   1359: "Du dök upp och körde slut på det!",
   1360: "Välj en av sex coacher, eller ingen coach. Din coach peppar dig med korta tips och meddelanden, en tumme upp för ett nytt personbästa och en high five när du klarat en vecka. Ändra hur ofta coachen hörs av sig, eller stäng av, när du vill.",
+  1361: "All utrustning",
+  1362: "Slå på eller av all utrustning",
+  1363: "Allt på en gång",
+  1364: "Slå på eller av all utrustning med ett tryck och ändra sedan enskilda saker.",
 };

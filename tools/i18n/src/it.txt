@@ -647,3 +647,7 @@
 1358	Muoviamoci!
 1359	Ti sei presentato e hai spaccato!
 1360	Scegli uno dei sei coach, oppure nessuno. Il tuo coach ti incoraggia con brevi consigli e messaggi, un pollice in su per ogni nuovo record personale e un batti cinque quando finisci una settimana. Puoi cambiare quanto spesso parla, o disattivarlo, quando vuoi.
+1361	Tutta l'attrezzatura
+1362	Attiva o disattiva tutta l'attrezzatura
+1363	Tutto insieme
+1364	Attiva o disattiva tutta l'attrezzatura con un tocco, poi cambia i singoli elementi.

@@ -1356,4 +1356,8 @@ export default {
   1358: "Auf geht's, bewegen wir uns!",
   1359: "Du warst da und hast es gerockt!",
   1360: "Wähle einen von sechs Coaches oder keinen Coach. Dein Coach feuert dich mit kurzen Tipps und Nachrichten an, mit einem Daumen hoch für eine neue Bestleistung und einem High five, wenn du eine Woche geschafft hast. Wie oft er sich meldet, kannst du jederzeit ändern oder ihn ausschalten.",
+  1361: "Alle Geräte",
+  1362: "Alle Geräte ein- oder ausschalten",
+  1363: "Alles auf einmal",
+  1364: "Schalte alle Geräte mit einem Tippen ein oder aus und schalte dann einzelne wieder um.",
 };

@@ -1356,4 +1356,8 @@ export const KEYS = {
   1358: "Let's get moving!",
   1359: "You showed up and crushed it!",
   1360: "Pick one of six coaches, or no coach. Your coach cheers you on with short tips and messages, a thumbs up for a new personal best and a high five when you finish a week. Change how often they speak, or turn them off, any time.",
+  1361: "All equipment",
+  1362: "Switch all equipment on or off",
+  1363: "All at once",
+  1364: "Switch all equipment on or off with one tap, then turn single items back on or off.",
 };

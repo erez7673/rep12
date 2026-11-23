@@ -66,6 +66,7 @@ const STEPS = [
   // ── Gym ──
   { sec: 'Gym', route: '#/gym', sel: '#nav a[href="#/gym"]', fixed: true, title: 'The Gym tab', text: 'Your gym\'s equipment.' },
   { sec: 'Gym', route: '#/gym', sel: '.eqrow:has([data-change="eq-toggle"])', title: 'Gym setup', text: 'Switch off anything your gym doesn\'t have. Tap a picture to see it bigger.' },
+  { sec: 'Gym', route: '#/gym', sel: '.eq-all', title: 'All at once', text: 'Switch all equipment on or off with one tap, then turn single items back on or off.' },
   { sec: 'Gym', route: '#/gym', sel: '[data-act="rebuild-plan"]', title: 'Rebuild your plan', text: 'After changing the equipment, rebuild your plan so it only uses what\'s switched on.' },
   { sec: 'Gym', route: '#/gym', sel: '[data-href="#/identify"]', title: 'Don\'t know a machine?', text: 'Take a photo, answer a few questions about how it moves, and the app tells you which exercises you can do on it.' },
 

@@ -646,3 +646,7 @@
 1358	¡A movernos!
 1359	¡Viniste y lo bordaste!
 1360	Elige uno de los seis entrenadores, o ninguno. Tu entrenador te anima con consejos y mensajes cortos, un pulgar arriba por cada nuevo récord personal y un choca esos cinco cuando terminas una semana. Cambia cuándo te habla, o desactívalo, cuando quieras.
+1361	Todo el equipamiento
+1362	Activar o desactivar todo el equipamiento
+1363	Todo a la vez
+1364	Activa o desactiva todo el equipamiento con un toque y luego cambia elementos sueltos.

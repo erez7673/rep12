@@ -647,3 +647,7 @@
 1358	Bora se mexer!
 1359	Você veio e arrasou!
 1360	Escolha um dos seis treinadores, ou nenhum. Seu treinador te incentiva com dicas e mensagens curtas, um joinha a cada novo recorde pessoal e um toca aqui quando você termina uma semana. Mude a frequência das mensagens, ou desative, quando quiser.
+1361	Todos os equipamentos
+1362	Ligar ou desligar todos os equipamentos
+1363	Tudo de uma vez
+1364	Ligue ou desligue todos os equipamentos com um toque e depois ajuste itens individuais.

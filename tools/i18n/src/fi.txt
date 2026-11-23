@@ -647,3 +647,7 @@
 1358	Liikkeelle!
 1359	Tulit paikalle ja hoidit homman!
 1360	Valitse yksi kuudesta valmentajasta tai ei valmentajaa. Valmentaja kannustaa lyhyillä vinkeillä ja viesteillä, peukulla uudesta ennätyksestä ja ylävitosilla, kun viikko on tehty. Voit muuttaa, kuinka usein valmentaja puhuu, tai poistaa sen käytöstä milloin tahansa.
+1361	Kaikki välineet
+1362	Kytke kaikki välineet päälle tai pois
+1363	Kaikki kerralla
+1364	Kytke kaikki välineet päälle tai pois yhdellä napautuksella ja muuta sitten yksittäisiä.

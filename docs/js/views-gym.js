@@ -55,7 +55,12 @@ export function libraryView() {
 
 register({
   'lib-q': (el) => { filter.q = el.value; document.getElementById('liblist').innerHTML = libraryList(); },
-  'lib-m': (el) => { filter.m = el.dataset.m; rerender(); },
+  // Keep the muscle chips scrolled where they were (a re-render would jump back to the start).
+  'lib-m': (el) => {
+    const x = el.closest('.chipscroll')?.scrollLeft || 0;
+    filter.m = el.dataset.m; rerender();
+    const row = document.querySelector('.chipscroll'); if (row) row.scrollLeft = x;
+  },
   'lib-avail': (el) => { filter.availOnly = el.checked; rerender(); },
 });
 
@@ -184,6 +189,8 @@ export function gymView() {
     html: `<header class="top"><div><h1>${t('Gym Setup')}</h1><p class="sub">${t('{a}/{b} items on', { a: on, b: total })}</p></div></header>
       <button class="btn primary big" data-act="go" data-href="#/identify">${icon.camera} ${t('Add a machine with a photo')}</button>
       <p class="muted small">${t('Switch off anything your gym doesn\'t have. The plan only uses items that are on.')}</p>
+      <div class="card list"><label class="eqrow eq-all"><span class="eqname"><b>${t('All equipment')}</b></span>
+        <input type="checkbox" class="switch" ${on === total ? 'checked' : ''} data-change="eq-all" aria-label="${t('Switch all equipment on or off')}"></label></div>
       ${machines.length ? `<h3>${t('My machines')}</h3><div class="exlist">${machines.map(m => {
         const exs = (m.exerciseIds || []).map(exById).filter(Boolean);
         return `<div class="exrow"><span class="zoomable" data-act="pic-zoom" role="button" tabindex="0" aria-label="${t('Show the picture larger')}" data-title="${esc(m.name)}">${m.photo ? `<div class="thumb md"><img src="${m.photo}" alt=""></div>` : thumb(exs[0])}</span>
@@ -208,7 +215,13 @@ register({
       <div class="zoom-pic ${el.classList.contains('still') || el.querySelector('.still') ? 'still' : ''}"><img src="${img.src}" alt=""></div>
       <button class="btn" data-act="sheet-close">${t('Close')}</button>`);
   },
-  'eq-toggle': (el) => { state.gym.enabled[el.dataset.id] = el.checked; touchGym(); scheduleSync(); },
+  'eq-toggle': (el) => { state.gym.enabled[el.dataset.id] = el.checked; touchGym(); scheduleSync(); rerender(); },
+  // Switch every piece of equipment (and the user's own machines) on or off at once.
+  'eq-all': (el) => {
+    for (const e of EQUIPMENT) state.gym.enabled[e.id] = el.checked;
+    for (const m of state.gym.machines) m.on = el.checked;
+    touchGym(); scheduleSync(); rerender();
+  },
   'rebuild-plan': () => {
     if (!confirm(t('Rebuild your plan with the current equipment? Your logged history is kept, but plan progress restarts at week 1.'))) return;
     const p = profile(); const custom = p.plan?.custom; p.plan = generatePlan(p); if (custom) p.plan.custom = true; touchProfile(p); scheduleSync(); toast(t('Plan rebuilt')); location.hash = '#/plan';

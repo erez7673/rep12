@@ -5,7 +5,7 @@ import { currentWeek, planProgress, dayFocus, planPhase, isCustom, buildSession,
 import { MUSCLES } from './exercises.js';
 import * as W from './workout.js';
 import { say, setCue } from './speak.js';
-import { coachPlanCard, coachDayLine, coachRest, coachFinish, coachStart, coachFinishMoment, coachWelcome } from './coach.js';
+import { coachPlanCard, coachDayLine, coachRest, coachFinish, coachStart, coachFinishMoment, coachPlanMoment } from './coach.js';
 import { t, wUnit, fromW, toW, locale, listJoin } from './i18n.js';
 import { rerender } from './app.js';
 import { scheduleSync } from './sync.js';
@@ -69,7 +69,7 @@ export function planView() {
         <div class="stat"><b>${p.history.length}</b><small>${t('Workouts logged')}</small></div>
         <div class="stat"><b>${p.stats.minutes}′</b><small>${t('Per session')}</small></div>
       </div>`,
-    after: () => coachWelcome(p),
+    after: () => coachPlanMoment(p),
   };
 }
 
@@ -447,7 +447,7 @@ export function sessionView() {
         <button class="pillbtn" data-act="rest-add" data-v="-15">${t('−15 s')}</button>
         <button class="pillbtn" data-act="rest-add" data-v="15">${t('+15 s')}</button>
         <button class="pillbtn light" data-act="rest-skip">${t('Skip rest')}</button>
-      </div>${coachRest(s.items[s.cur.i], s.restTotal)}</div>`;
+      </div>${coachRest(s.items[s.cur.i])}</div>`;
   } else if (allDone || s.phase === 'ready') {
     head = `<div class="hd"><div class="bigline">${t('All sets done')} 🎉</div><p>${s.cardio && !s.cardio.done ? t('Finish with cardio and the cooldown, then tap Finish.') : t('Finish with the cooldown, then tap Finish.')}</p>
       <div class="hd-btns"><button class="pillbtn light" data-act="finish">${t('Finish workout')}</button></div></div>`;

@@ -86,13 +86,13 @@ export const coachCardShown = () => coachFull();
 export const coachDayLine = (day) => coachFull() ? note(t('Today: {focus}. Warm up first and take your time.', { focus: dayFocus(day) })) : '';
 
 // The rest card of a workout: a tip for the exercise that comes next (its own tip, else the tip of the day).
-// On a long rest (90 s or more) the coach breathes calmly in a small looping clip, with a reminder to breathe.
-export function coachRest(it, total = 0) {
+// On every rest the coach breathes calmly in a small looping clip, with a reminder to breathe.
+export function coachRest(it) {
   if (!coachFull()) return '';
   const own = exById(it?.exId)?.tip;
   const tip = esc(own ? unitText(t(own)) : dailyTip(profile()));
   const k = coachKey();
-  if (total >= 90 && !motionReduced())
+  if (!motionReduced())
     return `<div class="coach-rest breathe"><span class="coach-clip" aria-hidden="true"><img src="media/coach/${k}-breathe.jpg" alt="" onerror="this.remove()"><video src="media/coach/${k}-breathe.mp4" muted autoplay loop playsinline onerror="this.remove()"></video></span><p><b>${t('Breathe slowly and recover.')}</b> ${tip}</p></div>`;
   return `<div class="coach-rest">${avatarHTML(40)}<p>${tip}</p></div>`;
 }
@@ -138,8 +138,47 @@ export function coachFinishMoment(ev = {}) {
   return moment('cheer', sig('finish'));
 }
 
+// A new phase of an app-built plan, once per plan and phase, on My Plan ("Tips and messages" style only).
+// A new plan is noted silently, so its first phase doesn't trigger it.
+const PHASE_MOMENT = {
+  build: () => ['letsgo', t('New phase: more reps per set. You\'re getting stronger!')],
+  peak: () => ['letsgo', t('New phase: heavier weights. Stay in control!')],
+  deload: () => ['breathe', t('Last week: lighter on purpose. Recover well!')],
+};
+function coachPhase(p) {
+  if (!coachFull() || !p?.plan || isCustom(p.plan)) return false;
+  const key = planPhase(p.plan, currentWeek(p.plan)).key;
+  const seen = state.settings.coachPhase || {};
+  if (seen.plan === p.plan.id && seen.key === key) return false;
+  const first = seen.plan !== p.plan.id;
+  state.settings.coachPhase = { plan: p.plan.id, key }; save();
+  if (first || !PHASE_MOMENT[key]) return false;
+  const [clip, line] = PHASE_MOMENT[key]();
+  moment(clip, line);
+  return true;
+}
+
+// My Plan moments: a new phase first, else welcome back (only one at a time).
+export const coachPlanMoment = (p) => { if (!coachPhase(p)) coachWelcome(p); };
+
+// A line on the Progress screen, picked by simple rules from the workout history.
+export function coachProgress(p) {
+  if (!coachFull() || !p) return '';
+  const h = p.history || [], now = Date.now();
+  const last = h.length ? Math.max(...h.map(r => r.date || 0)) : 0;
+  const week = h.filter(r => r.date > now - 7 * 864e5).length;
+  const month = h.filter(r => r.date > now - 30 * 864e5).length;
+  let line;
+  if (!h.length) line = t('Finish your first workout and your progress shows up here.');
+  else if (now - last >= 7 * 864e5) line = t('It\'s been a while. One workout this week gets you back on track.');
+  else if (week >= (p.stats.days || 3)) line = t('All your workouts this week are done. Great consistency!');
+  else if (month >= 8) line = t('{n} workouts in the last 30 days. You\'re building a real habit.', { n: month });
+  else line = t('Every workout counts. Keep showing up and the charts will rise.');
+  return note(line, 44, 'progress-coach');
+}
+
 // Welcome back on My Plan after a week or more without a workout (once per break; "Tips and messages" style only).
-export function coachWelcome(p) {
+function coachWelcome(p) {
   if (!coachFull() || !p?.history?.length) return;
   const last = Math.max(...p.history.map(h => h.date || 0));
   if (Date.now() - last < 7 * 864e5 || state.settings.coachWelcomed === last) return;

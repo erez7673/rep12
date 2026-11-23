@@ -617,3 +617,15 @@
 1324	Uppvärmning i minuter
 1325	(0 = ingen uppvärmning)
 1326	Välj Mia eller Lucas, eller ingen coach. Din coach peppar dig med korta tips och meddelanden, en tumme upp för ett nytt personbästa och en high five när du klarat en vecka. Ändra hur ofta coachen hörs av sig, eller stäng av, när du vill.
+1328	Ny fas: tyngre vikter. Behåll kontrollen!
+1329	Sista veckan: lättare med flit. Återhämta dig väl!
+1330	Gör ditt första pass så syns dina framsteg här.
+1332	Alla veckans pass är klara. Fin kontinuitet!
+1334	Varje pass räknas. Fortsätt komma hit så stiger kurvorna.
+1335	Din coach under Framsteg
+1336	Din coach sammanfattar hur träningen går och säger till när en ny fas i planen börjar.
+1337	Ny fas: fler repetitioner per set. Du blir starkare!
+1338	Det var ett tag sedan. Ett pass den här veckan tar dig tillbaka på banan.
+1339	{n} pass de senaste 30 dagarna. Det håller på att bli en vana.
+1341	Varje övning görs sittande i en maskin eller på en bänk, utan att stå och utan golvövningar – för rullstolsanvändare och alla med balans- eller bensvårigheter. Dag 2 har två benmaskiner; ta bort dem om de inte passar dig. Lätt start med 2–3 set med 10–15 repetitioner.
+1342	Två pass, A och B, som växlar: pass A (bröst, biceps och rygg) dag 1 och 3, pass B (axlar, triceps och ben) dag 2 och 4. Varje område tränas två gånger i veckan. Set och repetitioner följer ditt mål.

@@ -22,7 +22,7 @@ export function raiseDayCap(p, n) {
 export const SETS = 4;         // sets per exercise
 const PLAN_FMT = 3;            // bump when the plan shape changes (see upgradePlan)
 
-export const dayName = (i) => t('Workout Day {x}', { x: 'ABCDEFG'[i] || i + 1 });
+export const dayName = (i) => t('Workout Day {x}', { x: i + 1 });
 const planName = (st) => `${GOALS[st.goal]?.name || t('Training')} · ${t('{n} days a week', { n: st.days || 3 })}`;
 // The plan's name in the current language (the stored name is in the language it was made in).
 export const planTitle = (plan) => plan.template ? (TEMPLATES[plan.template]?.name || plan.name)
@@ -122,12 +122,12 @@ export const TEMPLATES = {
     blurb: 'Three full-body days with only 4 exercises each – legs, a push, a pull and hips or core – so a session takes about 35–40 minutes with warm-up and cooldown.' },
   ab: { name: 'AB Plan · 4 days a week', short: '4 days a week', days: ['abA', 'abB', 'abA', 'abB'], perDay: 6, goalRx: true,
     areas: [AB_A, AB_B, AB_A, AB_B],
-    blurb: 'Two workouts in turn, three muscle areas each: A is chest, biceps and back, B is shoulders, triceps and legs. Every area is trained twice a week. Sets and reps follow your goal.' },
+    blurb: 'Two workouts, A and B, in turn: workout A (chest, biceps and back) on days 1 and 3, workout B (shoulders, triceps and legs) on days 2 and 4. Every area is trained twice a week. Sets and reps follow your goal.' },
   upperlower: { name: 'Upper / Lower · 4 days a week', short: '4 days a week', days: ['upper', 'lower', 'upper', 'lower'], perDay: 6, goalRx: true,
     areas: [UP_AREAS, LOW_AREAS, UP_AREAS, LOW_AREAS],
     blurb: 'Upper body and lower body days in turn: chest, back, shoulders and arms, then legs, glutes, calves and core. Every area is trained twice a week. Sets and reps follow your goal.' },
   seated: { name: 'Seated · 3 days a week', short: '3 days a week', days: ['seatA', 'seatB', 'seatC'], perDay: 6, seated: true,
-    blurb: 'Every exercise is done sitting on a machine or bench, with no standing and no floor work – for wheelchair users and anyone with balance or leg limitations. Day B has two leg machines; remove them if they don\'t suit you. Starts light, with 2–3 sets of 10–15 reps.' },
+    blurb: 'Every exercise is done sitting on a machine or bench, with no standing and no floor work – for wheelchair users and anyone with balance or leg limitations. Day 2 has two leg machines; remove them if they don\'t suit you. Starts light, with 2–3 sets of 10–15 reps.' },
 };
 // The app-built plan that uses the gentle sets and reps of TPL_RX (null for split plans, which follow the goal).
 export const tplRx = (plan) => (plan?.template && TEMPLATES[plan.template] && !TEMPLATES[plan.template].goalRx) ? plan.template : null;

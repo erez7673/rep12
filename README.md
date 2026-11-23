@@ -9,7 +9,7 @@ A free workout app (installable web app) for Android and iPhone: personal 12-wee
 - App-built plans: 2 or 3 full-body days (2–3 sets of 10–15 reps), the AB Plan (4 days: chest, biceps and back / shoulders, triceps and legs) Upper / Lower (4 days) and a Seated plan with no standing or floor work (3 days), fully editable per day
 - 12-week plans built from your stats, goal, schedule, injuries and focus areas: 4 exercises × 4 sets per day, plus warm-up, optional cardio finisher and cooldown
 - Tap the sets on a day to change reps or kg before you start
-- Pick the muscle areas of each workout day (e.g. Workout Day A: chest + biceps) and the app chooses the exercises
+- Pick the muscle areas of each workout day (e.g. Workout Day 1: chest + biceps) and the app chooses the exercises
 - Warm-up on a cardio machine you pick, for the minutes you set, with a beep when it's done
 - "Add to workout" on any exercise page puts it into one of your workout days
 - Set timer, automatic rest countdown with a beep at the end, screen kept awake during workouts

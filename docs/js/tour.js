@@ -75,6 +75,7 @@ const STEPS = [
 
   // ── Progress ──
   { sec: 'Progress', route: '#/progress', sel: '#nav a[href="#/progress"]', fixed: true, title: 'The Progress tab', text: 'Charts of your workouts per week, your strength and your body weight. They fill up as you log workouts.' },
+  { sec: 'Progress', route: '#/progress', sel: '.progress-coach', when: () => coachCardShown(), title: 'Your coach on Progress', text: 'Your coach sums up how your training is going, and tells you when a new phase of your plan starts.' },
   { sec: 'Progress', route: '#/plan', title: 'You\'re all set!', text: 'Open your next workout day on My Plan and tap Start. Enjoy your training!' },
 ];
 

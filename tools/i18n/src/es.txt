@@ -616,3 +616,15 @@
 1324	Minutos de calentamiento
 1325	(0 = sin calentamiento)
 1326	Elige a Mia o a Lucas, o ningún entrenador. Tu entrenador te anima con consejos y mensajes cortos, un pulgar arriba por cada nuevo récord personal y un choca esos cinco cuando terminas una semana. Cambia cuándo te habla, o desactívalo, cuando quieras.
+1328	Nueva fase: pesos más altos. ¡Mantén el control!
+1329	Última semana: más suave a propósito. ¡Recupérate bien!
+1330	Termina tu primer entrenamiento y aquí verás tu progreso.
+1332	Has hecho todos los entrenamientos de esta semana. ¡Gran constancia!
+1334	Cada entrenamiento cuenta. Sigue viniendo y las gráficas subirán.
+1335	Tu entrenador en Progreso
+1336	Tu entrenador resume cómo va tu entrenamiento y te avisa cuando empieza una nueva fase de tu plan.
+1337	Nueva fase: más repeticiones por serie. ¡Te estás poniendo más fuerte!
+1338	Ha pasado un tiempo. Un entrenamiento esta semana te devuelve al camino.
+1339	{n} entrenamientos en los últimos 30 días. Estás creando un hábito de verdad.
+1341	Todos los ejercicios se hacen sentado en una máquina o un banco, sin estar de pie ni en el suelo – para usuarios de silla de ruedas y para quien tenga problemas de equilibrio o de piernas. El día 2 tiene dos máquinas de piernas; quítalas si no te van bien. Empieza suave, con 2–3 series de 10–15 repeticiones.
+1342	Dos entrenamientos, A y B, que se alternan: el entrenamiento A (pecho, bíceps y espalda) los días 1 y 3, y el entrenamiento B (hombros, tríceps y piernas) los días 2 y 4. Cada zona se entrena dos veces por semana. Las series y repeticiones siguen tu objetivo.

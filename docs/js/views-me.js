@@ -2,7 +2,7 @@
 import { state, profile, profileList, createProfile, touchProfile, save, replaceState, exById, today } from './store.js';
 import { esc, icon, register, toast, fmtDate, sheet, closeSheet, setTheme, applyA11y } from './ui.js';
 import { say, canSpeak } from './speak.js';
-import { coachAvailable, coachProfileRow, coachSettingsBlock, openMeet } from './coach.js';
+import { coachAvailable, coachProfileRow, coachSettingsBlock, openMeet, coachProgress } from './coach.js';
 import { GOALS, LEVELS, FOCUS, generatePlan, AREAS, areasFor, dayName, exPerDay, setDayAreas, fitDay, MAX_DAYS, MAX_EX_PER_DAY } from './planner.js';
 import { startTour } from './tour.js';
 import { INJURIES } from './exercises.js';
@@ -350,6 +350,7 @@ export function progressView() {
 
   return {
     html: `<header class="top"><h1>${t('Progress')}</h1></header>
+      ${coachProgress(p)}
       <div class="statrow">
         <div class="stat"><b>${h.length}</b><small>${t('Workouts')}</small></div>
         <div class="stat"><b>${h.filter(r => r.date > monthAgo).length}</b><small>${t('Last 30 days')}</small></div>

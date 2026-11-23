@@ -617,3 +617,15 @@
 1324	Aufwärmen in Minuten
 1325	(0 = kein Aufwärmen)
 1326	Wähle Mia oder Lucas oder keinen Coach. Dein Coach feuert dich mit kurzen Tipps und Nachrichten an, mit einem Daumen hoch für eine neue Bestleistung und einem High five, wenn du eine Woche geschafft hast. Wie oft er sich meldet, kannst du jederzeit ändern oder ihn ausschalten.
+1328	Neue Phase: schwerere Gewichte. Bleib kontrolliert!
+1329	Letzte Woche: absichtlich leichter. Erhol dich gut!
+1330	Schließ dein erstes Workout ab, dann siehst du hier deinen Fortschritt.
+1332	Alle Workouts dieser Woche sind geschafft. Starke Beständigkeit!
+1334	Jedes Workout zählt. Bleib dran, dann steigen die Kurven.
+1335	Dein Coach beim Fortschritt
+1336	Dein Coach fasst zusammen, wie dein Training läuft, und sagt dir, wenn eine neue Phase deines Plans beginnt.
+1337	Neue Phase: mehr Wiederholungen pro Satz. Du wirst stärker!
+1338	Ist eine Weile her. Ein Workout diese Woche bringt dich wieder in Schwung.
+1339	{n} Workouts in den letzten 30 Tagen. Das wird zur Gewohnheit.
+1341	Jede Übung wird sitzend an einem Gerät oder auf einer Bank gemacht, ohne Stehen und ohne Bodenübungen – für Menschen im Rollstuhl und alle mit Gleichgewichts- oder Beinproblemen. Tag 2 hat zwei Beingeräte; entferne sie, wenn sie nicht zu dir passen. Leichter Start mit 2–3 Sätzen à 10–15 Wiederholungen.
+1342	Zwei Trainings, A und B, im Wechsel: Training A (Brust, Bizeps und Rücken) an Tag 1 und 3, Training B (Schultern, Trizeps und Beine) an Tag 2 und 4. Jeder Bereich wird zweimal pro Woche trainiert. Sätze und Wiederholungen richten sich nach deinem Ziel.

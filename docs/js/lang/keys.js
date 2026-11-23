@@ -1360,4 +1360,5 @@ export const KEYS = {
   1362: "Switch all equipment on or off",
   1363: "All at once",
   1364: "Switch all equipment on or off with one tap, then turn single items back on or off.",
+  1365: "Open the exercise page",
 };

@@ -1360,4 +1360,5 @@ export default {
   1362: "Attiva o disattiva tutta l'attrezzatura",
   1363: "Tutto insieme",
   1364: "Attiva o disattiva tutta l'attrezzatura con un tocco, poi cambia i singoli elementi.",
+  1365: "Apri la pagina dell'esercizio",
 };

@@ -162,7 +162,7 @@ export function dayView(w, d) {
     const header = area !== lastArea ? `<h4 class="exgroup">${esc(AREAS[area]?.name || '')}</h4>` : '';
     lastArea = area;
     return `${header}<div class="exrow">
-      <a href="#/ex/${encodeURIComponent(ex.id)}" aria-label="${esc(t('How to do it') + ': ' + ex.name)}">${thumb(ex, photoFor(ex.id))}</a>
+      <button class="howto-thumb" data-act="howto" data-id="${ex.id}" aria-label="${esc(t('How to do it') + ': ' + ex.name)}">${thumb(ex, photoFor(ex.id))}</button>
       <div class="exbody">
         <a href="#/ex/${encodeURIComponent(ex.id)}" class="exname">${esc(ex.name)}</a>
         <button class="chips editable" data-act="edit-sets" data-w="${w}" data-d="${d}" data-i="${i}" aria-label="${t('Edit reps and weight')}">${it.sets.map(s => `<span class="chip">${setLabel(s, it.unit)}</span>`).join('')}<span class="chip edit">${icon.edit} ${t('Edit')}</span></button>
@@ -186,7 +186,7 @@ export function dayView(w, d) {
       ${coachDayLine(day)}
       ${rec ? `<a class="card donecard" href="#/summary/${rec.id}">${icon.check} ${t('Done on {date} – view log', { date: fmtDate(rec.date) })}</a>` : ''}
       <h3>${t('Warm-up')}</h3>
-      ${preview.warm ? `<div class="exrow"><a href="#/ex/${encodeURIComponent(preview.warm.exId)}" aria-label="${esc(t('How to do it') + ': ' + (exById(preview.warm.exId)?.name || ''))}">${thumb(exById(preview.warm.exId))}</a>
+      ${preview.warm ? `<div class="exrow"><button class="howto-thumb" data-act="howto" data-id="${preview.warm.exId}" aria-label="${esc(t('How to do it') + ': ' + (exById(preview.warm.exId)?.name || ''))}">${thumb(exById(preview.warm.exId))}</button>
           <div class="exbody"><b class="exname">${esc(exName(preview.warm.exId, preview.warm.name))}</b>
           <button class="chips editable" data-act="warm-open" aria-label="${t('Change warm-up')}"><span class="chip">${t('{n} min', { n: preview.warm.min })}</span><span class="chip edit">${icon.edit} ${t('Change')}</span></button></div></div>
         ${preview.warmup.length ? `<button class="row mobility-btn" data-act="mobility-open" data-w="${w}" data-d="${d}">${icon.info}<span><b>${t('Then a quick mobility routine')}</b><small>${t('{n} moves', { n: preview.warmup.length })} · ${t('{n} min', { n: Math.round(preview.warmup.reduce((a, m) => a + m.sec, 0) / 60) })}</small></span><span class="chev arw">›</span></button>` : ''}`
@@ -194,7 +194,7 @@ export function dayView(w, d) {
       <h3>${t('Exercise List')}</h3>
       <div class="exlist">${items}</div>
       <h3>${t('Cardio finisher')}</h3>
-      ${preview.cardio ? `<div class="exrow"><a href="#/ex/${encodeURIComponent(preview.cardio.exId)}" aria-label="${esc(t('How to do it') + ': ' + (exById(preview.cardio.exId)?.name || ''))}">${thumb(exById(preview.cardio.exId))}</a>
+      ${preview.cardio ? `<div class="exrow"><button class="howto-thumb" data-act="howto" data-id="${preview.cardio.exId}" aria-label="${esc(t('How to do it') + ': ' + (exById(preview.cardio.exId)?.name || ''))}">${thumb(exById(preview.cardio.exId))}</button>
           <div class="exbody"><b class="exname">${esc(exName(preview.cardio.exId, preview.cardio.name))}</b>
           <button class="chips editable" data-act="cardio-open" data-d="${d}" aria-label="${t('Change cardio finisher')}"><span class="chip">${t('{n} min', { n: preview.cardio.min })}</span><span class="chip edit">${icon.edit} ${t('Change')}</span></button></div></div>`
       : `<button class="btn" data-act="cardio-open" data-d="${d}">${icon.plus} ${t('Add a cardio finisher')}</button>`}
@@ -471,7 +471,7 @@ export function sessionView() {
     const doneN = it.sets.filter(x => x.done).length;
     if (i !== openItem) {
       return `<div class="exrow ${doneN === it.sets.length ? 'complete' : ''}" data-act="open-item" data-i="${i}">
-        ${thumb(e, photoFor(it.exId))}
+        <button class="howto-thumb" data-act="howto" data-id="${it.exId}" aria-label="${esc(t('How to do it') + ': ' + exName(it.exId, it.name))}">${thumb(e, photoFor(it.exId))}</button>
         <div class="exbody"><b class="exname">${esc(exName(it.exId, it.name))}</b>
         <div class="chips">${it.sets.map(x => `<span class="chip ${x.done ? 'on' : ''}">${setLabel(x, it.unit)}</span>`).join('')}</div></div>
         <span class="count">${doneN}/${it.sets.length}</span>
@@ -479,7 +479,7 @@ export function sessionView() {
     }
     const unitLbl = it.unit === 'sec' ? t('Sec') : t('Reps');
     return `<div class="exopen">
-      <div class="exrow flat">${thumb(e, photoFor(it.exId))}<div class="exbody"><a class="exname blue" href="#/ex/${encodeURIComponent(it.exId)}">${esc(exName(it.exId, it.name))}</a>${it.note ? `<small class="note">${esc(it.note)}</small>` : ''}</div>
+      <div class="exrow flat"><button class="howto-thumb" data-act="howto" data-id="${it.exId}" aria-label="${esc(t('How to do it') + ': ' + exName(it.exId, it.name))}">${thumb(e, photoFor(it.exId))}</button><div class="exbody"><a class="exname blue" href="#/ex/${encodeURIComponent(it.exId)}">${esc(exName(it.exId, it.name))}</a>${it.note ? `<small class="note">${esc(it.note)}</small>` : ''}</div>
         <button class="iconbtn" data-act="sess-menu" data-i="${i}" aria-label="${t('More options')}">${icon.dots}</button></div>
       <table class="sets"><thead><tr><th>${t('Set')}</th><th>${unitLbl}</th><th>${weightHead(it.assist)}</th><th>${t('Log')}</th></tr></thead><tbody>
       ${it.sets.map((x, si) => {
@@ -503,7 +503,7 @@ export function sessionView() {
     if (!c) return '';
     const running = c.endAt && !c.done;
     return `<div class="card cardio-card">
-      <a href="#/ex/${encodeURIComponent(c.exId)}" aria-label="${esc(t('How to do it') + ': ' + (exById(c.exId)?.name || ''))}">${thumb(exById(c.exId), photoFor(c.exId), 'sm')}</a>
+      <button class="howto-thumb" data-act="howto" data-id="${c.exId}" aria-label="${esc(t('How to do it') + ': ' + (exById(c.exId)?.name || ''))}">${thumb(exById(c.exId), photoFor(c.exId), 'sm')}</button>
       <div><b>${esc(exName(c.exId, c.name))}</b><small>${label} · ${t('{n} min', { n: c.min })}${c.done ? ' · ' + t('done') + ' ✓' : ''}</small></div>
       ${running ? `<b class="bigtime sm" data-t="${k}">${fmtClock(Math.ceil((c.endAt - Date.now()) / 1000))}</b><button class="pillbtn" data-act="timer-stop" data-k="${k}">${t('Stop')}</button>`
         : `${k === 'warm' ? `<button class="iconbtn" data-act="warm-open" aria-label="${t('Change warm-up')}">${icon.edit}</button>` : !c.done && s.planId === profile().plan.id ? `<button class="iconbtn" data-act="cardio-open" data-d="${s.dayIdx}" aria-label="${t('Change cardio finisher')}">${icon.edit}</button>` : ''}<button class="pillbtn dark" data-act="timer-start" data-k="${k}">${c.done ? t('Again') : t('Start')}</button>`}

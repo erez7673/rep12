@@ -1360,4 +1360,5 @@ export default {
   1362: "Slå på eller av all utrustning",
   1363: "Allt på en gång",
   1364: "Slå på eller av all utrustning med ett tryck och ändra sedan enskilda saker.",
+  1365: "Öppna övningens sida",
 };

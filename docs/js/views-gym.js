@@ -65,6 +65,22 @@ register({
 });
 
 // ───────────── Exercise details ─────────────
+// "How to do it" as a pop-up (tap an exercise picture in a workout day or a running workout): the clip or drawing,
+// the written steps and the tip, without leaving the screen. The name still opens the full exercise page.
+export function openHowTo(id) {
+  const ex = exById(id);
+  if (!ex) return;
+  const p = profile();
+  const steps = `<ol class="steps">${ex.steps.map(s => `<li>${esc(exText(s))}</li>`).join('')}</ol>`;
+  sheet(`<button class="iconbtn sheet-x" data-act="sheet-close" aria-label="${t('Close')}">${icon.x}</button>
+    <h2>${esc(ex.name)}</h2>
+    ${hasAnim(ex.id) ? animHTML(ex, p?.stats?.sex) : ''}
+    ${steps}
+    ${ex.tip ? `<div class="card tip">💡 ${esc(exText(ex.tip))}</div>` : ''}
+    <button class="btn" data-act="go" data-href="#/ex/${encodeURIComponent(ex.id)}">${t('Open the exercise page')}</button>`);
+  startAnims(exById);
+}
+
 export function exerciseView(id) {
   const ex = exById(id);
   const back = `<header class="bar"><button class="iconbtn" data-act="back" aria-label="${t('Back')}">${icon.back}</button><h2></h2><span></span></header>`;
@@ -207,6 +223,7 @@ export function gymView() {
 
 register({
   // Tap a picture in Gym Setup to see it big. preventDefault (in app.js) stops the tap from flipping the row's switch.
+  'howto': (el) => openHowTo(el.dataset.id),
   'pic-zoom': (el) => {
     const img = el.querySelector('img');
     if (!img) return;

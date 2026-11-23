@@ -1360,4 +1360,5 @@ export default {
   1362: "Kytke kaikki välineet päälle tai pois",
   1363: "Kaikki kerralla",
   1364: "Kytke kaikki välineet päälle tai pois yhdellä napautuksella ja muuta sitten yksittäisiä.",
+  1365: "Avaa liikkeen sivu",
 };

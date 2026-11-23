@@ -2,11 +2,11 @@
 
 Read this together with `CLAUDE.md` (the "Exercise animations" section holds the full rules). This file records where the work stands and every approved Higgsfield still, so a new chat can continue without redoing anything.
 
-_Last updated 2026-11-23 (late evening): six coaches with the Rep12 logo, full-screen coach moments, logo fixes._
+_Last updated 2026-11-23 (night): six coaches with the Rep12 logo, full-screen coach moments, logo fixes, all-equipment switch, how-to pop-up._
 
 ## Start here (written 2026-11-23, late evening)
 
-**Everything is committed and pushed** (last commit `511900b`). Live at https://erez7673.github.io/rep12/.
+**Everything is committed and pushed.** Live at https://erez7673.github.io/rep12/.
 
 **Done on 2026-11-23:**
 - **AI coaches live for everyone, now six:** Mia, Lucas, Amara (about 43), Kenji (about 52), Priya, Mateo, all wearing the Rep12 logo on the left chest. Off for each user until they pick one. Moments: "Let's go!" at start; at the finish a high five (week done, 10/25/50/100… workouts), thumbs up (personal best) or cheer; on My Plan a phase-change moment (app-built plans) or a wave after 7+ days away; a small breathe clip on every rest; a coach line on Progress. **Picking a coach** plays their wave with their greeting full screen (the app tour waits for it). Lucas has no high five of his own (it kept adding a wristband or losing his tattoo): he uses his cheer (`CLIP_STANDIN`); his wave is a warm nod.
@@ -15,13 +15,17 @@ _Last updated 2026-11-23 (late evening): six coaches with the Rep12 logo, full-s
 - **Workout days are numbered** (Workout Day 1, 2, 3…); the AB Plan text says workout A on days 1 and 3, B on days 2 and 4.
 - **Warm-up minutes are typed** (0–60) in Build your custom plan; saving also updates the workout day's warm-up.
 - **New logo** (12-week dial, the "1" and "2" now the same height) and tagline "Your next 12 weeks, planned." The accessibility button uses the universal access symbol (teal disc, white figure; `icon.access` in `ui.js`).
+- **Gym Setup "All equipment" switch** (pushed): turns every item and the user's own machines on or off. The exercise list's muscle chips keep their sideways scroll when one is picked (pushed).
+- **How-to pop-up (tested and pushed):** tapping an exercise picture in the day preview (exercise, warm-up and cardio pictures) or in a running workout (rows and the cardio card) opens `openHowTo(id)` in `views-gym.js`: clip, steps, tip and "Open the exercise page".
 - **Phone testing:** `python tools/devserver.py` (or `preview_start` name `fressi`) never lets the phone keep old files; the phone opens `http://<PC address>:8765` (this PC was 192.168.1.240).
 
 **Next steps (in this order)**
 1. The user's feedback on today's changes; fix what they find.
 2. **December (Higgsfield credits back): batch 10** — the 9 exercises below, plus mannequins and clips on our Flow machine pictures for the ab machine, rotary torso and **the 7 cardio exercises** (see the reminder under "Still to do next month"). Then add each machine to `EQ_STILL` and bump `PICS` in `sw.js`.
 3. **Speaking coaches, December (decided 2026-11-23):** English speech with lip sync, the line shown as text too (translated in other languages); route 2 = one fixed voice per coach + Seedance 2.0 with the audio as reference, about 10 lines per coach (six coaches now, so about 60 clips). Full plan in `AI personal trainers/COACH-USAGE-PLAN.md` section 10. The coach introduction (picking a coach) is a natural first speaking line.
-4. Native-speaker review of the translations (all written by Claude, about 1,360 texts per language).
+4. **Animations for the warm-up and cool-down moves too (the user's request, 2026-11-23):** the warm-up list (`WARMUP` in `exercises.js`: arm circles, bodyweight squats, hip circles / leg swings, band pull-aparts, …) and the cool-down stretches (`COOLDOWN`: chest, lat, shoulder, triceps, biceps, quad, hamstring, glute, calf, cobra stretches, deep breathing) should get clips like the exercises (same mannequin look; with batch 10 in December).
+5. **Home workouts inspired by calisthenics (the user's request, 2026-11-23, not started):** first ask the user: which home equipment (none, pull-up bar, chair or bench, resistance bands, dumbbells), whether "Home" is a separate setup next to Gym Setup (e.g. a per-profile or per-workout gym/home switch), and which plans (e.g. beginner bodyweight, progressions like push-up → decline push-up → archer push-up). Then: new exercises in `exercises.js` (eq `none` or new home equipment ids), clips (Higgsfield, December), translations, planner templates, tour steps.
+6. Native-speaker review of the translations (all written by Claude, about 1,360 texts per language).
 
 **Credits:** Flow (Google AI Pro): about 920 of 1,000 on 2026-11-22, minus roughly 140 for the phase 2 clips and roughly 400 for the new coaches and the logo remakes (estimates; check in Flow). Flow pictures cost no credits. Higgsfield: none until December.
 

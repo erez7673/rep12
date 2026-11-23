@@ -1360,4 +1360,5 @@ export default {
   1362: "Ligar ou desligar todos os equipamentos",
   1363: "Tudo de uma vez",
   1364: "Ligue ou desligue todos os equipamentos com um toque e depois ajuste itens individuais.",
+  1365: "Abrir a página do exercício",
 };

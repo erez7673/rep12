@@ -651,3 +651,4 @@
 1362	Alle Geräte ein- oder ausschalten
 1363	Alles auf einmal
 1364	Schalte alle Geräte mit einem Tippen ein oder aus und schalte dann einzelne wieder um.
+1365	Übungsseite öffnen

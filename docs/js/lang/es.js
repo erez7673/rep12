@@ -1360,4 +1360,5 @@ export default {
   1362: "Activar o desactivar todo el equipamiento",
   1363: "Todo a la vez",
   1364: "Activa o desactiva todo el equipamiento con un toque y luego cambia elementos sueltos.",
+  1365: "Abrir la página del ejercicio",
 };

@@ -10,7 +10,8 @@ export const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 // Icons are decoration for screen readers: the button or link around them carries the label.
 const P = (d, extra = '') => `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ${extra}>${d}</svg>`;
 export const icon = {
-  access: P('<circle cx="12" cy="4.5" r="2"/><path d="M4.5 8.5L12 10l7.5-1.5M12 10v4.5M12 14.5L8.5 21M12 14.5l3.5 6.5"/>'),
+  // Universal access symbol: a white figure inside a ring on a teal disc (keeps its own colours in every theme).
+  access: '<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="24" height="24" class="access-ico"><circle cx="12" cy="12" r="11.6" fill="#045c69"/><circle cx="12" cy="12" r="9.3" fill="none" stroke="#fff" stroke-width="1.15"/><circle cx="12" cy="7.1" r="1.75" fill="#fff"/><g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M7.1 10.1h9.8" stroke-width="1.5"/><path d="M12 10.1v4.2" stroke-width="2.3"/><path d="M11.4 14.2l-1.3 3.9M12.6 14.2l1.3 3.9" stroke-width="1.5"/></g></svg>',
   plan: P('<rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18M8 15l2 2 4-4"/>'),
   list: P('<path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>'),
   gym: P('<path d="M6.5 6.5v11M17.5 6.5v11M3 9v6M21 9v6M6.5 12h11"/>'),

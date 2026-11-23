@@ -3,7 +3,7 @@
 // Always optional: per phone (state.settings.coach = a key of COACHES or 'none', coachStyle = 'full' | 'key').
 import { state, save, profile, exById } from './store.js';
 import { t, unitText } from './i18n.js';
-import { esc, icon, register, sheet, closeSheet, toast, motionReduced } from './ui.js';
+import { esc, icon, register, sheet, closeSheet, motionReduced } from './ui.js';
 import { say, speakOn } from './speak.js';
 import { rerender } from './app.js';
 import { dayFocus, planPhase, isCustom, currentWeek } from './planner.js';
@@ -123,16 +123,18 @@ export const coachSettingsBlock = () => !coachAvailable() ? '' :
 // A coach without a clean clip for a moment uses another of their own clips (Lucas's high five kept adding a wristband
 // or losing his tattoo, so he cheers instead).
 const CLIP_STANDIN = { lucas: { highfive: 'cheer' } };
-function moment(id, line) {
+// onClose runs once the moment is gone (used to start the app tour after the Meet card).
+function moment(id, line, onClose) {
   const k = coachKey();
-  if (!k) return;
+  if (!k) { onClose?.(); return; }
   document.getElementById('coach-overlay')?.remove();
   const el = document.createElement('div');
   el.id = 'coach-overlay';
   el.setAttribute('role', 'status');
   el.innerHTML = `<button class="iconbtn sheet-x" aria-label="${t('Close')}">${icon.x}</button>${stageHTML(k, CLIP_STANDIN[k]?.[id] || id)}<p>${esc(line)}</p>`;
   let timer;
-  const close = () => { clearTimeout(timer); el.classList.add('out'); setTimeout(() => el.remove(), 250); };
+  let done = false;
+  const close = () => { if (done) return; done = true; clearTimeout(timer); el.classList.add('out'); setTimeout(() => { el.remove(); onClose?.(); }, 250); };
   el.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); close(); });
   const v = el.querySelector('video');
   if (v) v.addEventListener('ended', () => { timer = setTimeout(close, 400); });
@@ -235,8 +237,9 @@ register({
     state.settings.coach = k; state.settings.coachAsked = true; save();
     closeSheet();
     const then = afterPick; afterPick = null;
-    if (k !== 'none') toast(sig('greet', k));
-    if (then) setTimeout(then, 400); else rerender();
+    // The chosen coach introduces themself full screen: the wave clip and their greeting.
+    if (k !== 'none') { if (!then) rerender(); setTimeout(() => moment('wave', sig('greet', k), then), 300); }
+    else if (then) setTimeout(then, 400); else rerender();
   },
   'coach-style': (el) => { state.settings.coachStyle = el.value; save(); rerender(); },
 });

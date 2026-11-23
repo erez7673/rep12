@@ -532,7 +532,7 @@ body:has(.cta) #livebar { bottom: calc(var(--nav-h) + env(safe-area-inset-bottom
 #coach-overlay.out { opacity: 0; }
 #coach-overlay .sheet-x { position: absolute; top: calc(env(safe-area-inset-top) + 12px); inset-inline-end: 12px; color: #fff; }
 /* the clip has a plain studio background: its edges fade out, so only the coach seems to stand on the dimmed screen */
-.coach-stage { position: relative; width: min(100%, calc(72vh * .75)); aspect-ratio: 3 / 4; -webkit-mask-image: linear-gradient(to right, transparent, #000 14%, #000 86%, transparent), linear-gradient(to bottom, transparent, #000 5%, #000 80%, transparent); -webkit-mask-composite: source-in; mask-image: linear-gradient(to right, transparent, #000 14%, #000 86%, transparent), linear-gradient(to bottom, transparent, #000 5%, #000 80%, transparent); mask-composite: intersect; }
+.coach-stage { position: relative; width: min(100%, 62vh); aspect-ratio: 1 / 1; -webkit-mask-image: linear-gradient(to right, transparent, #000 9%, #000 91%, transparent), linear-gradient(to bottom, transparent, #000 5%, #000 80%, transparent); -webkit-mask-composite: source-in; mask-image: linear-gradient(to right, transparent, #000 9%, #000 91%, transparent), linear-gradient(to bottom, transparent, #000 5%, #000 80%, transparent); mask-composite: intersect; }
 .coach-stage img, .coach-stage video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 #coach-overlay p { margin: 0; font-weight: 800; font-size: calc(30px * var(--fs)); text-align: center; }
 @keyframes coachIn { from { opacity: 0; } }

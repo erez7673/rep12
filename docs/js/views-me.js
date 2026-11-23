@@ -73,7 +73,8 @@ export function onboardView(edit) {
   return {
     full: first,
     html: `<header class="bar">${first ? `<button class="iconbtn a11y-btn" data-act="go" data-href="#/access" aria-label="${t('Accessibility')}">${icon.access}</button>` : `<button class="iconbtn" data-act="back" aria-label="${t('Back')}">${icon.back}</button>`}<h2>${edit ? t('Edit profile') : first ? t('Welcome') + ' 👋' : t('New profile')}</h2><span></span></header>
-      ${first ? `<p class="lead">${t('Let\'s build your personal plan. You can add more profiles afterwards, for example for a partner.')}</p>
+      ${first ? `<div class="brand-hero"><img src="icons/icon.svg" alt="" width="88" height="88"><div><b>Rep12</b><span>${t('Your next 12 weeks, planned.')}</span></div></div>
+        <p class="lead">${t('Let\'s build your personal plan. You can add more profiles afterwards, for example for a partner.')}</p>
         <p class="muted small">${DISCLAIMER()}</p>
         <div class="card list"><a class="eqrow" href="#/settings"><span>${t('Language and units')}</span><span class="muted">${esc(LANGS[lang()])} · ${isUS() ? 'lb, ft' : 'kg, cm'} ${icon.chev}</span></a></div>` : ''}
       ${profileForm(edit ? 'edit' : 'new')}

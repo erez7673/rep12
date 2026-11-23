@@ -629,3 +629,4 @@
 1339	{n} Workouts in den letzten 30 Tagen. Das wird zur Gewohnheit.
 1341	Jede Übung wird sitzend an einem Gerät oder auf einer Bank gemacht, ohne Stehen und ohne Bodenübungen – für Menschen im Rollstuhl und alle mit Gleichgewichts- oder Beinproblemen. Tag 2 hat zwei Beingeräte; entferne sie, wenn sie nicht zu dir passen. Leichter Start mit 2–3 Sätzen à 10–15 Wiederholungen.
 1342	Zwei Trainings, A und B, im Wechsel: Training A (Brust, Bizeps und Rücken) an Tag 1 und 3, Training B (Schultern, Trizeps und Beine) an Tag 2 und 4. Jeder Bereich wird zweimal pro Woche trainiert. Sätze und Wiederholungen richten sich nach deinem Ziel.
+1343	Deine nächsten 12 Wochen, geplant.

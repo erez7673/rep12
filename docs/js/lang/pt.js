@@ -1338,4 +1338,5 @@ export default {
   1339: "{n} treinos nos últimos 30 dias. Você está criando um hábito de verdade.",
   1341: "Todos os exercícios são feitos sentado em uma máquina ou banco, sem ficar em pé e sem exercícios no chão – para usuários de cadeira de rodas e para quem tem limitações de equilíbrio ou nas pernas. O dia 2 tem duas máquinas de pernas; remova-as se não forem para você. Começa leve, com 2–3 séries de 10–15 repetições.",
   1342: "Dois treinos, A e B, que se alternam: o treino A (peito, bíceps e costas) nos dias 1 e 3, e o treino B (ombros, tríceps e pernas) nos dias 2 e 4. Cada área é treinada duas vezes por semana. As séries e repetições seguem o seu objetivo.",
+  1343: "Suas próximas 12 semanas, planejadas.",
 };

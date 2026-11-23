@@ -1338,4 +1338,5 @@ export const KEYS = {
   1339: "{n} workouts in the last 30 days. You're building a real habit.",
   1341: "Every exercise is done sitting on a machine or bench, with no standing and no floor work – for wheelchair users and anyone with balance or leg limitations. Day 2 has two leg machines; remove them if they don't suit you. Starts light, with 2–3 sets of 10–15 reps.",
   1342: "Two workouts, A and B, in turn: workout A (chest, biceps and back) on days 1 and 3, workout B (shoulders, triceps and legs) on days 2 and 4. Every area is trained twice a week. Sets and reps follow your goal.",
+  1343: "Your next 12 weeks, planned.",
 };

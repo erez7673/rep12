@@ -1,7 +1,7 @@
 {
   "name": "Rep12",
   "short_name": "Rep12",
-  "description": "Personal 12-week workout plans, timers and a machine guide for your gym.",
+  "description": "Your next 12 weeks, planned. Personal 12-week workout plans, timers and a machine guide for your gym.",
   "id": "./",
   "start_url": "./#/plan",
   "scope": "./",
@@ -12,6 +12,6 @@
   "icons": [
     { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
     { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }

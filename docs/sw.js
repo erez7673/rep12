@@ -1,5 +1,5 @@
 // Offline support: network first (so updates show up straight away), cached copy when offline.
-const CACHE = 'rep12-v10';
+const CACHE = 'rep12-v11';
 const PICS = 'rep12-pics-v2';
 const FILES = [
   './', './index.html', './manifest.webmanifest', './css/app.css',
@@ -7,7 +7,7 @@ const FILES = [
   './js/planner.js', './js/workout.js', './js/identify.js', './js/charts.js', './js/sync.js',
   './js/views-plan.js', './js/views-gym.js', './js/views-me.js', './js/views-timer.js', './js/anim.js', './js/tour.js', './js/speak.js', './js/coach.js', './js/i18n.js', './js/localize.js', './js/lang/keys.js',
   ...['es', 'pt', 'de', 'it', 'fi', 'sv', 'zh', 'hi', 'ar', 'he'].map(c => `./js/lang/${c}.js`),
-  './icons/icon.svg', './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png',
+  './icons/icon.svg', './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-512.png', './icons/apple-touch-icon.png',
 ];
 
 self.addEventListener('install', (e) => {

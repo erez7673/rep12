@@ -629,3 +629,4 @@
 1339	{n} allenamenti negli ultimi 30 giorni. Stai creando una vera abitudine.
 1341	Ogni esercizio si fa da seduti su una macchina o una panca, senza stare in piedi e senza esercizi a terra – per chi usa la sedia a rotelle e per chi ha problemi di equilibrio o alle gambe. Il giorno 2 ha due macchine per le gambe; toglile se non fanno per te. Inizio leggero, con 2–3 serie da 10–15 ripetizioni.
 1342	Due allenamenti, A e B, alternati: l'allenamento A (petto, bicipiti e schiena) nei giorni 1 e 3, l'allenamento B (spalle, tricipiti e gambe) nei giorni 2 e 4. Ogni area viene allenata due volte a settimana. Serie e ripetizioni seguono il tuo obiettivo.
+1343	Le tue prossime 12 settimane, pianificate.

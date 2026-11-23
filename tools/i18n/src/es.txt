@@ -628,3 +628,4 @@
 1339	{n} entrenamientos en los últimos 30 días. Estás creando un hábito de verdad.
 1341	Todos los ejercicios se hacen sentado en una máquina o un banco, sin estar de pie ni en el suelo – para usuarios de silla de ruedas y para quien tenga problemas de equilibrio o de piernas. El día 2 tiene dos máquinas de piernas; quítalas si no te van bien. Empieza suave, con 2–3 series de 10–15 repeticiones.
 1342	Dos entrenamientos, A y B, que se alternan: el entrenamiento A (pecho, bíceps y espalda) los días 1 y 3, y el entrenamiento B (hombros, tríceps y piernas) los días 2 y 4. Cada zona se entrena dos veces por semana. Las series y repeticiones siguen tu objetivo.
+1343	Tus próximas 12 semanas, planificadas.

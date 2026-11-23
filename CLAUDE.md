@@ -8,6 +8,7 @@ Rep12 (formerly Fressi Workout): a workout PWA. The site and the repo are reacha
 
 - App source: `docs/` (GitHub Pages serves `main` branch, `/docs` folder) → https://erez7673.github.io/rep12/ (repo `erez7673/rep12`, formerly `fressi-workout`)
 - Sync backend: `apps-script/Code.gs` (Google Apps Script web app over a Google Sheet)
+- Logo (2026-11-23): `docs/icons/icon.svg`, a dial of 12 week segments (9 lit in the accent lime) around a hand-drawn "12" (paths, no font, so it looks the same everywhere). The PNGs (`icon-192`, `icon-512`, `icon-maskable-512` and `apple-touch-icon`, the last two full-square) are rendered from it with headless Edge. The tagline "Your next 12 weeks, planned." is on the welcome screen and in the meta and manifest descriptions. Positioning (the user's decision): the app sells a planned, progressive 12-week block, never a promised result.
 - `Example App/` and `Fressi Gym equipment/` are reference photos only; they are git-ignored and must never be published.
 
 ## Commands

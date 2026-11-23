@@ -629,3 +629,4 @@
 1339	{n} pass de senaste 30 dagarna. Det håller på att bli en vana.
 1341	Varje övning görs sittande i en maskin eller på en bänk, utan att stå och utan golvövningar – för rullstolsanvändare och alla med balans- eller bensvårigheter. Dag 2 har två benmaskiner; ta bort dem om de inte passar dig. Lätt start med 2–3 set med 10–15 repetitioner.
 1342	Två pass, A och B, som växlar: pass A (bröst, biceps och rygg) dag 1 och 3, pass B (axlar, triceps och ben) dag 2 och 4. Varje område tränas två gånger i veckan. Set och repetitioner följer ditt mål.
+1343	Dina nästa 12 veckor, planerade.

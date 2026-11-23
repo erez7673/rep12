@@ -57,6 +57,11 @@ small { display: block; color: var(--ink3); font-size: calc(13px * var(--fs)); }
 .bar { display: grid; grid-template-columns: 44px 1fr 44px; align-items: center; margin-bottom: 12px; }
 .bar h2 { text-align: center; font-size: calc(19px * var(--fs)); }
 .lead { color: var(--ink2); font-size: calc(17px * var(--fs)); margin: 0 0 14px; }
+/* welcome screen: the logo, the name and the tagline */
+.brand-hero { display: flex; align-items: center; gap: 16px; margin: 4px 0 18px; }
+.brand-hero img { flex: none; width: 88px; height: 88px; border-radius: 20px; }
+.brand-hero b { display: block; font-size: calc(30px * var(--fs)); font-weight: 800; line-height: 1.1; }
+.brand-hero span { display: block; color: var(--ink2); font-size: calc(17px * var(--fs)); margin-top: 4px; }
 .title { font-size: calc(26px * var(--fs)); margin: 14px 0 8px; }
 .phase { color: var(--ink2); font-size: calc(14px * var(--fs)); margin: 8px 0 14px; }
 .linklike { color: var(--blue); font-weight: 650; display: inline-flex; align-items: center; gap: 4px; }

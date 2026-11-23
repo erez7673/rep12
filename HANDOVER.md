@@ -2,41 +2,38 @@
 
 Read this together with `CLAUDE.md` (the "Exercise animations" section holds the full rules). This file records where the work stands and every approved Higgsfield still, so a new chat can continue without redoing anything.
 
-_Last updated 2026-11-22 (night), after the Rep12 release, the tour, Settings, US units, 11 languages, Accessibility, new app-built plans and the first version of the AI coaches._
+_Last updated 2026-11-23 (evening): coaches live with phase 2, own pictures instead of maker pictures, new logo._
 
-## Start here tomorrow (written 2026-11-22, night)
+## Start here (written 2026-11-23, evening)
 
-**Where we paused:** the user is about to try the whole app, including the hidden AI coaches, on their own phone.
+**Everything is committed and pushed** (last commit `66c67d3`). Live at https://erez7673.github.io/rep12/.
 
-**Live and working (public, https://erez7673.github.io/rep12/):** Rep12 with 11 languages, Settings (language, units, appearance, sync, backup), US units, the app tour, the Accessibility screen (text size, high contrast, bigger buttons, reduce motion, spoken workout cues, screen-reader labels), app-built plans (Full body, Short, AB Plan, Upper / Lower, Seated), tab labels that fit every language, and a bigger tour close button. All of this is committed and pushed.
+**Done on 2026-11-23:**
+- **AI coaches (Mia, Lucas) live for everyone** (`READY = true`; the user read Flow's terms: commercial use allowed). Off for each user until they pick a coach. Moments, all full screen 5 s portrait clips except the rest card: "Let's go!" at start; at the finish a high five (week done, 10/25/50/100… workouts), thumbs up (personal best) or cheer; on My Plan a phase-change moment (app-built plans) or a wave after 7+ days away; a small breathe clip on every rest; a coach line on Progress. The Meet card comes after every new profile. Details in CLAUDE.md.
+- **No maker pictures any more:** exercises and equipment show our own clip stills; the 10 items without a clip have Flow product pictures in `docs/media/equip/`.
+- **Workout days are numbered** (Workout Day 1, 2, 3…); the AB Plan text says workout A on days 1 and 3, B on days 2 and 4.
+- **Warm-up minutes are typed** (0–60) in Build your custom plan; saving also updates the workout day's warm-up.
+- **New logo** (12-week dial) and tagline "Your next 12 weeks, planned." (welcome screen, meta, manifest).
+- **Phone testing:** `python tools/devserver.py` (or `preview_start` name `fressi`) never lets the phone keep old files; the phone opens `http://<PC address>:8765` (this PC was 192.168.1.240). A phone that cached files from the old plain server needs its site data cleared once.
 
-**The AI coaches (Mia and Lucas): built, tested locally, hidden from everyone.**
-- Code: `docs/js/coach.js` and hooks (details in `CLAUDE.md`). **Live for everyone since 2026-11-23** (`READY = true`; off by default for each user until they pick a coach). It was earlier hidden and on automatically on this computer and on the home network** (`isDevHost()`).
-- **Try it on the phone:** the phone must be on the same Wi-Fi. This PC was 192.168.1.240 on Wi-Fi (check again with `ipconfig`). Keep the preview server running (`preview_start` name `fressi`, or `python tools/devserver.py`, which never lets the phone keep old files). On the phone open `http://192.168.1.240:8765/`. If it doesn't load, allow Python through Windows Firewall on the private network. It is a new, empty copy of the app (different address, so a fresh profile): create a profile and the "Meet your coach" card comes up before the tour. No tour step is missing: coach steps appear only when the coach is available.
-- **What to look at on the phone:** the Meet card, the tip card on My Plan, the line on the day screen, the "Let's go!" clip when a workout starts (2.6 s, never takes taps), the tip on the rest card, the cheer clip on the summary, the Coach row in Profile and Settings, Style (Tips and messages / Only the start and the finish), Reduce motion (clips stay still), Extra large text, Hebrew or Arabic, and the spoken cues with "Speak during workouts".
-- **Local-only files (never committed):** `AI personal trainers/` (git-ignored: the six approved pictures `mia|lucas-master|close|34.jpg`, the Flow test clips, `_crops/`, `_frames/`, the guide `FLOW-PROMPTS.md`, the plans `COACH-PLAN.md` and `COACH-USAGE-PLAN.md`; **`lucas-face.png` is the actor's photo: never use it**) The app's coach media `docs/media/coach/` (made in Flow) is now committed.
+**Next steps (in this order)**
+1. The user's feedback on today's changes; fix what they find.
+2. **December (Higgsfield credits back): batch 10** — the 9 exercises below, plus mannequins and clips on our Flow machine pictures for the ab machine, rotary torso and **the 7 cardio exercises** (see the reminder under "Still to do next month"). Then add each machine to `EQ_STILL` and bump `PICS` in `sw.js`.
+3. Native-speaker review of the translations (all written by Claude, about 1,340 texts per language).
+4. Coach ideas for later: speaking coaches with lip-sync (`AI personal trainers/COACH-USAGE-PLAN.md` section 10).
 
-**Phone test feedback (2026-11-23) and fixes:** the Meet card now comes after every new profile (before, it came only once per phone); the "Let's go!" and cheer clips are full-screen moments with no card (5 s portrait cuts from the Flow clips: Mia fist-up 0–5 s, Lucas fist-up 0–5 s, Mia cheer B, Lucas cheer A, crop 540×720 at x 370/375 → 480×640, plus a `.jpg` first frame each), closed by a tap or when the clip ends. The My Plan tip card worked in the preview (probably hidden on the phone by the "Only the start and the finish" style; user to recheck). Spoken cues: off by default, turned on under Accessibility → Speak during workouts (user to recheck; on iPhone the silent switch may mute them).
+**Credits:** Flow (Google AI Pro): about 920 of 1,000 on 2026-11-22, minus roughly 140 for the phase 2 clips (estimate; check in Flow). Flow pictures cost no credits. Higgsfield: none until December.
 
-**Open decisions and next steps (in this order)**
-1. **The user's phone feedback** on the coach and the rest of the app: fix what they find.
-2. **Flow terms: done (2026-11-23).** The user read Flow's terms while signed in: commercial use is allowed. The Flow clips ship and `READY = true`; no Higgsfield remake needed for the coach.
-3. **In progress (2026-11-23): the user generates in Flow, Claude prepares and builds.** Phase 2 coach clips: prompt sheet `AI personal trainers/FLOW-PHASE2.md` (thumbs up, high five, breathe per coach, optional Lucas wave; proposed moments listed there). Equipment pictures: also in Flow now, since its images cost no credits (`Equipment pictures/FLOW-EQUIPMENT.md`, git-ignored folder, 44 pictures named by equipment id, leg press first as the style reference). When files arrive: check, cut, contact sheet for the user, then build.
-   **Phase 2 coach clips: DONE (2026-11-23).** Thumbs up (personal best), high five (week done, milestones), breathe (long rests), wave (welcome back; Mia's from her approved wave test) for both coaches, 5 s portrait cuts like the others (Mia's high five and wave and all Lucas hand clips cropped further left so the hand stays clear of the faded edge). The phase-change moment and the Progress line followed the same day, and the breathe clip now shows on every rest (the user's choice). Phase 2 is complete; later ideas: speaking coaches with lip-sync (`COACH-USAGE-PLAN.md` section 10).
-   **Earlier plan for phase 2 (for reference):** clips `thumbsup`, `highfive`, `breathe`; moments: phase change, week done, weight raised, milestones, welcome back, Progress line. Use the single-action prompts in `FLOW-PROMPTS.md` (Part 9, "Lessons"). Later: speaking coaches with lip-sync (`COACH-USAGE-PLAN.md` section 10).
-4. **December (Higgsfield credits back):** batch 10 exercise clips: the 9 below **plus mannequins and clips for the 7 cardio exercises** on our new Flow machine pictures (see the reminder under "Still to do next month"). The equipment pictures are done.
-5. Native-speaker review of the translations (all written by Claude, 1,318 texts per language).
+**Local-only files (never committed):** `AI personal trainers/` (coach pictures, Flow clips, prompt guides `FLOW-PROMPTS.md` and `FLOW-PHASE2.md`; **`lucas-face.png` is an actor's photo: never use it**) and `Equipment pictures/` (the 2048 px Flow originals, the prompt sheets and `references/`).
 
-**Credits:** Flow (Google AI Pro) about 920 of 1,000 left on 2026-11-22. Higgsfield: none until December.
-
-**Flow facts that cost time (full guide in `AI personal trainers/FLOW-PROMPTS.md`):** images cost no credits (daily limits); videos use Veo 3.1 Lite (10 credits, 8 s only, 16:9); turn on **Return silent videos** (if a try says "Audio generation failed", press retry; failed tries are refunded); keep prompts to one simple action, no counts, no left/right words; no visible watermark appeared with Visible watermarking off; the Frames (start + end) mode was not available in this layout.
+**Flow facts that cost time (full guide in `AI personal trainers/FLOW-PROMPTS.md`):** images cost no credits (daily limits); videos use Veo 3.1 Lite (10 credits, 8 s, 16:9); turn on **Return silent videos**; keep prompts to one simple action, no counts, no left/right words; a reference picture of another machine makes Flow copy its shape, so use none for machines without a clip.
 
 ## Where things stand
 
 - **Paused until next month (December 2026).** The Higgsfield credits ran out after batch 9. When they are refilled next month, we finish the remaining animations (batch 10, below).
 - **Done and in the app:** 89 of the app's 105 exercises have male + female clips (`VIDEOS` in `docs/js/anim.js`): leg press plus batches 1–9.
-  - The other 16 are the 9 in the table below, plus 7 cardio machines that were never planned for clips.
-- **Git:** everything is committed and pushed (batch 9 is commit `da1264a`).
+  - The other 16 are the 9 in the table below, plus the 7 cardio exercises (now wanted too, on our Flow machine pictures; see the reminder below).
+- **Git:** everything is committed and pushed (batch 9 is commit `da1264a`; latest `66c67d3`).
 - **Credits: 0.66 left (paid "plus" plan, refreshes in December). Nothing can be generated until then.** A `gpt_image_2_6` image was quoted at 0.75 credits on 2026-11-21 (earlier notes said 0.25, so check with `estimate_image_cost`). A seedance video costs 2–2.5. Batch 9 used about 65 credits.
 - **December budget:** batch 10 (9 exercises) about 35–45 credits, plus the equipment pictures about 35–50 credits (see below).
 - **Always check the balance BEFORE sending a batch,** never in the same step.
@@ -87,7 +84,7 @@ These changes don't affect the clips. If a future change adds a JS or CSS file, 
   - spoken workout cues (set logged, 10 seconds of rest left, rest over with the next set, timers done) in the app's language.
 - **Screen readers (VoiceOver, TalkBack):** every button and input has a spoken name, icons are hidden from readers, sheets act as dialogs, the active tab is announced, and keyboard focus is visible.
 - **Seated plan: done** (`ac2b94b`, live and confirmed working by the user): an app-built plan with no standing or floor work.
-- **Not done (the user didn't pick it):** reduce motion.
+- **Reduce motion:** added later on 2026-11-22 with the coaches (Accessibility screen).
 
 ## AI personal coaches (first version built behind a switch, 2026-11-22)
 

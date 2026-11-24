@@ -6,7 +6,7 @@ import { HOME_EQUIP } from './equipment.js';
 import { MUSCLES } from './exercises.js';
 import * as W from './workout.js';
 import { say, setCue } from './speak.js';
-import { coachPlanCard, coachDayLine, coachRest, coachFinish, coachStart, coachFinishMoment, coachPlanMoment } from './coach.js';
+import { coachPlanCard, coachDayLine, coachRest, coachFinish, coachStart, coachFinishMoment, coachPlanMoment, movePlay } from './coach.js';
 import { t, wUnit, fromW, toW, locale, listJoin } from './i18n.js';
 import { rerender } from './app.js';
 import { scheduleSync } from './sync.js';
@@ -225,7 +225,7 @@ export function dayView(w, d) {
           <button class="chips editable" data-act="cardio-open" data-d="${d}" aria-label="${t('Change cardio finisher')}"><span class="chip">${t('{n} min', { n: preview.cardio.min })}</span><span class="chip edit">${icon.edit} ${t('Change')}</span></button></div></div>`
       : `<button class="btn" data-act="cardio-open" data-d="${d}">${icon.plus} ${t('Add a cardio finisher')}</button>`}
       <h3>${t('Cooldown stretches')}</h3>
-      <ul class="moves">${preview.cooldown.map(m => `<li>${esc(m.name)}<span>${fmtDur(m.sec)}</span></li>`).join('')}</ul>
+      <ul class="moves">${preview.cooldown.map(m => `<li>${movePlay(m)}${esc(m.name)}<span>${fmtDur(m.sec)}</span></li>`).join('')}</ul>
       <div class="cta"><button class="btn primary big" data-act="start-day" data-w="${w}" data-d="${d}">${state.session?.startedAt ? t('Start (replaces current workout)') : done ? t('Do it again') : t('Start')}</button></div>`,
   };
 }
@@ -323,7 +323,7 @@ function openMobility(w, d) {
   const moves = buildSession(profile(), w, d).warmup;
   sheet(`${closeX()}<h2>${t('Quick mobility routine')}</h2>
     <p class="muted small">${t('Do these right after the warm-up machine.')}</p>
-    <ul class="moves">${moves.map(m => `<li>${esc(m.name)}<span>${fmtDur(m.sec)}</span></li>`).join('')}</ul>
+    <ul class="moves">${moves.map(m => `<li>${movePlay(m)}${esc(m.name)}<span>${fmtDur(m.sec)}</span></li>`).join('')}</ul>
     <button class="btn primary" data-act="sheet-close">${t('Done')}</button>`);
 }
 
@@ -567,12 +567,12 @@ export function sessionView() {
   };
   const warm = `${timerCard('warm', t('Warm-up'))}
     ${s.warmup.length ? `<details class="card moves-card" ${fresh ? 'open' : ''}><summary><b>${t('Then: quick mobility')}</b> · ${t('{n} min', { n: Math.round(s.warmup.reduce((a, m) => a + m.sec, 0) / 60) })}</summary>
-    <ul class="moves">${s.warmup.map((m, k) => `<li class="${m.done ? 'struck' : ''}" data-act="tick-move" data-list="warmup" data-k="${k}">${esc(t(m.name))}<span>${fmtDur(m.sec)}</span></li>`).join('')}</ul></details>` : ''}`;
+    <ul class="moves">${s.warmup.map((m, k) => `<li class="${m.done ? 'struck' : ''}" data-act="tick-move" data-list="warmup" data-k="${k}">${movePlay(m)}${esc(t(m.name))}<span>${fmtDur(m.sec)}</span></li>`).join('')}</ul></details>` : ''}`;
 
   const cardio = timerCard('cardio', t('Finisher'));
 
   const cool = `<details class="card moves-card" ${allDone ? 'open' : ''}><summary><b>${t('Cooldown')}</b> · ${t('stretches')}</summary>
-    <ul class="moves">${s.cooldown.map((m, k) => `<li class="${m.done ? 'struck' : ''}" data-act="tick-move" data-list="cooldown" data-k="${k}">${esc(t(m.name))}<span>${fmtDur(m.sec)}</span></li>`).join('')}</ul></details>`;
+    <ul class="moves">${s.cooldown.map((m, k) => `<li class="${m.done ? 'struck' : ''}" data-act="tick-move" data-list="cooldown" data-k="${k}">${movePlay(m)}${esc(t(m.name))}<span>${fmtDur(m.sec)}</span></li>`).join('')}</ul></details>`;
 
   return {
     full: true, cls: 'session',

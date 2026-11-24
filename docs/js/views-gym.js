@@ -7,7 +7,7 @@ import { POSITIONS, GRIPS, FEEL, matchExercises, customExercise, identifyWithAI 
 import { lineChart } from './charts.js';
 import { equipPic } from './pictures.js';
 import { hasAnim, hasClip, animHTML, startAnims } from './anim.js';
-import { generatePlan, dayFocus, sessionBudget, warmPref, dayCap, sortDay, raiseDayCap, MAX_EX_PER_DAY, dayName } from './planner.js';
+import { PLACES, generatePlan, dayFocus, sessionBudget, warmPref, dayCap, sortDay, raiseDayCap, MAX_EX_PER_DAY, dayName } from './planner.js';
 import { t, toW, wUnit, unitText, listJoin } from './i18n.js';
 import { coachTipCard } from './coach.js';
 import { homeEqList, openHomeEq } from './views-plan.js';
@@ -26,13 +26,20 @@ const eqText = (eq) => eq === 'none' ? t('No equipment') : eq.split('|').map(alt
 const exText = (s) => unitText(t(s));
 
 // ───────────── Library ─────────────
-let filter = { q: '', m: '', availOnly: true };
+let filter = { q: '', m: '', availOnly: true, at: 'gym' };
+// Where an exercise can be done: gym = the gym library (not the home-only exercises, like the planner);
+// home = only home equipment (all of it, or what the user has with availOnly); bare = no equipment at all.
+const HOME_IDS = new Set(HOME_EQUIP.map(e => e.id));
+const onlyHomeEq = (e) => e.eq.split('|').some(alt => alt.split('+').every(id => id === 'none' || HOME_IDS.has(id)));
+const fitsPlace = (e) => filter.at === 'bare' ? isAvailable(e, 'bare')
+  : filter.at === 'home' ? (filter.availOnly ? isAvailable(e, 'home') : onlyHomeEq(e))
+  : !e.home && (!filter.availOnly || isAvailable(e));
 
 function libraryList() {
   const q = filter.q.trim().toLowerCase();
   const list = allExercises().filter(e => (!filter.m || e.m === filter.m || e.s.includes(filter.m))
     && (!q || e.name.toLowerCase().includes(q) || MUSCLES[e.m].toLowerCase().includes(q))
-    && (!filter.availOnly || isAvailable(e)))
+    && fitsPlace(e))
     .sort((a, b) => (filter.m && a.m !== b.m ? (a.m === filter.m ? -1 : 1) : 0) || a.name.localeCompare(b.name));
   if (!list.length) return `<p class="muted center">${t('No exercises match.')}</p>`;
   return list.map(e => `<a class="exrow" href="#/ex/${encodeURIComponent(e.id)}">${thumb(e, photoFor(e.id))}
@@ -49,7 +56,9 @@ export function libraryView() {
         <button class="chip sel ${!filter.m ? 'on' : ''}" data-act="lib-m" data-m="">${t('All')}</button>
         ${muscles.map(([k, v]) => `<button class="chip sel ${filter.m === k ? 'on' : ''}" data-act="lib-m" data-m="${k}">${esc(v)}</button>`).join('')}
       </div>
-      <label class="toggle-line"><input type="checkbox" ${filter.availOnly ? 'checked' : ''} data-change="lib-avail"> ${t('Only what\'s available in my gym')}</label>
+      <div class="tabs2 place-ctl lib-place" role="group" aria-label="${t('Where you train')}">${Object.entries(PLACES).map(([k, v]) =>
+        `<button data-act="lib-at" data-at="${k}" class="${filter.at === k ? 'on' : ''}" aria-pressed="${filter.at === k}">${esc(v)}</button>`).join('')}</div>
+      ${filter.at === 'bare' ? '' : `<label class="toggle-line"><input type="checkbox" ${filter.availOnly ? 'checked' : ''} data-change="lib-avail"> ${filter.at === 'home' ? t('Only what I have at home') : t('Only what\'s available in my gym')}</label>`}
       <div class="exlist" id="liblist">${libraryList()}</div>`,
   };
 }
@@ -63,6 +72,7 @@ register({
     const row = document.querySelector('.chipscroll'); if (row) row.scrollLeft = x;
   },
   'lib-avail': (el) => { filter.availOnly = el.checked; rerender(); },
+  'lib-at': (el) => { filter.at = el.dataset.at; rerender(); },
 });
 
 // ───────────── Exercise details ─────────────

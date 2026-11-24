@@ -189,3 +189,61 @@
 1554	Salta aprendo i piedi mentre alzi le braccia sopra la testa, poi richiudi.
 1555	Per una versione più silenziosa e leggera, marcia sul posto alzando le ginocchia.
 1556	Mantieni un ritmo costante che ti lasci respirare.
+1557	Mostrami: {move}
+1558	{coach} ti mostra come si fa.
+1559	Qualche minuto su una macchina cardio, poi una breve routine di mobilità. Tocca Cambia per scegliere la macchina e i minuti. I movimenti con un pulsante play hanno una breve clip in cui un coach li mostra, nel riscaldamento e nel defaticamento.
+1560	Apri le braccia: larghe, poi abbracciati
+1561	Marcia sul posto, ginocchia alte
+1562	Allungamento sopra la testa: braccia su e giù
+1563	Mani intrecciate dietro la schiena (allungamento di petto e bicipiti)
+1564	Allungamento del petto al muro
+1565	Stai dritto e apri bene le braccia all'altezza delle spalle.
+1566	Portale davanti a te e abbracciati.
+1567	Riapri e ripeti a ritmo tranquillo.
+1568	Piedi alla larghezza delle spalle, braccia tese in avanti.
+1569	Porta i fianchi indietro e in basso, talloni a terra.
+1570	Torna in piedi e ripeti lentamente.
+1571	Stai dritto sul posto.
+1572	Solleva un ginocchio all'altezza dell'anca, poi l'altro.
+1573	Muovi il braccio opposto a ogni ginocchio e mantieni un ritmo costante.
+1574	Stai dritto con le braccia lungo i fianchi.
+1575	Solleva entrambe le braccia tese di lato fin sopra la testa.
+1576	Abbassale lentamente allo stesso modo e ripeti.
+1577	Mettiti di fianco a un muro e appoggia il palmo dietro di te, braccio all'altezza della spalla.
+1578	Ruota lentamente petto e piedi lontano dal muro finché senti l'allungamento nel petto.
+1579	Respira con calma e mantieni, poi cambia lato.
+1580	Inginocchiati e siediti sui talloni.
+1581	Piegati in avanti e fai scivolare le mani sul pavimento, braccia tese.
+1582	Appoggia la fronte e respira lentamente verso la schiena.
+1583	Porta un braccio teso davanti al petto, all'altezza della spalla.
+1584	Tienilo appena sopra il gomito con l'altra mano e tira delicatamente verso di te.
+1585	Tieni la spalla bassa; mantieni, poi cambia braccio.
+1586	Alza un braccio, piega il gomito e lascia scendere la mano dietro la nuca.
+1587	Con l'altra mano spingi delicatamente il gomito indietro.
+1588	Stai dritto e mantieni, poi cambia braccio.
+1589	Intreccia le mani dietro la schiena.
+1590	Distendi le braccia e solleva leggermente le mani.
+1591	Apri il petto, tieni le spalle basse e mantieni.
+1592	Mettiti accanto a un muro e appoggia una mano.
+1593	Piega un ginocchio e tieni quel piede dietro di te, ginocchia vicine.
+1594	Stai dritto, spingi leggermente i fianchi in avanti e mantieni, poi cambia gamba.
+1595	Siediti con entrambe le gambe tese davanti a te.
+1596	Tieni la schiena lunga e piegati in avanti dai fianchi.
+1597	Allungati verso i piedi solo finché è piacevole e mantieni.
+1598	Sdraiati sulla schiena con le ginocchia piegate.
+1599	Appoggia una caviglia sull'altro ginocchio.
+1600	Tira delicatamente verso di te la gamba sotto finché lo senti nel gluteo, poi cambia lato.
+1601	Mettiti di fronte a un muro con entrambe le mani appoggiate.
+1602	Porta un piede indietro, gamba tesa e tallone a terra.
+1603	Piega il ginocchio davanti e inclinati finché senti allungare il polpaccio, poi cambia gamba.
+1604	Sdraiati a pancia in giù con le mani sotto le spalle.
+1605	Tieni i fianchi a terra e solleva lentamente il petto.
+1606	Guarda avanti, rilassa le spalle e mantieni.
+1607	Sdraiati sulla schiena con le ginocchia piegate e le mani su petto e pancia.
+1608	Inspira lentamente dal naso per circa quattro secondi.
+1609	Espira lentamente per circa quattro secondi e lascia rilassare il corpo.
+1610	Qualche minuto su una macchina cardio, poi una breve routine di mobilità. Tocca Cambia per scegliere la macchina e i minuti. Tocca il pulsante play accanto a un movimento, nel riscaldamento o nel defaticamento, per vedere un coach che lo mostra, con brevi passaggi.
+1611	Dove ti alleni
+1612	Solo quello che ho a casa
+1613	Palestra, a casa o nessun attrezzo
+1614	Scegli dove ti alleni: Palestra mostra gli esercizi da palestra, A casa quelli che puoi fare con l'attrezzatura di casa e Nessun attrezzo quelli che non richiedono nulla.

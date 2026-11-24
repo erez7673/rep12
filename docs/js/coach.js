@@ -7,6 +7,7 @@ import { esc, icon, register, sheet, closeSheet, motionReduced } from './ui.js';
 import { say, speakOn } from './speak.js';
 import { rerender } from './app.js';
 import { dayFocus, planPhase, isCustom, currentWeek } from './planner.js';
+import { WARMUP, COOLDOWN } from './exercises.js';
 
 // Switch to true when docs/media/coach/ has the approved pictures and clips (<coach>-idle.jpg, -letsgo.mp4 ...).
 // Until then the whole feature stays hidden on the public site (testing elsewhere: set state.settings.coachPreview = true).
@@ -145,6 +146,38 @@ function moment(id, line, onClose) {
   if (speakOn()) say(line);
 }
 export const coachStart = () => moment('letsgo', sig('start'));
+
+// ── Warm-up and cool-down moves shown by the coaches ──
+// One coach per move, spread across all six (the user's choice, 2026-11-24); everyone sees the same clip, whichever
+// coach they picked (or none). Made in Google Flow: warm-up moves are clips (media/coach/moves/<id>.mp4 + .jpg first
+// frame); stretches are held still, so they are a picture only (<id>.jpg), because the video model kept changing the pose.
+// A move gets its button only once its id is in MOVES_READY ('clip' or 'still') and the approved files are committed.
+export const MOVE_COACH = {
+  'arm-openers': 'mateo', 'warm-squats': 'amara', march: 'priya', 'overhead-reach': 'lucas',
+  'chest-stretch': 'mia', 'childs-pose': 'kenji', 'shoulder-stretch': 'mia', 'triceps-stretch': 'priya',
+  'behind-back-stretch': 'mateo', 'quad-stretch': 'amara', 'hamstring-stretch': 'kenji', 'glute-stretch': 'mia',
+  'calf-stretch': 'lucas', cobra: 'priya', breathing: 'kenji',
+};
+const MOVES_READY = { 'arm-openers': 'clip', 'warm-squats': 'clip', march: 'clip', 'overhead-reach': 'clip', cobra: 'still', 'quad-stretch': 'still', 'shoulder-stretch': 'still', 'glute-stretch': 'still', 'calf-stretch': 'still', 'chest-stretch': 'still', 'triceps-stretch': 'still', 'hamstring-stretch': 'still', 'childs-pose': 'still', breathing: 'clip', 'behind-back-stretch': 'still' };
+export const moveHasClip = (id) => !!id && !!MOVES_READY[id] && coachAvailable();
+const moveOf = (id) => [...WARMUP, ...Object.values(COOLDOWN)].find(m => m.id === id);
+const moveName = (id) => moveOf(id)?.name || '';
+// Small play button for a move in a list (nothing when the move has no clip yet).
+export const movePlay = (m) => moveHasClip(m?.id)
+  ? `<button class="iconbtn move-play" data-act="move-clip" data-id="${m.id}" aria-label="${esc(t('Show me: {move}', { move: moveName(m.id) }))}">${icon.play}</button>` : '';
+export function openMoveClip(id) {
+  const k = MOVE_COACH[id];
+  if (!k || !moveHasClip(id)) return;
+  const src = `media/coach/moves/${id}`;
+  sheet(`<button class="iconbtn sheet-x" data-act="sheet-close" aria-label="${t('Close')}">${icon.x}</button>
+    <h2>${esc(moveName(id))}</h2>
+    <div class="move-clip">${motionReduced() || MOVES_READY[id] === 'still' ? `<img src="${src}.jpg${MV}" alt="">`
+      : `<video src="${src}.mp4${MV}" poster="${src}.jpg${MV}" muted autoplay loop playsinline></video>`}</div>
+    <p class="muted small">${t('{coach} shows you how.', { coach: esc(COACHES[k].name) })}</p>
+    ${moveOf(id)?.how ? `<ol class="steps">${moveOf(id).how.map(s => `<li>${esc(s)}</li>`).join('')}</ol>` : ''}
+    <button class="btn primary" data-act="sheet-close">${t('Done')}</button>`);
+}
+register({ 'move-clip': (el) => openMoveClip(el.dataset.id) });
 
 // When a workout is finished: a high five for a milestone or a finished week, a thumbs up for a personal best,
 // else the cheer. ev = { count: workouts logged, week: the week just finished (or null), pr: true for a personal best }.

@@ -549,3 +549,11 @@ button.coach-note { width: 100%; text-align: start; color: inherit; font: inheri
 .btn.levelup { width: auto; min-height: 36px; padding: 0 14px; margin: 6px 0 0; font-size: calc(14px * var(--fs)); border-radius: 99px; background: var(--accent); color: var(--accent-ink); box-shadow: none; }
 .btn.levelup svg { width: 16px; height: 16px; }
 h3.home-plans { margin-top: 22px; }
+
+/* Warm-up and cool-down moves: a play button in front of a move with a coach clip, and the clip sheet */
+.moves li:has(.move-play) { justify-content: flex-start; align-items: center; }
+.moves li:has(.move-play) > span { margin-inline-start: auto; }
+.moves li .move-play { width: 34px; height: 34px; min-width: 34px; margin: -6px 0; background: var(--chip); border-radius: 99px; }
+.moves li .move-play svg { width: 16px; height: 16px; }
+.move-clip { background: #1f1f21; border-radius: var(--radius); overflow: hidden; margin: 6px 0 10px; }
+.move-clip video, .move-clip img { display: block; width: 100%; height: auto; }

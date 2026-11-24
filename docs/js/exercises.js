@@ -530,28 +530,28 @@ export const PROGRESSIONS = [
   ['bw-calf-raise', 'sl-calf-raise'],
 ];
 
-// Warm-up and cooldown moves (seconds each).
+// Warm-up and cooldown moves (seconds each). id: the move's coach clip (MOVE_COACH in coach.js).
 export const WARMUP = [
-  { name: 'Easy cardio (bike, elliptical or treadmill)', sec: 180 },
-  { name: 'Arm circles forward and back', sec: 30 },
-  { name: 'Bodyweight squats', sec: 30 },
-  { name: 'Hip circles / leg swings', sec: 30 },
-  { name: 'Band or light-cable pull-aparts / face pulls', sec: 30 },
-  { name: 'Light warm-up set of the first exercise', sec: 60 },
+  { id: 'easy-cardio', name: 'Easy cardio (bike, elliptical or treadmill)', sec: 180 },
+  { id: 'arm-openers', name: 'Arm openers: arms wide, then hug yourself', sec: 30, how: ['Stand tall and open your arms wide at shoulder height.', 'Swing them in front of you and give yourself a hug.', 'Open again and repeat at an easy pace.'] },
+  { id: 'warm-squats', name: 'Bodyweight squats', sec: 30, how: ['Stand with your feet shoulder-width apart, arms out in front.', 'Sit your hips back and down, heels on the floor.', 'Stand up tall and repeat slowly.'] },
+  { id: 'march', name: 'March on the spot, knees high', sec: 30, how: ['Stand tall on the spot.', 'Lift one knee up to hip height, then the other.', 'Swing the opposite arm with each knee and keep a steady rhythm.'] },
+  { id: 'overhead-reach', name: 'Overhead reach: arms up and down', sec: 30, how: ['Stand tall with your arms at your sides.', 'Raise both straight arms out to the sides and up over your head.', 'Lower them slowly the same way and repeat.'] },
+  { id: 'warmup-set', name: 'Light warm-up set of the first exercise', sec: 60 },
 ];
 
 export const COOLDOWN = {
-  chest: { name: 'Doorway chest stretch', sec: 30 },
-  back: { name: 'Child\'s pose / lat stretch', sec: 30 },
-  shoulders: { name: 'Cross-body shoulder stretch (each side)', sec: 40 },
-  triceps: { name: 'Overhead triceps stretch (each side)', sec: 30 },
-  biceps: { name: 'Wall biceps stretch', sec: 30 },
-  quads: { name: 'Standing quad stretch (each side)', sec: 40 },
-  hamstrings: { name: 'Seated hamstring stretch', sec: 40 },
-  glutes: { name: 'Figure-four glute stretch (each side)', sec: 40 },
-  calves: { name: 'Wall calf stretch (each side)', sec: 30 },
-  core: { name: 'Cobra stretch', sec: 30 },
-  general: { name: 'Slow deep breathing, lying down', sec: 60 },
+  chest: { id: 'chest-stretch', name: 'Wall chest stretch', sec: 30, how: ['Stand side-on to a wall and place your palm on it behind you, arm at shoulder height.', 'Slowly turn your chest and feet away from the wall until you feel a stretch in your chest.', 'Breathe calmly and hold, then switch sides.'] },
+  back: { id: 'childs-pose', name: 'Child\'s pose / lat stretch', sec: 30, how: ['Kneel and sit back on your heels.', 'Fold forward and slide your hands along the floor, arms straight.', 'Rest your forehead down and breathe slowly into your back.'] },
+  shoulders: { id: 'shoulder-stretch', name: 'Cross-body shoulder stretch (each side)', sec: 40, how: ['Bring one straight arm across your chest at shoulder height.', 'Hold it just above the elbow with your other hand and pull gently towards you.', 'Keep your shoulder down; hold, then switch arms.'] },
+  triceps: { id: 'triceps-stretch', name: 'Overhead triceps stretch (each side)', sec: 30, how: ['Raise one arm, bend the elbow and drop your hand behind your neck.', 'With the other hand, gently push the elbow back.', 'Stand tall and hold, then switch arms.'] },
+  biceps: { id: 'behind-back-stretch', name: 'Hands clasped behind the back (chest and biceps stretch)', sec: 30, how: ['Clasp your hands behind your back.', 'Straighten your arms and lift your hands slightly.', 'Open your chest, keep your shoulders down and hold.'] },
+  quads: { id: 'quad-stretch', name: 'Standing quad stretch (each side)', sec: 40, how: ['Stand next to a wall and rest one hand on it.', 'Bend one knee and hold that foot behind you, knees side by side.', 'Stand tall, push your hips slightly forward and hold, then switch legs.'] },
+  hamstrings: { id: 'hamstring-stretch', name: 'Seated hamstring stretch', sec: 40, how: ['Sit with both legs straight out in front of you.', 'Keep your back long and fold forward from the hips.', 'Reach towards your feet only as far as feels good and hold.'] },
+  glutes: { id: 'glute-stretch', name: 'Figure-four glute stretch (each side)', sec: 40, how: ['Lie on your back with your knees bent.', 'Rest one ankle across the other knee.', 'Pull the bottom leg gently towards you until you feel it in your seat, then switch sides.'] },
+  calves: { id: 'calf-stretch', name: 'Wall calf stretch (each side)', sec: 30, how: ['Face a wall with both hands on it.', 'Step one foot back, keep that leg straight and the heel down.', 'Bend the front knee and lean in until you feel the calf stretch, then switch legs.'] },
+  core: { id: 'cobra', name: 'Cobra stretch', sec: 30, how: ['Lie face down with your hands under your shoulders.', 'Keep your hips on the floor and press your chest up slowly.', 'Look ahead, relax your shoulders and hold.'] },
+  general: { id: 'breathing', name: 'Slow deep breathing, lying down', sec: 60, how: ['Lie on your back with your knees bent and your hands on your chest and belly.', 'Breathe in slowly through your nose for about four seconds.', 'Breathe out slowly for about four seconds and let your body relax.'] },
 };
 
 // Picker motions → plain-language choices.

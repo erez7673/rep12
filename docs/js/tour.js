@@ -50,7 +50,7 @@ const STEPS = [
   { sec: 'Workout day', route: dayRoute, title: 'A workout day', text: 'Here you see everything in one workout and can adjust it before you start. Changes apply to this day in every week.' },
   { sec: 'Workout day', route: dayRoute, sel: '.lead-chips', title: 'Muscle areas', text: 'The muscles this day trains. Tap to choose other areas, and the app picks fitting exercises.' },
   { sec: 'Workout day', route: dayRoute, sel: '.place-ctl', title: 'Gym or home', text: 'Choose where you do this workout: at the gym, at home with your home equipment, or with no equipment at all. The app picks exercises for the same muscles, and switching back brings your earlier exercises back.' },
-  { sec: 'Workout day', route: dayRoute, sel: '[data-act="warm-open"]', title: 'Warm-up', text: 'A few minutes on a cardio machine, then a short mobility routine. Tap Change to pick the machine and the minutes.' },
+  { sec: 'Workout day', route: dayRoute, sel: '[data-act="warm-open"]', title: 'Warm-up', text: 'A few minutes on a cardio machine, then a short mobility routine. Tap Change to pick the machine and the minutes. Tap the play button next to a move, in the warm-up or the cooldown, to see a coach show it, with short steps.' },
   { sec: 'Workout day', route: dayRoute, sel: '.exlist [data-act="edit-sets"]', title: 'Sets, reps and weight', text: 'Each chip is one set. Tap Edit to change the reps or kg before you start. The first weights are estimates, so adjust them in your first week.' },
   { sec: 'Workout day', route: dayRoute, sel: '.exlist [data-act="move-open"]', title: 'Change the order', text: 'Move an exercise up or down in the workout.' },
   { sec: 'Workout day', route: dayRoute, sel: '.exlist [data-act="ex-menu"]', title: 'Swap or remove', text: 'See how to do the exercise, swap it for another one for the same muscles, or remove it from this day. Body-weight exercises also show an easier and a harder step. When every set gets easy, a Level up button appears.' },
@@ -60,6 +60,7 @@ const STEPS = [
   // ── Exercises ──
   { sec: 'Exercises', route: '#/exercises', sel: '#nav a[href="#/exercises"]', fixed: true, title: 'The Exercises tab', text: 'All the exercises in the app, with how-to videos.' },
   { sec: 'Exercises', route: '#/exercises', sel: '.search', title: 'Search and filter', text: 'Search by name, or tap a muscle to see only its exercises. "Only what\'s available in my gym" hides exercises for equipment you don\'t have.' },
+  { sec: 'Exercises', route: '#/exercises', sel: '.lib-place', title: 'Gym, home or no equipment', text: 'Choose where you train: Gym shows the gym exercises, Home the ones you can do with home equipment, and No equipment the ones that need nothing at all.' },
   { sec: 'Exercises', route: exRoute, sel: '.hero', title: 'An exercise', text: 'Tap any exercise to open it. Under "How to do it" there is a short video (for most exercises) and step-by-step instructions.' },
   { sec: 'Exercises', route: exRoute, sel: '[data-act="add-to-day"]', title: 'Add to workout', text: 'Put this exercise into one of your workout days, as an extra exercise or in place of another one.' },
   { sec: 'Exercises', route: exRoute, sel: '[data-act="like"]', title: 'Like or avoid', text: 'Mark exercises you like or want to avoid. The app uses this the next time it builds your plan.' },

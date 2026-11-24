@@ -17,6 +17,7 @@ export function walkData(fn) {
   for (const tp of Object.values(TEMPLATES)) { fn(tp, 'name'); fn(tp, 'short'); fn(tp, 'blurb'); }
   TPL_PHASES.forEach(row => { fn(row, 0); fn(row, 1); });
   field(WARMUP, 'name'); field(COOLDOWN, 'name');
+  for (const m of [...WARMUP, ...Object.values(COOLDOWN)]) if (m.how) values(m.how);
   for (const tp of Object.values(EX_TEMPLATES)) values(tp.steps);
   for (const e of EQUIPMENT) { fn(e, 'name'); fn(e, 'cat'); }
   for (const e of HOME_EQUIP) fn(e, 'name');

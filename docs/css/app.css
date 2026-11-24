@@ -541,3 +541,11 @@ body:has(.cta) #livebar { bottom: calc(var(--nav-h) + env(safe-area-inset-bottom
 #coach-overlay p { position: absolute; left: 16px; right: 16px; bottom: calc(env(safe-area-inset-bottom) + 36px); margin: 0; font-weight: 800; font-size: calc(28px * var(--fs)); line-height: 1.25; text-align: center; }
 @keyframes coachIn { from { opacity: 0; } }
 button.coach-note { width: 100%; text-align: start; color: inherit; font: inherit; }
+
+/* Gym / Home / No equipment switch on a workout day, the place tag on My Plan, and the Level up button */
+.place-ctl button { font-size: calc(14px * var(--fs)); padding: 10px 6px; }
+.home-eq-row { margin: -6px 0 12px; }
+.placetag { display: inline-block; font-size: calc(11px * var(--fs)); font-weight: 750; padding: 1px 7px; border-radius: 99px; background: var(--chip); color: var(--ink2); vertical-align: 1px; }
+.btn.levelup { width: auto; min-height: 36px; padding: 0 14px; margin: 6px 0 0; font-size: calc(14px * var(--fs)); border-radius: 99px; background: var(--accent); color: var(--accent-ink); box-shadow: none; }
+.btn.levelup svg { width: 16px; height: 16px; }
+h3.home-plans { margin-top: 22px; }

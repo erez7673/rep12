@@ -14,6 +14,7 @@ export const EQUIPMENT = [
   Q('barbell', 'Olympic barbell + plates', 'Free weights', true),
   Q('ezbar', 'EZ bar / fixed barbells', 'Free weights', true),
   Q('kettlebells', 'Kettlebells', 'Free weights', false, false),
+  Q('bands', 'Resistance bands', 'Free weights', false, false),
 
   Q('bench-flat', 'Flat bench', 'Benches & racks', true),
   Q('bench-adj', 'Adjustable bench', 'Benches & racks', true),
@@ -59,4 +60,15 @@ export const EQUIPMENT = [
   Q('bike', 'Exercise bike (recumbent)', 'Cardio', true),
   Q('bike-upright', 'Exercise bike (upright)', 'Cardio', true),
   Q('rower', 'Rowing machine', 'Cardio', true),
+];
+
+// Home equipment (Gym tab → Home equipment), used by workout days set to Home. Stored in state.gym.home
+// ({ id: true }), synced with the gym record. Body weight ('none') is always available.
+// The ids match the gym's where it is the same thing, so an exercise's eq string works in both places.
+export const HOME_EQUIP = [
+  { id: 'pullup-bar', name: 'Pull-up bar (in a doorway)' },
+  { id: 'furniture', name: 'Sturdy chair, sofa or table' },
+  { id: 'bands', name: 'Resistance bands' },
+  { id: 'dumbbells', name: 'Dumbbells' },
+  { id: 'kettlebells', name: 'Kettlebell' },
 ];

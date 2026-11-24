@@ -4,6 +4,7 @@
 // pos/grip/mot: used by the "What is this machine?" picker.
 // load: starting weight as a fraction of body weight (intermediate male; scaled for sex/level).
 // perHand: weight is per dumbbell. assist: weight is assistance (higher = easier).
+// home: a home / calisthenics exercise, used only on workout days set to Home or No equipment (never in gym plans).
 // unit: 'reps' | 'sec' | 'min'.
 
 export const MUSCLES = {
@@ -21,7 +22,7 @@ const E = (id, name, eq, pat, m, o = {}) => ({
   id, name, eq, pat, m,
   s: o.s || [], pos: o.pos || 'standing', grip: o.grip || 'none', mot: o.mot || '',
   iso: !!o.iso, lvl: o.lvl || 1, avoid: o.avoid || [], load: o.load ?? 0, inc: o.inc ?? 2.5,
-  unit: o.unit || 'reps', assist: !!o.assist, perHand: !!o.perHand,
+  unit: o.unit || 'reps', assist: !!o.assist, perHand: !!o.perHand, home: !!o.home,
   steps: o.steps || [], tip: o.tip || '',
 });
 
@@ -143,7 +144,7 @@ export const EXERCISES = [
   E('plate-row', 'Machine Seated One-Arm Row', 'plate-row', 'h-pull', 'back', {
     s: ['biceps', 'rear-delts'], pos: 'seated', grip: 'handles', mot: 'pull-toward', load: 0.25, inc: 5,
     steps: ['Load plates. Set the seat so your chest is on the pad and the handles are reachable.', 'Grip one or both handles with arms straight.', 'Pull your elbow(s) back past your body.', 'Return slowly. If doing one arm at a time, do all reps then switch.'] }),
-  E('db-row', 'One-Arm Dumbbell Row', 'dumbbells+bench-flat|dumbbells+bench-adj', 'h-pull', 'back', {
+  E('db-row', 'One-Arm Dumbbell Row', 'dumbbells+bench-flat|dumbbells+bench-adj|dumbbells+furniture', 'h-pull', 'back', {
     s: ['biceps', 'rear-delts'], pos: 'kneeling', grip: 'dumbbell', mot: 'pull-toward', perHand: true, load: 0.25, inc: 2,
     steps: ['Put one knee and hand on a flat bench, back flat.', 'Hold a dumbbell in the other hand, arm straight.', 'Pull the dumbbell to your hip, elbow close to your body.', 'Lower slowly. Do all reps, then switch sides.'] }),
   E('incline-db-row', 'Chest-Supported Dumbbell Row', 'dumbbells+bench-adj', 'h-pull', 'back', {
@@ -207,7 +208,7 @@ export const EXERCISES = [
   E('triceps-machine', 'Machine Triceps Extension', 'triceps-machine', 'triceps', 'triceps', {
     pos: 'seated', grip: 'handles', mot: 'extend-arm', iso: true, load: 0.2, inc: 5,
     steps: ['Adjust the seat so your elbows line up with the machine\'s pivot point.', 'Rest your upper arms on the pad, grip the handles.', 'Push down/forward until your arms are straight.', 'Return slowly.'] }),
-  E('bench-dip', 'Bench Dip', 'bench-flat', 'triceps', 'triceps', {
+  E('bench-dip', 'Bench Dip', 'bench-flat|furniture', 'triceps', 'triceps', {
     s: ['chest'], pos: 'seated', grip: 'none', mot: 'push-down', avoid: ['shoulder', 'wrist'], load: 0,
     steps: ['Sit on the edge of a bench, hands beside your hips.', 'Slide your butt off the bench, legs bent.', 'Bend your elbows to lower your body about 10–15 cm.', 'Push back up.'] }),
 
@@ -221,7 +222,7 @@ export const EXERCISES = [
   E('smith-squat', 'Smith Machine Squat', 'smith', 'squat', 'quads', {
     s: ['glutes'], pos: 'standing', grip: 'bar', mot: 'leg-push', avoid: ['knee'], load: 0.6,
     steps: ['Bar on your upper back, feet slightly in front of the bar.', 'Unhook the bar.', 'Squat down until thighs are about parallel.', 'Push back up, then re-hook.'] }),
-  E('goblet-squat', 'Goblet Squat', 'dumbbells', 'squat', 'quads', {
+  E('goblet-squat', 'Goblet Squat', 'dumbbells|kettlebells', 'squat', 'quads', {
     s: ['glutes', 'core'], pos: 'standing', grip: 'dumbbell', mot: 'leg-push', avoid: ['knee'], load: 0.25, inc: 2,
     steps: ['Hold one dumbbell vertically against your chest.', 'Feet shoulder-width, toes slightly out.', 'Squat down between your knees, chest up.', 'Stand back up.'] }),
   E('sumo-squat', 'Dumbbell Sumo Squat', 'dumbbells', 'squat', 'glutes', {
@@ -258,7 +259,7 @@ export const EXERCISES = [
   E('reverse-lunge', 'Dumbbell Reverse Lunge', 'dumbbells', 'lunge', 'glutes', {
     s: ['quads'], pos: 'standing', grip: 'dumbbell', mot: 'leg-push', avoid: ['knee'], perHand: true, load: 0.12, inc: 2,
     steps: ['Stand tall holding dumbbells.', 'Step one foot back and lower the back knee.', 'Push through the front heel to return.', 'Alternate legs; reps count per leg.'], tip: 'Easier on the knees than forward lunges.' }),
-  E('split-squat', 'Bulgarian Split Squat', 'dumbbells+bench-flat|dumbbells+bench-adj', 'lunge', 'quads', {
+  E('split-squat', 'Bulgarian Split Squat', 'dumbbells+bench-flat|dumbbells+bench-adj|dumbbells+furniture', 'lunge', 'quads', {
     s: ['glutes'], pos: 'standing', grip: 'dumbbell', mot: 'leg-push', lvl: 2, avoid: ['knee'], perHand: true, load: 0.1, inc: 2,
     steps: ['Stand in front of a bench, put the top of your back foot on it.', 'Hold dumbbells at your sides.', 'Lower straight down until your front thigh is about parallel.', 'Push up through the front heel. Do all reps, then switch.'] }),
   E('stepup', 'Dumbbell Step-Up', 'dumbbells+bench-flat', 'lunge', 'glutes', {
@@ -373,6 +374,160 @@ export const EXERCISES = [
   E('rower', 'Rowing Machine', 'rower', 'cardio', 'cardio', {
     s: ['back'], pos: 'seated', grip: 'handles', mot: 'cardio', unit: 'min', avoid: ['lowerback'],
     steps: ['Strap your feet in, grab the handle.', 'Push with your legs first, then lean back, then pull the arms.', 'Return in reverse: arms, body, legs.', 'Keep a steady rhythm.'] }),
+
+  // ───────── HOME / CALISTHENICS (home: true – only on days set to Home or No equipment) ─────────
+  // Push-up steps, easiest first (see PROGRESSIONS).
+  E('wall-pushup', 'Wall Push-Up', 'none', 'h-push', 'chest', { home: true,
+    s: ['triceps', 'shoulders'], mot: 'push-forward', avoid: ['wrist'],
+    steps: ['Stand an arm\'s length from a wall, hands on it at chest height.', 'Bend your elbows and bring your chest towards the wall.', 'Push back to straight arms, body in one line.'],
+    tip: 'Step further from the wall to make it harder.' }),
+  E('incline-pushup', 'Incline Push-Up', 'furniture|bench-flat', 'h-push', 'chest', { home: true,
+    s: ['triceps', 'shoulders', 'core'], mot: 'push-forward', avoid: ['wrist'],
+    steps: ['Hands on the edge of a sturdy table, sofa or bench, a bit wider than shoulders.', 'Walk your feet back until your body is in a straight line.', 'Lower your chest to the edge, then push back up.'],
+    tip: 'The lower the support, the harder it gets.' }),
+  E('knee-pushup', 'Knee Push-Up', 'none', 'h-push', 'chest', { home: true,
+    s: ['triceps', 'shoulders', 'core'], pos: 'lying', mot: 'push-forward', avoid: ['wrist', 'knee'],
+    steps: ['Kneel with hands on the floor, a bit wider than shoulders.', 'Keep a straight line from knees to head.', 'Lower your chest to just above the floor, then push up.'] }),
+  E('decline-pushup', 'Decline Push-Up', 'furniture|bench-flat', 'h-push', 'chest', { home: true, lvl: 2,
+    s: ['shoulders', 'triceps', 'core'], pos: 'lying', mot: 'push-forward', avoid: ['wrist', 'shoulder'],
+    steps: ['Hands on the floor, feet up on a chair, sofa or bench.', 'Keep your body straight from head to heels.', 'Lower your chest to the floor, then push up.'],
+    tip: 'Works the upper chest and shoulders more.' }),
+  E('archer-pushup', 'Archer Push-Up', 'none', 'h-push', 'chest', { home: true, lvl: 3,
+    s: ['triceps', 'shoulders', 'core'], pos: 'lying', mot: 'push-forward', avoid: ['wrist', 'shoulder'],
+    steps: ['Start in a push-up with hands very wide.', 'Lower towards one hand while the other arm stays almost straight.', 'Push back up and switch sides each rep.'],
+    tip: 'A step towards the one-arm push-up.' }),
+  E('diamond-pushup', 'Diamond Push-Up', 'none', 'triceps', 'triceps', { home: true, lvl: 2,
+    s: ['chest', 'shoulders'], pos: 'lying', mot: 'push-forward', avoid: ['wrist', 'elbow'],
+    steps: ['Hands close together under your chest, thumbs and fingers touching.', 'Lower your chest to your hands, elbows close to your body.', 'Push back up to straight arms.'],
+    tip: 'Too hard? Do them from your knees.' }),
+  E('pike-pushup', 'Pike Push-Up', 'none', 'v-push', 'shoulders', { home: true, lvl: 2,
+    s: ['triceps'], mot: 'push-up', avoid: ['wrist', 'shoulder'],
+    steps: ['Start in a push-up, then walk your feet in and lift your hips high.', 'Bend your elbows and lower the top of your head towards the floor.', 'Push back up until your arms are straight.'] }),
+  E('elevated-pike-pushup', 'Feet-Up Pike Push-Up', 'furniture|bench-flat', 'v-push', 'shoulders', { home: true, lvl: 3,
+    s: ['triceps'], mot: 'push-up', avoid: ['wrist', 'shoulder', 'neck'],
+    steps: ['Feet on a chair or sofa, hands on the floor, hips high.', 'Lower your head towards the floor between your hands.', 'Push back up with control.'],
+    tip: 'A step towards the handstand push-up.' }),
+  E('band-press', 'Band Overhead Press', 'bands', 'v-push', 'shoulders', { home: true,
+    s: ['triceps'], grip: 'handles', mot: 'push-up', avoid: ['shoulder'],
+    steps: ['Stand on the middle of the band, ends at shoulder height.', 'Press both hands straight up over your head.', 'Lower slowly back to your shoulders.'] }),
+  E('standing-db-press', 'Standing Dumbbell Shoulder Press', 'dumbbells|kettlebells', 'v-push', 'shoulders', { home: true,
+    s: ['triceps', 'core'], grip: 'dumbbell', mot: 'push-up', avoid: ['shoulder', 'lowerback'], perHand: true, load: 0.12, inc: 2,
+    steps: ['Stand tall with the weights at shoulder height.', 'Press up until your arms are straight, without leaning back.', 'Lower slowly to your shoulders.'] }),
+  E('band-lateral', 'Band Lateral Raise', 'bands', 'side-delt', 'shoulders', { home: true, iso: true,
+    grip: 'handles', mot: 'raise-arms', avoid: ['shoulder'],
+    steps: ['Stand on the band, an end in each hand by your sides.', 'Raise your arms out to the sides to shoulder height, elbows soft.', 'Lower slowly.'] }),
+
+  // Legs
+  E('chair-squat', 'Sit-to-Stand (Chair Squat)', 'furniture|bench-flat', 'squat', 'quads', { home: true,
+    s: ['glutes'], mot: 'leg-push', avoid: ['knee'],
+    steps: ['Stand in front of a sturdy chair, feet hip-width apart.', 'Sit back and down until you lightly touch the seat.', 'Stand up by pushing through your whole foot.'],
+    tip: 'Cross your arms on your chest; use your hands only if you need to.' }),
+  E('air-squat', 'Bodyweight Squat', 'none', 'squat', 'quads', { home: true,
+    s: ['glutes', 'hamstrings'], mot: 'leg-push', avoid: ['knee'],
+    steps: ['Feet shoulder-width apart, toes slightly out.', 'Sit your hips back and down, chest up, knees over toes.', 'Go as low as feels good, then stand up.'] }),
+  E('jump-squat', 'Jump Squat', 'none', 'squat', 'quads', { home: true, lvl: 2,
+    s: ['glutes', 'calves'], mot: 'leg-push', avoid: ['knee', 'ankle'],
+    steps: ['Squat down as in a bodyweight squat.', 'Jump up as high as you can.', 'Land softly on bent knees and go straight into the next squat.'],
+    tip: 'Land quietly – soft knees protect your joints.' }),
+  E('bw-reverse-lunge', 'Bodyweight Reverse Lunge', 'none', 'lunge', 'glutes', { home: true,
+    s: ['quads', 'hamstrings'], mot: 'leg-push', avoid: ['knee'],
+    steps: ['Stand tall, then take a big step backwards.', 'Lower your back knee towards the floor.', 'Push through the front foot to stand up. Switch legs.'] }),
+  E('bw-bulgarian', 'Bodyweight Bulgarian Split Squat', 'furniture|bench-flat', 'lunge', 'quads', { home: true, lvl: 2,
+    s: ['glutes'], mot: 'leg-push', avoid: ['knee'],
+    steps: ['Stand in front of a chair or sofa and rest one foot behind you on it.', 'Lower your back knee towards the floor, front shin fairly upright.', 'Push up through the front foot. Do all reps, then switch legs.'] }),
+  E('bw-sl-rdl', 'Single-Leg Romanian Deadlift (Bodyweight)', 'none', 'hinge', 'hamstrings', { home: true, lvl: 2,
+    s: ['glutes', 'core'], mot: 'hip-hinge', avoid: ['lowerback'],
+    steps: ['Stand on one leg, knee slightly bent.', 'Hinge forward at the hips while the other leg reaches back, back straight.', 'Stop when your body is near level, then stand back up. Switch legs.'],
+    tip: 'Hold a wall with one hand at first for balance.' }),
+  E('kb-swing', 'Kettlebell Swing', 'kettlebells|dumbbells', 'hinge', 'glutes', { home: true, lvl: 2,
+    s: ['hamstrings', 'core'], grip: 'dumbbell', mot: 'hip-hinge', avoid: ['lowerback'], load: 0.16, inc: 4,
+    steps: ['Feet a bit wider than shoulders, the weight held in both hands.', 'Hinge at the hips and swing the weight back between your legs.', 'Snap your hips forward to swing it to chest height. Let it fall back and repeat.'],
+    tip: 'The power comes from your hips, not your arms.' }),
+  E('sl-glute-bridge', 'Single-Leg Glute Bridge', 'none', 'glute', 'glutes', { home: true, lvl: 2,
+    s: ['hamstrings'], pos: 'lying', mot: 'hip-thrust',
+    steps: ['Lie on your back, one knee bent with the foot flat, the other leg straight.', 'Push through the heel and lift your hips until your body is straight.', 'Lower slowly. Do all reps, then switch legs.'] }),
+  E('couch-hip-thrust', 'Sofa Hip Thrust', 'furniture|bench-flat', 'glute', 'glutes', { home: true, lvl: 2,
+    s: ['hamstrings'], mot: 'hip-thrust',
+    steps: ['Sit on the floor with your upper back against the edge of a sofa or bench.', 'Feet flat, push through your heels and lift your hips until level.', 'Squeeze your glutes at the top, then lower slowly.'],
+    tip: 'Rest a dumbbell on your hips to make it harder.' }),
+  E('wall-sit', 'Wall Sit', 'none', 'quad-iso', 'quads', { home: true, iso: true, unit: 'sec',
+    s: ['glutes'], mot: 'leg-push', avoid: ['knee'],
+    steps: ['Lean your back against a wall and slide down.', 'Stop with your knees bent about 90°, over your ankles.', 'Hold, breathing slowly.'] }),
+  E('bw-calf-raise', 'Calf Raise (Bodyweight)', 'none', 'calf', 'calves', { home: true, iso: true,
+    avoid: ['ankle'], mot: 'calf',
+    steps: ['Stand with the balls of your feet on a step, heels hanging off. Hold on for balance.', 'Rise up onto your toes as high as you can.', 'Lower your heels slowly below the step.'] }),
+  E('sl-calf-raise', 'Single-Leg Calf Raise (Bodyweight)', 'none', 'calf', 'calves', { home: true, iso: true, lvl: 2,
+    avoid: ['ankle'], mot: 'calf',
+    steps: ['Stand on one foot on a step, hold a wall for balance.', 'Rise up onto your toes as high as you can.', 'Lower slowly. Do all reps, then switch legs.'] }),
+
+  // Back
+  E('negative-pullup', 'Negative Pull-Up', 'pullup-bar', 'v-pull', 'back', { home: true,
+    s: ['biceps'], grip: 'bar', mot: 'pull-down', avoid: ['shoulder', 'elbow'],
+    steps: ['Use a chair to get your chin above the bar.', 'Lower yourself as slowly as you can, about 3–5 seconds, to straight arms.', 'Step back up and repeat.'],
+    tip: 'The best way to build up to your first pull-up.' }),
+  E('chinup', 'Chin-Up', 'pullup-bar', 'v-pull', 'back', { home: true, lvl: 2,
+    s: ['biceps'], grip: 'bar', mot: 'pull-down', avoid: ['shoulder', 'elbow'],
+    steps: ['Hang from the bar, palms facing you, hands shoulder-width apart.', 'Pull until your chin is over the bar.', 'Lower slowly to straight arms.'] }),
+  E('band-pulldown', 'Band Lat Pulldown', 'bands', 'v-pull', 'back', { home: true,
+    s: ['biceps'], grip: 'handles', mot: 'pull-down',
+    steps: ['Fix the band high, for example over the top of a door.', 'Kneel facing it, arms reaching up.', 'Pull your elbows down to your sides, then let your arms go back up slowly.'] }),
+  E('table-row', 'Table Row (Inverted Row)', 'furniture', 'h-pull', 'back', { home: true, lvl: 2,
+    s: ['biceps', 'rear-delts'], pos: 'lying', grip: 'bar', mot: 'pull-toward',
+    steps: ['Lie under a very sturdy table and grip its edge, hands shoulder-width.', 'Keep your body straight, heels on the floor.', 'Pull your chest up to the table edge, then lower slowly.'],
+    tip: 'Test that the table cannot tip over before you start.' }),
+  E('band-row', 'Band Row', 'bands', 'h-pull', 'back', { home: true,
+    s: ['biceps', 'rear-delts'], pos: 'seated', grip: 'handles', mot: 'pull-toward',
+    steps: ['Sit with legs straight and loop the band around your feet.', 'Pull the ends towards your waist, squeezing your shoulder blades.', 'Let your arms go forward slowly.'] }),
+  E('superman', 'Superman', 'none', 'h-pull', 'back', { home: true,
+    s: ['glutes'], pos: 'lying', mot: 'hip-hinge', avoid: ['lowerback'],
+    steps: ['Lie face down, arms stretched out in front of you.', 'Lift your arms, chest and legs a little off the floor.', 'Hold for 2 seconds, then lower slowly.'] }),
+  E('band-pull-apart', 'Band Pull-Apart', 'bands', 'rear-delt', 'rear-delts', { home: true, iso: true,
+    s: ['traps'], grip: 'handles', mot: 'pull-toward',
+    steps: ['Hold the band in front of you at chest height, arms straight.', 'Pull the band apart until it touches your chest.', 'Return slowly.'] }),
+  E('prone-ytw', 'Prone Y-T-W Raise', 'none', 'rear-delt', 'rear-delts', { home: true, iso: true,
+    s: ['traps'], pos: 'lying', mot: 'raise-arms',
+    steps: ['Lie face down, forehead on a towel.', 'Lift your arms in a Y, then a T, then a W shape, thumbs up.', 'Each letter counts as one rep. Move slowly.'] }),
+
+  // Arms
+  E('band-curl', 'Band Biceps Curl', 'bands', 'biceps', 'biceps', { home: true, iso: true,
+    s: ['forearms'], grip: 'handles', mot: 'curl',
+    steps: ['Stand on the middle of the band, ends in your hands, palms forward.', 'Curl your hands up to your shoulders, elbows by your sides.', 'Lower slowly.'] }),
+  E('band-pushdown', 'Band Triceps Pushdown', 'bands', 'triceps', 'triceps', { home: true, iso: true,
+    grip: 'handles', mot: 'push-down', avoid: ['elbow'],
+    steps: ['Fix the band high, for example over the top of a door.', 'Elbows by your sides, push your hands down until your arms are straight.', 'Let them come back up slowly.'] }),
+
+  // Core
+  E('hollow-hold', 'Hollow Body Hold', 'none', 'core', 'core', { home: true, lvl: 2, unit: 'sec',
+    pos: 'lying', mot: 'hold', avoid: ['lowerback'],
+    steps: ['Lie on your back and press your lower back into the floor.', 'Lift your shoulders and legs off the floor, arms reaching past your head.', 'Hold. Bend your knees to make it easier.'] }),
+  E('mountain-climber', 'Mountain Climbers', 'none', 'core', 'core', { home: true, unit: 'sec',
+    s: ['shoulders', 'quads'], pos: 'lying', mot: 'core-flex', avoid: ['wrist'],
+    steps: ['Start in a push-up position, arms straight.', 'Drive one knee towards your chest, then switch legs quickly.', 'Keep your hips low and your back flat.'] }),
+  E('lying-leg-raise', 'Lying Leg Raise', 'none', 'core', 'core', { home: true,
+    pos: 'lying', mot: 'core-flex', avoid: ['lowerback'],
+    steps: ['Lie on your back, hands under your hips.', 'Keep your legs together and raise them until they point up.', 'Lower slowly without letting your lower back arch.'] }),
+  E('hanging-knee-raise', 'Hanging Knee Raise', 'pullup-bar', 'core', 'core', { home: true,
+    grip: 'bar', mot: 'core-flex', avoid: ['shoulder'],
+    steps: ['Hang from the bar with straight arms.', 'Pull your knees up towards your chest.', 'Lower slowly without swinging.'] }),
+
+  // Home cardio (warm-up and finisher on Home days)
+  E('jumping-jacks', 'Jumping Jacks or Marching', 'none', 'cardio', 'cardio', { home: true, unit: 'min', mot: 'cardio',
+    steps: ['Jump your feet apart while raising your arms overhead, then back together.', 'For a quieter, gentler version, march on the spot with high knees.', 'Keep a steady pace you can breathe through.'] }),
+];
+
+// Steps from easiest to hardest. Once every set reaches the top of the rep range the app suggests the next
+// step (planner.js nextStep), and the exercise's ⋯ sheet offers the easier and harder steps.
+export const PROGRESSIONS = [
+  ['wall-pushup', 'incline-pushup', 'knee-pushup', 'pushup', 'decline-pushup', 'archer-pushup'],
+  ['pike-pushup', 'elevated-pike-pushup'],
+  ['chair-squat', 'air-squat', 'jump-squat'],
+  ['bw-reverse-lunge', 'bw-bulgarian'],
+  ['glute-bridge', 'sl-glute-bridge', 'couch-hip-thrust'],
+  ['negative-pullup', 'chinup', 'pullup'],
+  ['superman', 'band-row', 'table-row'],
+  ['dead-bug', 'plank', 'hollow-hold'],
+  ['lying-leg-raise', 'hanging-knee-raise', 'hanging-leg-raise'],
+  ['bw-calf-raise', 'sl-calf-raise'],
 ];
 
 // Warm-up and cooldown moves (seconds each).

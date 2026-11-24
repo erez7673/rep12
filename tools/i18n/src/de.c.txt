@@ -1,0 +1,191 @@
+1366	Alle Wiederholungen geschafft – bereit für die nächste Stufe: {name}
+1367	Übung für zu Hause
+1368	Geräte zu Hause
+1369	Was du zu Hause hast
+1370	Für Trainingstage, die auf „Zu Hause“ stehen. Öffne einen Trainingstag und wähle oben Studio, Zu Hause oder Ohne Geräte.
+1371	Pläne für zu Hause
+1372	Training zu Hause mit deinem Körpergewicht und den Geräten, die du zu Hause hast (im Tab „Studio“ einstellen). Die Übungen gehen in Stufen von leicht bis schwer.
+1373	Nur Körpergewicht
+1374	Was hast du zu Hause? Trainingstage auf „Zu Hause“ nutzen dein Körpergewicht und diese Geräte. Körpergewicht ist immer dabei.
+1375	Übungen, die etwas brauchen, das du ausgeschaltet hast, werden am Tag markiert – tausche sie aus, oder stelle den Tag auf Studio und zurück auf Zu Hause, um eine neue Liste zu bekommen.
+1376	Nächste Stufe
+1377	Wo du an diesem Tag trainierst
+1378	Leichtere Stufe
+1379	Schwerere Stufe
+1380	Keine Alternativen mit deinen Geräten zu Hause.
+1381	{day} findet jetzt hier statt: {place}
+1382	Nächste Stufe: {name}
+1383	Pläne mit festem Wochenablauf: Ganzkörperpläne für 2 oder 3 Tage pro Woche, der AB-Plan und Oberkörper / Unterkörper für 4 Tage pro Woche, ein Sitzplan ohne Stehen und ohne Bodenübungen sowie Pläne für zu Hause, einer davon ganz ohne Geräte. Wähle einen davon statt eines eigenen Plans, wenn dir das lieber ist.
+1384	Studio oder zu Hause
+1385	Wähle, wo du dieses Training machst: im Fitnessstudio, zu Hause mit deinen Geräten oder ganz ohne Geräte. Die App wählt Übungen für dieselben Muskeln, und beim Zurückwechseln kommen deine bisherigen Übungen wieder.
+1386	Sieh dir an, wie die Übung geht, tausche sie gegen eine andere für dieselben Muskeln oder entferne sie von diesem Tag. Bei Körpergewichtsübungen siehst du auch eine leichtere und eine schwerere Stufe. Wenn alle Sätze leicht werden, erscheint der Knopf „Nächste Stufe“.
+1387	Sag der App, was du zu Hause hast: eine Klimmzugstange, einen stabilen Stuhl, Widerstandsbänder oder Gewichte. Trainingstage auf „Zu Hause“ nutzen diese plus dein Körpergewicht.
+1388	Zu Hause
+1389	Ganzkörper zu Hause · 3 Tage pro Woche
+1390	Drei Ganzkörper-Trainings zu Hause mit deinem Körpergewicht und den Geräten, die du hast (im Tab „Studio“ einstellen). Wenn alle Sätze leicht fallen, schlägt die App die nächste, schwerere Stufe einer Übung vor.
+1391	Oberkörper / Unterkörper zu Hause · 4 Tage pro Woche
+1392	Oberkörper- und Unterkörpertage im Wechsel, zu Hause. Jeder Bereich wird zweimal pro Woche trainiert. Eine Klimmzugstange oder Widerstandsbänder geben Rücken und Armen mehr zu tun.
+1393	Kurz zu Hause · 20 Minuten, 3 Tage pro Woche
+1394	Vier Übungen pro Tag mit kurzen Pausen, sodass ein Training zu Hause etwa 20 Minuten dauert.
+1395	Ohne Geräte · 3 Tage pro Woche
+1396	Nur dein Körpergewicht: kein Stuhl, keine Stange, keine Gewichte, nur etwas Platz am Boden und eine Wand. Auch gut auf Reisen.
+1397	Widerstandsbänder
+1398	Klimmzugstange (im Türrahmen)
+1399	Stabiler Stuhl, Sofa oder Tisch
+1400	Kurzhanteln
+1401	Kettlebell
+1402	Liegestütz an der Wand
+1403	Stell dich eine Armlänge vor eine Wand, Hände auf Brusthöhe an die Wand.
+1404	Beuge die Ellbogen und bring die Brust zur Wand.
+1405	Drück dich zurück bis die Arme gestreckt sind, Körper in einer Linie.
+1406	Stell dich weiter weg von der Wand, um es schwerer zu machen.
+1407	Erhöhter Liegestütz
+1408	Hände auf die Kante eines stabilen Tisches, Sofas oder einer Bank, etwas breiter als die Schultern.
+1409	Geh mit den Füßen zurück, bis dein Körper eine gerade Linie bildet.
+1410	Senk die Brust zur Kante und drück dich wieder hoch.
+1411	Je niedriger die Auflage, desto schwerer wird es.
+1412	Liegestütz auf den Knien
+1413	Knie dich hin, Hände auf dem Boden, etwas breiter als die Schultern.
+1414	Halte eine gerade Linie von den Knien bis zum Kopf.
+1415	Senk die Brust bis knapp über den Boden und drück dich hoch.
+1416	Liegestütz mit erhöhten Füßen
+1417	Hände auf dem Boden, Füße auf einem Stuhl, Sofa oder einer Bank.
+1418	Halte den Körper gerade vom Kopf bis zu den Fersen.
+1419	Senk die Brust zum Boden und drück dich hoch.
+1420	Trainiert die obere Brust und die Schultern stärker.
+1421	Bogenschützen-Liegestütz
+1422	Beginne im Liegestütz mit sehr weit gesetzten Händen.
+1423	Senk dich zu einer Hand, während der andere Arm fast gestreckt bleibt.
+1424	Drück dich hoch und wechsle bei jeder Wiederholung die Seite.
+1425	Eine Stufe auf dem Weg zum einarmigen Liegestütz.
+1426	Diamant-Liegestütz
+1427	Hände eng zusammen unter der Brust, Daumen und Finger berühren sich.
+1428	Senk die Brust zu den Händen, Ellbogen nah am Körper.
+1429	Zu schwer? Mach sie auf den Knien.
+1430	Pike-Liegestütz
+1431	Beginne im Liegestütz, geh dann mit den Füßen näher und heb die Hüfte hoch.
+1432	Beuge die Ellbogen und senk den Kopf Richtung Boden.
+1433	Drück dich hoch, bis die Arme gestreckt sind.
+1434	Pike-Liegestütz mit erhöhten Füßen
+1435	Füße auf einem Stuhl oder Sofa, Hände auf dem Boden, Hüfte hoch.
+1436	Senk den Kopf zwischen den Händen Richtung Boden.
+1437	Drück dich kontrolliert wieder hoch.
+1438	Eine Stufe auf dem Weg zum Handstand-Liegestütz.
+1439	Schulterdrücken mit Band
+1440	Stell dich auf die Mitte des Bandes, Enden auf Schulterhöhe.
+1441	Drück beide Hände gerade über den Kopf.
+1442	Senk sie langsam zurück zu den Schultern.
+1443	Schulterdrücken mit Kurzhanteln im Stehen
+1444	Steh aufrecht, die Gewichte auf Schulterhöhe.
+1445	Drück nach oben, bis die Arme gestreckt sind, ohne dich nach hinten zu lehnen.
+1446	Senk sie langsam zu den Schultern.
+1447	Seitheben mit Band
+1448	Stell dich auf das Band, ein Ende in jeder Hand an den Seiten.
+1449	Heb die Arme seitlich bis auf Schulterhöhe, Ellbogen leicht gebeugt.
+1450	Aufstehen vom Stuhl (Stuhl-Kniebeuge)
+1451	Stell dich vor einen stabilen Stuhl, Füße hüftbreit.
+1452	Setz dich nach hinten unten, bis du die Sitzfläche leicht berührst.
+1453	Steh auf, indem du dich über den ganzen Fuß hochdrückst.
+1454	Verschränke die Arme vor der Brust; nimm die Hände nur zu Hilfe, wenn nötig.
+1455	Kniebeuge mit Körpergewicht
+1456	Füße schulterbreit, Zehen leicht nach außen.
+1457	Schieb die Hüfte nach hinten unten, Brust hoch, Knie über den Zehen.
+1458	Geh so tief, wie es sich gut anfühlt, und steh wieder auf.
+1459	Sprungkniebeuge
+1460	Geh in die Kniebeuge wie bei der Kniebeuge mit Körpergewicht.
+1461	Spring so hoch du kannst.
+1462	Lande weich mit gebeugten Knien und geh direkt in die nächste Kniebeuge.
+1463	Lande leise – weiche Knie schonen die Gelenke.
+1464	Ausfallschritt rückwärts mit Körpergewicht
+1465	Steh aufrecht und mach einen großen Schritt nach hinten.
+1466	Senk das hintere Knie Richtung Boden.
+1467	Drück dich über den vorderen Fuß hoch. Bein wechseln.
+1468	Bulgarische Kniebeuge mit Körpergewicht
+1469	Stell dich vor einen Stuhl oder ein Sofa und leg einen Fuß hinter dir darauf ab.
+1470	Senk das hintere Knie Richtung Boden, das vordere Schienbein recht senkrecht.
+1471	Drück dich über den vorderen Fuß hoch. Alle Wiederholungen, dann Bein wechseln.
+1472	Einbeiniges Rumänisches Kreuzheben (Körpergewicht)
+1473	Steh auf einem Bein, Knie leicht gebeugt.
+1474	Beuge dich in der Hüfte nach vorn, während das andere Bein nach hinten geht, Rücken gerade.
+1475	Halt an, wenn der Körper fast waagerecht ist, und richte dich wieder auf. Bein wechseln.
+1476	Halt dich anfangs mit einer Hand an einer Wand fest, um das Gleichgewicht zu halten.
+1477	Kettlebell-Swing
+1478	Füße etwas breiter als die Schultern, das Gewicht in beiden Händen.
+1479	Beuge dich in der Hüfte und schwing das Gewicht zwischen den Beinen nach hinten.
+1480	Streck die Hüfte kräftig nach vorn, um es auf Brusthöhe zu schwingen. Zurückfallen lassen und wiederholen.
+1481	Die Kraft kommt aus der Hüfte, nicht aus den Armen.
+1482	Einbeinige Glute Bridge
+1483	Leg dich auf den Rücken, ein Knie gebeugt mit dem Fuß flach, das andere Bein gestreckt.
+1484	Drück über die Ferse und heb die Hüfte, bis dein Körper gerade ist.
+1485	Langsam absenken. Alle Wiederholungen, dann Bein wechseln.
+1486	Hüftheben am Sofa
+1487	Setz dich auf den Boden, den oberen Rücken an die Kante eines Sofas oder einer Bank gelehnt.
+1488	Füße flach, drück über die Fersen und heb die Hüfte bis zur Waagerechten.
+1489	Spann oben den Po an und senk dich dann langsam ab.
+1490	Leg eine Kurzhantel auf die Hüfte, um es schwerer zu machen.
+1491	Wandsitzen
+1492	Lehn dich mit dem Rücken an eine Wand und rutsch nach unten.
+1493	Halt an, wenn die Knie etwa 90° gebeugt sind, über den Knöcheln.
+1494	Halten und ruhig atmen.
+1495	Wadenheben (Körpergewicht)
+1496	Stell dich mit den Fußballen auf eine Stufe, Fersen frei. Halt dich fest für das Gleichgewicht.
+1497	Senk die Fersen langsam unter die Stufe.
+1498	Einbeiniges Wadenheben (Körpergewicht)
+1499	Stell dich auf einem Fuß auf eine Stufe, halt dich an einer Wand fest.
+1500	Negativ-Klimmzug
+1501	Nimm einen Stuhl, um mit dem Kinn über die Stange zu kommen.
+1502	Lass dich so langsam wie möglich ab, etwa 3–5 Sekunden, bis die Arme gestreckt sind.
+1503	Steig wieder hoch und wiederhole.
+1504	Der beste Weg zu deinem ersten Klimmzug.
+1505	Klimmzug im Untergriff
+1506	Häng an der Stange, Handflächen zu dir, Hände schulterbreit.
+1507	Zieh dich hoch, bis das Kinn über der Stange ist.
+1508	Latziehen mit Band
+1509	Befestige das Band hoch, zum Beispiel oben an einer Tür.
+1510	Knie dich davor, Arme nach oben gestreckt.
+1511	Zieh die Ellbogen zu den Seiten nach unten und lass die Arme langsam wieder hoch.
+1512	Rudern unter dem Tisch (umgekehrtes Rudern)
+1513	Leg dich unter einen sehr stabilen Tisch und greif seine Kante, Hände schulterbreit.
+1514	Halte den Körper gerade, Fersen am Boden.
+1515	Zieh die Brust zur Tischkante und senk dich langsam ab.
+1516	Prüf vorher, dass der Tisch nicht kippen kann.
+1517	Rudern mit Band
+1518	Setz dich mit gestreckten Beinen hin und leg das Band um die Füße.
+1519	Zieh die Enden zur Taille und zieh die Schulterblätter zusammen.
+1520	Lass die Arme langsam nach vorn.
+1521	Superman
+1522	Leg dich auf den Bauch, Arme nach vorn gestreckt.
+1523	Heb Arme, Brust und Beine etwas vom Boden.
+1524	2 Sekunden halten, dann langsam absenken.
+1525	Band auseinanderziehen
+1526	Halt das Band vor dir auf Brusthöhe, Arme gestreckt.
+1527	Zieh das Band auseinander, bis es die Brust berührt.
+1528	Y-T-W-Heben in Bauchlage
+1529	Leg dich auf den Bauch, Stirn auf einem Handtuch.
+1530	Heb die Arme zu einem Y, dann einem T, dann einem W, Daumen nach oben.
+1531	Jeder Buchstabe zählt als eine Wiederholung. Langsam bewegen.
+1532	Bizepscurl mit Band
+1533	Stell dich auf die Mitte des Bandes, Enden in den Händen, Handflächen nach vorn.
+1534	Beuge die Hände zu den Schultern, Ellbogen an den Seiten.
+1535	Trizepsdrücken mit Band
+1536	Ellbogen an den Seiten, drück die Hände nach unten, bis die Arme gestreckt sind.
+1537	Lass sie langsam wieder hochkommen.
+1538	Hollow Body Hold
+1539	Leg dich auf den Rücken und drück den unteren Rücken in den Boden.
+1540	Heb Schultern und Beine vom Boden, Arme über den Kopf gestreckt.
+1541	Halten. Beuge die Knie, um es leichter zu machen.
+1542	Bergsteiger
+1543	Beginne im Liegestütz, Arme gestreckt.
+1544	Zieh ein Knie zur Brust und wechsle die Beine schnell.
+1545	Halte die Hüfte tief und den Rücken gerade.
+1546	Beinheben im Liegen
+1547	Leg dich auf den Rücken, Hände unter der Hüfte.
+1548	Halte die Beine zusammen und heb sie, bis sie nach oben zeigen.
+1549	Senk sie langsam, ohne ins Hohlkreuz zu gehen.
+1550	Knieheben hängend
+1551	Häng an der Stange mit gestreckten Armen.
+1552	Zieh die Knie Richtung Brust.
+1553	Hampelmann oder Marschieren
+1554	Spring mit den Füßen auseinander und heb die Arme über den Kopf, dann zurück.
+1555	Leiser und sanfter: Marschiere auf der Stelle mit hohen Knien.
+1556	Halte ein gleichmäßiges Tempo, bei dem du gut atmen kannst.

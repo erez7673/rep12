@@ -1,0 +1,191 @@
+1366	Alla reps klara – redo för nästa steg: {name}
+1367	Hemmaövning
+1368	Utrustning hemma
+1369	Det du har hemma
+1370	Används av träningsdagar som är satta till Hemma. Öppna en träningsdag och välj Gym, Hemma eller Ingen utrustning högst upp.
+1371	Hemmaprogram
+1372	Träning hemma med din kroppsvikt och den utrustning du har hemma (ställ in den under fliken Gym). Övningarna går från lätt till svårt i steg.
+1373	Bara kroppsvikt
+1374	Vad har du hemma? Dagar satta till Hemma använder din kroppsvikt plus det här. Kroppsvikt ingår alltid.
+1375	Övningar som behöver något du har stängt av markeras på dagen – byt ut dem, eller sätt dagen till Gym och tillbaka till Hemma för att få en ny lista.
+1376	Nästa steg
+1377	Var du tränar den här dagen
+1378	Lättare steg
+1379	Svårare steg
+1380	Inga alternativ med din hemmautrustning.
+1381	{day} görs nu här: {place}
+1382	Nästa steg: {name}
+1383	Program med ett fast veckoschema: helkroppsprogram för 2 eller 3 dagar i veckan, AB-programmet och Över- / underkropp för 4 dagar i veckan, ett Sittande program utan stående och golvövningar, och hemmaprogram, ett av dem helt utan utrustning. Välj ett av dem i stället för ett eget program om du vill.
+1384	Gym eller hemma
+1385	Välj var du gör det här passet: på gymmet, hemma med din utrustning eller helt utan utrustning. Appen väljer övningar för samma muskler, och när du byter tillbaka kommer dina tidigare övningar tillbaka.
+1386	Se hur övningen görs, byt den mot en annan för samma muskler eller ta bort den från den här dagen. Kroppsviktsövningar visar också ett lättare och ett svårare steg. När alla set blir lätta visas knappen Nästa steg.
+1387	Berätta för appen vad du har hemma: en chinsstång, en stadig stol, gummiband eller vikter. Dagar satta till Hemma använder dessa plus din kroppsvikt.
+1388	Hemma
+1389	Helkropp hemma · 3 dagar i veckan
+1390	Tre helkroppspass hemma med din kroppsvikt och den utrustning du har (ställ in den under fliken Gym). När alla set känns lätta föreslår appen nästa, svårare steg av en övning.
+1391	Över- / underkropp hemma · 4 dagar i veckan
+1392	Överkropps- och underkroppsdagar om vartannat, hemma. Varje område tränas två gånger i veckan. En chinsstång eller gummiband ger rygg och armar mer att jobba med.
+1393	Kort hemma · 20 minuter, 3 dagar i veckan
+1394	Fyra övningar om dagen med korta vilor, så ett pass hemma tar runt 20 minuter.
+1395	Ingen utrustning · 3 dagar i veckan
+1396	Bara din kroppsvikt: ingen stol, stång eller vikter, bara lite golvyta och en vägg. Passar också på resa.
+1397	Gummiband
+1398	Chinsstång (i dörrkarmen)
+1399	Stadig stol, soffa eller bord
+1400	Hantlar
+1401	Kettlebell
+1402	Armhävning mot vägg
+1403	Stå en armlängd från en vägg med händerna mot den i brösthöjd.
+1404	Böj armbågarna och för bröstet mot väggen.
+1405	Tryck tillbaka till raka armar, kroppen i en linje.
+1406	Stå längre från väggen för att göra det svårare.
+1407	Armhävning med händerna högt
+1408	Händerna på kanten av ett stadigt bord, en soffa eller bänk, lite bredare än axlarna.
+1409	Gå bakåt med fötterna tills kroppen är rak.
+1410	Sänk bröstet mot kanten och tryck upp igen.
+1411	Ju lägre stöd, desto svårare.
+1412	Armhävning på knä
+1413	Stå på knä med händerna i golvet, lite bredare än axlarna.
+1414	Håll en rak linje från knäna till huvudet.
+1415	Sänk bröstet till strax ovanför golvet och tryck upp.
+1416	Armhävning med fötterna högt
+1417	Händerna i golvet, fötterna på en stol, soffa eller bänk.
+1418	Håll kroppen rak från huvud till hälar.
+1419	Sänk bröstet mot golvet och tryck upp.
+1420	Tränar övre bröstet och axlarna mer.
+1421	Bågskytte-armhävning
+1422	Börja i armhävningsläge med händerna väldigt brett.
+1423	Sänk dig mot ena handen medan den andra armen är nästan rak.
+1424	Tryck upp och byt sida varje repetition.
+1425	Ett steg mot armhävning på en arm.
+1426	Diamantarmhävning
+1427	Händerna tätt ihop under bröstet, tummar och fingrar nuddar varandra.
+1428	Sänk bröstet mot händerna med armbågarna nära kroppen.
+1429	För svårt? Gör dem på knä.
+1430	Pike-armhävning
+1431	Börja i armhävningsläge, gå in med fötterna och lyft höften högt.
+1432	Böj armbågarna och sänk hjässan mot golvet.
+1433	Tryck upp tills armarna är raka.
+1434	Pike-armhävning med fötterna högt
+1435	Fötterna på en stol eller soffa, händerna i golvet, höften högt.
+1436	Sänk huvudet mot golvet mellan händerna.
+1437	Tryck upp igen med kontroll.
+1438	Ett steg mot armhävning i handstående.
+1439	Axelpress med gummiband
+1440	Stå på mitten av bandet med ändarna i axelhöjd.
+1441	Tryck båda händerna rakt upp över huvudet.
+1442	Sänk långsamt tillbaka till axlarna.
+1443	Stående axelpress med hantlar
+1444	Stå rak med vikterna i axelhöjd.
+1445	Tryck upp tills armarna är raka, utan att luta dig bakåt.
+1446	Sänk långsamt till axlarna.
+1447	Sidolyft med gummiband
+1448	Stå på bandet med en ände i varje hand vid sidorna.
+1449	Lyft armarna ut åt sidorna till axelhöjd, mjuka armbågar.
+1450	Resa sig från stol (stolsknäböj)
+1451	Stå framför en stadig stol med fötterna höftbrett.
+1452	Sätt dig bakåt och nedåt tills du lätt nuddar sitsen.
+1453	Res dig genom att trycka med hela foten.
+1454	Korsa armarna över bröstet; använd händerna bara om du behöver.
+1455	Knäböj med kroppsvikt
+1456	Fötterna axelbrett, tårna lite utåt.
+1457	För höften bakåt och nedåt, bröstet upp, knäna i linje med tårna.
+1458	Gå så djupt som känns bra och res dig.
+1459	Upphopp från knäböj
+1460	Gå ner som i en knäböj med kroppsvikt.
+1461	Hoppa så högt du kan.
+1462	Landa mjukt med böjda knän och gå direkt in i nästa knäböj.
+1463	Landa tyst – mjuka knän skyddar lederna.
+1464	Bakåtutfall med kroppsvikt
+1465	Stå rak och ta ett stort steg bakåt.
+1466	Sänk det bakre knät mot golvet.
+1467	Tryck ifrån med den främre foten för att resa dig. Byt ben.
+1468	Bulgarisk utfallsböj med kroppsvikt
+1469	Stå framför en stol eller soffa och lägg ena foten bakom dig på den.
+1470	Sänk det bakre knät mot golvet, främre smalbenet nästan lodrätt.
+1471	Tryck upp med den främre foten. Gör alla reps och byt sedan ben.
+1472	Rumänsk marklyft på ett ben (kroppsvikt)
+1473	Stå på ett ben med knät lätt böjt.
+1474	Fäll framåt i höften medan det andra benet sträcks bakåt, rak rygg.
+1475	Stanna när kroppen är nästan vågrät och res dig igen. Byt ben.
+1476	Håll i en vägg med ena handen i början för balansen.
+1477	Kettlebellsving
+1478	Fötterna lite bredare än axlarna, vikten i båda händerna.
+1479	Fäll i höften och sving vikten bakåt mellan benen.
+1480	Skjut fram höften kraftigt så att vikten svingar upp till brösthöjd. Låt den falla tillbaka och upprepa.
+1481	Kraften kommer från höften, inte från armarna.
+1482	Höftlyft på ett ben
+1483	Ligg på rygg, ett knä böjt med foten i golvet och det andra benet rakt.
+1484	Tryck med hälen och lyft höften tills kroppen är rak.
+1485	Sänk långsamt. Gör alla reps och byt sedan ben.
+1486	Höftlyft mot soffan
+1487	Sitt på golvet med övre ryggen mot kanten av en soffa eller bänk.
+1488	Fötterna i golvet, tryck med hälarna och lyft höften till vågrätt.
+1489	Spänn sätet högst upp och sänk sedan långsamt.
+1490	Lägg en hantel på höften för att göra det svårare.
+1491	Väggsittning
+1492	Luta ryggen mot en vägg och glid ner.
+1493	Stanna med knäna böjda cirka 90°, ovanför fotlederna.
+1494	Håll kvar och andas lugnt.
+1495	Tåhävning (kroppsvikt)
+1496	Stå med trampdynorna på ett trappsteg och hälarna utanför. Håll i dig för balansen.
+1497	Sänk hälarna långsamt under trappsteget.
+1498	Tåhävning på ett ben (kroppsvikt)
+1499	Stå på en fot på ett trappsteg och håll i en vägg.
+1500	Negativ chins
+1501	Använd en stol för att få upp hakan över stången.
+1502	Sänk dig så långsamt du kan, cirka 3–5 sekunder, till raka armar.
+1503	Kliv upp igen och upprepa.
+1504	Det bästa sättet att nå din första chins.
+1505	Chins med underhandsgrepp
+1506	Häng i stången med handflatorna mot dig, händerna axelbrett.
+1507	Dra tills hakan är över stången.
+1508	Latsdrag med gummiband
+1509	Fäst bandet högt, till exempel över överkanten på en dörr.
+1510	Ställ dig på knä mot det med armarna sträckta uppåt.
+1511	Dra ner armbågarna längs sidorna och låt armarna gå upp långsamt.
+1512	Rodd under bordet (omvänd rodd)
+1513	Ligg under ett mycket stadigt bord och greppa kanten, händerna axelbrett.
+1514	Håll kroppen rak med hälarna i golvet.
+1515	Dra upp bröstet mot bordskanten och sänk långsamt.
+1516	Kontrollera först att bordet inte kan välta.
+1517	Rodd med gummiband
+1518	Sitt med raka ben och lägg bandet runt fötterna.
+1519	Dra ändarna mot midjan och dra ihop skulderbladen.
+1520	Låt armarna gå fram långsamt.
+1521	Superman
+1522	Ligg på mage med armarna sträckta framåt.
+1523	Lyft armar, bröst och ben en bit från golvet.
+1524	Håll i 2 sekunder och sänk långsamt.
+1525	Isärdrag med gummiband
+1526	Håll bandet framför dig i brösthöjd med raka armar.
+1527	Dra isär bandet tills det nuddar bröstet.
+1528	Y-T-W-lyft på mage
+1529	Ligg på mage med pannan på en handduk.
+1530	Lyft armarna i ett Y, sedan ett T och sedan ett W, tummarna upp.
+1531	Varje bokstav räknas som en repetition. Rör dig långsamt.
+1532	Bicepscurl med gummiband
+1533	Stå på mitten av bandet, ändarna i händerna, handflatorna framåt.
+1534	Böj upp händerna mot axlarna med armbågarna längs sidorna.
+1535	Tricepspress med gummiband
+1536	Armbågarna längs sidorna, tryck ner händerna tills armarna är raka.
+1537	Låt dem komma upp igen långsamt.
+1538	Hollow hold
+1539	Ligg på rygg och pressa ländryggen mot golvet.
+1540	Lyft axlar och ben från golvet med armarna sträckta förbi huvudet.
+1541	Håll. Böj knäna för att göra det lättare.
+1542	Bergsklättrare
+1543	Börja i armhävningsläge med raka armar.
+1544	Dra ett knä mot bröstet och byt ben snabbt.
+1545	Håll höften låg och ryggen rak.
+1546	Benlyft liggande
+1547	Ligg på rygg med händerna under höften.
+1548	Håll ihop benen och lyft dem tills de pekar uppåt.
+1549	Sänk långsamt utan att svanka.
+1550	Hängande knälyft
+1551	Häng i stången med raka armar.
+1552	Dra upp knäna mot bröstet.
+1553	Hoppande Jacks eller marsch
+1554	Hoppa isär med fötterna medan du lyfter armarna över huvudet, och tillbaka ihop.
+1555	För en tystare, mjukare version: marschera på stället med höga knän.
+1556	Håll ett jämnt tempo som du kan andas i.

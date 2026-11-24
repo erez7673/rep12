@@ -2,7 +2,7 @@
 import { state, profile, allExercises, exById, photoFor, isAvailable, eqOn, touchGym, touchProfile, uid, save } from './store.js';
 import { esc, icon, thumb, register, toast, resizeImage, sheet, closeSheet } from './ui.js';
 import { MUSCLES, MOTIONS, PATTERN_NAMES, TEMPLATES, INJURIES } from './exercises.js';
-import { EQUIPMENT, EQUIP_CATS } from './equipment.js';
+import { EQUIPMENT, EQUIP_CATS, HOME_EQUIP } from './equipment.js';
 import { POSITIONS, GRIPS, FEEL, matchExercises, customExercise, identifyWithAI } from './identify.js';
 import { lineChart } from './charts.js';
 import { equipPic } from './pictures.js';
@@ -10,6 +10,7 @@ import { hasAnim, hasClip, animHTML, startAnims } from './anim.js';
 import { generatePlan, dayFocus, sessionBudget, warmPref, dayCap, sortDay, raiseDayCap, MAX_EX_PER_DAY, dayName } from './planner.js';
 import { t, toW, wUnit, unitText, listJoin } from './i18n.js';
 import { coachTipCard } from './coach.js';
+import { homeEqList, openHomeEq } from './views-plan.js';
 import { rerender } from './app.js';
 import { scheduleSync } from './sync.js';
 
@@ -19,7 +20,7 @@ const eqThumb = (id) => {
     ? `<span class="thumb pic ${pic.kind} sm zoomable" data-act="pic-zoom" role="button" tabindex="0" aria-label="${t('Show the picture larger')}"><img src="${pic.url}" alt="" loading="lazy" onerror="this.remove()"></span>`
     : `<span class="thumb sm"><span class="ico">${icon.gym}</span></span>`;
 };
-const eqName = (id) => EQUIPMENT.find(e => e.id === id)?.name || state.gym.machines.find(m => m.id === id)?.name || id;
+const eqName = (id) => EQUIPMENT.find(e => e.id === id)?.name || HOME_EQUIP.find(e => e.id === id)?.name || state.gym.machines.find(m => m.id === id)?.name || id;
 const eqText = (eq) => eq === 'none' ? t('No equipment') : eq.split('|').map(alt => alt.split('+').map(eqName).join(' + ')).join(`  ${t('or')}  `);
 // Exercise texts: custom exercises keep the language they were made in, and speeds or distances follow the unit setting.
 const exText = (s) => unitText(t(s));
@@ -102,7 +103,7 @@ export function exerciseView(id) {
         <span class="chip on">${esc(MUSCLES[ex.m])}</span>${ex.s.map(x => `<span class="chip">${esc(MUSCLES[x])}</span>`).join('')}
         <span class="chip">${esc(PATTERN_NAMES[ex.pat] || '')}</span>
       </div>
-      <p class="muted">${icon.gym} ${esc(eqText(ex.eq))}${isAvailable(ex) ? '' : ` · <b class="warn">${t('not in your gym setup')}</b>`}</p>
+      <p class="muted">${icon.gym} ${esc(eqText(ex.eq))}${ex.home ? ` · ${t('Home exercise')}` : isAvailable(ex) ? '' : ` · <b class="warn">${t('not in your gym setup')}</b>`}</p>
       ${p.plan ? `<button class="btn primary" data-act="add-to-day" data-id="${ex.id}">${icon.plus} ${t('Add to workout')}</button>` : ''}
       ${machines.length ? `<p class="muted">${t('Your machine:')} ${listJoin(machines.map(m => esc([m.name, m.brand, m.model].filter(Boolean).join(' · '))))}</p>` : ''}
       ${avoid.length ? `<div class="card warncard">⚠️ ${t('Marked as risky for your {parts} – go light or swap it.', { parts: esc(listJoin(avoid)) })}</div>` : ''}
@@ -217,6 +218,9 @@ export function gymView() {
       ${EQUIP_CATS.map(cat => `<h3>${esc(cat)}</h3><div class="card list">${EQUIPMENT.filter(e => e.cat === cat).map(e => `
         <label class="eqrow"><span class="eqname">${eqThumb(e.id)}<span>${esc(e.name)}</span></span>
         <input type="checkbox" class="switch" ${eqOn(e.id) ? 'checked' : ''} data-change="eq-toggle" data-id="${e.id}"></label>`).join('')}</div>`).join('')}
+      <h3>${t('Home equipment')}</h3>
+      <button class="row mobility-btn home-eq-row" data-act="home-eq-open">${icon.gym}<span><b>${t('What you have at home')}</b><small>${esc(homeEqList())}</small></span><span class="chev arw">›</span></button>
+      <p class="muted small">${t('Used by workout days set to Home. Open a workout day and pick Gym, Home or No equipment at the top.')}</p>
       <div class="card"><p><b>${t('Changed the equipment?')}</b> ${t('Rebuild your plan so it only uses what\'s on.')}</p><button class="btn" data-act="rebuild-plan">${t('Rebuild my plan')}</button></div>`,
   };
 }

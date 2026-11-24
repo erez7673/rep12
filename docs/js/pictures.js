@@ -37,5 +37,6 @@ export function picFor(ex) {
   if (!ex) return null;
   if (hasClip(ex.id)) return still(ex.id);
   const first = String(ex.eq || 'none').split('|')[0].split('+')[0];
-  return equipPic(first);
+  // A body-weight exercise without its own clip gets the line icon, not another exercise's picture.
+  return first === 'none' ? null : equipPic(first);
 }

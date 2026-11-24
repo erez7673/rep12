@@ -1,7 +1,8 @@
 // My Plan, day preview, active workout and summary screens.
-import { state, profile, exById, photoFor, isAvailable, touchProfile, save, lastLogFor } from './store.js';
+import { state, profile, exById, photoFor, isAvailable, touchProfile, touchGym, save, lastLogFor } from './store.js';
 import { esc, icon, thumb, register, sheet, closeSheet, toast, fmtClock, fmtKg, fmtDate, fmtDur, setLabel, themeButton } from './ui.js';
-import { currentWeek, planProgress, dayFocus, planPhase, isCustom, buildSession, estimateMinutes, estimateCalories, swapOptions, generatePlan, sortDay, itemArea, editKey, AREAS, setDayAreas, exPerDay, dayCap, warmOptions, warmPref, sessionBudget, TEMPLATES, TPL_PHASES, generateTemplatePlan, templateDayText, tplRx, dayName, planTitle } from './planner.js';
+import { currentWeek, planProgress, dayFocus, planPhase, isCustom, buildSession, estimateMinutes, estimateCalories, swapOptions, generatePlan, sortDay, itemArea, editKey, AREAS, setDayAreas, exPerDay, dayCap, warmOptions, warmPref, sessionBudget, TEMPLATES, TPL_PHASES, generateTemplatePlan, templateDayText, tplRx, dayName, planTitle, PLACES, setDayAt, nextStep, prevStep } from './planner.js';
+import { HOME_EQUIP } from './equipment.js';
 import { MUSCLES } from './exercises.js';
 import * as W from './workout.js';
 import { say, setCue } from './speak.js';
@@ -46,10 +47,10 @@ export function planView() {
   const cards = plan.days.map((day, d) => {
     const done = plan.done[`${w}-${d}`];
     const next = d === nextIdx;
-    const warn = day.items.some(it => { const ex = exById(it.exId); return !ex || !isAvailable(ex); });
+    const warn = day.items.some(it => { const ex = exById(it.exId); return !ex || !isAvailable(ex, day.at); });
     return `<a class="daycard ${done ? 'done' : ''} ${next ? 'next' : ''}" href="#/day/${w}/${d}">
       <span class="tick">${done ? icon.check : ''}</span>
-      <span class="dc-body"><b>${esc(dayName(d))}</b><small>${esc(dayFocus(day))}</small>${warn ? `<em class="warn">${t('Some equipment is off – tap to swap')}</em>` : ''}</span>
+      <span class="dc-body"><b>${esc(dayName(d))}</b><small>${day.at ? `<span class="placetag">${esc(PLACES[day.at])}</span> ` : ''}${esc(dayFocus(day))}</small>${warn ? `<em class="warn">${t('Some equipment is off – tap to swap')}</em>` : ''}</span>
       ${next ? `<span class="nextpill">${t('Next')}</span>` : ''}
     </a>`;
   }).join('');
@@ -100,11 +101,10 @@ register({
     const cur = profile().plan?.template;
     sheet(`${closeX()}<h2>${t('App-built plans')}</h2>
       <p class="muted small">${t('Plans with a set weekly layout, filled with exercises that fit your equipment. The full-body plans start light, with 2–3 sets of 10–15 reps. The AB and Upper / Lower plans follow your goal. You can still swap, add or remove exercises and change sets, reps and weight on every day.')}</p>
-      ${Object.entries(TEMPLATES).map(([k, tp]) => `<div class="card">
-        <b>${esc(tp.name)}</b>${cur === k ? ` <span class="pill">${t('Current')}</span>` : ''}
-        <p class="muted small">${esc(tp.blurb)}</p>
-        <ul class="plain">${tp.days.map((_, di) => `<li><b>${esc(dayName(di))}:</b> ${esc(templateDayText(k, di))}</li>`).join('')}</ul>
-        <button class="btn primary" data-act="tpl-use" data-k="${k}">${cur === k ? t('Restart this plan') : t('Use this plan')}</button></div>`).join('')}
+      ${tplCards(([, tp]) => !tp.group, cur)}
+      <h3 class="home-plans">${t('Home plans')}</h3>
+      <p class="muted small">${t('Workouts at home with your body weight, plus any home equipment you have (set it in the Gym tab). Exercises go from easy to hard in steps.')}</p>
+      ${tplCards(([, tp]) => tp.group === 'home', cur)}
       <button class="btn ghost" data-act="sheet-close">${t('Cancel')}</button>`);
   },
   'tpl-use': (el) => {
@@ -124,6 +124,27 @@ register({
   },
   'use-profile': (el) => { state.activeProfile = el.dataset.id; viewWeek = null; save(); closeSheet(); rerender(); },
 });
+
+// Cards for the app-built plans that pass the filter.
+const tplCards = (keep, cur) => Object.entries(TEMPLATES).filter(keep).map(([k, tp]) => `<div class="card">
+        <b>${esc(tp.name)}</b>${cur === k ? ` <span class="pill">${t('Current')}</span>` : ''}
+        <p class="muted small">${esc(tp.blurb)}</p>
+        <ul class="plain">${tp.days.map((_, di) => `<li><b>${esc(dayName(di))}:</b> ${esc(templateDayText(k, di))}</li>`).join('')}</ul>
+        <button class="btn primary" data-act="tpl-use" data-k="${k}">${cur === k ? t('Restart this plan') : t('Use this plan')}</button></div>`).join('');
+
+// Home equipment: what the user has at home (shared by the profiles on this phone and synced with the gym setup).
+export function homeEqList() {
+  const on = HOME_EQUIP.filter(e => state.gym.home?.[e.id]).map(e => e.name);
+  return on.length ? listJoin(on) : t('Body weight only');
+}
+export function openHomeEq() {
+  sheet(`${closeX()}<h2>${t('Home equipment')}</h2>
+    <p class="muted small">${t('What do you have at home? Workout days set to Home use your body weight plus these. Body weight is always included.')}</p>
+    <div class="card list">${HOME_EQUIP.map(e => `<label class="eqrow"><span class="eqname"><span>${esc(e.name)}</span></span>
+      <input type="checkbox" class="switch" ${state.gym.home?.[e.id] ? 'checked' : ''} data-change="home-eq-toggle" data-id="${e.id}"></label>`).join('')}</div>
+    <p class="muted small">${t('Exercises that need something you switched off are marked on the day – swap them, or switch the day to Gym and back to Home to get a new list.')}</p>
+    <button class="btn primary" data-act="sheet-close">${t('Done')}</button>`);
+}
 
 // ───────────── Day preview ─────────────
 let preview = null;
@@ -157,7 +178,8 @@ export function dayView(w, d) {
   let lastArea = null;
   const items = preview.items.map((it, i) => {
     const ex = exById(it.exId);
-    const avail = isAvailable(ex);
+    const avail = isAvailable(ex, day.at);
+    const up = it.next && exById(it.next);
     const area = itemArea(day, day.items.find(x => x.exId === it.exId) || { exId: it.exId });
     const header = area !== lastArea ? `<h4 class="exgroup">${esc(AREAS[area]?.name || '')}</h4>` : '';
     lastArea = area;
@@ -167,6 +189,7 @@ export function dayView(w, d) {
         <a href="#/ex/${encodeURIComponent(ex.id)}" class="exname">${esc(ex.name)}</a>
         <button class="chips editable" data-act="edit-sets" data-w="${w}" data-d="${d}" data-i="${i}" aria-label="${t('Edit reps and weight')}">${it.sets.map(s => `<span class="chip">${setLabel(s, it.unit)}</span>`).join('')}<span class="chip edit">${icon.edit} ${t('Edit')}</span></button>
         ${!avail ? `<em class="warn">${t('Equipment marked as not available – swap it')}</em>` : it.note ? `<small class="note">${esc(it.note)}</small>` : ''}
+        ${avail && up ? `<button class="btn small levelup" data-act="level-up" data-d="${d}" data-ex="${ex.id}" data-to="${up.id}">${icon.up} ${t('Level up')}</button>` : ''}
       </div>
       ${preview.items.length > 1 ? `<button class="iconbtn" data-act="move-open" data-d="${d}" data-i="${i}" aria-label="${t('Move up or down')}">${icon.move}</button>` : ''}
       <button class="iconbtn" data-act="ex-menu" data-d="${d}" data-i="${i}" aria-label="${t('Options')}">${icon.dots}</button>
@@ -178,6 +201,9 @@ export function dayView(w, d) {
     cls: 'with-cta',
     html: `<header class="bar"><button class="iconbtn" data-act="back" aria-label="${t('Back')}">${icon.back}</button><h2>${esc(dayName(d))}</h2><span></span></header>
       <button class="chips editable lead-chips" data-act="areas-open" data-d="${d}" aria-label="${t('Choose muscle areas')}">${(day.muscles?.length ? day.muscles.map(a => AREAS[a]?.name) : [dayFocus(day)]).filter(Boolean).map(n => `<span class="chip on">${esc(n)}</span>`).join('')}<span class="chip edit">${icon.edit} ${t('Muscle areas')}</span></button>
+      <div class="tabs2 place-ctl" role="group" aria-label="${t('Where you train this day')}">${Object.entries(PLACES).map(([k, v]) =>
+        `<button data-act="day-at" data-d="${d}" data-at="${k}" class="${(day.at || 'gym') === k ? 'on' : ''}" aria-pressed="${(day.at || 'gym') === k}">${esc(v)}</button>`).join('')}</div>
+      ${day.at === 'home' ? `<button class="row mobility-btn home-eq-row" data-act="home-eq-open">${icon.gym}<span><b>${t('Home equipment')}</b><small>${esc(homeEqList())}</small></span><span class="chev arw">›</span></button>` : ''}
       <div class="statrow">
         <div class="stat">${icon.clock}<b>${t('{n} min', { n: mins })}</b><small>${t('Workout time')}</small></div>
         <div class="stat">${icon.fire}<b>${estimateCalories(p.stats, mins)}</b><small>${t('Calories (est.)')}</small></div>
@@ -188,9 +214,9 @@ export function dayView(w, d) {
       <h3>${t('Warm-up')}</h3>
       ${preview.warm ? `<div class="exrow"><button class="howto-thumb" data-act="howto" data-id="${preview.warm.exId}" aria-label="${esc(t('How to do it') + ': ' + (exById(preview.warm.exId)?.name || ''))}">${thumb(exById(preview.warm.exId))}</button>
           <div class="exbody"><b class="exname">${esc(exName(preview.warm.exId, preview.warm.name))}</b>
-          <button class="chips editable" data-act="warm-open" aria-label="${t('Change warm-up')}"><span class="chip">${t('{n} min', { n: preview.warm.min })}</span><span class="chip edit">${icon.edit} ${t('Change')}</span></button></div></div>
+          <button class="chips editable" data-act="warm-open" data-d="${d}" aria-label="${t('Change warm-up')}"><span class="chip">${t('{n} min', { n: preview.warm.min })}</span><span class="chip edit">${icon.edit} ${t('Change')}</span></button></div></div>
         ${preview.warmup.length ? `<button class="row mobility-btn" data-act="mobility-open" data-w="${w}" data-d="${d}">${icon.info}<span><b>${t('Then a quick mobility routine')}</b><small>${t('{n} moves', { n: preview.warmup.length })} · ${t('{n} min', { n: Math.round(preview.warmup.reduce((a, m) => a + m.sec, 0) / 60) })}</small></span><span class="chev arw">›</span></button>` : ''}`
-      : `<button class="btn" data-act="warm-open">${icon.plus} ${t('Add a warm-up')}</button>`}
+      : `<button class="btn" data-act="warm-open" data-d="${d}">${icon.plus} ${t('Add a warm-up')}</button>`}
       <h3>${t('Exercise List')}</h3>
       <div class="exlist">${items}</div>
       <h3>${t('Cardio finisher')}</h3>
@@ -242,10 +268,12 @@ const stepper = (act, setAct, val, extra = '') => `<label class="field"><span>${
       <button class="pillbtn dark" data-act="${act}" ${extra} data-v="1" aria-label="${t('One minute more')}">+</button></div></label>`;
 
 // Bottom sheet to pick the warm-up machine and how long it runs.
+let warmDay = null; // the workout day the warm-up sheet was opened from (its place decides the options)
 function openWarm() {
   const p = profile();
-  const wp = warmPref(p);
-  const opts = warmOptions();
+  const at = p.plan?.days[warmDay]?.at;
+  const wp = warmPref(p, at);
+  const opts = warmOptions(at);
   sheet(`<h2>${t('Warm-up')}</h2>
     <p class="muted small">${t('Used for all your workout days. In the workout, tap Start and the app beeps when the time is up.')}</p>
     ${stepper('warm-min', 'warm-min-set', wp.min)}
@@ -259,7 +287,7 @@ function openWarm() {
 function openCardio(d) {
   const p = profile();
   const c = p.plan.days[d]?.cardio;
-  const opts = warmOptions();
+  const opts = warmOptions(p.plan.days[d]?.at);
   const min = c?.min ?? 0;
   sheet(`${closeX()}<h2>${t('Cardio finisher')}</h2>
     <p class="muted small">${t('Used on {day} in every week. Set the minutes to 0 to leave it out.', { day: esc(dayName(d)) })}</p>
@@ -273,7 +301,7 @@ function openCardio(d) {
 function saveCardio(d, patch) {
   const p = profile();
   const day = p.plan.days[d];
-  const opts = warmOptions();
+  const opts = warmOptions(day.at);
   const cur = day.cardio || {};
   // A new finisher starts on the usual length for the profile's goal, on the first machine that's on.
   const next = { exId: cur.exId || opts[0]?.id, min: cur.exId ? cur.min : (sessionBudget(p.stats).cardio || 10), ...patch };
@@ -301,7 +329,7 @@ function openMobility(w, d) {
 
 function saveWarm(patch) {
   const p = profile();
-  p.warm = { ...warmPref(p), ...patch };
+  p.warm = { ...warmPref(p, p.plan?.days[warmDay]?.at), ...patch };
   p.warm.min = Math.max(0, Math.min(60, Math.round(p.warm.min || 0)));
   // Also update a workout that's open but whose warm-up hasn't started yet.
   const s = state.session;
@@ -331,9 +359,9 @@ register({
     const p = profile(); setDayAreas(p, +el.dataset.d, []);
     areaSel = null; touchProfile(p); scheduleSync(); closeSheet(); rerender();
   },
-  'warm-open': () => openWarm(),
+  'warm-open': (el) => { warmDay = el.dataset.d != null ? +el.dataset.d : null; openWarm(); },
   'warm-pick': (el) => saveWarm({ exId: el.dataset.ex }),
-  'warm-min': (el) => saveWarm({ min: warmPref(profile()).min + +el.dataset.v }),
+  'warm-min': (el) => saveWarm({ min: warmPref(profile(), profile().plan?.days[warmDay]?.at).min + +el.dataset.v }),
   'warm-min-set': (el) => saveWarm({ min: +el.value || 0 }),
   'cardio-open': (el) => openCardio(+el.dataset.d),
   'cardio-pick': (el) => saveCardio(+el.dataset.d, { exId: el.dataset.ex }),
@@ -355,10 +383,13 @@ register({
     const ex = exById(it.exId);
     const opts = swapOptions(p.stats, p.plan, d, i);
     const area = AREAS[itemArea(p.plan.days[d], it)]?.name || '';
+    const at = p.plan.days[d].at;
+    const steps = [[prevStep(ex.id, at), t('Easier step')], [nextStep(ex.id, at), t('Harder step')]].filter(([e]) => e);
     sheet(`${closeX()}<h2>${esc(ex.name)}</h2>
       <button class="row" data-act="go" data-href="#/ex/${encodeURIComponent(ex.id)}">${icon.info}<b>${t('How to do it')}</b></button>
+      ${steps.map(([e, label]) => `<button class="row" data-act="swap" data-d="${d}" data-i="${i}" data-ex="${e.id}">${thumb(e, photoFor(e.id), 'sm')}<span><b>${esc(e.name)}</b><small>${esc(label)}</small></span></button>`).join('')}
       <h3>${t('Swap for another {area} exercise', { area: esc(area) })} <small class="muted">(${opts.length})</small></h3>
-      ${opts.length ? opts.map(o => `<button class="row" data-act="swap" data-d="${d}" data-i="${i}" data-ex="${o.id}">${thumb(o, photoFor(o.id), 'sm')}<span><b>${esc(o.name)}</b><small>${esc(MUSCLES[o.m])}</small></span></button>`).join('') : `<p class="muted">${t('No alternatives with your current gym setup.')}</p>`}
+      ${opts.length ? opts.map(o => `<button class="row" data-act="swap" data-d="${d}" data-i="${i}" data-ex="${o.id}">${thumb(o, photoFor(o.id), 'sm')}<span><b>${esc(o.name)}</b><small>${esc(MUSCLES[o.m])}</small></span></button>`).join('') : `<p class="muted">${at ? t('No alternatives with your home equipment.') : t('No alternatives with your current gym setup.')}</p>`}
       <button class="row danger" data-act="remove-ex" data-d="${d}" data-i="${i}">${icon.trash}<b>${t('Remove from this day')}</b></button>`);
   },
   'move-open': (el) => openMoveSheet(+el.dataset.d, +el.dataset.i),
@@ -415,6 +446,31 @@ register({
     const p = profile();
     p.plan.days[+el.dataset.d].items.splice(+el.dataset.i, 1);
     touchProfile(p); scheduleSync(); closeSheet(); rerender();
+  },
+  // Gym / Home / No equipment for one workout day (all weeks). The first switch to Home asks what's at home.
+  'day-at': (el) => {
+    const p = profile(); const d = +el.dataset.d, place = el.dataset.at;
+    if (!setDayAt(p, d, place)) return;
+    touchProfile(p); scheduleSync(); rerender();
+    toast(t('{day} is now done at: {place}', { day: dayName(d), place: PLACES[place] }));
+    if (place === 'home' && !state.gym.homeAsked) { state.gym.homeAsked = true; touchGym(); scheduleSync(); openHomeEq(); }
+  },
+  'home-eq-open': () => openHomeEq(),
+  'home-eq-toggle': (el) => {
+    state.gym.home ||= {};
+    state.gym.home[el.dataset.id] = el.checked;
+    state.gym.homeAsked = true;
+    touchGym(); scheduleSync(); rerender();
+  },
+  // Swap a body-weight exercise for its next, harder step on this day (all weeks).
+  'level-up': (el) => {
+    const p = profile(); const day = p.plan.days[+el.dataset.d];
+    const to = exById(el.dataset.to);
+    const i = day.items.findIndex(x => x.exId === el.dataset.ex);
+    if (i < 0 || !to) return;
+    day.items[i] = { exId: to.id, pat: to.pat };
+    sortDay(day);
+    touchProfile(p); scheduleSync(); rerender(); toast(t('Next step: {name}', { name: to.name }));
   },
 });
 

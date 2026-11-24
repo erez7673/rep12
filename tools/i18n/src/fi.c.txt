@@ -1,0 +1,191 @@
+1366	Kaikki toistot tehty – valmis seuraavalle tasolle: {name}
+1367	Kotiliike
+1368	Kotivälineet
+1369	Mitä sinulla on kotona
+1370	Käytetään treenipäivissä, joiden paikka on Koti. Avaa treenipäivä ja valitse ylhäältä Sali, Koti tai Ei välineitä.
+1371	Kotiohjelmat
+1372	Treenit kotona omalla kehonpainolla ja kotivälineillä, jotka sinulla on (aseta ne Sali-välilehdellä). Liikkeet etenevät helposta vaikeaan tasoittain.
+1373	Vain kehonpaino
+1374	Mitä sinulla on kotona? Koti-päivät käyttävät kehonpainoasi ja näitä. Kehonpaino on aina mukana.
+1375	Liikkeet, jotka tarvitsevat jotain pois kytkemääsi, merkitään päivään – vaihda ne, tai vaihda päivä Saliksi ja takaisin Kodiksi saadaksesi uuden listan.
+1376	Seuraava taso
+1377	Missä treenaat tänä päivänä
+1378	Helpompi taso
+1379	Vaikeampi taso
+1380	Ei vaihtoehtoja kotivälineilläsi.
+1381	{day} tehdään nyt paikassa: {place}
+1382	Seuraava taso: {name}
+1383	Ohjelmia, joilla on kiinteä viikkorakenne: koko kehon ohjelmat 2 tai 3 päivälle viikossa, AB-ohjelma ja Ylä- / alakroppa 4 päivälle viikossa, Istuen-ohjelma ilman seisomista ja lattialiikkeitä sekä kotiohjelmia, joista yksi kokonaan ilman välineitä. Valitse jokin näistä oman ohjelman sijaan, jos haluat.
+1384	Sali vai koti
+1385	Valitse, missä teet tämän treenin: salilla, kotona kotivälineilläsi vai kokonaan ilman välineitä. Sovellus valitsee liikkeet samoille lihaksille, ja takaisin vaihtaessa aiemmat liikkeesi palaavat.
+1386	Katso, miten liike tehdään, vaihda se toiseen samoille lihaksille tai poista se tältä päivältä. Kehonpainoliikkeissä näet myös helpomman ja vaikeamman tason. Kun kaikki sarjat käyvät helpoiksi, esiin tulee Seuraava taso -painike.
+1387	Kerro sovellukselle, mitä sinulla on kotona: leuanvetotanko, tukeva tuoli, kuminauhat tai painot. Koti-päivät käyttävät näitä ja kehonpainoasi.
+1388	Koti
+1389	Koko keho kotona · 3 päivää viikossa
+1390	Kolme koko kehon treeniä kotona kehonpainolla ja kotivälineilläsi (aseta ne Sali-välilehdellä). Kun kaikki sarjat tuntuvat helpoilta, sovellus ehdottaa liikkeen seuraavaa, vaikeampaa tasoa.
+1391	Ylä- / alakroppa kotona · 4 päivää viikossa
+1392	Ylä- ja alakropan päiviä vuorotellen, kotona. Jokaista aluetta treenataan kahdesti viikossa. Leuanvetotanko tai kuminauhat antavat selälle ja käsille enemmän tekemistä.
+1393	Lyhyt kotitreeni · 20 minuuttia, 3 päivää viikossa
+1394	Neljä liikettä päivässä lyhyin palautuksin, joten kotitreeni kestää noin 20 minuuttia.
+1395	Ei välineitä · 3 päivää viikossa
+1396	Vain oma kehonpaino: ei tuolia, tankoa eikä painoja, vain vähän lattiatilaa ja seinä. Sopii myös matkoille.
+1397	Kuminauhat
+1398	Leuanvetotanko (ovenkarmissa)
+1399	Tukeva tuoli, sohva tai pöytä
+1400	Käsipainot
+1401	Kahvakuula
+1402	Punnerrus seinää vasten
+1403	Seiso käsivarren mitan päässä seinästä, kädet seinällä rinnan korkeudella.
+1404	Koukista kyynärpäät ja vie rintaa kohti seinää.
+1405	Työnnä takaisin suorille käsille, vartalo suorana linjana.
+1406	Siirry kauemmas seinästä, niin liike vaikeutuu.
+1407	Kaltevapunnerrus
+1408	Kädet tukevan pöydän, sohvan tai penkin reunalla, hieman hartioita leveämmällä.
+1409	Siirrä jalkoja taaksepäin, kunnes vartalo on suorassa linjassa.
+1410	Laske rinta reunaan ja työnnä takaisin ylös.
+1411	Mitä matalampi tuki, sitä vaikeampaa.
+1412	Polvipunnerrus
+1413	Polvillaan, kädet lattialla hieman hartioita leveämmällä.
+1414	Pidä suora linja polvista päähän.
+1415	Laske rinta lähelle lattiaa ja työnnä ylös.
+1416	Punnerrus jalat koholla
+1417	Kädet lattialla, jalat tuolin, sohvan tai penkin päällä.
+1418	Pidä vartalo suorana päästä kantapäihin.
+1419	Laske rinta lattiaan ja työnnä ylös.
+1420	Kuormittaa enemmän rinnan yläosaa ja hartioita.
+1421	Jousiampujapunnerrus
+1422	Aloita punnerrusasennosta kädet hyvin leveällä.
+1423	Laskeudu kohti toista kättä, toinen käsi pysyy lähes suorana.
+1424	Työnnä ylös ja vaihda puolta joka toistolla.
+1425	Askel kohti yhden käden punnerrusta.
+1426	Timanttipunnerrus
+1427	Kädet lähekkäin rinnan alla, peukalot ja sormet koskettavat.
+1428	Laske rinta käsiin, kyynärpäät lähellä vartaloa.
+1429	Liian vaikeaa? Tee ne polvillaan.
+1430	Pike-punnerrus
+1431	Aloita punnerrusasennosta, kävele jalat lähemmäs ja nosta lantio korkealle.
+1432	Koukista kyynärpäät ja laske päälaki kohti lattiaa.
+1433	Työnnä ylös, kunnes kädet ovat suorina.
+1434	Pike-punnerrus jalat koholla
+1435	Jalat tuolilla tai sohvalla, kädet lattialla, lantio ylhäällä.
+1436	Laske päätä kohti lattiaa käsien väliin.
+1437	Työnnä hallitusti takaisin ylös.
+1438	Askel kohti käsilläseisontapunnerrusta.
+1439	Pystypunnerrus kuminauhalla
+1440	Seiso kuminauhan keskellä, päät hartioiden korkeudella.
+1441	Työnnä molemmat kädet suoraan pään yläpuolelle.
+1442	Laske hitaasti takaisin hartioille.
+1443	Pystypunnerrus käsipainoilla seisten
+1444	Seiso suorana, painot hartioiden korkeudella.
+1445	Työnnä ylös, kunnes kädet ovat suorina, nojaamatta taaksepäin.
+1446	Laske hitaasti hartioille.
+1447	Vipunosto sivulle kuminauhalla
+1448	Seiso kuminauhan päällä, pää kummassakin kädessä sivuilla.
+1449	Nosta kädet sivuille hartioiden korkeudelle, kyynärpäät pehmeinä.
+1450	Tuolilta nousu (tuolikyykky)
+1451	Seiso tukevan tuolin edessä, jalat lantion levyisesti.
+1452	Istu taakse ja alas, kunnes kosketat kevyesti istuinta.
+1453	Nouse ylös painaen koko jalkapohjalla.
+1454	Pidä kädet ristissä rinnalla; käytä käsiä vain tarvittaessa.
+1455	Kyykky kehonpainolla
+1456	Jalat hartioiden levyisesti, varpaat hieman ulospäin.
+1457	Vie lantio taakse ja alas, rinta ylhäällä, polvet varpaiden suuntaan.
+1458	Mene niin alas kuin tuntuu hyvältä ja nouse ylös.
+1459	Hyppykyykky
+1460	Kyykisty kuten kehonpainokyykyssä.
+1461	Hyppää niin korkealle kuin pystyt.
+1462	Laskeudu pehmeästi polvet koukussa ja jatka suoraan seuraavaan kyykkyyn.
+1463	Laskeudu hiljaa – pehmeät polvet suojaavat niveliä.
+1464	Takaprässi kehonpainolla
+1465	Seiso suorana ja ota iso askel taaksepäin.
+1466	Laske takapolvi kohti lattiaa.
+1467	Ponnista etujalalla ylös. Vaihda jalkaa.
+1468	Bulgarialainen askelkyykky kehonpainolla
+1469	Seiso tuolin tai sohvan edessä ja nosta toinen jalka taaksesi sen päälle.
+1470	Laske takapolvi kohti lattiaa, etusääri lähes pystyssä.
+1471	Nouse etujalalla painaen. Tee kaikki toistot ja vaihda jalkaa.
+1472	Yhden jalan romanialainen maastaveto (kehonpaino)
+1473	Seiso yhdellä jalalla, polvi hieman koukussa.
+1474	Taivuta lantiosta eteenpäin samalla kun toinen jalka ojentuu taakse, selkä suorana.
+1475	Pysähdy, kun vartalo on lähes vaakatasossa, ja nouse takaisin. Vaihda jalkaa.
+1476	Ota aluksi yhdellä kädellä tukea seinästä tasapainoa varten.
+1477	Kahvakuulaheilautus
+1478	Jalat hieman hartioita leveämmällä, paino molemmissa käsissä.
+1479	Taivu lantiosta ja heilauta painoa taakse jalkojen välistä.
+1480	Työnnä lantio voimakkaasti eteen, niin paino nousee rinnan korkeudelle. Anna sen pudota ja toista.
+1481	Voima tulee lantiosta, ei käsistä.
+1482	Yhden jalan lantionnosto
+1483	Makaa selälläsi, toinen polvi koukussa jalkapohja lattialla, toinen jalka suorana.
+1484	Paina kantapäällä ja nosta lantiota, kunnes vartalo on suora.
+1485	Laske hitaasti. Tee kaikki toistot ja vaihda jalkaa.
+1486	Lantionnosto sohvaa vasten
+1487	Istu lattialla yläselkä sohvan tai penkin reunaa vasten.
+1488	Jalat lattialla, paina kantapäillä ja nosta lantio vaakatasoon.
+1489	Purista pakaroita ylhäällä ja laske hitaasti.
+1490	Laita käsipaino lantiolle, niin liike vaikeutuu.
+1491	Seinäkyykky
+1492	Nojaa selällä seinään ja liu'u alas.
+1493	Pysähdy, kun polvet ovat noin 90° koukussa nilkkojen yläpuolella.
+1494	Pidä asento ja hengitä rauhallisesti.
+1495	Pohjenousu (kehonpaino)
+1496	Seiso päkiöillä portaalla, kantapäät reunan yli. Ota tukea tasapainoa varten.
+1497	Laske kantapäät hitaasti portaan alapuolelle.
+1498	Yhden jalan pohjenousu (kehonpaino)
+1499	Seiso yhdellä jalalla portaalla ja ota tukea seinästä.
+1500	Negatiivinen leuanveto
+1501	Nouse tuolin avulla niin, että leuka on tangon yläpuolella.
+1502	Laskeudu niin hitaasti kuin pystyt, noin 3–5 sekuntia, suorille käsille.
+1503	Nouse uudelleen ylös ja toista.
+1504	Paras tapa edetä ensimmäiseen leuanvetoon.
+1505	Vastaotteleuanveto
+1506	Roiku tangossa kämmenet itseesi päin, kädet hartioiden levyisesti.
+1507	Vedä, kunnes leuka on tangon yläpuolella.
+1508	Ylätalja kuminauhalla
+1509	Kiinnitä kuminauha korkealle, esimerkiksi oven yläreunaan.
+1510	Polvistu sitä kohti kädet ylhäällä.
+1511	Vedä kyynärpäät alas kyljille ja anna käsien nousta hitaasti takaisin.
+1512	Pöydän alla soutu (käänteinen soutu)
+1513	Makaa hyvin tukevan pöydän alla ja ota kiinni sen reunasta, kädet hartioiden levyisesti.
+1514	Pidä vartalo suorana, kantapäät lattialla.
+1515	Vedä rinta pöydän reunaan ja laske hitaasti.
+1516	Varmista ensin, ettei pöytä voi kaatua.
+1517	Soutu kuminauhalla
+1518	Istu jalat suorina ja kierrä kuminauha jalkapohjien ympäri.
+1519	Vedä päitä vyötärölle ja purista lapaluita yhteen.
+1520	Anna käsien palata hitaasti eteen.
+1521	Superman
+1522	Makaa vatsallaan, kädet suorina edessä.
+1523	Nosta kädet, rinta ja jalat hieman irti lattiasta.
+1524	Pidä 2 sekuntia ja laske hitaasti.
+1525	Kuminauhan levitys
+1526	Pidä kuminauhaa edessäsi rinnan korkeudella, kädet suorina.
+1527	Levitä nauhaa, kunnes se koskettaa rintaa.
+1528	Y-T-W-nostot vatsamakuulla
+1529	Makaa vatsallaan otsa pyyhkeen päällä.
+1530	Nosta kädet Y-, sitten T- ja sitten W-asentoon, peukalot ylöspäin.
+1531	Jokainen kirjain on yksi toisto. Liiku hitaasti.
+1532	Hauiskääntö kuminauhalla
+1533	Seiso kuminauhan keskellä, päät käsissä, kämmenet eteenpäin.
+1534	Koukista kädet hartioille, kyynärpäät kyljissä.
+1535	Ojentajapunnerrus kuminauhalla
+1536	Kyynärpäät kyljissä, työnnä kädet alas, kunnes kädet ovat suorina.
+1537	Anna niiden nousta hitaasti takaisin.
+1538	Hollow-pito
+1539	Makaa selälläsi ja paina alaselkä lattiaan.
+1540	Nosta hartiat ja jalat irti lattiasta, kädet ojennettuina pään yli.
+1541	Pidä. Koukista polvia, niin liike helpottuu.
+1542	Vuorikiipeilijä
+1543	Aloita punnerrusasennosta kädet suorina.
+1544	Tuo toinen polvi rintaa kohti ja vaihda jalkaa nopeasti.
+1545	Pidä lantio alhaalla ja selkä suorana.
+1546	Jalkojen nosto selinmakuulla
+1547	Makaa selälläsi, kädet lantion alla.
+1548	Pidä jalat yhdessä ja nosta ne osoittamaan ylöspäin.
+1549	Laske hitaasti niin, ettei alaselkä notkistu.
+1550	Polvennosto roikkuen
+1551	Roiku tangossa kädet suorina.
+1552	Vedä polvet kohti rintaa.
+1553	Haarahyppy tai marssi
+1554	Hyppää jalat erilleen ja nosta kädet pään yli, sitten takaisin yhteen.
+1555	Hiljaisempi ja kevyempi versio: marssi paikallaan polvet korkealle.
+1556	Pidä tasainen tahti, jossa pystyt hengittämään.

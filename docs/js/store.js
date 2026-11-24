@@ -8,7 +8,7 @@ const blank = () => ({
   v: 1,
   activeProfile: null,
   profiles: {},
-  gym: { enabled: {}, machines: [], customEx: [], updatedAt: 0 },
+  gym: { enabled: {}, machines: [], customEx: [], home: {}, updatedAt: 0 },
   settings: { syncUrl: '', syncKey: '', sound: true, theme: 'auto', lastSync: 0 },
   session: null,
 });
@@ -68,8 +68,15 @@ export function eqOn(id) {
   return e ? e.on : false;
 }
 
-export function isAvailable(ex) {
-  return ex.eq.split('|').some(alt => alt.split('+').every(eqOn));
+// Where a workout day is done: undefined = the gym (Gym Setup), 'home' = Home equipment, 'bare' = body weight only.
+export function eqAt(id, at) {
+  if (!at) return eqOn(id);
+  if (id === 'none') return true;
+  return at === 'home' && !!state.gym.home?.[id];
+}
+
+export function isAvailable(ex, at) {
+  return ex.eq.split('|').some(alt => alt.split('+').every(id => eqAt(id, at)));
 }
 
 export function allExercises() { return [...EXERCISES, ...state.gym.customEx]; }

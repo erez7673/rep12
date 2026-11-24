@@ -1,5 +1,5 @@
 // Builds a multi-week plan from a profile, and works out each session's sets, reps and weights.
-import { MUSCLES, WARMUP, COOLDOWN } from './exercises.js';
+import { MUSCLES, WARMUP, COOLDOWN, PROGRESSIONS } from './exercises.js';
 import { allExercises, isAvailable, exById, lastLogFor, uid } from './store.js';
 import { t, wStep, fmtW, listJoin } from './i18n.js';
 
@@ -112,6 +112,13 @@ const FLOOR = ['pushup', 'glute-bridge', 'plank', 'side-plank', 'dead-bug', 'dec
 export const isSeatedEx = (e) => ['seated', 'incline', 'lying'].includes(e?.pos) && !FLOOR.includes(e.id);
 
 const AB_A = ['chest', 'biceps', 'back'], AB_B = ['shoulders', 'triceps', 'legs'];
+// Home plans (at: 'home' = the Home equipment in the Gym tab, 'bare' = body weight only): muscle areas per day,
+// filled with home exercises at the profile's level; the steps up (PROGRESSIONS) come from level-up suggestions.
+const HOME_A = ['legs', 'chest', 'back', 'glutes', 'shoulders', 'core'], HOME_B = ['glutes', 'back', 'chest', 'legs', 'biceps', 'core'],
+  HOME_C = ['legs', 'shoulders', 'back', 'chest', 'triceps', 'calves'];
+const SHORT_A = ['legs', 'chest', 'back', 'core'], SHORT_B = ['glutes', 'shoulders', 'back', 'core'], SHORT_C = ['legs', 'chest', 'glutes', 'core'];
+const BARE_A = ['legs', 'chest', 'back', 'glutes', 'core'], BARE_B = ['glutes', 'shoulders', 'legs', 'back', 'core'],
+  BARE_C = ['legs', 'chest', 'triceps', 'calves', 'core'];
 const UP_AREAS = ['chest', 'back', 'shoulders', 'biceps', 'triceps'], LOW_AREAS = ['legs', 'glutes', 'calves', 'core'];
 export const TEMPLATES = {
   starter: { name: 'Gentle start · 2 days a week', short: '2 days a week', days: ['fullA', 'fullB'], perDay: 6,
@@ -128,6 +135,18 @@ export const TEMPLATES = {
     blurb: 'Upper body and lower body days in turn: chest, back, shoulders and arms, then legs, glutes, calves and core. Every area is trained twice a week. Sets and reps follow your goal.' },
   seated: { name: 'Seated · 3 days a week', short: '3 days a week', days: ['seatA', 'seatB', 'seatC'], perDay: 6, seated: true,
     blurb: 'Every exercise is done sitting on a machine or bench, with no standing and no floor work – for wheelchair users and anyone with balance or leg limitations. Day 2 has two leg machines; remove them if they don\'t suit you. Starts light, with 2–3 sets of 10–15 reps.' },
+  homeFull: { name: 'Home full body · 3 days a week', short: '3 days a week', days: ['homeA', 'homeB', 'homeC'], perDay: 6, at: 'home', group: 'home',
+    areas: [HOME_A, HOME_B, HOME_C],
+    blurb: 'Three full-body workouts at home with your body weight and the home equipment you have (set it in the Gym tab). When every set feels easy, the app suggests the next, harder step of an exercise.' },
+  homeUL: { name: 'Home upper / lower · 4 days a week', short: '4 days a week', days: ['upper', 'lower', 'upper', 'lower'], perDay: 6, at: 'home', group: 'home',
+    areas: [UP_AREAS, LOW_AREAS, UP_AREAS, LOW_AREAS],
+    blurb: 'Upper body and lower body days in turn, at home. Every area is trained twice a week. A pull-up bar or resistance bands give the back and arms more to work with.' },
+  homeShort: { name: 'Home short · 20 minutes, 3 days a week', short: '3 days a week', days: ['homeA', 'homeB', 'homeC'], perDay: 4, at: 'home', group: 'home', rest: 30,
+    areas: [SHORT_A, SHORT_B, SHORT_C],
+    blurb: 'Four exercises a day with short rests, so a workout at home takes about 20 minutes.' },
+  homeBare: { name: 'No equipment · 3 days a week', short: '3 days a week', days: ['homeA', 'homeB', 'homeC'], perDay: 5, at: 'bare', group: 'home',
+    areas: [BARE_A, BARE_B, BARE_C],
+    blurb: 'Only your body weight: no chair, bar or weights needed, just some floor space and a wall. Good for travel too.' },
 };
 // The app-built plan that uses the gentle sets and reps of TPL_RX (null for split plans, which follow the goal).
 export const tplRx = (plan) => (plan?.template && TEMPLATES[plan.template] && !TEMPLATES[plan.template].goalRx) ? plan.template : null;
@@ -173,17 +192,18 @@ export function generateTemplatePlan(p, key) {
     const own = (st.dayAreas?.[di] || []).filter(k => AREAS[k]);
     const muscles = own.length ? own : [...(tpl.areas?.[di] || [])];
     let items = [];
-    if (muscles.length) items = itemsForAreas(st, muscles, rng(p.id + muscles.join() + di), used, [], tpl.perDay);
+    if (muscles.length) items = itemsForAreas(tpl.at ? { ...st, at: tpl.at } : st, muscles, rng(p.id + muscles.join() + di), used, [], tpl.perDay);
     else for (const alts of TPL_DAYS[dk]) {
       const ex = resolveSlot(st, alts, items.map(i => i.exId), tpl.seated);
       if (ex) items.push({ exId: ex.id, pat: ex.pat });
     }
     let cardio = null;
-    if (st.cardio) {
+    if (st.cardio && tpl.at) cardio = { exId: 'jumping-jacks', min: 5 };
+    else if (st.cardio) {
       const c = resolveSlot(st, tpl.seated ? ['upright-bike', 'bike'] : ['incline-walk', 'elliptical', 'bike', 'upright-bike'], [], tpl.seated);
       if (c) cardio = { exId: c.id, min: 8 };
     }
-    const day = { key: dk, name: dayName(di), items, cardio, ...(muscles.length ? { muscles } : {}) };
+    const day = { key: dk, name: dayName(di), items, cardio, ...(muscles.length ? { muscles } : {}), ...(tpl.at ? { at: tpl.at } : {}) };
     sortDay(day);
     return day;
   });
@@ -267,7 +287,8 @@ export function candidates(stats, pat, exclude = []) {
   const lvl = LEVEL_NUM[stats.level] || 1;
   const injuries = stats.injuries || [];
   const dislikes = stats.dislikes || [];
-  const base = allExercises().filter(e => e.pat === pat && isAvailable(e) && !exclude.includes(e.id)
+  // Home exercises are only used on Home and No-equipment days (stats.at), never in gym plans.
+  const base = allExercises().filter(e => e.pat === pat && isAvailable(e, stats.at) && (stats.at || !e.home) && !exclude.includes(e.id)
     && !dislikes.includes(e.id) && !e.avoid.some(a => injuries.includes(a)));
   const fit = base.filter(e => e.lvl <= lvl);
   return fit.length ? fit : base.filter(e => e.lvl <= lvl + 1);
@@ -286,6 +307,7 @@ function pick(stats, pat, { exclude, used, rand, compoundFirst }) {
     if (compoundFirst && !e.iso) s += 2;
     if (beginner && ['handles', 'pad-arms', 'pad-legs', 'platform'].includes(e.grip)) s += 2;
     if (e.custom) s += 3; // prefer machines the user added
+    if (stats.at && e.lvl === (LEVEL_NUM[stats.level] || 1)) s += 1.5; // at home: the step that fits the profile's level
     if (s > bestScore) { bestScore = s; best = e; }
   }
   used.set(best.id, (used.get(best.id) || 0) + 1);
@@ -377,14 +399,62 @@ function itemsForAreas(st, areas, rand, used, keep = [], n = exPerDay(st)) {
     while (items.length < n && queues.some(q => q.length)) {
       for (const q of queues) {
         if (items.length >= n) break;
-        const pat = q.shift();
+        let pat = q.shift();
         if (!pat) continue;
-        const ex = pick(st, pat, { exclude: items.map(i => i.exId), used, rand, compoundFirst: items.length < 2 });
+        let ex = pick(st, pat, { exclude: items.map(i => i.exId), used, rand, compoundFirst: items.length < 2 });
+        // At home few patterns have an exercise (no pull-up bar: no pulldowns), so try the area's next pattern
+        // in the same turn. Gym days keep the old behaviour, so existing plans come out the same.
+        while (!ex && st.at && q.length) { pat = q.shift(); ex = pick(st, pat, { exclude: items.map(i => i.exId), used, rand, compoundFirst: items.length < 2 }); }
         if (ex) { items.push({ exId: ex.id, pat }); added = true; }
       }
     }
   }
   return items;
+}
+
+// ── Where a workout day is done ──
+// day.at: undefined = the gym, 'home' = with the Home equipment, 'bare' = body weight only. Switching keeps the
+// other place's list in day.alt, so switching back brings the same exercises back.
+export const PLACES = { gym: 'Gym', home: 'Home', bare: 'No equipment' };
+export const dayAt = (day) => day?.at || undefined;
+const dayStats = (p, day) => day?.at ? { ...p.stats, at: day.at } : p.stats;
+
+export function setDayAt(p, dayIdx, place) {
+  const day = p.plan.days[dayIdx];
+  const cur = day.at || 'gym';
+  if (place === cur || !PLACES[place]) return false;
+  day.alt ||= {};
+  day.alt[cur] = { items: day.items, ...(day.manual ? { manual: true } : {}) };
+  if (place === 'gym') delete day.at; else day.at = place;
+  const kept = day.alt[place];
+  delete day.alt[place];
+  delete day.manual;
+  if (kept) {
+    day.items = kept.items;
+    if (kept.manual) day.manual = true;
+  } else {
+    // New exercises for the same muscle areas, as many as the day had.
+    const areas = day.muscles?.length ? day.muscles : [...new Set(day.items.map(it => itemArea(day, it)))];
+    const n = Math.max(1, Math.min(MAX_EX_PER_DAY, day.items.length || dayCap(p)));
+    const st = dayStats(p, day), rand = rng(p.id + dayIdx + place + areas.join()), used = usedElsewhere(p, dayIdx);
+    day.items = itemsForAreas(st, areas, rand, used, [], n);
+    // Areas with nothing for this place (e.g. biceps with no equipment): fill up with other areas.
+    if (day.items.length < n) day.items = itemsForAreas(st, [...areas, ...AREA_ORDER.filter(a => !areas.includes(a))], rand, used, day.items, n);
+  }
+  if (!Object.keys(day.alt).length) delete day.alt;
+  sortDay(day);
+  return true;
+}
+
+// The easier and harder steps of an exercise (PROGRESSIONS), only those that can be done at the place.
+const chainOf = (exId) => PROGRESSIONS.find(c => c.includes(exId));
+export function nextStep(exId, at) {
+  const c = chainOf(exId);
+  return c ? c.slice(c.indexOf(exId) + 1).map(exById).find(e => e && isAvailable(e, at)) || null : null;
+}
+export function prevStep(exId, at) {
+  const c = chainOf(exId);
+  return c ? c.slice(0, c.indexOf(exId)).reverse().map(exById).find(e => e && isAvailable(e, at)) || null : null;
 }
 
 const usedElsewhere = (p, dayIdx) => {
@@ -401,10 +471,11 @@ export function setDayAreas(p, dayIdx, areas, seed = Date.now()) {
   p.stats.dayAreas[dayIdx] = [...areas];
   if (areas.length) {
     day.muscles = [...areas];
-    day.items = itemsForAreas(p.stats, areas, rng(p.id + areas.join() + seed), usedElsewhere(p, dayIdx), [], dayCap(p));
+    day.items = itemsForAreas(dayStats(p, day), areas, rng(p.id + areas.join() + seed), usedElsewhere(p, dayIdx), [], dayCap(p));
   } else {
     delete day.muscles;
   }
+  delete day.alt; // the lists kept for the other places were made for the old areas
   delete day.manual; // new exercises: back to the app's order
   fitDay(p, dayIdx);
   sortDay(day);
@@ -432,8 +503,8 @@ export function fitDay(p, dayIdx) {
   const rand = rng(p.id + dayIdx + Date.now());
   const used = usedElsewhere(p, dayIdx);
   const areas = day.muscles || [];
-  day.items = areas.length ? itemsForAreas(p.stats, areas, rand, used, day.items, n)
-    : autoItems(p.stats, day.key, (p.stats.focus || []).flatMap(f => FOCUS[f]?.pats || []), rand, used, day.items, n);
+  day.items = areas.length ? itemsForAreas(dayStats(p, day), areas, rand, used, day.items, n)
+    : autoItems(dayStats(p, day), day.key, (p.stats.focus || []).flatMap(f => FOCUS[f]?.pats || []), rand, used, day.items, n);
   sortDay(day);
 }
 
@@ -485,7 +556,8 @@ export function prescribe(stats, ex, week, restScale = 1, tpl = null, custom = f
   if (tpl) {
     const b = TPL_RX[phaseOf(week).key];
     const hold = ex.unit === 'sec';
-    return { sets: b.sets, reps: [...(hold ? b.hold : b.reps)], rest: Math.max(45, Math.round((hold ? 45 : b.rest) * restScale / 15) * 15), unit: ex.unit };
+    const fixed = TEMPLATES[tpl]?.rest; // short plans use their own short rests
+    return { sets: b.sets, reps: [...(hold ? b.hold : b.reps)], rest: fixed || Math.max(45, Math.round((hold ? 45 : b.rest) * restScale / 15) * 15), unit: ex.unit };
   }
   const g = GOALS[stats.goal] || GOALS.general;
   const b = ex.iso ? g.iso : g.compound;
@@ -493,6 +565,7 @@ export function prescribe(stats, ex, week, restScale = 1, tpl = null, custom = f
   const ph = custom ? 'base' : phaseOf(week).key;
   if (ph === 'build') reps = reps.map(r => r + (stats.goal === 'strength' ? 1 : 2));
   if (ph === 'peak' && (stats.goal === 'strength' || stats.goal === 'hypertrophy')) reps = reps.map(r => Math.max(3, r - 2));
+  if (ex.home && !ex.load && reps[1] < 10) reps = [8, 12]; // body-weight moves get harder by steps, not by fewer reps
   if (ex.unit === 'sec') {
     const add = custom ? 0 : Math.min(30, (week - 1) * 3);
     reps = [30 + add, 45 + add];
@@ -519,9 +592,11 @@ export function estimateWeight(stats, ex) {
 }
 
 // Suggests the weight and reps for the next session based on the last time this exercise was logged.
-export function suggest(p, ex, rx, week) {
+// at: where the day is done. next: the harder step of a body-weight exercise, once every set reached the top of the
+// rep range last time.
+export function suggest(p, ex, rx, week, at) {
   const last = lastLogFor(p, ex.id);
-  let kg, reps = rx.reps[0], estimated = false, note = '';
+  let kg, reps = rx.reps[0], estimated = false, note = '', next = null;
   if (!last && p.startKg?.[ex.id] != null) {
     kg = p.startKg[ex.id]; // weight the user set in a day preview before ever logging this exercise
   } else if (!last) {
@@ -543,9 +618,11 @@ export function suggest(p, ex, rx, week) {
       reps = Math.min(rx.reps[1], Math.max(rx.reps[0], minReps + 1));
       if (!ex.load) reps = Math.min(rx.reps[1] + 5, Math.max(rx.reps[0], minReps + 1));
     }
+    const step = allTop && !ex.load ? nextStep(ex.id, at) : null;
+    if (step) { next = step.id; note = t('All reps done – ready for the next step: {name}', { name: step.name }); }
   }
   if (planPhase(p.plan, week).key === 'deload' && kg) { kg = ex.assist ? kg * 1.15 : round(kg * 0.85, ex.inc); note = t('Deload week – lighter on purpose.'); }
-  return { kg: round(kg, ex.inc), reps, estimated, note };
+  return { kg: round(kg, ex.inc), reps, estimated, note, next };
 }
 
 // Reps/kg the user typed in the day preview, per week + day + exercise.
@@ -560,7 +637,7 @@ export function buildSession(p, week, dayIdx) {
     const ex = exById(it.exId);
     if (!ex) return null;
     const rx = prescribe(st, ex, week, p.plan.restScale || 1, tplRx(p.plan), isCustom(p.plan));
-    const sg = suggest(p, ex, rx, week);
+    const sg = suggest(p, ex, rx, week, day.at);
     const edit = p.plan.edits?.[editKey(week, dayIdx, ex.id)];
     const sets = Array.from({ length: rx.sets }, (_, k) => {
       const e = edit?.[k];
@@ -568,20 +645,23 @@ export function buildSession(p, week, dayIdx) {
     });
     return {
       exId: ex.id, name: ex.name, unit: ex.unit, rest: rx.rest, assist: ex.assist,
-      target: { reps: rx.reps, kg: sg.kg }, note: edit ? t('Edited by you') : sg.note, estimated: sg.estimated && !edit,
+      target: { reps: rx.reps, kg: sg.kg }, note: edit ? t('Edited by you') : sg.note, estimated: sg.estimated && !edit, ...(sg.next ? { next: sg.next } : {}),
       sets,
     };
   }).filter(Boolean);
 
   // Warm-up: a timed cardio machine the user picks (same for every day), then a short mobility routine.
-  const wp = warmPref(p);
+  const wp = warmPref(p, day.at);
   const warmEx = wp.min > 0 && exById(wp.exId);
   const warm = warmEx ? { exId: warmEx.id, name: warmEx.name, min: wp.min, done: false } : null;
   const warmup = warm ? WARMUP.slice(1).map(m => ({ ...m })) : [];
   const muscles = new Set(items.map(i => exById(i.exId)?.m).filter(Boolean));
   const cool = [...muscles].map(m => COOLDOWN[m]).filter(Boolean).slice(0, 5);
   cool.push(COOLDOWN.general);
-  const cardio = day.cardio?.min > 0 && exById(day.cardio.exId) ? { exId: day.cardio.exId, name: exById(day.cardio.exId).name, min: day.cardio.min, done: false } : null;
+  // A finisher on a machine that isn't there (a Home day) becomes jumping jacks, at most 5 minutes.
+  let cEx = day.cardio?.min > 0 && exById(day.cardio.exId), cMin = day.cardio?.min;
+  if (cEx && day.at && !isAvailable(cEx, day.at)) { cEx = exById('jumping-jacks'); cMin = Math.min(cMin, 5); }
+  const cardio = cEx ? { exId: cEx.id, name: cEx.name, min: cMin, done: false } : null;
 
   return {
     id: uid('s'), profileId: p.id, planId: p.plan.id, week, dayIdx, title: dayName(dayIdx),
@@ -590,12 +670,13 @@ export function buildSession(p, week, dayIdx) {
   };
 }
 
-// Cardio machines that can be used for the warm-up (only what's on in Gym Setup).
-export const warmOptions = () => allExercises().filter(e => e.pat === 'cardio' && isAvailable(e));
+// Cardio for the warm-up or finisher: machines that are on in Gym Setup, or on a Home day (at) home cardio.
+export const warmOptions = (at) => allExercises().filter(e => e.pat === 'cardio' && isAvailable(e, at) && (at || !e.home));
 
 // The profile's warm-up choice: machine + minutes. Defaults to the exercise bike for the profile's warm-up length.
-export function warmPref(p) {
-  const opts = warmOptions();
+// On a Home day (at) a machine that isn't there becomes home cardio (jumping jacks).
+export function warmPref(p, at) {
+  const opts = warmOptions(at);
   let exId = p.warm?.exId;
   if (!opts.some(e => e.id === exId)) exId = (opts.find(e => e.id === 'bike') || opts[0])?.id || null;
   return { exId, min: p.warm?.min ?? p.stats.warmup ?? 5 };
@@ -634,8 +715,9 @@ export function swapOptions(stats, plan, dayIdx, itemIdx) {
   const inDay = new Set(day.items.map(i => i.exId));
   const inj = stats.injuries || [], no = stats.dislikes || [];
   const pats = AREAS[area]?.pats || [];
+  const at = day.at;
   return allExercises()
-    .filter(e => e.pat !== 'cardio' && !inDay.has(e.id) && isAvailable(e) && !no.includes(e.id) && !e.avoid.some(a => inj.includes(a))
+    .filter(e => e.pat !== 'cardio' && !inDay.has(e.id) && isAvailable(e, at) && (at || !e.home) && !no.includes(e.id) && !e.avoid.some(a => inj.includes(a))
       && (areaOfEx(e) === area || pats.includes(e.pat))
       && (!TEMPLATES[plan.template]?.seated || isSeatedEx(e))) // a Seated plan only offers seated exercises
     .sort((a, b) => (b.pat === it.pat) - (a.pat === it.pat) || (areaOfEx(b) === area) - (areaOfEx(a) === area) || a.iso - b.iso || a.name.localeCompare(b.name));

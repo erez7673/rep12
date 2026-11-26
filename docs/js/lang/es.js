@@ -1610,4 +1610,7 @@ export default {
   1612: "Solo lo que tengo en casa",
   1613: "Gimnasio, en casa o sin equipo",
   1614: "Elige dónde entrenas: Gimnasio muestra los ejercicios de gimnasio, En casa los que puedes hacer con material de casa y Sin equipo los que no necesitan nada.",
+  1615: "Ver todos los ejercicios",
+  1616: "Cambiar por cualquier ejercicio",
+  1617: "Mira cómo se hace el ejercicio, cámbialo por otro para los mismos músculos o quítalo de este día. Los ejercicios con peso corporal también muestran un nivel más fácil y uno más difícil. Cuando todas las series resulten fáciles, aparece el botón Subir de nivel. Toca Ver todos los ejercicios para cambiarlo por cualquiera, no solo por los mismos músculos.",
 };

@@ -247,3 +247,6 @@
 1612	Bara det jag har hemma
 1613	Gym, hemma eller ingen utrustning
 1614	Välj var du tränar: Gym visar gymövningarna, Hemma de du kan göra med hemmaredskap och Ingen utrustning de som inte kräver något alls.
+1615	Visa alla övningar
+1616	Byt mot valfri övning
+1617	Se hur övningen görs, byt den mot en annan för samma muskler eller ta bort den från den här dagen. Kroppsviktsövningar visar också ett lättare och ett svårare steg. När alla set blir lätta visas knappen Nästa steg. Tryck på Visa alla övningar för att byta mot vilken övning som helst, inte bara för samma muskler.

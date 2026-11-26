@@ -1610,4 +1610,7 @@ export default {
   1612: "Vain mitä minulla on kotona",
   1613: "Sali, koti tai ei välineitä",
   1614: "Valitse, missä treenaat: Sali näyttää salin liikkeet, Koti ne, jotka onnistuvat kotivälineillä, ja Ei välineitä ne, joihin ei tarvita mitään.",
+  1615: "Näytä kaikki liikkeet",
+  1616: "Vaihda mihin tahansa liikkeeseen",
+  1617: "Katso, miten liike tehdään, vaihda se toiseen samoille lihaksille tai poista se tältä päivältä. Kehonpainoliikkeissä näet myös helpomman ja vaikeamman tason. Kun kaikki sarjat käyvät helpoiksi, esiin tulee Seuraava taso -painike. Napauta Näytä kaikki liikkeet vaihtaaksesi mihin tahansa liikkeeseen, ei vain samoille lihaksille.",
 };

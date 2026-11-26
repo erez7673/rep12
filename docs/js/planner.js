@@ -707,8 +707,8 @@ export function planProgress(plan) {
 }
 
 // Every exercise for the same muscle area as the item (on in Gym Setup, safe for the profile's injuries),
-// the same kind of movement first.
-export function swapOptions(stats, plan, dayIdx, itemIdx) {
+// the same kind of movement first. With `all`, the whole library (same area still first).
+export function swapOptions(stats, plan, dayIdx, itemIdx, all = false) {
   const day = plan.days[dayIdx];
   const it = day.items[itemIdx];
   const area = itemArea(day, it);
@@ -718,7 +718,7 @@ export function swapOptions(stats, plan, dayIdx, itemIdx) {
   const at = day.at;
   return allExercises()
     .filter(e => e.pat !== 'cardio' && !inDay.has(e.id) && isAvailable(e, at) && (at || !e.home) && !no.includes(e.id) && !e.avoid.some(a => inj.includes(a))
-      && (areaOfEx(e) === area || pats.includes(e.pat))
+      && (all || areaOfEx(e) === area || pats.includes(e.pat))
       && (!TEMPLATES[plan.template]?.seated || isSeatedEx(e))) // a Seated plan only offers seated exercises
     .sort((a, b) => (b.pat === it.pat) - (a.pat === it.pat) || (areaOfEx(b) === area) - (areaOfEx(a) === area) || a.iso - b.iso || a.name.localeCompare(b.name));
 }

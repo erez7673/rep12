@@ -247,3 +247,6 @@
 1612	Nur was ich zu Hause habe
 1613	Studio, zu Hause oder ohne Geräte
 1614	Wähle, wo du trainierst: Studio zeigt die Übungen fürs Studio, Zu Hause die mit Heimgeräten und Ohne Geräte die, für die du gar nichts brauchst.
+1615	Alle Übungen anzeigen
+1616	Gegen eine beliebige Übung tauschen
+1617	Sieh dir an, wie die Übung geht, tausche sie gegen eine andere für dieselben Muskeln oder entferne sie von diesem Tag. Bei Körpergewichtsübungen siehst du auch eine leichtere und eine schwerere Stufe. Wenn alle Sätze leicht werden, erscheint der Knopf „Nächste Stufe“. Tippe auf „Alle Übungen anzeigen“, um gegen jede Übung zu tauschen, nicht nur für dieselben Muskeln.

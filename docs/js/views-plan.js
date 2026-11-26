@@ -74,6 +74,23 @@ export function planView() {
   };
 }
 
+function openExMenu(d, i, all) {
+    const p = profile();
+    const it = p.plan.days[d].items[i];
+    const ex = exById(it.exId);
+    const opts = swapOptions(p.stats, p.plan, d, i, all);
+    const area = AREAS[itemArea(p.plan.days[d], it)]?.name || '';
+    const at = p.plan.days[d].at;
+    const steps = [[prevStep(ex.id, at), t('Easier step')], [nextStep(ex.id, at), t('Harder step')]].filter(([e]) => e);
+    sheet(`${closeX()}<h2>${esc(ex.name)}</h2>
+      <button class="row" data-act="go" data-href="#/ex/${encodeURIComponent(ex.id)}">${icon.info}<b>${t('How to do it')}</b></button>
+      ${steps.map(([e, label]) => `<button class="row" data-act="swap" data-d="${d}" data-i="${i}" data-ex="${e.id}">${thumb(e, photoFor(e.id), 'sm')}<span><b>${esc(e.name)}</b><small>${esc(label)}</small></span></button>`).join('')}
+      ${all ? '' : `<button class="row" data-act="ex-menu-all" data-d="${d}" data-i="${i}">${icon.swap}<b>${t('Show all exercises')}</b></button>`}
+      <h3>${all ? t('Swap for any exercise') : t('Swap for another {area} exercise', { area: esc(area) })} <small class="muted">(${opts.length})</small></h3>
+      ${opts.length ? opts.map(o => `<button class="row" data-act="swap" data-d="${d}" data-i="${i}" data-ex="${o.id}">${thumb(o, photoFor(o.id), 'sm')}<span><b>${esc(o.name)}</b><small>${esc(MUSCLES[o.m])}</small></span></button>`).join('') : `<p class="muted">${at ? t('No alternatives with your home equipment.') : t('No alternatives with your current gym setup.')}</p>`}
+      <button class="row danger" data-act="remove-ex" data-d="${d}" data-i="${i}">${icon.trash}<b>${t('Remove from this day')}</b></button>`);
+  }
+
 register({
   'pick-week': (el) => { viewWeek = +el.dataset.w; rerender(); },
   'make-plan': () => { const p = profile(); p.plan = generatePlan(p); touchProfile(p); scheduleSync(); rerender(); toast(t('Plan ready!')); },
@@ -376,22 +393,8 @@ register({
     location.hash = '#/session';
     coachStart();
   },
-  'ex-menu': (el) => {
-    const d = +el.dataset.d, i = +el.dataset.i;
-    const p = profile();
-    const it = p.plan.days[d].items[i];
-    const ex = exById(it.exId);
-    const opts = swapOptions(p.stats, p.plan, d, i);
-    const area = AREAS[itemArea(p.plan.days[d], it)]?.name || '';
-    const at = p.plan.days[d].at;
-    const steps = [[prevStep(ex.id, at), t('Easier step')], [nextStep(ex.id, at), t('Harder step')]].filter(([e]) => e);
-    sheet(`${closeX()}<h2>${esc(ex.name)}</h2>
-      <button class="row" data-act="go" data-href="#/ex/${encodeURIComponent(ex.id)}">${icon.info}<b>${t('How to do it')}</b></button>
-      ${steps.map(([e, label]) => `<button class="row" data-act="swap" data-d="${d}" data-i="${i}" data-ex="${e.id}">${thumb(e, photoFor(e.id), 'sm')}<span><b>${esc(e.name)}</b><small>${esc(label)}</small></span></button>`).join('')}
-      <h3>${t('Swap for another {area} exercise', { area: esc(area) })} <small class="muted">(${opts.length})</small></h3>
-      ${opts.length ? opts.map(o => `<button class="row" data-act="swap" data-d="${d}" data-i="${i}" data-ex="${o.id}">${thumb(o, photoFor(o.id), 'sm')}<span><b>${esc(o.name)}</b><small>${esc(MUSCLES[o.m])}</small></span></button>`).join('') : `<p class="muted">${at ? t('No alternatives with your home equipment.') : t('No alternatives with your current gym setup.')}</p>`}
-      <button class="row danger" data-act="remove-ex" data-d="${d}" data-i="${i}">${icon.trash}<b>${t('Remove from this day')}</b></button>`);
-  },
+  'ex-menu': (el) => openExMenu(+el.dataset.d, +el.dataset.i, false),
+  'ex-menu-all': (el) => openExMenu(+el.dataset.d, +el.dataset.i, true),
   'move-open': (el) => openMoveSheet(+el.dataset.d, +el.dataset.i),
   'move-step': (el) => {
     const p = profile(); const d = +el.dataset.d, i = +el.dataset.i, j = i + +el.dataset.by;

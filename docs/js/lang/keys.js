@@ -1610,4 +1610,7 @@ export const KEYS = {
   1612: "Only what I have at home",
   1613: "Gym, home or no equipment",
   1614: "Choose where you train: Gym shows the gym exercises, Home the ones you can do with home equipment, and No equipment the ones that need nothing at all.",
+  1615: "Show all exercises",
+  1616: "Swap for any exercise",
+  1617: "See how to do the exercise, swap it for another one for the same muscles, or remove it from this day. Body-weight exercises also show an easier and a harder step. When every set gets easy, a Level up button appears. Tap Show all exercises to swap for any exercise, not only the same muscles.",
 };

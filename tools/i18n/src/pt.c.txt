@@ -247,3 +247,6 @@
 1612	Só o que tenho em casa
 1613	Academia, em casa ou sem equipamento
 1614	Escolha onde você treina: Academia mostra os exercícios de academia, Em casa os que dá para fazer com equipamento de casa e Sem equipamento os que não precisam de nada.
+1615	Mostrar todos os exercícios
+1616	Trocar por qualquer exercício
+1617	Veja como fazer o exercício, troque-o por outro para os mesmos músculos ou tire-o deste dia. Exercícios com peso corporal também mostram um nível mais fácil e um mais difícil. Quando todas as séries ficarem fáceis, aparece o botão Subir de nível. Toque em Mostrar todos os exercícios para trocar por qualquer um, não só pelos mesmos músculos.

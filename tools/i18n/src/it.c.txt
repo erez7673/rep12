@@ -247,3 +247,6 @@
 1612	Solo quello che ho a casa
 1613	Palestra, a casa o nessun attrezzo
 1614	Scegli dove ti alleni: Palestra mostra gli esercizi da palestra, A casa quelli che puoi fare con l'attrezzatura di casa e Nessun attrezzo quelli che non richiedono nulla.
+1615	Mostra tutti gli esercizi
+1616	Sostituisci con qualsiasi esercizio
+1617	Guarda come si fa l'esercizio, sostituiscilo con un altro per gli stessi muscoli o toglilo da questo giorno. Gli esercizi a corpo libero mostrano anche un livello più facile e uno più difficile. Quando tutte le serie diventano facili, compare il pulsante Sali di livello. Tocca Mostra tutti gli esercizi per sostituirlo con uno qualsiasi, non solo per gli stessi muscoli.
